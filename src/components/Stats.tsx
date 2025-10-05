@@ -1,10 +1,10 @@
 import React from 'react';
-import { FaUsers, FaProjectDiagram, FaAward } from 'react-icons/fa';
+import { Users, Folder, Calendar } from 'lucide-react';
 
 const stats = [
-  { icon: <FaUsers />, value: '2500+', label: 'Participants' },
-  { icon: <FaProjectDiagram />, value: '550+', label: 'Teams Registered' },
-  { icon: <FaAward />, value: '5M+', label: 'Prize Pool' },
+  { icon: <Users />, value: '2400+', label: 'Participants' },
+  { icon: <Folder />, value: '550+', label: 'Teams Registered' },
+  { icon: <Calendar />, value: '26', label: 'Days' },
 ];
 
 const Stats = () => {

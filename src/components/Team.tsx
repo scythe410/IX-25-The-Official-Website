@@ -3,10 +3,10 @@ import React from 'react';
 import { FaLinkedin, FaTwitter } from 'react-icons/fa';
 
 const teamMembers = [
-  { name: 'John Doe', role: 'Lead Judge', image: '/team-1.jpg' },
-  { name: 'Jane Smith', role: 'Mentor & Investor', image: '/team-2.jpg' },
-  { name: 'Emily White', role: 'Tech Evangelist', image: '/team-3.jpg' },
-  { name: 'Michael Brown', role: 'Venture Capitalist', image: '/team-4.jpg' },
+  { name: 'VIHAN PERERA', role: 'Lead Organizer', image: '/team-1.jpg' },
+  { name: 'KAVISHA THANUJAN', role: 'Co-Lead Organizer', image: '/team-2.jpg' },
+  { name: 'GIMHANI RANATHUNGA', role: 'Co-Lead Organizer', image: '/team-3.jpg' },
+  { name: 'PRASANNA KATHIRAMANATHAN', role: 'Co-Lead Organizer', image: '/team-4.jpg' },
 ];
 
 const Team = () => {
@@ -22,7 +22,7 @@ const Team = () => {
                 alt={member.name}
                 layout="fill"
                 objectFit="cover"
-                className="rounded-full border-2 border-cyan-400"
+                className="rounded-lg border-2 border-cyan-400"
               />
             </div>
             <h3 className="font-bold text-lg">{member.name}</h3>

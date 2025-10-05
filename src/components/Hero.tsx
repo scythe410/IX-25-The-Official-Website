@@ -3,7 +3,7 @@ import React from 'react';
 
 const Hero = () => {
   return (
-    <section 
+    <section
       className="relative h-screen flex items-center justify-center"
       style={{ backgroundImage: `url(/hero-bg.jpg)`, backgroundSize: 'cover', backgroundPosition: 'center' }}
     >
@@ -28,19 +28,17 @@ const Hero = () => {
           </div>
         </div>
         <div className="text-center md:text-left">
+        <p className="text-sm uppercase tracking-widest text-gray-400 mb-2">About Us</p>
           <h2 className="text-4xl md:text-6xl font-bold tracking-wider leading-tight text-glow">
             THE BATTLE
             <br />
             FOR STARTUP
             <br />
-            GRANDEUR
+            BRILLIANCE
           </h2>
           <p className="mt-6 text-gray-300 max-w-lg mx-auto md:mx-0">
             CodeSprint X is the ultimate proving ground for aspiring entrepreneurs and developers. A platform where innovation meets execution, and groundbreaking ideas are forged into reality.
           </p>
-          <button className="mt-8 px-8 py-3 bg-white text-black font-bold rounded-full hover:scale-105 transition-transform duration-300 button-glow">
-            EXPLORE THE JOURNEY
-          </button>
         </div>
       </div>
     </section>

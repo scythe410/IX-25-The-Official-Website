@@ -1,20 +1,20 @@
 import React from 'react';
-import { FaBolt, FaCrosshairs, FaTrophy } from 'react-icons/fa';
+import { Lightbulb, Gem, Rocket } from 'lucide-react';
 
 const phases = [
   {
-    icon: <FaBolt />,
-    title: 'WORKSHOP SERIES',
+    icon: <Lightbulb />,
+    title: 'IDEATE',
     description: 'Kickstart your journey with expert-led workshops on cutting-edge technologies and business strategies.',
   },
   {
-    icon: <FaCrosshairs />,
-    title: 'MENTORING',
+    icon: <Gem />,
+    title: 'PROTOTYPE',
     description: 'Get paired with industry veterans to refine your idea, strategy, and execution plan.',
   },
   {
-    icon: <FaTrophy />,
-    title: 'FINALE',
+    icon: <Rocket />,
+    title: 'STARTUP',
     description: 'Pitch your startup to a panel of esteemed judges and investors for a chance to win the grand prize.',
   },
 ];
