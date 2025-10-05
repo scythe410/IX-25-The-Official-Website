@@ -1,33 +1,3 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-body {
-  background-color: #000;
-  color: #fff;
-}
-
-/* Custom glow effects */
-.text-glow {
-  text-shadow: 0 0 8px rgba(255, 255, 255, 0.3), 0 0 20px rgba(78, 187, 255, 0.4);
-}
-
-.box-glow {
-  box-shadow: 0 0 15px rgba(78, 187, 255, 0.3), 0 0 30px rgba(78, 187, 255, 0.2), inset 0 0 10px rgba(78, 187, 255, 0.2);
-}
-
-.button-glow:hover {
-  box-shadow: 0 0 15px rgba(255, 255, 255, 0.5), 0 0 25px rgba(255, 255, 255, 0.3);
-}
-
-/* For the vertical timeline line */
-.timeline-line::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 2px;
-    height: 100%;
-    background-color: rgba(255, 255, 255, 0.15);
-}
