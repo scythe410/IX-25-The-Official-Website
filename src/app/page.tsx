@@ -27,17 +27,9 @@ export default function Home() {
 
   return (
     <>
-      <main className="min-h-screen bg-gradient-to-b from-black via-gray-900 to-black text-white font-mont">
+      <main className="min-h-screen text-white font-mont dot-grid-background">
         {/* Hero */}
         <section className="relative overflow-hidden">
-          <div className="absolute inset-0 -z-10">
-            {/* starfield background */}
-            <div
-              className="w-full h-full bg-[radial-gradient(ellipse_at_center,rgba(255,255,255,0.02),transparent_40%),url('/stars.png')] bg-cover opacity-60"
-              style={{ backgroundImage: "url('/stars.png')" }}
-            />
-          </div>
-
           <div className="container mx-auto px-6 py-24 lg:py-36">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <motion.div initial={{ x: -80, opacity: 0 }} animate={{ x: 0, opacity: 1 }} transition={{ duration: 0.8 }}>
@@ -80,7 +72,7 @@ export default function Home() {
         </section>
 
         {/* Phases */}
-        <section className="bg-gradient-to-b from-transparent to-gray-900 py-16">
+        <section className="py-16">
           <div className="container mx-auto px-6">
             <h3 className="text-center text-3xl font-bold font-orbit mb-8">THREE PHASES OF SUCCESS</h3>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -133,7 +125,7 @@ export default function Home() {
         </section>
 
         {/* Roadmap / Timeline */}
-        <section className="bg-gradient-to-t from-black/0 to-gray-900 py-16">
+        <section className="py-16">
           <div className="container mx-auto px-6">
             <h3 className="text-3xl text-center font-orbit font-bold mb-8">THE JOURNEY OF CODESPRINT X</h3>
             <div className="max-w-4xl mx-auto">
@@ -186,7 +178,7 @@ export default function Home() {
         </section>
 
         {/* FAQ and Registration form */}
-        <section id="register" className="bg-gradient-to-b from-gray-900 to-black py-16">
+        <section id="register" className="py-16">
           <div className="container mx-auto px-6 grid md:grid-cols-2 gap-10">
             <div>
               <h3 className="text-3xl font-orbit font-bold mb-6">FREQUENTLY ASKED QUESTIONS</h3>
