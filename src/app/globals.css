@@ -19,16 +19,17 @@ body {
 
 /* Custom glow effects */
 .text-glow {
-  text-shadow: 0 0 8px rgba(255, 255, 255, 0.3), 0 0 20px rgba(78, 187, 255, 0.4);
+  text-shadow: 0 0 8px rgba(255, 20, 147, 0.4), 0 0 20px rgba(255, 20, 147, 0.5);
 }
 
 .box-glow {
-  box-shadow: 0 0 15px rgba(78, 187, 255, 0.3), 0 0 30px rgba(78, 187, 255, 0.2), inset 0 0 10px rgba(78, 187, 255, 0.2);
+  box-shadow: 0 0 15px rgba(255, 20, 147, 0.4), 0 0 30px rgba(255, 20, 147, 0.3), inset 0 0 10px rgba(255, 20, 147, 0.2);
 }
 
 .button-glow:hover {
-  box-shadow: 0 0 15px rgba(255, 255, 255, 0.5), 0 0 25px rgba(255, 255, 255, 0.3);
+  box-shadow: 0 0 15px rgba(255, 20, 147, 0.6), 0 0 25px rgba(255, 20, 147, 0.4);
 }
+
 
 /* For the vertical timeline line */
 .timeline-line::before {

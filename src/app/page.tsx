@@ -63,7 +63,7 @@ export default function Home() {
       <main className="min-h-screen text-white font-mont dot-grid-background">
         <nav className="fixed top-0 left-0 right-0 z-50 flex justify-between items-center py-4 px-8 md:px-16 bg-black bg-opacity-30 backdrop-blur-sm">
           <h1 className="text-2xl font-bold tracking-widest text-glow font-orbit">CODESPRINT X</h1>
-          <button className="px-6 py-2 border border-white rounded-full text-sm font-semibold hover:bg-white hover:text-black transition-colors duration-300 button-glow">
+          <button className="px-6 py-2 border border-pink-500 text-pink-500 rounded-full text-sm font-semibold hover:bg-pink-500 hover:text-white transition-colors duration-300 button-glow">
             REGISTER
           </button>
         </nav>
@@ -115,7 +115,7 @@ export default function Home() {
             </div>
 
             <div className="order-1 lg:order-2">
-                <div className="inline-block px-4 py-1.5 bg-gray-800/70 rounded-full text-sm uppercase font-semibold tracking-wider mb-4">
+                <div className="inline-block px-4 py-1.5 bg-pink-900/70 text-pink-300 rounded-full text-sm uppercase font-semibold tracking-wider mb-4">
                   About Us
                 </div>
                 <h2 className="text-4xl md:text-5xl font-bold font-orbit">THE BATTLE FOR STARTUP BRILLIANCE</h2>
@@ -127,7 +127,7 @@ export default function Home() {
 
         {/* Phases */}
         <section className="py-20 container mx-auto px-4 text-center">
-          <div className="inline-block px-4 py-1.5 bg-gray-800/70 rounded-full text-sm uppercase font-semibold tracking-wider mb-4">
+          <div className="inline-block px-4 py-1.5 bg-pink-900/70 text-pink-300 rounded-full text-sm uppercase font-semibold tracking-wider mb-4">
             Our Structure
           </div>
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-glow font-orbit">THREE PHASES OF SUCCESS</h2>
@@ -138,8 +138,8 @@ export default function Home() {
               { icon: <Gem />, title: 'PROTOTYPE', description: 'Get paired with industry veterans to refine your idea, strategy, and execution plan.' },
               { icon: <Rocket />, title: 'STARTUP', description: 'Pitch your startup to a panel of esteemed judges and investors for a chance to win the grand prize.' },
             ].map((phase, index) => (
-              <div key={index} className="flex flex-col items-center p-8 border border-gray-800 rounded-lg bg-gray-900 bg-opacity-50 box-glow">
-                <div className="text-4xl text-cyan-400 mb-4">{phase.icon}</div>
+              <div key={index} className="flex flex-col items-center p-8 border border-pink-900 rounded-lg bg-gray-900 bg-opacity-50 box-glow">
+                <div className="text-4xl text-pink-400 mb-4">{phase.icon}</div>
                 <h3 className="text-xl font-bold mb-2 font-orbit">{phase.title}</h3>
                 <p className="text-gray-400">{phase.description}</p>
               </div>
@@ -157,7 +157,7 @@ export default function Home() {
                   { icon: <Calendar />, value: '26', label: 'Universities' },
               ].map((stat, index) => (
                 <div key={index} className="text-center">
-                  <div className="text-5xl text-cyan-400 mb-3">{stat.icon}</div>
+                  <div className="text-5xl text-pink-400 mb-3">{stat.icon}</div>
                   <p className="text-4xl font-bold text-glow font-orbit">{stat.value}</p>
                   <p className="text-gray-400">{stat.label}</p>
                 </div>
@@ -168,7 +168,7 @@ export default function Home() {
 
         {/* Memories / Carousel */}
         <section className="py-20 text-center">
-            <div className="inline-block px-4 py-1.5 bg-gray-800/70 rounded-full text-sm uppercase font-semibold tracking-wider mb-4">
+            <div className="inline-block px-4 py-1.5 bg-pink-900/70 text-pink-300 rounded-full text-sm uppercase font-semibold tracking-wider mb-4">
               Gallery
             </div>
             <h2 className="text-3xl md:text-4xl font-bold mb-12 text-glow font-orbit">OUR MEMORIES</h2>
@@ -195,7 +195,7 @@ export default function Home() {
         {/* Roadmap / Timeline */}
         <section className="py-20 container mx-auto px-4">
             <div className="text-center mb-16">
-                 <div className="inline-block px-4 py-1.5 bg-gray-800/70 rounded-full text-sm uppercase font-semibold tracking-wider mb-4">
+                 <div className="inline-block px-4 py-1.5 bg-pink-900/70 text-pink-300 rounded-full text-sm uppercase font-semibold tracking-wider mb-4">
                     Roadmap
                 </div>
                 <h2 className="text-3xl md:text-4xl font-bold text-glow font-orbit">THE JOURNEY OF CODESPRINT X</h2>
@@ -210,7 +210,7 @@ export default function Home() {
               ].map((event, index) => (
                 <div key={index} className={`mb-8 flex justify-between items-center w-full ${index % 2 === 0 ? 'flex-row-reverse' : ''}`}>
                    <div className="order-1 w-5/12"></div>
-                  <div className="z-20 flex items-center order-1 bg-cyan-500 shadow-xl w-4 h-4 rounded-full"></div>
+                  <div className="z-20 flex items-center order-1 bg-pink-500 shadow-xl w-4 h-4 rounded-full"></div>
                   <div className={`order-1 w-5/12 p-4 rounded-lg shadow-xl bg-gray-900 bg-opacity-50 box-glow ${index % 2 === 0 ? 'text-right' : 'text-left'}`}>
                     <h3 className="font-bold text-lg mb-1 font-orbit">{event.title}</h3>
                     <p className="text-sm text-gray-400">{event.description}</p>
@@ -219,7 +219,7 @@ export default function Home() {
               ))}
             </div>
              <div className="text-center mt-12">
-                <button className="mt-8 px-8 py-3 bg-transparent border border-white text-white font-bold rounded-full hover:bg-white hover:text-black transition-transform duration-300 button-glow">
+                <button className="mt-8 px-8 py-3 bg-transparent border border-pink-500 text-pink-500 font-bold rounded-full hover:bg-pink-500 hover:text-white transition-transform duration-300 button-glow">
                   CONTACT US
                 </button>
               </div>
@@ -227,7 +227,7 @@ export default function Home() {
 
         {/* Contact / Team */}
         <section className="py-20 text-center">
-            <div className="inline-block px-4 py-1.5 bg-gray-800/70 rounded-full text-sm uppercase font-semibold tracking-wider mb-4">
+            <div className="inline-block px-4 py-1.5 bg-pink-900/70 text-pink-300 rounded-full text-sm uppercase font-semibold tracking-wider mb-4">
                 Our Team
             </div>
             <h2 className="text-3xl md:text-4xl font-bold mb-12 text-glow font-orbit">MEET THE EXPERTS</h2>
@@ -245,11 +245,11 @@ export default function Home() {
                       alt={member.name}
                       layout="fill"
                       objectFit="cover"
-                      className="rounded-lg border-2 border-cyan-400"
+                      className="rounded-lg border-2 border-pink-400"
                     />
                   </div>
                   <h3 className="font-bold text-lg font-orbit">{member.name}</h3>
-                  <p className="text-cyan-400 text-sm">{member.role}</p>
+                  <p className="text-pink-400 text-sm">{member.role}</p>
                   <div className="flex gap-4 mt-2">
                     <FaLinkedin className="text-gray-400 hover:text-white" />
                     <FaTwitter className="text-gray-400 hover:text-white" />
@@ -262,7 +262,7 @@ export default function Home() {
         {/* FAQ and Registration form */}
         <section id="register" className="py-20 container mx-auto px-4 max-w-4xl">
             <div className="text-center mb-12">
-                 <div className="inline-block px-4 py-1.5 bg-gray-800/70 rounded-full text-sm uppercase font-semibold tracking-wider mb-4">
+                 <div className="inline-block px-4 py-1.5 bg-pink-900/70 text-pink-300 rounded-full text-sm uppercase font-semibold tracking-wider mb-4">
                     Get Started
                 </div>
                 <h2 className="text-3xl md:text-4xl font-bold text-glow font-orbit">FREQUENTLY ASKED QUESTIONS</h2>
