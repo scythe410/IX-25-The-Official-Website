@@ -148,7 +148,7 @@ export default function Home() {
         </section>
 
         {/* stats */}
-        <div className="py-20 bg-black">
+        <div className="py-20">
           <div className="container mx-auto px-4">
             <div className="flex flex-col md:flex-row justify-around items-center gap-12">
               {[
