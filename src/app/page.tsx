@@ -99,12 +99,12 @@ export default function Home() {
           />
 
           <div className="relative z-10 container mx-auto px-4 flex flex-col items-center text-center">
-            <div className="relative w-[300px] h-[200px] md:w-[450px] md:h-[300px] mb-8">
+             <div className="relative w-[300px] h-[200px] md:w-[450px] md:h-[300px] mb-8">
               {/* IX Logo */}
               <div className="absolute inset-0 flex items-center justify-center">
                 {/* I */}
-                <div className="absolute left-[calc(50%-110px)] md:left-[calc(50%-165px)] flex flex-col items-center">
-                  <div className="w-12 h-12 md:w-16 md:h-16 bg-white rounded-full"></div>
+                <div className="absolute left-[calc(50%-125px)] md:left-[calc(50%-180px)] top-[calc(50%-80px)] md:top-[calc(50%-120px)] flex flex-col items-center">
+                  <div className="w-12 h-12 md:w-16 md:h-16 bg-white rounded-full mb-1"></div>
                   <div className="w-12 h-24 md:w-16 md:h-36 bg-white rounded-b-full"></div>
                 </div>
                 {/* X */}
@@ -116,7 +116,7 @@ export default function Home() {
                 </div>
               </div>
               {/* 25 */}
-              <div className="absolute top-[20%] right-[calc(50%-120px)] md:right-[calc(50%-180px)] text-3xl font-bold font-orbit">25</div>
+              <div className="absolute top-[calc(50%-30px)] md:top-[calc(50%-45px)] right-[calc(50%-110px)] md:right-[calc(50%-165px)] text-3xl font-bold font-orbit">25</div>
 
               {/* Chat bubble */}
               <motion.div
