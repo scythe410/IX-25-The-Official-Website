@@ -120,15 +120,16 @@ export default function Home() {
                 <div className="absolute inset-0 flex items-center justify-center">
                     {/* I */}
                     <div className="absolute left-[calc(50%-125px)] md:left-[calc(50%-180px)] top-[calc(50%-80px)] md:top-[calc(50%-120px)] flex flex-col items-center">
-                    <div className="w-12 h-12 md:w-16 md:h-16 bg-white rounded-full mb-1"></div>
-                    <div className="w-12 h-24 md:w-16 md:h-36 bg-white rounded-b-full"></div>
+                      <div className="w-12 h-12 md:w-16 md:h-16 bg-white rounded-full mb-1"></div>
+                      <div className="w-12 h-24 md:w-16 md:h-36 bg-white rounded-b-full"></div>
                     </div>
                     {/* X */}
                     <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[220px] h-[220px] md:w-[330px] md:h-[330px]">
-                    <div className="relative w-full h-full">
-                        <div className="absolute w-[90px] h-12 md:w-[135px] md:h-16 bg-pink-500 rounded-full transform -rotate-45 translate-x-[20px] translate-y-[20px] md:translate-x-[30px] md:translate-y-[30px]"></div>
-                        <div className="absolute w-[200px] h-12 md:w-[300px] md:h-16 bg-white rounded-full transform -rotate-45 translate-x-[10px] translate-y-[90px] md:translate-x-[15px] md:translate-y-[135px]"></div>
-                    </div>
+                      <div className="relative w-full h-full">
+                        {/* The two strokes of the X */}
+                        <div className="absolute w-[200px] h-12 md:w-[300px] md:h-16 bg-white rounded-full transform rotate-45 top-[75px] left-[-25px] md:top-[110px] md:left-[-40px]"></div>
+                        <div className="absolute w-[200px] h-12 md:w-[300px] md:h-16 bg-pink-500 rounded-full transform -rotate-45 top-[75px] left-[45px] md:top-[110px] md:left-[70px]"></div>
+                      </div>
                     </div>
                 </div>
                 {/* 25 */}
@@ -157,7 +158,7 @@ export default function Home() {
             className="container mx-auto px-6 py-14 lg:py-24"
             initial="hidden"
             whileInView="visible"
-            viewport={{ amount: 0.3 }}
+            viewport={{ once: false, amount: 0.3 }}
             variants={sectionVariants}
         >
           <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -183,7 +184,7 @@ export default function Home() {
             className="py-20 container mx-auto px-4 text-center"
             initial="hidden"
             whileInView="visible"
-            viewport={{ amount: 0.3 }}
+            viewport={{ once: false, amount: 0.3 }}
             variants={sectionVariants}
         >
           <div className="inline-block px-4 py-1.5 bg-pink-900/70 text-pink-300 rounded-full text-sm uppercase font-semibold tracking-wider mb-4">
@@ -211,7 +212,7 @@ export default function Home() {
             className="py-20"
             initial="hidden"
             whileInView="visible"
-            viewport={{ amount: 0.3 }}
+            viewport={{ once: false, amount: 0.3 }}
             variants={sectionVariants}
         >
           <div className="container mx-auto px-4">
@@ -236,7 +237,7 @@ export default function Home() {
             className="py-20 text-center"
             initial="hidden"
             whileInView="visible"
-            viewport={{ amount: 0.3 }}
+            viewport={{ once: false, amount: 0.3 }}
             variants={sectionVariants}
         >
             <div className="inline-block px-4 py-1.5 bg-pink-900/70 text-pink-300 rounded-full text-sm uppercase font-semibold tracking-wider mb-4">
@@ -268,7 +269,7 @@ export default function Home() {
             className="py-20 container mx-auto px-4"
             initial="hidden"
             whileInView="visible"
-            viewport={{ amount: 0.3 }}
+            viewport={{ once: false, amount: 0.3 }}
             variants={sectionVariants}
         >
             <div className="text-center mb-16">
@@ -307,7 +308,7 @@ export default function Home() {
             className="py-20 text-center"
             initial="hidden"
             whileInView="visible"
-            viewport={{ amount: 0.3 }}
+            viewport={{ once: false, amount: 0.3 }}
             variants={sectionVariants}
         >
             <div className="inline-block px-4 py-1.5 bg-pink-900/70 text-pink-300 rounded-full text-sm uppercase font-semibold tracking-wider mb-4">
@@ -348,14 +349,14 @@ export default function Home() {
             className="py-20 container mx-auto px-4 max-w-4xl"
             initial="hidden"
             whileInView="visible"
-            viewport={{ amount: 0.3 }}
+            viewport={{ once: false, amount: 0.3 }}
             variants={sectionVariants}
         >
             <div className="text-center mb-12">
                  <div className="inline-block px-4 py-1.5 bg-pink-900/70 text-pink-300 rounded-full text-sm uppercase font-semibold tracking-wider mb-4">
                     Get Started
                 </div>
-                <h2 className="text-3xl md:text-4xl font-bold text-glow font-orbit">FREQUENTLY ASKED QUESTIONS</h2>
+                <h2 className="text-3xl md:text-4xl font-bold text-glow font-orbit">FREQUENTly ASKED QUESTIONS</h2>
             </div>
             <div className="grid md:grid-cols-2 gap-x-12 gap-y-4">
               {faqData.map((item, index) => (
@@ -368,7 +369,7 @@ export default function Home() {
             className="py-8 border-t border-gray-800"
             initial="hidden"
             whileInView="visible"
-            viewport={{ amount: 0.3 }}
+            viewport={{ once: false, amount: 0.3 }}
             variants={sectionVariants}
         >
               <div className="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-4">
