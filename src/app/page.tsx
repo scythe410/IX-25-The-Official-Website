@@ -229,7 +229,7 @@ export default function Home() {
                             {phase.icon}
                            </div>
                         </div>
-                        <div className="relative w-full p-8 pt-20 border border-pink-900 rounded-lg bg-gray-900 bg-opacity-50 box-glow overflow-hidden">
+                        <div className="relative w-full h-full p-8 pt-20 border border-pink-900 rounded-lg bg-gray-900 bg-opacity-50 box-glow overflow-hidden hover:shadow-pink-500/50 hover:shadow-lg transition-shadow duration-300">
                            <h3 className="text-2xl font-bold mb-4 font-orbit">{phase.title}</h3>
                            <p className="text-gray-400 text-sm leading-6">{phase.description}</p>
                            <div className="absolute -bottom-8 -right-2 text-8xl font-bold font-orbit text-gray-800 text-opacity-50">
