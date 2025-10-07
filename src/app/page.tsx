@@ -76,7 +76,7 @@ export default function Home() {
   return (
     <>
       {loading && <Preloader />}
-      <main className="min-h-screen text-white font-mont dot-grid-background">
+      <main className="min-h-screen text-white font-readex dot-grid-background">
         <nav className="fixed top-0 left-0 right-0 z-50 flex justify-between items-center py-4 px-8 md:px-16 bg-black bg-opacity-30 backdrop-blur-sm">
           <h1 className="text-2xl font-bold tracking-widest text-glow font-orbit">CODESPRINT X</h1>
           <button className="px-6 py-2 border border-pink-500 text-pink-500 rounded-full text-sm font-semibold hover:bg-pink-500 hover:text-white transition-colors duration-300 button-glow">
@@ -87,7 +87,7 @@ export default function Home() {
         {/* Hero */}
         <section className="relative h-screen flex items-center justify-center overflow-hidden">
         <motion.div
-          className="absolute -top-16 -right-16 w-96 h-96 bg-pink-500/10 rounded-full blur-3xl"
+          className="absolute -top-16 -left-16 w-96 h-96 bg-pink-500/10 rounded-full blur-3xl"
           animate={{
             x: [0, 20, 0, -20, 0],
             y: [0, -10, 20, -10, 0],
@@ -101,7 +101,7 @@ export default function Home() {
         />
 
           <div className="relative z-10 container mx-auto px-4 grid md:grid-cols-2 gap-8 items-center">
-            <div className="order-2 md:order-1 text-center md:text-left">
+            <div className="text-center md:text-left">
                 <h1 className="text-5xl md:text-7xl font-bold tracking-wider leading-tight text-glow font-orbit">
                 Design Beyond
                 <br />
@@ -111,7 +111,7 @@ export default function Home() {
                 Do you feel that? The calm before the storm...
                 </p>
             </div>
-            <div className="order-1 md:order-2 flex justify-center">
+            <div className="flex justify-center">
                 <IXLogo />
             </div>
           </div>
@@ -123,11 +123,11 @@ export default function Home() {
             className="container mx-auto px-6 py-14 lg:py-24 relative overflow-hidden"
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, amount: 0.3 }}
+            viewport={{ once: false, amount: 0.3 }}
             variants={sectionVariants}
         >
           <motion.div
-            className="absolute -bottom-32 -left-32 w-96 h-96 bg-pink-500/10 rounded-full blur-3xl"
+            className="absolute -bottom-32 -right-32 w-96 h-96 bg-pink-500/10 rounded-full blur-3xl"
             animate={{
               x: [0, -20, 0, 20, 0],
               y: [0, 15, -10, 15, 0],
@@ -163,7 +163,7 @@ export default function Home() {
             className="py-20 container mx-auto px-4 text-center"
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, amount: 0.3 }}
+            viewport={{ once: false, amount: 0.3 }}
             variants={sectionVariants}
         >
             <div className="inline-block px-4 py-1.5 bg-pink-900/70 text-pink-300 rounded-full text-sm uppercase font-semibold tracking-wider mb-4">
@@ -192,7 +192,7 @@ export default function Home() {
                         number: '03'
                     },
                 ].map((phase, index) => (
-                    <div key={index} className="relative flex flex-col items-center pt-8">
+                    <div key={index} className="relative flex flex-col items-center pt-8 h-full">
                         <div className="absolute -top-8 w-24 h-24 flex items-center justify-center bg-gray-900 rounded-full border border-gray-700 box-glow">
                            <div className="w-20 h-20 flex items-center justify-center bg-gray-800 rounded-full">
                             {phase.icon}
@@ -215,7 +215,7 @@ export default function Home() {
             className="py-20 relative overflow-hidden"
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, amount: 0.3 }}
+            viewport={{ once: false, amount: 0.3 }}
             variants={sectionVariants}
         >
           <motion.div
@@ -254,7 +254,7 @@ export default function Home() {
             className="py-20 text-center"
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, amount: 0.3 }}
+            viewport={{ once: false, amount: 0.3 }}
             variants={sectionVariants}
         >
             <div className="inline-block px-4 py-1.5 bg-pink-900/70 text-pink-300 rounded-full text-sm uppercase font-semibold tracking-wider mb-4">
@@ -286,7 +286,7 @@ export default function Home() {
             className="py-20 container mx-auto px-4"
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, amount: 0.3 }}
+            viewport={{ once: false, amount: 0.3 }}
             variants={sectionVariants}
         >
             <div className="text-center mb-16">
@@ -325,7 +325,7 @@ export default function Home() {
             className="py-20 text-center relative overflow-hidden"
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, amount: 0.3 }}
+            viewport={{ once: false, amount: 0.3 }}
             variants={sectionVariants}
         >
             <motion.div
@@ -380,7 +380,7 @@ export default function Home() {
             className="py-20 container mx-auto px-4 max-w-4xl"
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, amount: 0.3 }}
+            viewport={{ once: false, amount: 0.3 }}
             variants={sectionVariants}
         >
             <div className="text-center mb-12">
@@ -400,7 +400,7 @@ export default function Home() {
             className="py-8 border-t border-gray-800"
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, amount: 0.3 }}
+            viewport={{ once: false, amount: 0.3 }}
             variants={sectionVariants}
         >
               <div className="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-4">

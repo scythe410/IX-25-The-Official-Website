@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { Orbitron, Montserrat } from 'next/font/google';
+import { Orbitron, Readex_Pro } from 'next/font/google';
 import './globals.css';
 import 'swiper/css';
 import 'swiper/css/pagination';
@@ -11,10 +11,10 @@ const orbitron = Orbitron({
   variable: '--font-orbitron',
 });
 
-const montserrat = Montserrat({
+const readexPro = Readex_Pro({
   subsets: ['latin'],
   weight: ['300', '400', '500', '600', '700'],
-  variable: '--font-montserrat',
+  variable: '--font-readex-pro',
 });
 
 export const metadata: Metadata = {
@@ -29,7 +29,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${orbitron.variable} ${montserrat.variable} font-mont`}>
+      <body className={`${orbitron.variable} ${readexPro.variable} font-readex`}>
         {children}
       </body>
     </html>

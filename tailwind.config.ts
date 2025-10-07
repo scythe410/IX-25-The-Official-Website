@@ -11,7 +11,7 @@ export default {
     extend: {
       fontFamily: {
         orbit: ['var(--font-orbitron)', 'sans-serif'],
-        mont: ['var(--font-montserrat)', 'sans-serif'],
+        readex: ['var(--font-readex-pro)', 'sans-serif'],
       },
       colors: {
         background: 'hsl(var(--background))',
