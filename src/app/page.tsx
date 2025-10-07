@@ -86,33 +86,19 @@ export default function Home() {
         
         {/* Hero */}
         <section className="relative h-screen flex items-center justify-center overflow-hidden">
-          <motion.div
-            className="absolute top-20 right-20 w-32 h-20 bg-blue-500/30 rounded-full blur-2xl"
-            animate={{
-              x: [0, 20, 0],
-              y: [0, -10, 0],
-            }}
-            transition={{
-              duration: 5,
-              repeat: Infinity,
-              repeatType: 'reverse',
-              ease: 'easeInOut',
-            }}
-          />
-          <motion.div
-            className="absolute top-32 right-32 w-24 h-24 bg-gray-500/20 rounded-full blur-2xl"
-            animate={{
-              x: [0, -15, 0],
-              y: [0, 15, 0],
-            }}
-            transition={{
-              duration: 6,
-              repeat: Infinity,
-              repeatType: 'reverse',
-              ease: 'easeInOut',
-              delay: 1,
-            }}
-          />
+        <motion.div
+          className="absolute -top-16 -left-16 w-96 h-96 bg-pink-500/10 rounded-full blur-3xl"
+          animate={{
+            x: [0, 20, 0, -20, 0],
+            y: [0, -10, 20, -10, 0],
+          }}
+          transition={{
+            duration: 20,
+            repeat: Infinity,
+            repeatType: 'reverse',
+            ease: 'easeInOut',
+          }}
+        />
 
           <div className="relative z-10 container mx-auto px-4 grid md:grid-cols-2 gap-8 items-center">
             <div className="order-2 md:order-1 text-center md:text-left">
@@ -134,12 +120,26 @@ export default function Home() {
         {/* About / Battle section */}
         <motion.section 
             id="about" 
-            className="container mx-auto px-6 py-14 lg:py-24"
+            className="container mx-auto px-6 py-14 lg:py-24 relative overflow-hidden"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.3 }}
             variants={sectionVariants}
         >
+          <motion.div
+            className="absolute -bottom-32 -right-32 w-96 h-96 bg-pink-500/10 rounded-full blur-3xl"
+            animate={{
+              x: [0, -20, 0, 20, 0],
+              y: [0, 15, -10, 15, 0],
+            }}
+            transition={{
+              duration: 25,
+              repeat: Infinity,
+              repeatType: 'reverse',
+              ease: 'easeInOut',
+              delay: 2,
+            }}
+          />
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="order-2 lg:order-1 flex justify-center lg:justify-start">
               <div className="w-80 h-80 bg-gradient-to-tr from-gray-800/80 to-gray-700/40 rounded-2xl p-6">
