@@ -10,7 +10,7 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        orbit: ['var(--font-orbitron)', 'sans-serif'],
+        bebas: ['var(--font-bebas-neue)', 'sans-serif'],
         readex: ['var(--font-readex-pro)', 'sans-serif'],
       },
       colors: {

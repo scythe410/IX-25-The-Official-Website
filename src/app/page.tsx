@@ -78,7 +78,7 @@ export default function Home() {
       {loading && <Preloader />}
       <main className="min-h-screen text-white font-readex dot-grid-background">
         <nav className="fixed top-0 left-0 right-0 z-50 flex justify-between items-center py-4 px-8 md:px-16 bg-black bg-opacity-30 backdrop-blur-sm">
-          <h1 className="text-2xl font-bold tracking-widest text-glow font-orbit">CODESPRINT X</h1>
+          <h1 className="text-2xl font-bold tracking-widest text-glow font-bebas">CODESPRINT X</h1>
           <button className="px-6 py-2 border border-pink-500 text-pink-500 rounded-full text-sm font-semibold hover:bg-pink-500 hover:text-white transition-colors duration-300 button-glow">
             REGISTER
           </button>
@@ -102,7 +102,7 @@ export default function Home() {
 
           <div className="relative z-10 container mx-auto px-4 grid md:grid-cols-2 gap-8 items-center">
             <div className="text-center md:text-left">
-                <h1 className="text-5xl md:text-7xl font-bold tracking-wider leading-tight text-glow font-orbit">
+                <h1 className="text-5xl md:text-7xl font-bold tracking-wider leading-tight text-glow font-bebas">
                 Design Beyond
                 <br />
                 Ordinary.
@@ -123,7 +123,7 @@ export default function Home() {
             className="container mx-auto px-6 py-14 lg:py-24 relative overflow-hidden"
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: false, amount: 0.3 }}
+            viewport={{ once: true, amount: 0.3 }}
             variants={sectionVariants}
         >
           <motion.div
@@ -151,7 +151,7 @@ export default function Home() {
                 <div className="inline-block px-4 py-1.5 bg-pink-900/70 text-pink-300 rounded-full text-sm uppercase font-semibold tracking-wider mb-4">
                   About Us
                 </div>
-                <h2 className="text-4xl md:text-5xl font-bold font-orbit">THE BATTLE FOR STARTUP BRILLIANCE</h2>
+                <h2 className="text-4xl md:text-5xl font-bold font-bebas">THE BATTLE FOR STARTUP BRILLIANCE</h2>
                 <p className="mt-4 text-gray-300 leading-relaxed max-w-xl">CodeSprint X is Sri Lanka's premier inter-university startup battle, designed to ignite innovation and empower the next generation of entrepreneurs. Organized by the IEEE Student Branch of IIT, this flagship event is where the brightest minds are challenged to turn ideas into impactful real-world solutions.</p>
                  <p className="mt-4 text-gray-300 leading-relaxed max-w-xl">With each edition, CodeSprint continues to shape the future of tech entrepreneurship, bridging the gap between ideas and execution while fostering a thriving ecosystem of innovation, leadership, and collaboration.</p>
             </div>
@@ -163,13 +163,13 @@ export default function Home() {
             className="py-20 container mx-auto px-4 text-center"
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: false, amount: 0.3 }}
+            viewport={{ once: true, amount: 0.3 }}
             variants={sectionVariants}
         >
             <div className="inline-block px-4 py-1.5 bg-pink-900/70 text-pink-300 rounded-full text-sm uppercase font-semibold tracking-wider mb-4">
                 Phases
             </div>
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-glow font-orbit">THREE PHASES OF SUCCESS</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-glow font-bebas">THREE PHASES OF SUCCESS</h2>
             <p className="text-gray-400 mb-24 max-w-2xl mx-auto">The structured path from idea to reality, ensuring every team gets the guidance and resources they need to excel.</p>
             <div className="grid md:grid-cols-3 gap-8">
                 {[
@@ -199,9 +199,9 @@ export default function Home() {
                            </div>
                         </div>
                         <div className="relative w-full h-full p-8 pt-20 border border-pink-900 rounded-lg bg-gray-900 bg-opacity-50 box-glow overflow-hidden hover:shadow-pink-500/50 hover:shadow-lg transition-shadow duration-300">
-                           <h3 className="text-2xl font-bold mb-4 font-orbit">{phase.title}</h3>
+                           <h3 className="text-2xl font-bold mb-4 font-bebas">{phase.title}</h3>
                            <p className="text-gray-400 text-sm leading-6">{phase.description}</p>
-                           <div className="absolute -bottom-8 -right-2 text-8xl font-bold font-orbit text-gray-800 text-opacity-50">
+                           <div className="absolute -bottom-8 -right-2 text-8xl font-bold font-bebas text-gray-800 text-opacity-50">
                                {phase.number}
                            </div>
                         </div>
@@ -241,7 +241,7 @@ export default function Home() {
               ].map((stat, index) => (
                 <div key={index} className="text-center">
                   <div className="text-5xl text-pink-400 mb-3">{stat.icon}</div>
-                  <p className="text-4xl font-bold text-glow font-orbit">{stat.value}</p>
+                  <p className="text-4xl font-bold text-glow font-bebas">{stat.value}</p>
                   <p className="text-gray-400">{stat.label}</p>
                 </div>
               ))}
@@ -254,13 +254,13 @@ export default function Home() {
             className="py-20 text-center"
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: false, amount: 0.3 }}
+            viewport={{ once: true, amount: 0.3 }}
             variants={sectionVariants}
         >
             <div className="inline-block px-4 py-1.5 bg-pink-900/70 text-pink-300 rounded-full text-sm uppercase font-semibold tracking-wider mb-4">
               Gallery
             </div>
-            <h2 className="text-3xl md:text-4xl font-bold mb-12 text-glow font-orbit">OUR MEMORIES</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-12 text-glow font-bebas">OUR MEMORIES</h2>
             <div className="container mx-auto px-4 grid grid-cols-2 md:grid-cols-4 gap-4">
               {[
                 '/gallery-1.jpg',
@@ -286,14 +286,14 @@ export default function Home() {
             className="py-20 container mx-auto px-4"
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: false, amount: 0.3 }}
+            viewport={{ once: true, amount: 0.3 }}
             variants={sectionVariants}
         >
             <div className="text-center mb-16">
                  <div className="inline-block px-4 py-1.5 bg-pink-900/70 text-pink-300 rounded-full text-sm uppercase font-semibold tracking-wider mb-4">
                     Roadmap
                 </div>
-                <h2 className="text-3xl md:text-4xl font-bold text-glow font-orbit">THE JOURNEY OF CODESPRINT X</h2>
+                <h2 className="text-3xl md:text-4xl font-bold text-glow font-bebas">THE JOURNEY OF CODESPRINT X</h2>
             </div>
             <div className="relative max-w-4xl mx-auto timeline-line">
               {[
@@ -307,7 +307,7 @@ export default function Home() {
                    <div className="order-1 w-5/12"></div>
                   <div className="z-20 flex items-center order-1 bg-pink-500 shadow-xl w-4 h-4 rounded-full"></div>
                   <div className={`order-1 w-5/12 p-4 rounded-lg shadow-xl bg-gray-900 bg-opacity-50 box-glow ${index % 2 === 0 ? 'text-right' : 'text-left'}`}>
-                    <h3 className="font-bold text-lg mb-1 font-orbit">{event.title}</h3>
+                    <h3 className="font-bold text-lg mb-1 font-bebas">{event.title}</h3>
                     <p className="text-sm text-gray-400">{event.description}</p>
                   </div>
                 </div>
@@ -325,7 +325,7 @@ export default function Home() {
             className="py-20 text-center relative overflow-hidden"
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: false, amount: 0.3 }}
+            viewport={{ once: true, amount: 0.3 }}
             variants={sectionVariants}
         >
             <motion.div
@@ -345,7 +345,7 @@ export default function Home() {
             <div className="inline-block px-4 py-1.5 bg-pink-900/70 text-pink-300 rounded-full text-sm uppercase font-semibold tracking-wider mb-4">
                 Our Team
             </div>
-            <h2 className="text-3xl md:text-4xl font-bold mb-12 text-glow font-orbit">MEET THE EXPERTS</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-12 text-glow font-bebas">MEET THE EXPERTS</h2>
             <div className="container mx-auto px-4 grid grid-cols-2 md:grid-cols-4 gap-8">
               {[
                 { name: 'VIHAN PERERA', role: 'Lead Organizer', image: '/team-1.jpg' },
@@ -363,7 +363,7 @@ export default function Home() {
                       className="rounded-lg border-2 border-pink-400"
                     />
                   </div>
-                  <h3 className="font-bold text-lg font-orbit">{member.name}</h3>
+                  <h3 className="font-bold text-lg font-bebas">{member.name}</h3>
                   <p className="text-pink-400 text-sm">{member.role}</p>
                   <div className="flex gap-4 mt-2">
                     <FaLinkedin className="text-gray-400 hover:text-white" />
@@ -380,14 +380,14 @@ export default function Home() {
             className="py-20 container mx-auto px-4 max-w-4xl"
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: false, amount: 0.3 }}
+            viewport={{ once: true, amount: 0.3 }}
             variants={sectionVariants}
         >
             <div className="text-center mb-12">
                  <div className="inline-block px-4 py-1.5 bg-pink-900/70 text-pink-300 rounded-full text-sm uppercase font-semibold tracking-wider mb-4">
                     Get Started
                 </div>
-                <h2 className="text-3xl md:text-4xl font-bold text-glow font-orbit">FREQUENTly ASKED QUESTIONS</h2>
+                <h2 className="text-3xl md:text-4xl font-bold text-glow font-bebas">FREQUENTly ASKED QUESTIONS</h2>
             </div>
             <div className="grid md:grid-cols-2 gap-x-12 gap-y-4">
               {faqData.map((item, index) => (
@@ -400,7 +400,7 @@ export default function Home() {
             className="py-8 border-t border-gray-800"
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: false, amount: 0.3 }}
+            viewport={{ once: true, amount: 0.3 }}
             variants={sectionVariants}
         >
               <div className="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-4">

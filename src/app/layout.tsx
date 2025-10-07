@@ -1,14 +1,14 @@
 import type { Metadata } from 'next';
-import { Orbitron, Readex_Pro } from 'next/font/google';
+import { Bebas_Neue, Readex_Pro } from 'next/font/google';
 import './globals.css';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 
-const orbitron = Orbitron({
+const bebasNeue = Bebas_Neue({
   subsets: ['latin'],
-  weight: ['400', '700'],
-  variable: '--font-orbitron',
+  weight: ['400'],
+  variable: '--font-bebas-neue',
 });
 
 const readexPro = Readex_Pro({
@@ -29,7 +29,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${orbitron.variable} ${readexPro.variable} font-readex`}>
+      <body className={`${bebasNeue.variable} ${readexPro.variable} font-readex`}>
         {children}
       </body>
     </html>

@@ -10,7 +10,7 @@ const Preloader = () => {
       transition={{ delay: 2.5, duration: 0.5 }}
       className="fixed inset-0 z-[100] flex flex-col items-center justify-center bg-black dot-grid-background"
     >
-      <div className="text-2xl font-bold tracking-widest text-glow font-orbit mb-4">
+      <div className="text-2xl font-bold tracking-widest text-glow font-bebas mb-4">
         CODESPRINT X
       </div>
       <div className="w-64 h-2 bg-gray-800 rounded-full overflow-hidden box-glow">
