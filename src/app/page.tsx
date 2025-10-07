@@ -114,16 +114,6 @@ export default function Home() {
           />
 
           <div className="relative z-10 container mx-auto px-4 grid md:grid-cols-2 gap-8 items-center">
-            <div className="text-center md:text-left">
-                <h1 className="text-5xl md:text-7xl font-bold tracking-wider leading-tight text-glow font-orbit">
-                Design Beyond
-                <br />
-                Ordinary.
-                </h1>
-                <p className="mt-6 text-gray-300 max-w-lg mx-auto md:mx-0">
-                Do you feel that? The calm before the storm...
-                </p>
-            </div>
             <div className="flex justify-center">
                 <div className="relative w-[300px] h-[200px] md:w-[450px] md:h-[300px] mb-8">
                 {/* IX Logo */}
@@ -158,6 +148,16 @@ export default function Home() {
                     <p className="text-xs mt-1">It's not calm anymore. Watch this. 🤫⚡</p>
                 </motion.div>
                 </div>
+            </div>
+            <div className="text-center md:text-left">
+                <h1 className="text-5xl md:text-7xl font-bold tracking-wider leading-tight text-glow font-orbit">
+                Design Beyond
+                <br />
+                Ordinary.
+                </h1>
+                <p className="mt-6 text-gray-300 max-w-lg mx-auto md:mx-0">
+                Do you feel that? The calm before the storm...
+                </p>
             </div>
           </div>
         </section>
@@ -197,24 +197,48 @@ export default function Home() {
             viewport={{ once: false, amount: 0.3 }}
             variants={sectionVariants}
         >
-          <div className="inline-block px-4 py-1.5 bg-pink-900/70 text-pink-300 rounded-full text-sm uppercase font-semibold tracking-wider mb-4">
-            Our Structure
-          </div>
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-glow font-orbit">THREE PHASES OF SUCCESS</h2>
-          <p className="text-gray-400 mb-16 max-w-2xl mx-auto">The structured path from idea to reality, ensuring every team gets the guidance and resources they need to excel.</p>
-          <div className="grid md:grid-cols-3 gap-12">
-            {[
-              { icon: <Lightbulb />, title: 'IDEATE', description: 'Kickstart your journey with expert-led workshops on cutting-edge technologies and business strategies.' },
-              { icon: <Gem />, title: 'PROTOTYPE', description: 'Get paired with industry veterans to refine your idea, strategy, and execution plan.' },
-              { icon: <Rocket />, title: 'STARTUP', description: 'Pitch your startup to a panel of esteemed judges and investors for a chance to win the grand prize.' },
-            ].map((phase, index) => (
-              <div key={index} className="flex flex-col items-center p-8 border border-pink-900 rounded-lg bg-gray-900 bg-opacity-50 box-glow">
-                <div className="text-4xl text-pink-400 mb-4">{phase.icon}</div>
-                <h3 className="text-xl font-bold mb-2 font-orbit">{phase.title}</h3>
-                <p className="text-gray-400">{phase.description}</p>
-              </div>
-            ))}
-          </div>
+            <div className="inline-block px-4 py-1.5 bg-pink-900/70 text-pink-300 rounded-full text-sm uppercase font-semibold tracking-wider mb-4">
+                Phases
+            </div>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-glow font-orbit">THREE PHASES OF SUCCESS</h2>
+            <p className="text-gray-400 mb-24 max-w-2xl mx-auto">The structured path from idea to reality, ensuring every team gets the guidance and resources they need to excel.</p>
+            <div className="grid md:grid-cols-3 gap-8">
+                {[
+                    { 
+                        icon: <Lightbulb size={40} />, 
+                        title: 'IDEATE', 
+                        description: 'Every great startup begins with a bold and visionary idea. In this phase, teams brainstorm, research, and refine their concepts to address real-world challenges. With expert mentorship, they craft innovative, scalable, and impactful solutions.',
+                        number: '01'
+                    },
+                    { 
+                        icon: <Gem size={40} />, 
+                        title: 'PROTOTYPE', 
+                        description: 'Turning ideas into reality—this phase focuses on building a functional prototype or MVP. Participants develop their solutions, test feasibility, and receive industry feedback to enhance their product before pitching to investors.',
+                        number: '02'
+                    },
+                    { 
+                        icon: <Rocket size={40} />, 
+                        title: 'STARTUP', 
+                        description: 'The final phase is where vision meets execution. Teams refine their business models, craft compelling pitches, and present their startups to a panel of industry leaders. This is where startups are born, and futures are shaped.',
+                        number: '03'
+                    },
+                ].map((phase, index) => (
+                    <div key={index} className="relative flex flex-col items-center pt-8">
+                        <div className="absolute -top-8 w-24 h-24 flex items-center justify-center bg-gray-900 rounded-full border border-gray-700 box-glow">
+                           <div className="w-20 h-20 flex items-center justify-center bg-gray-800 rounded-full">
+                            {phase.icon}
+                           </div>
+                        </div>
+                        <div className="relative w-full p-8 pt-20 border border-pink-900 rounded-lg bg-gray-900 bg-opacity-50 box-glow overflow-hidden">
+                           <h3 className="text-2xl font-bold mb-4 font-orbit">{phase.title}</h3>
+                           <p className="text-gray-400 text-sm leading-6">{phase.description}</p>
+                           <div className="absolute -bottom-8 -right-2 text-8xl font-bold font-orbit text-gray-800 text-opacity-50">
+                               {phase.number}
+                           </div>
+                        </div>
+                    </div>
+                ))}
+            </div>
         </motion.section>
 
         {/* stats */}
