@@ -58,6 +58,11 @@ export default function Home() {
     { question: 'How to register for CodeSprint X?', answer: 'Teams can consist of 2 to 4 members.' },
 ];
 
+  const sectionVariants = {
+    hidden: { opacity: 0, y: 50 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
+  };
+
   return (
     <>
       <main className="min-h-screen text-white font-mont dot-grid-background">
@@ -147,7 +152,14 @@ export default function Home() {
         </section>
 
         {/* About / Battle section */}
-        <section id="about" className="container mx-auto px-6 py-14 lg:py-24">
+        <motion.section 
+            id="about" 
+            className="container mx-auto px-6 py-14 lg:py-24"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.3 }}
+            variants={sectionVariants}
+        >
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="order-2 lg:order-1 flex justify-center lg:justify-start">
               <div className="w-80 h-80 bg-gradient-to-tr from-gray-800/80 to-gray-700/40 rounded-2xl p-6">
@@ -164,10 +176,16 @@ export default function Home() {
                  <p className="mt-4 text-gray-300 leading-relaxed max-w-xl">With each edition, CodeSprint continues to shape the future of tech entrepreneurship, bridging the gap between ideas and execution while fostering a thriving ecosystem of innovation, leadership, and collaboration.</p>
             </div>
           </div>
-        </section>
+        </motion.section>
 
         {/* Phases */}
-        <section className="py-20 container mx-auto px-4 text-center">
+        <motion.section 
+            className="py-20 container mx-auto px-4 text-center"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.3 }}
+            variants={sectionVariants}
+        >
           <div className="inline-block px-4 py-1.5 bg-pink-900/70 text-pink-300 rounded-full text-sm uppercase font-semibold tracking-wider mb-4">
             Our Structure
           </div>
@@ -186,10 +204,16 @@ export default function Home() {
               </div>
             ))}
           </div>
-        </section>
+        </motion.section>
 
         {/* stats */}
-        <div className="py-20">
+        <motion.div 
+            className="py-20"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.3 }}
+            variants={sectionVariants}
+        >
           <div className="container mx-auto px-4">
             <div className="flex flex-col md:flex-row justify-around items-center gap-12">
               {[
@@ -205,10 +229,16 @@ export default function Home() {
               ))}
             </div>
           </div>
-        </div>
+        </motion.div>
 
         {/* Memories / Carousel */}
-        <section className="py-20 text-center">
+        <motion.section 
+            className="py-20 text-center"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.3 }}
+            variants={sectionVariants}
+        >
             <div className="inline-block px-4 py-1.5 bg-pink-900/70 text-pink-300 rounded-full text-sm uppercase font-semibold tracking-wider mb-4">
               Gallery
             </div>
@@ -231,10 +261,16 @@ export default function Home() {
                 </div>
               ))}
             </div>
-        </section>
+        </motion.section>
 
         {/* Roadmap / Timeline */}
-        <section className="py-20 container mx-auto px-4">
+        <motion.section 
+            className="py-20 container mx-auto px-4"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.3 }}
+            variants={sectionVariants}
+        >
             <div className="text-center mb-16">
                  <div className="inline-block px-4 py-1.5 bg-pink-900/70 text-pink-300 rounded-full text-sm uppercase font-semibold tracking-wider mb-4">
                     Roadmap
@@ -264,10 +300,16 @@ export default function Home() {
                   CONTACT US
                 </button>
               </div>
-        </section>
+        </motion.section>
 
         {/* Contact / Team */}
-        <section className="py-20 text-center">
+        <motion.section 
+            className="py-20 text-center"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.3 }}
+            variants={sectionVariants}
+        >
             <div className="inline-block px-4 py-1.5 bg-pink-900/70 text-pink-300 rounded-full text-sm uppercase font-semibold tracking-wider mb-4">
                 Our Team
             </div>
@@ -298,10 +340,17 @@ export default function Home() {
                 </div>
               ))}
             </div>
-        </section>
+        </motion.section>
 
         {/* FAQ and Registration form */}
-        <section id="register" className="py-20 container mx-auto px-4 max-w-4xl">
+        <motion.section 
+            id="register" 
+            className="py-20 container mx-auto px-4 max-w-4xl"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.3 }}
+            variants={sectionVariants}
+        >
             <div className="text-center mb-12">
                  <div className="inline-block px-4 py-1.5 bg-pink-900/70 text-pink-300 rounded-full text-sm uppercase font-semibold tracking-wider mb-4">
                     Get Started
@@ -313,9 +362,15 @@ export default function Home() {
                 <FAQItem key={index} item={item} index={index} />
               ))}
             </div>
-        </section>
+        </motion.section>
         
-        <footer className="py-8 border-t border-gray-800">
+        <motion.footer 
+            className="py-8 border-t border-gray-800"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.3 }}
+            variants={sectionVariants}
+        >
               <div className="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-4">
                 <p className="text-sm text-gray-500">&copy; 2025 CodeSprint X. All Rights Reserved.</p>
                 <div className="flex gap-6">
@@ -325,7 +380,7 @@ export default function Home() {
                   <FaLinkedin className="text-xl text-gray-400 hover:text-white cursor-pointer" />
                 </div>
               </div>
-        </footer>
+        </motion.footer>
 
       </main>
     </>
