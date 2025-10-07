@@ -87,7 +87,7 @@ export default function Home() {
         {/* Hero */}
         <section className="relative h-screen flex items-center justify-center overflow-hidden">
         <motion.div
-          className="absolute -top-16 -left-16 w-96 h-96 bg-pink-500/10 rounded-full blur-3xl"
+          className="absolute -top-16 -right-16 w-96 h-96 bg-pink-500/10 rounded-full blur-3xl"
           animate={{
             x: [0, 20, 0, -20, 0],
             y: [0, -10, 20, -10, 0],
@@ -127,7 +127,7 @@ export default function Home() {
             variants={sectionVariants}
         >
           <motion.div
-            className="absolute -bottom-32 -right-32 w-96 h-96 bg-pink-500/10 rounded-full blur-3xl"
+            className="absolute -bottom-32 -left-32 w-96 h-96 bg-pink-500/10 rounded-full blur-3xl"
             animate={{
               x: [0, -20, 0, 20, 0],
               y: [0, 15, -10, 15, 0],
@@ -212,12 +212,26 @@ export default function Home() {
 
         {/* stats */}
         <motion.div 
-            className="py-20"
+            className="py-20 relative overflow-hidden"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.3 }}
             variants={sectionVariants}
         >
+          <motion.div
+            className="absolute -top-24 -left-24 w-96 h-96 bg-pink-500/10 rounded-full blur-3xl"
+            animate={{
+              x: [0, 20, 0, -20, 0],
+              y: [0, -10, 20, -10, 0],
+            }}
+            transition={{
+              duration: 22,
+              repeat: Infinity,
+              repeatType: 'reverse',
+              ease: 'easeInOut',
+              delay: 3,
+            }}
+          />
           <div className="container mx-auto px-4">
             <div className="flex flex-col md:flex-row justify-around items-center gap-12">
               {[
@@ -308,12 +322,26 @@ export default function Home() {
 
         {/* Contact / Team */}
         <motion.section 
-            className="py-20 text-center"
+            className="py-20 text-center relative overflow-hidden"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.3 }}
             variants={sectionVariants}
         >
+            <motion.div
+              className="absolute -bottom-48 -right-48 w-96 h-96 bg-pink-500/10 rounded-full blur-3xl"
+              animate={{
+                x: [0, -20, 0, 20, 0],
+                y: [0, 15, -10, 15, 0],
+              }}
+              transition={{
+                duration: 28,
+                repeat: Infinity,
+                repeatType: 'reverse',
+                ease: 'easeInOut',
+                delay: 1,
+              }}
+            />
             <div className="inline-block px-4 py-1.5 bg-pink-900/70 text-pink-300 rounded-full text-sm uppercase font-semibold tracking-wider mb-4">
                 Our Team
             </div>
