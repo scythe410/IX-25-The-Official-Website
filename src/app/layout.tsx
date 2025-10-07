@@ -1,13 +1,13 @@
 import type { Metadata } from 'next';
 import localFont from 'next/font/local'
-import { Readex_Pro } from 'next/font/google';
+import { Bebas_Neue, Readex_Pro } from 'next/font/google';
 import './globals.css';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 
 const bbhSansBartle = localFont({
-  src: '../fonts/BBH-Sans-Bartle.ttf',
+  src: '../../public/fonts/BBHSansBartle-Regular.ttf',
   display: 'swap',
   variable: '--font-bbh-sans-bartle',
 });
