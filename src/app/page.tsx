@@ -157,7 +157,7 @@ export default function Home() {
             className="container mx-auto px-6 py-14 lg:py-24"
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, amount: 0.3 }}
+            viewport={{ amount: 0.3 }}
             variants={sectionVariants}
         >
           <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -183,7 +183,7 @@ export default function Home() {
             className="py-20 container mx-auto px-4 text-center"
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, amount: 0.3 }}
+            viewport={{ amount: 0.3 }}
             variants={sectionVariants}
         >
           <div className="inline-block px-4 py-1.5 bg-pink-900/70 text-pink-300 rounded-full text-sm uppercase font-semibold tracking-wider mb-4">
@@ -211,7 +211,7 @@ export default function Home() {
             className="py-20"
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, amount: 0.3 }}
+            viewport={{ amount: 0.3 }}
             variants={sectionVariants}
         >
           <div className="container mx-auto px-4">
@@ -236,7 +236,7 @@ export default function Home() {
             className="py-20 text-center"
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, amount: 0.3 }}
+            viewport={{ amount: 0.3 }}
             variants={sectionVariants}
         >
             <div className="inline-block px-4 py-1.5 bg-pink-900/70 text-pink-300 rounded-full text-sm uppercase font-semibold tracking-wider mb-4">
@@ -268,7 +268,7 @@ export default function Home() {
             className="py-20 container mx-auto px-4"
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, amount: 0.3 }}
+            viewport={{ amount: 0.3 }}
             variants={sectionVariants}
         >
             <div className="text-center mb-16">
@@ -307,7 +307,7 @@ export default function Home() {
             className="py-20 text-center"
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, amount: 0.3 }}
+            viewport={{ amount: 0.3 }}
             variants={sectionVariants}
         >
             <div className="inline-block px-4 py-1.5 bg-pink-900/70 text-pink-300 rounded-full text-sm uppercase font-semibold tracking-wider mb-4">
@@ -348,7 +348,7 @@ export default function Home() {
             className="py-20 container mx-auto px-4 max-w-4xl"
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, amount: 0.3 }}
+            viewport={{ amount: 0.3 }}
             variants={sectionVariants}
         >
             <div className="text-center mb-12">
@@ -368,7 +368,7 @@ export default function Home() {
             className="py-8 border-t border-gray-800"
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, amount: 0.3 }}
+            viewport={{ amount: 0.3 }}
             variants={sectionVariants}
         >
               <div className="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-4">
