@@ -1,5 +1,5 @@
 'use client';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
@@ -8,6 +8,7 @@ import { FaPlus, FaMinus } from 'react-icons/fa';
 import { Lightbulb, Gem, Rocket } from 'lucide-react';
 import { Users, Folder, Calendar } from 'lucide-react';
 import Image from 'next/image';
+import Preloader from '@/components/Preloader';
 
 const FAQItem = ({ item, index }: { item: { question: string; answer: string }, index: number }) => {
     const [isOpen, setIsOpen] = useState(false);
@@ -29,9 +30,17 @@ const FAQItem = ({ item, index }: { item: { question: string; answer: string }, 
 };
 
 export default function Home() {
+  const [loading, setLoading] = useState(true);
   const [form, setForm] = useState({ name: '', email: '', idea: '' });
   const [submitting, setSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
+  
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 3000); // Adjust time as needed
+    return () => clearTimeout(timer);
+  }, []);
 
   function handleChange(e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) {
     const { name, value } = e.target;
@@ -65,6 +74,7 @@ export default function Home() {
 
   return (
     <>
+      {loading && <Preloader />}
       <main className="min-h-screen text-white font-mont dot-grid-background">
         <nav className="fixed top-0 left-0 right-0 z-50 flex justify-between items-center py-4 px-8 md:px-16 bg-black bg-opacity-30 backdrop-blur-sm">
           <h1 className="text-2xl font-bold tracking-widest text-glow font-orbit">CODESPRINT X</h1>
