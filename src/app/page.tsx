@@ -99,6 +99,16 @@ export default function Home() {
           />
 
           <div className="relative z-10 container mx-auto px-4 grid md:grid-cols-2 gap-8 items-center">
+            <div className="text-center md:text-left">
+                <h1 className="text-5xl md:text-7xl font-bold tracking-wider leading-tight text-glow font-orbit">
+                Design Beyond
+                <br />
+                Ordinary.
+                </h1>
+                <p className="mt-6 text-gray-300 max-w-lg mx-auto md:mx-0">
+                Do you feel that? The calm before the storm...
+                </p>
+            </div>
             <div className="flex justify-center">
                 <div className="relative w-[300px] h-[200px] md:w-[450px] md:h-[300px] mb-8">
                 {/* IX Logo */}
@@ -132,17 +142,6 @@ export default function Home() {
                     <p className="text-xs mt-1">It's not calm anymore. Watch this. 🤫⚡</p>
                 </motion.div>
                 </div>
-            </div>
-
-            <div className="text-center md:text-left">
-                <h1 className="text-5xl md:text-7xl font-bold tracking-wider leading-tight text-glow font-orbit">
-                Design Beyond
-                <br />
-                Ordinary.
-                </h1>
-                <p className="mt-6 text-gray-300 max-w-lg mx-auto md:mx-0">
-                Do you feel that? The calm before the storm...
-                </p>
             </div>
           </div>
         </section>
