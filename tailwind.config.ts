@@ -10,7 +10,7 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        bebas: ['var(--font-bebas-neue)', 'sans-serif'],
+        bebas: ['var(--font-bbh-sans-bartle)', 'sans-serif'],
         readex: ['var(--font-readex-pro)', 'sans-serif'],
       },
       colors: {
