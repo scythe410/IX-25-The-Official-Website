@@ -9,6 +9,7 @@ import { Lightbulb, Gem, Rocket } from 'lucide-react';
 import { Users, Folder, Calendar } from 'lucide-react';
 import Image from 'next/image';
 import Preloader from '@/components/Preloader';
+import IXLogo from '@/components/IXLogo';
 
 const FAQItem = ({ item, index }: { item: { question: string; answer: string }, index: number }) => {
     const [isOpen, setIsOpen] = useState(false);
@@ -114,7 +115,7 @@ export default function Home() {
           />
 
           <div className="relative z-10 container mx-auto px-4 grid md:grid-cols-2 gap-8 items-center">
-            <div className="text-center md:text-left">
+            <div className="order-2 md:order-1 text-center md:text-left">
                 <h1 className="text-5xl md:text-7xl font-bold tracking-wider leading-tight text-glow font-orbit">
                 Design Beyond
                 <br />
@@ -124,40 +125,8 @@ export default function Home() {
                 Do you feel that? The calm before the storm...
                 </p>
             </div>
-            <div className="flex justify-center">
-                <div className="relative w-[300px] h-[200px] md:w-[450px] md:h-[300px] mb-8">
-                {/* IX Logo */}
-                <div className="absolute inset-0 flex items-center justify-center">
-                    {/* I */}
-                    <div className="absolute left-[calc(50%-125px)] md:left-[calc(50%-180px)] top-[calc(50%-80px)] md:top-[calc(50%-120px)] flex flex-col items-center">
-                      <div className="w-12 h-12 md:w-16 md:h-16 bg-white rounded-full mb-1"></div>
-                      <div className="w-12 h-24 md:w-16 md:h-36 bg-white rounded-b-full"></div>
-                    </div>
-                    {/* X */}
-                    <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[220px] h-[220px] md:w-[330px] md:h-[330px]">
-                      <div className="relative w-full h-full">
-                        {/* The two strokes of the X */}
-                        <div className="absolute w-[200px] h-12 md:w-[300px] md:h-16 bg-white rounded-full transform rotate-45 top-[75px] left-[-25px] md:top-[110px] md:left-[-40px]"></div>
-                        <div className="absolute w-[200px] h-12 md:w-[300px] md:h-16 bg-pink-500 rounded-full transform -rotate-45 top-[75px] left-[45px] md:top-[110px] md:left-[70px]"></div>
-                      </div>
-                    </div>
-                </div>
-                {/* 25 */}
-                <div className="absolute top-[calc(50%-30px)] md:top-[calc(50%-45px)] right-[calc(50%-110px)] md:right-[calc(50%-165px)] text-3xl font-bold font-orbit">25</div>
-
-                {/* Chat bubble */}
-                <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 0.5 }}
-                    className="absolute bottom-0 right-0 md:right-[-50px] bg-pink-600/90 text-white p-3 rounded-lg rounded-br-none shadow-lg max-w-[200px] text-left"
-                >
-                    <div className="font-bold text-sm flex items-center gap-2">
-                    <span className="font-orbit">IX'25</span>
-                    </div>
-                    <p className="text-xs mt-1">It's not calm anymore. Watch this. 🤫⚡</p>
-                </motion.div>
-                </div>
+            <div className="order-1 md:order-2 flex justify-center">
+                <IXLogo />
             </div>
           </div>
         </section>
