@@ -86,7 +86,7 @@ export default function Home() {
         </nav>
         
         {/* Hero */}
-        <section className="relative h-screen flex items-center justify-center overflow-hidden">
+        <section className="relative h-screen flex items-center justify-center">
         <motion.div
           className="absolute -top-16 -left-16 w-96 h-96 bg-pink-500/10 rounded-full blur-3xl"
           animate={{
@@ -101,7 +101,7 @@ export default function Home() {
           }}
         />
          <motion.div
-          className="absolute -bottom-16 -right-16 w-96 h-96 bg-blue-300/10 rounded-full blur-3xl"
+          className="absolute -bottom-16 -right-16 w-96 h-96 bg-pink-500/10 rounded-full blur-3xl"
           animate={{
             x: [0, -20, 0, 20, 0],
             y: [0, 10, -20, 10, 0],
@@ -137,7 +137,7 @@ export default function Home() {
         {/* About / Battle section */}
         <motion.section 
             id="about" 
-            className="container mx-auto px-6 py-14 lg:py-24 relative overflow-hidden"
+            className="container mx-auto px-6 py-14 lg:py-24 relative"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.3 }}
@@ -229,7 +229,7 @@ export default function Home() {
 
         {/* stats */}
         <motion.div 
-            className="py-20 relative overflow-hidden"
+            className="py-20 relative"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: false, amount: 0.3 }}
@@ -353,7 +353,7 @@ export default function Home() {
 
         {/* Contact / Team */}
         <motion.section 
-            className="py-20 text-center relative overflow-hidden"
+            className="py-20 text-center relative"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.3 }}
