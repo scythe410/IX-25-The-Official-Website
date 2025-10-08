@@ -77,11 +77,13 @@ export default function Home() {
     <>
       {loading && <Preloader />}
       <main className="min-h-screen text-white font-readex dot-grid-background">
-        <nav className="fixed top-4 left-1/2 -translate-x-1/2 z-50 flex justify-between items-center py-2 px-4 md:px-8 bg-black bg-opacity-30 backdrop-blur-sm w-[90%] md:w-auto rounded-full border border-white/10">
-          <Image src="https://picsum.photos/seed/logo/100/40" alt="CodeSprint X Logo" width={100} height={40} className="rounded-full" data-ai-hint="logo" />
-          <button className="px-6 py-2 border border-pink-500 text-pink-500 rounded-full text-sm font-semibold hover:bg-pink-500 hover:text-white transition-colors duration-300 button-glow">
-            REGISTER
-          </button>
+        <nav className="fixed top-0 left-0 right-0 z-50 bg-black bg-opacity-30 backdrop-blur-sm border-b border-white/10">
+          <div className="container mx-auto flex justify-between items-center py-3 px-4 md:px-8">
+            <Image src="https://picsum.photos/seed/logo/100/40" alt="CodeSprint X Logo" width={100} height={40} className="rounded-full" data-ai-hint="logo" />
+            <button className="px-6 py-2 border border-pink-500 text-pink-500 rounded-full text-sm font-semibold hover:bg-pink-500 hover:text-white transition-colors duration-300 button-glow">
+              REGISTER
+            </button>
+          </div>
         </nav>
         
         {/* Hero */}

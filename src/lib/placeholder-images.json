@@ -15,7 +15,7 @@
     {
       "id": "nav-logo",
       "description": "Placeholder for the navigation bar logo",
-      "imageUrl": "https://picsum.photos/seed/logo/100/40",
+      "imageUrl": "/public/images/logo.svg",
       "imageHint": "logo"
     },
     {
