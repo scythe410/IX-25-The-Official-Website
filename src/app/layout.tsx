@@ -19,7 +19,7 @@ const readexPro = Readex_Pro({
 });
 
 export const metadata: Metadata = {
-  title: 'CodeSprint X — Replica',
+  title: 'iX — 25',
   description: 'Defying the final line — a battle for startup brilliance, prototypes and the future of ideas.',
 };
 
