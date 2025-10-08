@@ -3,14 +3,20 @@
     {
       "id": "hero",
       "description": "Abstract technological background for hero section",
-      "imageUrl": "../../public/images/logo.svg",
+      "imageUrl": "/public/images/logo.svg",
       "imageHint": "abstract technology"
     },
     {
       "id": "hero-logo",
       "description": "Placeholder for a futuristic logo",
-      "imageUrl": "../../public/images/logo.svg",
+      "imageUrl": "/public/images/logo.svg",
       "imageHint": "futuristic logo"
+    },
+    {
+      "id": "nav-logo",
+      "description": "Placeholder for the navigation bar logo",
+      "imageUrl": "https://picsum.photos/seed/logo/100/40",
+      "imageHint": "logo"
     },
     {
       "id": "participant1",
