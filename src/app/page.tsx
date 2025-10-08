@@ -79,7 +79,7 @@ export default function Home() {
       {loading && <Preloader />}
       <main className="min-h-screen text-white font-readex dot-grid-background">
         <nav className="fixed top-0 left-0 right-0 z-50 flex justify-between items-center py-4 px-8 md:px-16 bg-black bg-opacity-30 backdrop-blur-sm">
-          <h1 className="text-2xl font-bold tracking-widest text-glow font-bebas">CODESPRINT X</h1>
+          <h1 className="text-2xl font-bold tracking-widest heading-gradient font-bebas">CODESPRINT X</h1>
           <button className="px-6 py-2 border border-pink-500 text-pink-500 rounded-full text-sm font-semibold hover:bg-pink-500 hover:text-white transition-colors duration-300 button-glow">
             REGISTER
           </button>
@@ -100,10 +100,24 @@ export default function Home() {
             ease: 'easeInOut',
           }}
         />
+         <motion.div
+          className="absolute -bottom-16 -right-16 w-96 h-96 bg-blue-300/10 rounded-full blur-3xl"
+          animate={{
+            x: [0, -20, 0, 20, 0],
+            y: [0, 10, -20, 10, 0],
+          }}
+          transition={{
+            duration: 20,
+            repeat: Infinity,
+            repeatType: 'reverse',
+            ease: 'easeInOut',
+            delay: 5,
+          }}
+        />
 
           <div className="relative z-10 container mx-auto px-4 grid md:grid-cols-2 gap-8 items-center">
             <div className="text-center md:text-left">
-                <h1 className="text-5xl md:text-7xl font-bold tracking-wider leading-tight text-glow font-bebas">
+                <h1 className="text-5xl md:text-7xl font-bold tracking-wider leading-tight heading-gradient font-bebas">
                 Design Beyond
                 <br />
                 Ordinary.
@@ -154,7 +168,7 @@ export default function Home() {
                 <div className="inline-block px-4 py-1.5 bg-pink-900/70 text-pink-300 rounded-full text-sm uppercase font-semibold tracking-wider mb-4">
                   About Us
                 </div>
-                <h2 className="text-4xl md:text-5xl font-bold font-bebas">THE BATTLE FOR STARTUP BRILLIANCE</h2>
+                <h2 className="text-4xl md:text-5xl font-bold font-bebas heading-gradient">THE BATTLE FOR STARTUP BRILLIANCE</h2>
                 <p className="mt-4 text-gray-300 leading-relaxed max-w-xl">CodeSprint X is Sri Lanka's premier inter-university startup battle, designed to ignite innovation and empower the next generation of entrepreneurs. Organized by the IEEE Student Branch of IIT, this flagship event is where the brightest minds are challenged to turn ideas into impactful real-world solutions.</p>
                  <p className="mt-4 text-gray-300 leading-relaxed max-w-xl">With each edition, CodeSprint continues to shape the future of tech entrepreneurship, bridging the gap between ideas and execution while fostering a thriving ecosystem of innovation, leadership, and collaboration.</p>
             </div>
@@ -172,7 +186,7 @@ export default function Home() {
             <div className="inline-block px-4 py-1.5 bg-pink-900/70 text-pink-300 rounded-full text-sm uppercase font-semibold tracking-wider mb-4">
                 Phases
             </div>
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-glow font-bebas">THREE PHASES OF SUCCESS</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 heading-gradient font-bebas">THREE PHASES OF SUCCESS</h2>
             <p className="text-gray-400 mb-24 max-w-2xl mx-auto">The structured path from idea to reality, ensuring every team gets the guidance and resources they need to excel.</p>
             <div className="grid md:grid-cols-3 gap-8">
                 {[
@@ -235,6 +249,20 @@ export default function Home() {
               delay: 3,
             }}
           />
+           <motion.div
+          className="absolute -bottom-24 -right-24 w-96 h-96 bg-blue-300/10 rounded-full blur-3xl"
+          animate={{
+            x: [0, -20, 0, 20, 0],
+            y: [0, 10, -20, 10, 0],
+          }}
+          transition={{
+            duration: 22,
+            repeat: Infinity,
+            repeatType: 'reverse',
+            ease: 'easeInOut',
+            delay: 5,
+          }}
+        />
           <div className="container mx-auto px-4">
             <div className="flex flex-col md:flex-row justify-around items-center gap-12">
               {[
@@ -244,7 +272,7 @@ export default function Home() {
               ].map((stat, index) => (
                 <div key={index} className="text-center">
                   <div className="text-5xl text-pink-400 mb-3">{stat.icon}</div>
-                  <p className="text-4xl font-bold text-glow font-bebas">{stat.value}</p>
+                  <p className="text-4xl font-bold heading-gradient font-bebas">{stat.value}</p>
                   <p className="text-gray-400">{stat.label}</p>
                 </div>
               ))}
@@ -263,7 +291,7 @@ export default function Home() {
             <div className="inline-block px-4 py-1.5 bg-pink-900/70 text-pink-300 rounded-full text-sm uppercase font-semibold tracking-wider mb-4">
               Gallery
             </div>
-            <h2 className="text-3xl md:text-4xl font-bold mb-12 text-glow font-bebas">OUR MEMORIES</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-12 heading-gradient font-bebas">OUR MEMORIES</h2>
             <div className="container mx-auto px-4 grid grid-cols-2 md:grid-cols-4 gap-4">
               {[
                 '/gallery-1.jpg',
@@ -296,7 +324,7 @@ export default function Home() {
                  <div className="inline-block px-4 py-1.5 bg-pink-900/70 text-pink-300 rounded-full text-sm uppercase font-semibold tracking-wider mb-4">
                     Roadmap
                 </div>
-                <h2 className="text-3xl md:text-4xl font-bold text-glow font-bebas">THE JOURNEY OF CODESPRINT X</h2>
+                <h2 className="text-3xl md:text-4xl font-bold heading-gradient font-bebas">THE JOURNEY OF CODESPRINT X</h2>
             </div>
             <div className="relative max-w-4xl mx-auto timeline-line">
               {[
@@ -345,10 +373,24 @@ export default function Home() {
                 delay: 1,
               }}
             />
+            <motion.div
+          className="absolute -top-48 -left-48 w-96 h-96 bg-blue-300/10 rounded-full blur-3xl"
+          animate={{
+            x: [0, 20, 0, -20, 0],
+            y: [0, -10, 20, -10, 0],
+          }}
+          transition={{
+            duration: 28,
+            repeat: Infinity,
+            repeatType: 'reverse',
+            ease: 'easeInOut',
+            delay: 4,
+          }}
+        />
             <div className="inline-block px-4 py-1.5 bg-pink-900/70 text-pink-300 rounded-full text-sm uppercase font-semibold tracking-wider mb-4">
                 Our Team
             </div>
-            <h2 className="text-3xl md:text-4xl font-bold mb-12 text-glow font-bebas">MEET THE EXPERTS</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-12 heading-gradient font-bebas">MEET THE EXPERTS</h2>
             <div className="container mx-auto px-4 grid grid-cols-2 md:grid-cols-4 gap-8">
               {[
                 { name: 'VIHAN PERERA', role: 'Lead Organizer', image: '/team-1.jpg' },
@@ -390,7 +432,7 @@ export default function Home() {
                  <div className="inline-block px-4 py-1.5 bg-pink-900/70 text-pink-300 rounded-full text-sm uppercase font-semibold tracking-wider mb-4">
                     Get Started
                 </div>
-                <h2 className="text-3xl md:text-4xl font-bold text-glow font-bebas">FREQUENTly ASKED QUESTIONS</h2>
+                <h2 className="text-3xl md:text-4xl font-bold heading-gradient font-bebas">FREQUENTLY ASKED QUESTIONS</h2>
             </div>
             <div className="grid md:grid-cols-2 gap-x-12 gap-y-4">
               {faqData.map((item, index) => (
