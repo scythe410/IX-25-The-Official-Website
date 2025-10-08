@@ -5,11 +5,12 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from 'react-icons/fa';
 import { FaPlus, FaMinus } from 'react-icons/fa';
-import { Lightbulb, Gem, Rocket } from 'lucide-react';
+import { Lightbulb, Gem, Rocket, Figma, PenTool, MousePointer, AppWindow } from 'lucide-react';
 import { Users, Folder, Calendar } from 'lucide-react';
 import Image from 'next/image';
 import Preloader from '@/components/Preloader';
 import Marquee from '@/components/Marquee';
+import { cn } from '@/lib/utils';
 
 const FAQItem = ({ item, index }: { item: { question: string; answer: string }, index: number }) => {
     const [isOpen, setIsOpen] = useState(false);
@@ -29,6 +30,19 @@ const FAQItem = ({ item, index }: { item: { question: string; answer: string }, 
         </div>
     );
 };
+
+const GlassButton = ({ icon: Icon, className }: { icon: React.ElementType, className?: string }) => (
+    <motion.div
+        className={cn("absolute p-3 bg-black/20 backdrop-blur-sm border border-white/10 rounded-full shadow-lg", className)}
+        drag
+        dragConstraints={{ left: 0, right: 0, top: 0, bottom: 0 }}
+        dragElastic={0.5}
+        whileHover={{ scale: 1.1, boxShadow: '0 0 25px rgba(255, 20, 147, 0.4)' }}
+        whileTap={{ scale: 0.9 }}
+    >
+        <Icon className="w-6 h-6 text-white/80" />
+    </motion.div>
+);
 
 export default function Home() {
   const [loading, setLoading] = useState(true);
@@ -79,7 +93,7 @@ export default function Home() {
       <main className="min-h-screen text-white font-readex dot-grid-background">
         <nav className="fixed top-0 left-0 right-0 z-50 p-4">
           <div className="container mx-auto flex justify-between items-center py-3 px-6 md:px-8 bg-black bg-opacity-30 backdrop-blur-sm border border-white/10 rounded-full">
-            <Image src="/images/logo.svg" alt="IX Logo" width={100} height={40} className="rounded-full" data-ai-hint="logo" />
+            <Image src="/images/logo.svg" alt="IX Logo" width={100} height={40} className="" data-ai-hint="logo" />
             <button className="px-6 py-2 border border-pink-500 text-pink-500 rounded-full text-sm font-semibold hover:bg-pink-500 hover:text-white transition-colors duration-300 button-glow">
               REGISTER
             </button>
@@ -119,23 +133,27 @@ export default function Home() {
           <div className="relative z-10 container mx-auto px-4 grid md:grid-cols-2 gap-8 items-center">
             <div className="text-center md:text-left">
                 <h1 className="text-5xl md:text-7xl font-bold tracking-wider leading-tight heading-gradient font-bebas">
-                Design Beyond
+                Can you design
                 <br />
-                Ordinary.
+                Without templates?
                 </h1>
                 <p className="mt-6 text-gray-300 max-w-lg mx-auto md:mx-0">
                 Do you feel that? The calm before the storm...
                 </p>
             </div>
-            <div className="flex justify-center">
+            <div className="relative flex justify-center items-center">
                 <Image
                   src="/images/logo.svg"
                   alt="CodeSprint X Logo"
                   width={600}
                   height={400}
-                  className="rounded-lg object-cover"
+                  className="rounded-lg object-contain opacity-75"
                   data-ai-hint="futuristic logo"
                 />
+                <GlassButton icon={Figma} className="top-1/4 left-0" />
+                <GlassButton icon={PenTool} className="top-0 right-1/4" />
+                <GlassButton icon={MousePointer} className="bottom-1/4 right-0" />
+                <GlassButton icon={AppWindow} className="bottom-0 left-1/4" />
             </div>
           </div>
         </section>
@@ -471,3 +489,5 @@ export default function Home() {
     </>
   );
 }
+
+    
