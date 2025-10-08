@@ -10,6 +10,7 @@ import { Users, Folder, Calendar } from 'lucide-react';
 import Image from 'next/image';
 import Preloader from '@/components/Preloader';
 import IXLogo from '@/components/IXLogo';
+import Marquee from '@/components/Marquee';
 
 const FAQItem = ({ item, index }: { item: { question: string; answer: string }, index: number }) => {
     const [isOpen, setIsOpen] = useState(false);
@@ -116,6 +117,8 @@ export default function Home() {
             </div>
           </div>
         </section>
+
+        <Marquee />
 
         {/* About / Battle section */}
         <motion.section 

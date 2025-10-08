@@ -6,8 +6,8 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 
-const bbhSansBartle = localFont({
-  src: '../../public/fonts/BBHSansBartle-Regular.ttf',
+const corpta = localFont({
+  src: '../../public/fonts/Corpta.otf',
   display: 'swap',
   variable: '--font-bbh-sans-bartle',
 });
@@ -30,7 +30,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${bbhSansBartle.variable} ${readexPro.variable} font-readex`}>
+      <body className={`${corpta.variable} ${readexPro.variable} font-readex`}>
         {children}
       </body>
     </html>
