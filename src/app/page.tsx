@@ -33,7 +33,7 @@ const FAQItem = ({ item, index }: { item: { question: string; answer: string }, 
 
 const GlassButton = ({ icon: Icon, className, animate }: { icon: React.ElementType, className?: string, animate?: object }) => (
     <motion.div
-        className={cn("absolute p-3 bg-black/20 backdrop-blur-sm border border-white/10 rounded-full shadow-lg", className)}
+        className={cn("absolute p-4 bg-black/20 backdrop-blur-sm border border-white/10 rounded-full shadow-lg", className)}
         drag
         dragConstraints={{ left: 0, right: 0, top: 0, bottom: 0 }}
         dragElastic={0.5}
@@ -47,7 +47,7 @@ const GlassButton = ({ icon: Icon, className, animate }: { icon: React.ElementTy
             ease: "easeInOut"
         }}
     >
-        <Icon className="w-6 h-6 text-white/80" />
+        <Icon className="w-8 h-8 text-white/80" />
     </motion.div>
 );
 
@@ -100,7 +100,7 @@ export default function Home() {
       <main className="min-h-screen text-white font-readex dot-grid-background">
         <nav className="fixed top-0 left-0 right-0 z-50 p-4">
           <div className="container mx-auto flex justify-between items-center py-3 px-6 md:px-8 bg-black bg-opacity-30 backdrop-blur-sm border border-white/10 rounded-full">
-            <Image src="/images/logo.svg" alt="IX Logo" width={100} height={40} className="" data-ai-hint="logo" />
+            <Image src="/images/logo.svg" alt="IX Logo" width={50} height={20} className="" data-ai-hint="logo" />
             <button className="px-6 py-2 border border-pink-500 text-pink-500 rounded-full text-sm font-semibold hover:bg-pink-500 hover:text-white transition-colors duration-300 button-glow">
               REGISTER
             </button>
