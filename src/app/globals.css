@@ -45,21 +45,12 @@ body {
 }
 
 @keyframes marquee {
-  0% { transform: translateX(0%); }
-  100% { transform: translateX(-100%); }
-}
-
-@keyframes marquee2 {
-  0% { transform: translateX(100%); }
-  100% { transform: translateX(0%); }
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
 }
 
 .animate-marquee {
   animation: marquee 40s linear infinite;
-}
-
-.animate-marquee2 {
-  animation: marquee2 40s linear infinite;
 }
 
 .heading-gradient {
