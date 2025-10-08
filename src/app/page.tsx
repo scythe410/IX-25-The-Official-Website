@@ -157,14 +157,10 @@ export default function Home() {
                   className="rounded-lg object-contain opacity-75"
                   data-ai-hint="futuristic logo"
                 />
-                <GlassButton icon={Figma} className="top-1/4 left-0" animate={{ y: [0, -10, 0] }} />
-                <GlassButton icon={PenTool} className="top-0 right-1/4" animate={{ x: [0, 10, 0] }} />
-                <GlassButton icon={MousePointer} className="bottom-1/4 right-0" animate={{ y: [0, 10, 0] }} />
-                <GlassButton icon={AppWindow} className="bottom-0 left-1/4" animate={{ x: [0, -10, 0] }} />
-                <GlassButton icon={Layers} className="top-1/3 right-1/4" animate={{ x: [0, 5, 0], y: [0, -5, 0] }} />
-                <GlassButton icon={Component} className="bottom-1/3 left-1/4" animate={{ x: [0, -5, 0], y: [0, 5, 0] }} />
-                <GlassButton icon={Type} className="top-1/2 left-12" animate={{ y: [0, -15, 0] }} />
-                <GlassButton icon={Palette} className="bottom-1/2 right-12" animate={{ y: [0, 15, 0] }} />
+                <GlassButton icon={Figma} className="top-10 left-20" animate={{ y: [0, -10, 0] }} />
+                <GlassButton icon={PenTool} className="top-20 right-10" animate={{ x: [0, 10, 0] }} />
+                <GlassButton icon={Component} className="bottom-20 left-10" animate={{ x: [0, -5, 0], y: [0, 5, 0] }} />
+                <GlassButton icon={Palette} className="bottom-10 right-20" animate={{ y: [0, 15, 0] }} />
             </div>
           </div>
         </section>
