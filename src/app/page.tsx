@@ -11,6 +11,7 @@ import Image from 'next/image';
 import Preloader from '@/components/Preloader';
 import IXLogo from '@/components/IXLogo';
 import Marquee from '@/components/Marquee';
+import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 const FAQItem = ({ item, index }: { item: { question: string; answer: string }, index: number }) => {
     const [isOpen, setIsOpen] = useState(false);
@@ -36,6 +37,7 @@ export default function Home() {
   const [form, setForm] = useState({ name: '', email: '', idea: '' });
   const [submitting, setSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
+  const heroImage = PlaceHolderImages.find((img) => img.id === 'hero-logo');
   
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -127,7 +129,16 @@ export default function Home() {
                 </p>
             </div>
             <div className="flex justify-center">
-                <IXLogo />
+              {heroImage && (
+                <Image
+                  src={heroImage.imageUrl}
+                  alt={heroImage.description}
+                  width={600}
+                  height={400}
+                  className="rounded-lg object-cover"
+                  data-ai-hint={heroImage.imageHint}
+                />
+              )}
             </div>
           </div>
         </section>
