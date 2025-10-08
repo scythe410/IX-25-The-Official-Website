@@ -138,7 +138,7 @@ export default function Home() {
           }}
         />
 
-          <div className="relative z-10 container mx-auto px-4 grid md:grid-cols-2 gap-8 items-center">
+          <div className="relative z-10 container mx-auto px-6 md:px-12 grid md:grid-cols-2 gap-8 items-center">
             <div className="text-center md:text-left">
                 <h1 className="text-5xl md:text-7xl font-bold tracking-wider leading-tight heading-gradient font-bebas">
                 Can you design
