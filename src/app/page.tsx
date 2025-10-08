@@ -5,7 +5,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from 'react-icons/fa';
 import { FaPlus, FaMinus } from 'react-icons/fa';
-import { Lightbulb, Gem, Rocket, Figma, PenTool, MousePointer, AppWindow } from 'lucide-react';
+import { Lightbulb, Gem, Rocket, Figma, PenTool, MousePointer, AppWindow, Layers, Component, Type, Palette } from 'lucide-react';
 import { Users, Folder, Calendar } from 'lucide-react';
 import Image from 'next/image';
 import Preloader from '@/components/Preloader';
@@ -31,7 +31,7 @@ const FAQItem = ({ item, index }: { item: { question: string; answer: string }, 
     );
 };
 
-const GlassButton = ({ icon: Icon, className }: { icon: React.ElementType, className?: string }) => (
+const GlassButton = ({ icon: Icon, className, animate }: { icon: React.ElementType, className?: string, animate?: object }) => (
     <motion.div
         className={cn("absolute p-3 bg-black/20 backdrop-blur-sm border border-white/10 rounded-full shadow-lg", className)}
         drag
@@ -39,6 +39,13 @@ const GlassButton = ({ icon: Icon, className }: { icon: React.ElementType, class
         dragElastic={0.5}
         whileHover={{ scale: 1.1, boxShadow: '0 0 25px rgba(255, 20, 147, 0.4)' }}
         whileTap={{ scale: 0.9 }}
+        animate={animate}
+        transition={{
+            duration: 5,
+            repeat: Infinity,
+            repeatType: "mirror",
+            ease: "easeInOut"
+        }}
     >
         <Icon className="w-6 h-6 text-white/80" />
     </motion.div>
@@ -141,7 +148,7 @@ export default function Home() {
                 Do you feel that? The calm before the storm...
                 </p>
             </div>
-            <div className="relative flex justify-center items-center">
+            <div className="relative flex justify-center items-center h-96">
                 <Image
                   src="/images/logo.svg"
                   alt="CodeSprint X Logo"
@@ -150,10 +157,14 @@ export default function Home() {
                   className="rounded-lg object-contain opacity-75"
                   data-ai-hint="futuristic logo"
                 />
-                <GlassButton icon={Figma} className="top-1/4 left-0" />
-                <GlassButton icon={PenTool} className="top-0 right-1/4" />
-                <GlassButton icon={MousePointer} className="bottom-1/4 right-0" />
-                <GlassButton icon={AppWindow} className="bottom-0 left-1/4" />
+                <GlassButton icon={Figma} className="top-1/4 left-0" animate={{ y: [0, -10, 0] }} />
+                <GlassButton icon={PenTool} className="top-0 right-1/4" animate={{ x: [0, 10, 0] }} />
+                <GlassButton icon={MousePointer} className="bottom-1/4 right-0" animate={{ y: [0, 10, 0] }} />
+                <GlassButton icon={AppWindow} className="bottom-0 left-1/4" animate={{ x: [0, -10, 0] }} />
+                <GlassButton icon={Layers} className="top-1/3 right-1/4" animate={{ x: [0, 5, 0], y: [0, -5, 0] }} />
+                <GlassButton icon={Component} className="bottom-1/3 left-1/4" animate={{ x: [0, -5, 0], y: [0, 5, 0] }} />
+                <GlassButton icon={Type} className="top-1/2 left-12" animate={{ y: [0, -15, 0] }} />
+                <GlassButton icon={Palette} className="bottom-1/2 right-12" animate={{ y: [0, 15, 0] }} />
             </div>
           </div>
         </section>
@@ -489,5 +500,3 @@ export default function Home() {
     </>
   );
 }
-
-    
