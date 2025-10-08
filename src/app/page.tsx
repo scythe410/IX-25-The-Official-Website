@@ -5,7 +5,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from 'react-icons/fa';
 import { FaPlus, FaMinus } from 'react-icons/fa';
-import { Lightbulb, Gem, Rocket, Figma, PenTool, MousePointer, AppWindow, Layers, Component, Type, Palette } from 'lucide-react';
+import { Lightbulb, Gem, Rocket, Figma, PenTool, Palette, Component } from 'lucide-react';
 import { Users, Folder, Calendar } from 'lucide-react';
 import Image from 'next/image';
 import Preloader from '@/components/Preloader';
@@ -97,6 +97,7 @@ export default function Home() {
   return (
     <>
       {loading && <Preloader />}
+      <div className="overflow-x-hidden">
       <main className="min-h-screen text-white font-readex dot-grid-background">
         <nav className="fixed top-0 left-0 right-0 z-50 p-4">
           <div className="container mx-auto flex justify-between items-center py-3 px-6 md:px-8 bg-black bg-opacity-30 backdrop-blur-sm border border-white/10 rounded-full">
@@ -455,7 +456,7 @@ export default function Home() {
         {/* FAQ and Registration form */}
         <motion.section 
             id="register" 
-            className="py-20 container mx-auto px-4 max-w-4xl"
+            className="py-20 container mx-auto px-4 max-w-6xl"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.3 }}
@@ -493,6 +494,7 @@ export default function Home() {
         </motion.footer>
 
       </main>
+      </div>
     </>
   );
 }
