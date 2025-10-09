@@ -300,14 +300,16 @@ export default function Home() {
           <div className="container mx-auto px-4">
             <div className="flex flex-col md:flex-row justify-around items-center gap-12">
               {[
-                  { icon: <Users />, value: '2400+', label: 'Participants' },
-                  { icon: <Folder />, value: '550+', label: 'Teams Registered' },
-                  { icon: <Calendar />, value: '26', label: 'Universities' },
+                  { value: '25', label: 'UNIVERSITIES' },
+                  { value: '260', label: 'TEAMS' },
+                  { value: '1100', label: 'PARTICIPANTS' },
               ].map((stat, index) => (
                 <div key={index} className="text-center">
-                  <div className="text-5xl text-pink-400 mb-3">{stat.icon}</div>
-                  <p className="text-4xl font-bold heading-gradient font-bebas">{stat.value}</p>
-                  <p className="text-gray-400">{stat.label}</p>
+                    <p className="text-6xl md:text-8xl font-bold text-gray-200 font-bebas flex items-center">
+                        {stat.value}
+                        <span className="text-4xl md:text-6xl text-green-400">+</span>
+                    </p>
+                    <p className="text-gray-400 uppercase tracking-widest mt-2">{stat.label}</p>
                 </div>
               ))}
             </div>
