@@ -15,7 +15,7 @@ const FAQItem = ({ item, index }: { item: { question: string; answer: string }, 
                 className="w-full flex justify-between items-center text-left"
                 onClick={() => setIsOpen(!isOpen)}
             >
-                <h3 className="font-semibold text-lg flex items-center gap-4">
+                <h3 className="font-semibold text-lg flex items-center gap-4 font-vt323">
                     {item.question}
                 </h3>
                 <span>{isOpen ? <FaMinus /> : <FaPlus />}</span>
@@ -59,23 +59,23 @@ export default function Home() {
         <section className="relative min-h-screen flex items-center justify-center py-20 px-8">
           <div className="container mx-auto grid md:grid-cols-2 gap-12 items-center">
             <div className="text-center md:text-left">
-                <p className="text-xl md:text-2xl text-gray-300">28 & 29 FEB 2024</p>
-                <h1 className="text-8xl md:text-9xl font-bold my-2 -space-y-4">
+                <p className="text-xl md:text-2xl text-gray-300 font-vt323">28 & 29 FEB 2024</p>
+                <h1 className="text-8xl md:text-9xl font-bold my-2 -space-y-4 font-vt323">
                     <span className="text-[#95FF00]">design</span>
                     <br />
                     <span>athon</span>
                 </h1>
-                <p className="text-2xl md:text-3xl font-bold text-gray-200 tracking-wider">
+                <p className="text-2xl md:text-3xl font-bold text-gray-200 tracking-wider font-vt323">
                     BIGGER<span className="text-purple-400">.</span> GRANDER<span className="text-purple-400">.</span> WILDER<span className="text-purple-400">.</span>
                 </p>
                 <div className="flex justify-center md:justify-start gap-12 mt-8">
                     <div>
-                        <p className="text-5xl font-bold text-[#95FF00]">12</p>
-                        <p className="text-gray-400">HOURS</p>
+                        <p className="text-5xl font-bold text-[#95FF00] font-vt323">12</p>
+                        <p className="text-gray-400 font-vt323">HOURS</p>
                     </div>
                     <div>
-                        <p className="text-5xl font-bold text-[#95FF00]">20K</p>
-                        <p className="text-gray-400">PRIZEPOOL</p>
+                        <p className="text-5xl font-bold text-[#95FF00] font-vt323">20K</p>
+                        <p className="text-gray-400 font-vt323">PRIZEPOOL</p>
                     </div>
                 </div>
             </div>
@@ -101,7 +101,7 @@ export default function Home() {
             viewport={{ once: true, amount: 0.3 }}
             variants={sectionVariants}
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">WHAT IS <span className="text-[#95FF00]">DESIGNATHON?</span></h2>
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 font-vt323">WHAT IS <span className="text-[#95FF00]">DESIGNATHON?</span></h2>
           <p className="text-lg text-gray-300 leading-relaxed">
             An in-person action packed design hackathon where students and aspiring designers are given a platform to experience real-life design problems and master the art of creating usable, viable, and empathetic design solutions while having a great deal of fun for 12 hours straight.
           </p>
@@ -119,16 +119,16 @@ export default function Home() {
         >
             <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
                 <div className="text-center">
-                    <p className="text-gray-400 uppercase tracking-widest">TITLE WINNER</p>
-                    <p className="text-5xl md:text-6xl font-bold heading-gradient">10,000 INR</p>
+                    <p className="text-gray-400 uppercase tracking-widest font-vt323">TITLE WINNER</p>
+                    <p className="text-5xl md:text-6xl font-bold heading-gradient font-vt323">10,000 INR</p>
                 </div>
                  <div className="text-center">
-                    <p className="text-gray-400 uppercase tracking-widest">FIRST RUNNERS UP</p>
-                    <p className="text-5xl md:text-6xl font-bold heading-gradient">5,000 INR</p>
+                    <p className="text-gray-400 uppercase tracking-widest font-vt323">FIRST RUNNERS UP</p>
+                    <p className="text-5xl md:text-6xl font-bold heading-gradient font-vt323">5,000 INR</p>
                 </div>
                  <div className="text-center">
-                    <p className="text-gray-400 uppercase tracking-widest">SECOND RUNNERS UP</p>
-                    <p className="text-5xl md:text-6xl font-bold heading-gradient">3,000 INR</p>
+                    <p className="text-gray-400 uppercase tracking-widest font-vt323">SECOND RUNNERS UP</p>
+                    <p className="text-5xl md:text-6xl font-bold heading-gradient font-vt323">3,000 INR</p>
                 </div>
             </div>
         </motion.section>
@@ -143,16 +143,16 @@ export default function Home() {
             variants={sectionVariants}
         >
             <div className="absolute inset-x-0 top-1/2 -translate-y-1/2">
-                <h1 className="text-[20vw] font-bold text-gray-800/50 opacity-50 whitespace-nowrap">
+                <h1 className="text-[20vw] font-bold text-gray-800/50 opacity-50 whitespace-nowrap font-vt323">
                     BIGGER. GRANDER. WILDER.
                 </h1>
             </div>
             <div className="relative z-10">
-                <button className="px-8 py-3 bg-[#95FF00] text-black font-bold rounded-md hover:bg-lime-400 transition-colors duration-300 button-glow text-xl">
+                <button className="px-8 py-3 bg-[#95FF00] text-black font-bold rounded-md hover:bg-lime-400 transition-colors duration-300 button-glow text-xl font-vt323">
                     REGISTER FOR FREE
                 </button>
-                <p className="mt-4 text-xl font-bold">APPLICATIONS CLOSES ON <span className="text-purple-400">FEBRUARY 20TH</span></p>
-                <button className="mt-2 px-6 py-2 border border-gray-600 text-gray-300 rounded-md text-sm font-semibold hover:bg-gray-800 transition-colors duration-300">
+                <p className="mt-4 text-xl font-bold font-vt323">APPLICATIONS CLOSES ON <span className="text-purple-400">FEBRUARY 20TH</span></p>
+                <button className="mt-2 px-6 py-2 border border-gray-600 text-gray-300 rounded-md text-sm font-semibold hover:bg-gray-800 transition-colors duration-300 font-vt323">
                     Apply with Devfolio
                 </button>
             </div>
@@ -166,9 +166,9 @@ export default function Home() {
             viewport={{ once: true, amount: 0.3 }}
             variants={sectionVariants}
         >
-             <h2 className="text-3xl md:text-4xl font-bold mb-4">HACKATHON <span className="heading-gradient">VENUE</span></h2>
-             <p className="text-xl text-gray-300">CHRIST COLLEGE OF ENGINEERING</p>
-             <p className="text-gray-400">IRINJALAKUDA, THRISSUR, KERALA</p>
+             <h2 className="text-3xl md:text-4xl font-bold mb-4 font-vt323">HACKATHON <span className="heading-gradient">VENUE</span></h2>
+             <p className="text-xl text-gray-300 font-vt323">CHRIST COLLEGE OF ENGINEERING</p>
+             <p className="text-gray-400 font-vt323">IRINJALAKUDA, THRISSUR, KERALA</p>
              <div className="mt-4 h-32 w-full bg-gray-900/50 max-w-4xl mx-auto rounded-lg border border-gray-700 flex items-center justify-center">
                 <p className="text-gray-500">Building Illustration</p>
              </div>
@@ -183,7 +183,7 @@ export default function Home() {
             variants={sectionVariants}
         >
             <div className="text-center mb-12">
-                <h2 className="text-3xl md:text-4xl font-bold">HACKATHON <span className="heading-gradient">ROADMAP</span></h2>
+                <h2 className="text-3xl md:text-4xl font-bold font-vt323">HACKATHON <span className="heading-gradient">ROADMAP</span></h2>
             </div>
             <div className="grid md:grid-cols-3 gap-x-8 gap-y-12 max-w-6xl mx-auto text-center md:text-left">
               {[
@@ -195,7 +195,7 @@ export default function Home() {
                 { date: '29th FEBRUARY', description: 'Valedictory ceremony of DESIGNATHON 24.' },
               ].map((event, index) => (
                 <div key={index}>
-                    <h3 className="font-bold text-2xl mb-2 text-purple-400">{event.date}</h3>
+                    <h3 className="font-bold text-2xl mb-2 text-purple-400 font-vt323">{event.date}</h3>
                     <p className="text-gray-400">{event.description}</p>
                 </div>
               ))}
@@ -210,7 +210,7 @@ export default function Home() {
             viewport={{ once: true, amount: 0.3 }}
             variants={sectionVariants}
         >
-            <h2 className="text-3xl md:text-4xl font-bold mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold mb-12 font-vt323">
                 GLIMPSE INTO THE <span className="heading-gradient">MEMORIES</span> WE
                 <br />
                  HAVE CREATED.
@@ -234,7 +234,7 @@ export default function Home() {
                 </div>
               ))}
             </div>
-            <p className="mt-4 text-gray-500">The Previous Edition of DESIGNATHON by CODe</p>
+            <p className="mt-4 text-gray-500 font-vt323">The Previous Edition of DESIGNATHON by CODe</p>
         </motion.section>
 
 
@@ -259,7 +259,7 @@ export default function Home() {
                     />
                 </div>
                 <div>
-                    <h2 className="text-3xl md:text-4xl font-bold mb-8">
+                    <h2 className="text-3xl md:text-4xl font-bold mb-8 font-vt323">
                         <span className="heading-gradient">FREQUENTLY ASKED</span> QUESTIONS
                     </h2>
                     <div className="space-y-4">
@@ -279,12 +279,12 @@ export default function Home() {
             viewport={{ once: true, amount: 0.3 }}
             variants={sectionVariants}
         >
-            <h2 className="text-3xl md:text-4xl font-bold mb-8">
+            <h2 className="text-3xl md:text-4xl font-bold mb-8 font-vt323">
                 <span className="heading-gradient">PARTNERING</span> WITH
             </h2>
             <div className="flex flex-wrap justify-center items-center gap-x-8 gap-y-4 max-w-4xl mx-auto">
                 {partners.map(partner => (
-                    <div key={partner} className="text-gray-400 text-2xl font-bold">{partner}</div>
+                    <div key={partner} className="text-gray-400 text-2xl font-bold font-vt323">{partner}</div>
                 ))}
             </div>
         </motion.section>
@@ -300,7 +300,7 @@ export default function Home() {
             <div className="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-4">
                 <div className='flex items-center gap-4'>
                     <Image src="https://picsum.photos/seed/christ-logo/100/100" alt="Christ College Logo" width={50} height={50} data-ai-hint="college logo" />
-                    <p className="text-sm text-gray-500">CHRIST COLLEGE OF ENGINEERING</p>
+                    <p className="text-sm text-gray-500 font-vt323">CHRIST COLLEGE OF ENGINEERING</p>
                 </div>
                 <p className="text-sm text-gray-500 text-center">Copyright &copy; 2024 Community Of Developers (CODe). All Rights Reserved</p>
                 <div className="flex gap-6">

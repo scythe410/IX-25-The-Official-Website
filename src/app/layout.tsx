@@ -1,14 +1,21 @@
 import type { Metadata } from 'next';
-import { Archivo } from 'next/font/google';
+import { Archivo, VT323 } from 'next/font/google';
 import './globals.css';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
+import { Toaster } from '@/components/ui/toaster';
 
 const archivo = Archivo({
   subsets: ['latin'],
   weight: ['400', '700'],
   variable: '--font-archivo',
+});
+
+const vt323 = VT323({
+  subsets: ['latin'],
+  weight: ['400'],
+  variable: '--font-vt323',
 });
 
 export const metadata: Metadata = {
@@ -23,8 +30,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${archivo.variable} font-sans`}>
+      <body className={`${archivo.variable} ${vt323.variable} font-archivo`}>
         {children}
+        <Toaster />
       </body>
     </html>
   );

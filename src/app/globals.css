@@ -9,7 +9,7 @@
 }
 
 html {
-  cursor: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0L18 12L13 14L0 0Z' fill='%23C774E7'/%3E%3Cpath d='M0 0L24 12L18 12L0 0Z' fill='%23C774E7'/%3E%3Cpath d='M13 14L18 12L24 12L13 14Z' fill='%23C774E7'/%3E%3Cpath d='M0 0L24 12L18 12L13 14L0 0Z' stroke='black' stroke-width='1.5' stroke-linejoin='round'/%3E%3C/svg%3E") 0 0, auto;
+  cursor: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0L18 12L13 14L0 0Z' fill='%23C774E7'/%3E%3Cpath d='M0 0L24 12L18 12L0 0Z' fill='%2395FF00'/%3E%3Cpath d='M13 14L18 12L24 12L13 14Z' fill='%2395FF00'/%3E%3Cpath d='M0 0L24 12L18 12L13 14L0 0Z' stroke='black' stroke-width='1.5' stroke-linejoin='round'/%3E%3C/svg%3E") 0 0, auto;
   scroll-behavior: smooth;
 }
 
