@@ -10,7 +10,7 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        anton: ['var(--font-anton)', 'sans-serif'],
+        archivo: ['var(--font-archivo)', 'sans-serif'],
         vt323: ['var(--font-vt323)', 'monospace'],
       },
       colors: {
