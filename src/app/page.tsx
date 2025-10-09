@@ -5,7 +5,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from 'react-icons/fa';
 import { FaPlus, FaMinus } from 'react-icons/fa';
-import { Lightbulb, Gem, Rocket, Figma, PenTool, Palette, Component } from 'lucide-react';
+import { Lightbulb, Gem, Rocket, Figma, PenTool, Palette, Component, BookOpen, HomeIcon } from 'lucide-react';
 import { Users, Folder, Calendar } from 'lucide-react';
 import Image from 'next/image';
 import Preloader from '@/components/Preloader';
@@ -98,7 +98,7 @@ export default function Home() {
     <>
       {loading && <Preloader />}
       <div className="overflow-x-hidden">
-      <main className="min-h-screen text-white font-readex dot-grid-background">
+      <main className="min-h-screen text-white font-anton dot-grid-background">
         <nav className="fixed top-0 left-0 right-0 z-50 p-4">
           <div className="container mx-auto flex justify-between items-center py-3 px-6 md:px-8 bg-black bg-opacity-30 backdrop-blur-sm border border-white/10 rounded-full">
             <Image src="/images/logo.svg" alt="IX Logo" width={50} height={20} className="" data-ai-hint="logo" />
@@ -140,7 +140,7 @@ export default function Home() {
 
           <div className="relative z-10 container mx-auto px-6 md:px-12 grid md:grid-cols-2 gap-8 items-center">
             <div className="text-center md:text-left">
-                <h1 className="text-5xl md:text-7xl font-bold tracking-wider leading-tight heading-gradient font-bebas">
+                <h1 className="text-5xl md:text-7xl font-bold tracking-wider leading-tight heading-gradient">
                 Can you design
                 <br />
                 Without templates?
@@ -202,7 +202,7 @@ export default function Home() {
                 <div className="inline-block px-4 py-1.5 bg-pink-900/70 text-pink-300 rounded-full text-sm uppercase font-semibold tracking-wider mb-4">
                   About Us
                 </div>
-                <h2 className="text-4xl md:text-5xl font-bold font-bebas heading-gradient">THE BATTLE FOR STARTUP BRILLIANCE</h2>
+                <h2 className="text-4xl md:text-5xl font-bold heading-gradient">THE BATTLE FOR STARTUP BRILLIANCE</h2>
                 <p className="mt-4 text-gray-300 leading-relaxed max-w-xl">CodeSprint X is Sri Lanka's premier inter-university startup battle, designed to ignite innovation and empower the next generation of entrepreneurs. Organized by the IEEE Student Branch of IIT, this flagship event is where the brightest minds are challenged to turn ideas into impactful real-world solutions.</p>
                  <p className="mt-4 text-gray-300 leading-relaxed max-w-xl">With each edition, CodeSprint continues to shape the future of tech entrepreneurship, bridging the gap between ideas and execution while fostering a thriving ecosystem of innovation, leadership, and collaboration.</p>
             </div>
@@ -220,7 +220,7 @@ export default function Home() {
             <div className="inline-block px-4 py-1.5 bg-pink-900/70 text-pink-300 rounded-full text-sm uppercase font-semibold tracking-wider mb-4">
                 Phases
             </div>
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 heading-gradient font-bebas">THREE PHASES OF SUCCESS</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 heading-gradient">THREE PHASES OF SUCCESS</h2>
             <p className="text-gray-400 mb-24 max-w-2xl mx-auto">The structured path from idea to reality, ensuring every team gets the guidance and resources they need to excel.</p>
             <div className="grid md:grid-cols-3 gap-8">
                 {[
@@ -250,9 +250,9 @@ export default function Home() {
                            </div>
                         </div>
                         <div className="relative w-full h-full p-8 pt-20 border border-pink-900 rounded-lg bg-gray-900 bg-opacity-50 box-glow overflow-hidden hover:shadow-pink-500/50 hover:shadow-lg transition-shadow duration-300">
-                           <h3 className="text-2xl font-bold mb-4 font-bebas">{phase.title}</h3>
+                           <h3 className="text-2xl font-bold mb-4">{phase.title}</h3>
                            <p className="text-gray-400 text-sm leading-6">{phase.description}</p>
-                           <div className="absolute -bottom-8 -right-2 text-8xl font-bold font-bebas text-gray-800 text-opacity-50">
+                           <div className="absolute -bottom-8 -right-2 text-8xl font-bold text-gray-800 text-opacity-50">
                                {phase.number}
                            </div>
                         </div>
@@ -305,7 +305,7 @@ export default function Home() {
                   { value: '1100', label: 'PARTICIPANTS' },
               ].map((stat, index) => (
                 <div key={index} className="text-center">
-                    <p className="text-6xl md:text-8xl font-bold text-gray-200 font-bebas flex items-center">
+                    <p className="text-6xl md:text-8xl font-bold text-gray-200 flex items-center">
                         {stat.value}
                         <span className="text-4xl md:text-6xl text-green-400">+</span>
                     </p>
@@ -327,7 +327,7 @@ export default function Home() {
             <div className="inline-block px-4 py-1.5 bg-pink-900/70 text-pink-300 rounded-full text-sm uppercase font-semibold tracking-wider mb-4">
               Gallery
             </div>
-            <h2 className="text-3xl md:text-4xl font-bold mb-12 heading-gradient font-bebas">OUR MEMORIES</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-12 heading-gradient">OUR MEMORIES</h2>
             <div className="container mx-auto px-4 grid grid-cols-2 md:grid-cols-4 gap-4">
               {[
                 '/gallery-1.jpg',
@@ -360,7 +360,7 @@ export default function Home() {
                  <div className="inline-block px-4 py-1.5 bg-pink-900/70 text-pink-300 rounded-full text-sm uppercase font-semibold tracking-wider mb-4">
                     Roadmap
                 </div>
-                <h2 className="text-3xl md:text-4xl font-bold heading-gradient font-bebas">THE JOURNEY OF CODESPRINT X</h2>
+                <h2 className="text-3xl md:text-4xl font-bold heading-gradient">THE JOURNEY OF CODESPRINT X</h2>
             </div>
             <div className="relative max-w-4xl mx-auto timeline-line">
               {[
@@ -374,7 +374,7 @@ export default function Home() {
                    <div className="order-1 w-5/12"></div>
                   <div className="z-20 flex items-center order-1 bg-pink-500 shadow-xl w-4 h-4 rounded-full"></div>
                   <div className={`order-1 w-5/12 p-4 rounded-lg shadow-xl bg-gray-900 bg-opacity-50 box-glow ${index % 2 === 0 ? 'text-right' : 'text-left'}`}>
-                    <h3 className="font-bold text-lg mb-1 font-bebas">{event.title}</h3>
+                    <h3 className="font-bold text-lg mb-1">{event.title}</h3>
                     <p className="text-sm text-gray-400">{event.description}</p>
                   </div>
                 </div>
@@ -426,7 +426,7 @@ export default function Home() {
             <div className="inline-block px-4 py-1.5 bg-pink-900/70 text-pink-300 rounded-full text-sm uppercase font-semibold tracking-wider mb-4">
                 Our Team
             </div>
-            <h2 className="text-3xl md:text-4xl font-bold mb-12 heading-gradient font-bebas">MEET THE EXPERTS</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-12 heading-gradient">MEET THE EXPERTS</h2>
             <div className="container mx-auto px-4 grid grid-cols-2 md:grid-cols-4 gap-8">
               {[
                 { name: 'VIHAN PERERA', role: 'Lead Organizer', image: '/team-1.jpg' },
@@ -444,7 +444,7 @@ export default function Home() {
                       className="rounded-lg border-2 border-pink-400"
                     />
                   </div>
-                  <h3 className="font-bold text-lg font-bebas">{member.name}</h3>
+                  <h3 className="font-bold text-lg">{member.name}</h3>
                   <p className="text-pink-400 text-sm">{member.role}</p>
                   <div className="flex gap-4 mt-2">
                     <FaLinkedin className="text-gray-400 hover:text-white" />
@@ -468,7 +468,7 @@ export default function Home() {
                  <div className="inline-block px-4 py-1.5 bg-pink-900/70 text-pink-300 rounded-full text-sm uppercase font-semibold tracking-wider mb-4">
                     Get Started
                 </div>
-                <h2 className="text-3xl md:text-4xl font-bold heading-gradient font-bebas">FREQUENTLY ASKED QUESTIONS</h2>
+                <h2 className="text-3xl md:text-4xl font-bold heading-gradient">FREQUENTLY ASKED QUESTIONS</h2>
             </div>
             <div className="grid md:grid-cols-2 gap-x-12 gap-y-4">
               {faqData.map((item, index) => (

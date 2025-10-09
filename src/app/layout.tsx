@@ -1,21 +1,14 @@
 import type { Metadata } from 'next';
-import localFont from 'next/font/local'
-import { Bebas_Neue, Readex_Pro } from 'next/font/google';
+import { Anton } from 'next/font/google';
 import './globals.css';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 
-const corpta = localFont({
-  src: '../../public/fonts/Corpta.otf',
-  display: 'swap',
-  variable: '--font-bbh-sans-bartle',
-});
-
-const readexPro = Readex_Pro({
+const anton = Anton({
   subsets: ['latin'],
-  weight: ['300', '400', '500', '600', '700'],
-  variable: '--font-readex-pro',
+  weight: ['400'],
+  variable: '--font-anton',
 });
 
 export const metadata: Metadata = {
@@ -30,7 +23,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${corpta.variable} ${readexPro.variable} font-readex`}>
+      <body className={`${anton.variable} font-anton`}>
         {children}
       </body>
     </html>
