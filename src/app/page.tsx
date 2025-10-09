@@ -6,6 +6,7 @@ import { FaFacebook, FaInstagram, FaTwitter } from 'react-icons/fa';
 import Image from 'next/image';
 import Preloader from '@/components/Preloader';
 import Marquee from '@/components/Marquee';
+import Navbar from '@/components/Navbar';
 
 const FAQItem = ({ item, index }: { item: { question: string; answer: string }, index: number }) => {
     const [isOpen, setIsOpen] = useState(false);
@@ -53,6 +54,7 @@ export default function Home() {
     <>
       {loading && <Preloader />}
       <div className="overflow-x-hidden font-archivo">
+      <Navbar />
       <main className="min-h-screen text-white dot-grid-background">
         
         {/* Hero */}
