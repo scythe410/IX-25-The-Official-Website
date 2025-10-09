@@ -141,9 +141,9 @@ export default function Home() {
           <div className="relative z-10 container mx-auto px-6 md:px-12 grid md:grid-cols-2 gap-8 items-center">
             <div className="text-center md:text-left">
                 <h1 className="text-5xl md:text-7xl font-bold tracking-wider leading-tight heading-gradient">
-                Can you design
+                CAN YOU DESIGN
                 <br />
-                Without templates?
+                WITHOUT TEMPLATES?
                 </h1>
                 <p className="mt-6 text-gray-300 max-w-lg mx-auto md:mx-0">
                 Do you feel that? The calm before the storm...
