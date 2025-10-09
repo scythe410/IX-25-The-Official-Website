@@ -1,14 +1,14 @@
 import type { Metadata } from 'next';
-import { Anton } from 'next/font/google';
+import { VT323 } from 'next/font/google';
 import './globals.css';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 
-const anton = Anton({
+const vt323 = VT323({
   subsets: ['latin'],
   weight: ['400'],
-  variable: '--font-anton',
+  variable: '--font-vt323',
 });
 
 export const metadata: Metadata = {
@@ -23,7 +23,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${anton.variable} font-anton`}>
+      <body className={`${vt323.variable} font-sans`}>
         {children}
       </body>
     </html>

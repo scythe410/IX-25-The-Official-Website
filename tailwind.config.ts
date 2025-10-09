@@ -11,6 +11,7 @@ export default {
     extend: {
       fontFamily: {
         anton: ['var(--font-anton)', 'sans-serif'],
+        vt323: ['var(--font-vt323)', 'monospace'],
       },
       colors: {
         background: 'hsl(var(--background))',

@@ -1,16 +1,11 @@
 'use client';
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from 'react-icons/fa';
 import { FaPlus, FaMinus } from 'react-icons/fa';
-import { Lightbulb, Gem, Rocket, Figma, PenTool, Palette, Component, BookOpen, HomeIcon } from 'lucide-react';
-import { Users, Folder, Calendar } from 'lucide-react';
 import Image from 'next/image';
 import Preloader from '@/components/Preloader';
 import Marquee from '@/components/Marquee';
-import { cn } from '@/lib/utils';
 
 const FAQItem = ({ item, index }: { item: { question: string; answer: string }, index: number }) => {
     const [isOpen, setIsOpen] = useState(false);
@@ -21,7 +16,6 @@ const FAQItem = ({ item, index }: { item: { question: string; answer: string }, 
                 onClick={() => setIsOpen(!isOpen)}
             >
                 <h3 className="font-semibold text-lg flex items-center gap-4">
-                    <span className="text-gray-500">0{index + 1}</span>
                     {item.question}
                 </h3>
                 <span>{isOpen ? <FaMinus /> : <FaPlus />}</span>
@@ -31,324 +25,154 @@ const FAQItem = ({ item, index }: { item: { question: string; answer: string }, 
     );
 };
 
-const GlassButton = ({ icon: Icon, className, animate }: { icon: React.ElementType, className?: string, animate?: object }) => (
-    <motion.div
-        className={cn("absolute p-4 bg-black/20 backdrop-blur-sm border border-white/10 rounded-full shadow-lg", className)}
-        drag
-        dragConstraints={{ left: 0, right: 0, top: 0, bottom: 0 }}
-        dragElastic={0.5}
-        whileHover={{ scale: 1.1, boxShadow: '0 0 25px rgba(255, 20, 147, 0.4)' }}
-        whileTap={{ scale: 0.9 }}
-        animate={animate}
-        transition={{
-            duration: 5,
-            repeat: Infinity,
-            repeatType: "mirror",
-            ease: "easeInOut"
-        }}
-    >
-        <Icon className="w-8 h-8 text-white/80" />
-    </motion.div>
-);
-
 export default function Home() {
   const [loading, setLoading] = useState(true);
-  const [form, setForm] = useState({ name: '', email: '', idea: '' });
-  const [submitting, setSubmitting] = useState(false);
-  const [submitted, setSubmitted] = useState(false);
   
   useEffect(() => {
     const timer = setTimeout(() => {
       setLoading(false);
-    }, 3000); // Adjust time as needed
+    }, 3000);
     return () => clearTimeout(timer);
   }, []);
-
-  function handleChange(e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) {
-    const { name, value } = e.target;
-    setForm(prev => ({ ...prev, [name]: value }));
-  }
-
-  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
-    e.preventDefault();
-    setSubmitting(true);
-    // Simulate API call
-    await new Promise(r => setTimeout(r, 900));
-    setSubmitting(false);
-    setSubmitted(true);
-    setTimeout(() => setSubmitted(false), 3000);
-    setForm({ name: '', email: '', idea: '' });
-  }
   
   const faqData = [
-    { question: 'Who is eligible for what?', answer: 'The competition is open to all university undergraduates across the country.' },
-    { question: 'Can we participate as a team?', answer: 'Teams can consist of 2 to 4 members.' },
-    { question: 'What if we don\'t have a team?', answer: 'No, participation in CodeSprint X is completely free of charge.' },
-    { question: 'Is there a registration fee?', answer: 'Projects will be judged on innovation, technical complexity, business viability, and presentation quality.' },
-    { question: 'Do we have to be present physically?', answer: 'The competition is open to all university undergraduates across the country.' },
-    { question: 'How to register for CodeSprint X?', answer: 'Teams can consist of 2 to 4 members.' },
-];
+    { question: 'WHAT IS THE TEAM SIZE?', answer: 'Teams can consist of 2 to 4 members.' },
+    { question: 'WHAT IS EXPECTED TO BE BUILD?', answer: 'You are expected to design a solution for a given problem within 12 hours. No coding is involved.' },
+    { question: 'HOW CAN I GET SHORTLISTED?', answer: 'Shortlisting is based on submissions and previous designs.' },
+    { question: 'IS THERE A REGISTRATION FEE?', answer: 'No, participation is completely free of charge.' },
+  ];
 
   const sectionVariants = {
     hidden: { opacity: 0, y: 50 },
     visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
   };
+  
+  const partners = ['Devfolio', 'polygon', 'replit', 'SOLANA', 'Filecoin'];
 
   return (
     <>
       {loading && <Preloader />}
-      <div className="overflow-x-hidden">
-      <main className="min-h-screen text-white font-anton dot-grid-background">
-        <nav className="fixed top-0 left-0 right-0 z-50 p-4">
-          <div className="container mx-auto flex justify-between items-center py-3 px-6 md:px-8 bg-black bg-opacity-30 backdrop-blur-sm border border-white/10 rounded-full">
-            <Image src="/images/logo.svg" alt="IX Logo" width={50} height={20} className="" data-ai-hint="logo" />
-            <button className="px-6 py-2 border border-pink-500 text-pink-500 rounded-full text-sm font-semibold hover:bg-pink-500 hover:text-white transition-colors duration-300 button-glow">
-              REGISTER
-            </button>
-          </div>
-        </nav>
+      <div className="overflow-x-hidden font-vt323">
+      <main className="min-h-screen text-white dot-grid-background">
         
         {/* Hero */}
-        <section className="relative h-screen flex items-center justify-center">
-        <motion.div
-          className="absolute -top-16 -left-16 w-96 h-96 bg-pink-500/10 rounded-full blur-3xl"
-          animate={{
-            x: [0, 20, 0, -20, 0],
-            y: [0, -10, 20, -10, 0],
-          }}
-          transition={{
-            duration: 20,
-            repeat: Infinity,
-            repeatType: 'reverse',
-            ease: 'easeInOut',
-          }}
-        />
-         <motion.div
-          className="absolute -bottom-16 -right-16 w-96 h-96 bg-pink-500/10 rounded-full blur-3xl"
-          animate={{
-            x: [0, -20, 0, 20, 0],
-            y: [0, 10, -20, 10, 0],
-          }}
-          transition={{
-            duration: 20,
-            repeat: Infinity,
-            repeatType: 'reverse',
-            ease: 'easeInOut',
-            delay: 5,
-          }}
-        />
-
-          <div className="relative z-10 container mx-auto px-6 md:px-12 grid md:grid-cols-2 gap-8 items-center">
+        <section className="relative min-h-screen flex items-center justify-center py-20">
+          <div className="container mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
             <div className="text-center md:text-left">
-                <h1 className="text-5xl md:text-7xl font-bold tracking-wider leading-tight heading-gradient">
-                CAN YOU DESIGN
-                <br />
-                WITHOUT TEMPLATES?
+                <p className="text-xl md:text-2xl text-gray-300">28 & 29 FEB 2024</p>
+                <h1 className="text-7xl md:text-9xl font-bold tracking-tighter my-2">
+                    <span className="heading-gradient">design</span>
+                    <br />
+                    athon
                 </h1>
-                <p className="mt-6 text-gray-300 max-w-lg mx-auto md:mx-0">
-                Do you feel that? The calm before the storm...
-                </p>
+                <p className="text-2xl md:text-3xl font-bold text-gray-200 tracking-wider">BIGGER. GRANDER. WILDER.</p>
+                <div className="flex justify-center md:justify-start gap-12 mt-8">
+                    <div>
+                        <p className="text-5xl font-bold heading-gradient">12</p>
+                        <p className="text-gray-400">HOURS</p>
+                    </div>
+                    <div>
+                        <p className="text-5xl font-bold heading-gradient">20K</p>
+                        <p className="text-gray-400">PRIZEPOOL</p>
+                    </div>
+                </div>
             </div>
             <div className="relative flex justify-center items-center h-96">
                 <Image
-                  src="/images/logo.svg"
-                  alt="CodeSprint X Logo"
+                  src="https://picsum.photos/seed/designathon/600/400"
+                  alt="Designathon Illustration"
                   width={600}
                   height={400}
-                  className="rounded-lg object-contain opacity-75"
-                  data-ai-hint="futuristic logo"
+                  className="rounded-lg object-contain"
+                  data-ai-hint="abstract illustration"
                 />
-                <GlassButton icon={Figma} className="top-10 left-20" animate={{ y: [0, -10, 0] }} />
-                <GlassButton icon={PenTool} className="top-20 right-10" animate={{ x: [0, 10, 0] }} />
-                <GlassButton icon={Component} className="bottom-20 left-10" animate={{ x: [0, -5, 0], y: [0, 5, 0] }} />
-                <GlassButton icon={Palette} className="bottom-10 right-20" animate={{ y: [0, 15, 0] }} />
             </div>
           </div>
         </section>
 
-        <Marquee />
-
-        {/* About / Battle section */}
+        {/* About */}
         <motion.section 
             id="about" 
-            className="container mx-auto px-6 py-14 lg:py-24 relative"
+            className="container mx-auto px-6 py-16 text-center max-w-4xl"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.3 }}
             variants={sectionVariants}
         >
-          <motion.div
-            className="absolute -bottom-32 -right-32 w-96 h-96 bg-pink-500/10 rounded-full blur-3xl"
-            animate={{
-              x: [0, -20, 0, 20, 0],
-              y: [0, 15, -10, 15, 0],
-            }}
-            transition={{
-              duration: 25,
-              repeat: Infinity,
-              repeatType: 'reverse',
-              ease: 'easeInOut',
-              delay: 2,
-            }}
-          />
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="order-2 lg:order-1 flex justify-center lg:justify-start">
-              <div className="w-80 h-80 bg-gradient-to-tr from-gray-800/80 to-gray-700/40 rounded-2xl p-6">
-                <img src="/helmet.png" alt="helmet" className="w-full h-full object-contain" />
-              </div>
-            </div>
-
-            <div className="order-1 lg:order-2">
-                <div className="inline-block px-4 py-1.5 bg-pink-900/70 text-pink-300 rounded-full text-sm uppercase font-semibold tracking-wider mb-4">
-                  About Us
-                </div>
-                <h2 className="text-4xl md:text-5xl font-bold heading-gradient">THE BATTLE FOR STARTUP BRILLIANCE</h2>
-                <p className="mt-4 text-gray-300 leading-relaxed max-w-xl">CodeSprint X is Sri Lanka's premier inter-university startup battle, designed to ignite innovation and empower the next generation of entrepreneurs. Organized by the IEEE Student Branch of IIT, this flagship event is where the brightest minds are challenged to turn ideas into impactful real-world solutions.</p>
-                 <p className="mt-4 text-gray-300 leading-relaxed max-w-xl">With each edition, CodeSprint continues to shape the future of tech entrepreneurship, bridging the gap between ideas and execution while fostering a thriving ecosystem of innovation, leadership, and collaboration.</p>
-            </div>
-          </div>
+          <h2 className="text-4xl md:text-5xl font-bold mb-4"><span className="heading-gradient">WHAT IS</span> DESIGNATHON?</h2>
+          <p className="text-lg text-gray-300 leading-relaxed">
+            An in-person action packed design hackathon where students and aspiring designers are given a platform to experience real-life design problems and master the art of creating usable, viable, and empathetic design solutions while having a great deal of fun for 12 hours straight.
+          </p>
         </motion.section>
 
-        {/* Phases */}
-        <motion.section 
+        <Marquee text="DESIGNATHON '24" />
+        
+        {/* Prizes */}
+        <motion.section
             className="py-20 container mx-auto px-4 text-center"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.3 }}
             variants={sectionVariants}
         >
-            <div className="inline-block px-4 py-1.5 bg-pink-900/70 text-pink-300 rounded-full text-sm uppercase font-semibold tracking-wider mb-4">
-                Phases
-            </div>
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 heading-gradient">THREE PHASES OF SUCCESS</h2>
-            <p className="text-gray-400 mb-24 max-w-2xl mx-auto">The structured path from idea to reality, ensuring every team gets the guidance and resources they need to excel.</p>
-            <div className="grid md:grid-cols-3 gap-8">
-                {[
-                    { 
-                        icon: <Lightbulb size={40} />, 
-                        title: 'IDEATE', 
-                        description: 'Every great startup begins with a bold and visionary idea. In this phase, teams brainstorm, research, and refine their concepts to address real-world challenges. With expert mentorship, they craft innovative, scalable, and impactful solutions.',
-                        number: '01'
-                    },
-                    { 
-                        icon: <Gem size={40} />, 
-                        title: 'PROTOTYPE', 
-                        description: 'Turning ideas into reality—this phase focuses on building a functional prototype or MVP. Participants develop their solutions, test feasibility, and receive industry feedback to enhance their product before pitching to investors.',
-                        number: '02'
-                    },
-                    { 
-                        icon: <Rocket size={40} />, 
-                        title: 'STARTUP', 
-                        description: 'The final phase is where vision meets execution. Teams refine their business models, craft compelling pitches, and present their startups to a panel of industry leaders. This is where startups are born, and futures are shaped.',
-                        number: '03'
-                    },
-                ].map((phase, index) => (
-                    <div key={index} className="relative flex flex-col items-center pt-8 h-full">
-                        <div className="absolute -top-8 w-24 h-24 flex items-center justify-center bg-gray-900 rounded-full border border-gray-700 box-glow">
-                           <div className="w-20 h-20 flex items-center justify-center bg-gray-800 rounded-full">
-                            {phase.icon}
-                           </div>
-                        </div>
-                        <div className="relative w-full h-full p-8 pt-20 border border-pink-900 rounded-lg bg-gray-900 bg-opacity-50 box-glow overflow-hidden hover:shadow-pink-500/50 hover:shadow-lg transition-shadow duration-300">
-                           <h3 className="text-2xl font-bold mb-4">{phase.title}</h3>
-                           <p className="text-gray-400 text-sm leading-6">{phase.description}</p>
-                           <div className="absolute -bottom-8 -right-2 text-8xl font-bold text-gray-800 text-opacity-50">
-                               {phase.number}
-                           </div>
-                        </div>
-                    </div>
-                ))}
+            <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                <div className="text-center">
+                    <p className="text-gray-400 uppercase tracking-widest">TITLE WINNER</p>
+                    <p className="text-5xl md:text-6xl font-bold heading-gradient">10,000 INR</p>
+                </div>
+                 <div className="text-center">
+                    <p className="text-gray-400 uppercase tracking-widest">FIRST RUNNERS UP</p>
+                    <p className="text-5xl md:text-6xl font-bold heading-gradient">5,000 INR</p>
+                </div>
+                 <div className="text-center">
+                    <p className="text-gray-400 uppercase tracking-widest">SECOND RUNNERS UP</p>
+                    <p className="text-5xl md:text-6xl font-bold heading-gradient">3,000 INR</p>
+                </div>
             </div>
         </motion.section>
 
-        {/* stats */}
-        <motion.div 
-            className="py-20 relative"
+
+        {/* Registration */}
+        <motion.section
+            className="py-20 text-center relative"
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: false, amount: 0.3 }}
+            viewport={{ once: true, amount: 0.3 }}
             variants={sectionVariants}
         >
-          <motion.div
-            className="absolute -top-24 -left-24 w-96 h-96 bg-pink-500/10 rounded-full blur-3xl"
-            animate={{
-              x: [0, 20, 0, -20, 0],
-              y: [0, -10, 20, -10, 0],
-            }}
-            transition={{
-              duration: 22,
-              repeat: Infinity,
-              repeatType: 'reverse',
-              ease: 'easeInOut',
-              delay: 3,
-            }}
-          />
-           <motion.div
-          className="absolute -bottom-24 -right-24 w-96 h-96 bg-blue-300/10 rounded-full blur-3xl"
-          animate={{
-            x: [0, -20, 0, 20, 0],
-            y: [0, 10, -20, 10, 0],
-          }}
-          transition={{
-            duration: 22,
-            repeat: Infinity,
-            repeatType: 'reverse',
-            ease: 'easeInOut',
-            delay: 5,
-          }}
-        />
-          <div className="container mx-auto px-4">
-            <div className="flex flex-col md:flex-row justify-around items-center gap-12">
-              {[
-                  { value: '25', label: 'UNIVERSITIES' },
-                  { value: '260', label: 'TEAMS' },
-                  { value: '1100', label: 'PARTICIPANTS' },
-              ].map((stat, index) => (
-                <div key={index} className="text-center">
-                    <p className="text-6xl md:text-8xl font-bold text-gray-200 flex items-center">
-                        {stat.value}
-                        <span className="text-4xl md:text-6xl text-green-400">+</span>
-                    </p>
-                    <p className="text-gray-400 uppercase tracking-widest mt-2">{stat.label}</p>
-                </div>
-              ))}
+            <div className="absolute inset-x-0 top-1/2 -translate-y-1/2">
+                <h1 className="text-[20vw] font-bold text-gray-800/50 opacity-50 whitespace-nowrap">
+                    BIGGER. GRANDER. WILDER.
+                </h1>
             </div>
-          </div>
-        </motion.div>
-
-        {/* Memories / Carousel */}
-        <motion.section 
+            <div className="relative z-10">
+                <button className="px-8 py-3 bg-pink-500 text-white font-bold rounded-md hover:bg-pink-600 transition-colors duration-300 button-glow text-xl">
+                    REGISTER FOR FREE
+                </button>
+                <p className="mt-4 text-xl font-bold">APPLICATIONS CLOSES ON <span className="text-pink-400">FEBRUARY 20TH</span></p>
+                <button className="mt-2 px-6 py-2 border border-gray-600 text-gray-300 rounded-md text-sm font-semibold hover:bg-gray-800 transition-colors duration-300">
+                    Apply with Devfolio
+                </button>
+            </div>
+        </motion.section>
+        
+        {/* Venue */}
+        <motion.section
             className="py-20 text-center"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.3 }}
             variants={sectionVariants}
         >
-            <div className="inline-block px-4 py-1.5 bg-pink-900/70 text-pink-300 rounded-full text-sm uppercase font-semibold tracking-wider mb-4">
-              Gallery
-            </div>
-            <h2 className="text-3xl md:text-4xl font-bold mb-12 heading-gradient">OUR MEMORIES</h2>
-            <div className="container mx-auto px-4 grid grid-cols-2 md:grid-cols-4 gap-4">
-              {[
-                '/gallery-1.jpg',
-                '/gallery-2.jpg',
-                '/gallery-3.jpg',
-                '/gallery-4.jpg',
-              ].map((src, index) => (
-                <div key={index} className="relative aspect-square grayscale hover:grayscale-0 transition-all duration-300">
-                  <Image
-                    src={src}
-                    alt={`Memory ${index + 1}`}
-                    layout="fill"
-                    objectFit="cover"
-                    className="rounded-lg"
-                  />
-                </div>
-              ))}
-            </div>
+             <h2 className="text-3xl md:text-4xl font-bold mb-4"><span className="heading-gradient">HACKATHON</span> VENUE</h2>
+             <p className="text-xl text-gray-300">CHRIST COLLEGE OF ENGINEERING</p>
+             <p className="text-gray-400">IRINJALAKUDA, THRISSUR, KERALA</p>
+             <div className="mt-4 h-32 w-full bg-gray-900/50 max-w-4xl mx-auto rounded-lg border border-gray-700 flex items-center justify-center">
+                <p className="text-gray-500">Building Illustration</p>
+             </div>
         </motion.section>
 
-        {/* Roadmap / Timeline */}
+        {/* Roadmap */}
         <motion.section 
             className="py-20 container mx-auto px-4"
             initial="hidden"
@@ -356,126 +180,113 @@ export default function Home() {
             viewport={{ once: true, amount: 0.3 }}
             variants={sectionVariants}
         >
-            <div className="text-center mb-16">
-                 <div className="inline-block px-4 py-1.5 bg-pink-900/70 text-pink-300 rounded-full text-sm uppercase font-semibold tracking-wider mb-4">
-                    Roadmap
-                </div>
-                <h2 className="text-3xl md:text-4xl font-bold heading-gradient">THE JOURNEY OF CODESPRINT X</h2>
+            <div className="text-center mb-12">
+                <h2 className="text-3xl md:text-4xl font-bold"><span className="heading-gradient">HACKATHON</span> ROADMAP</h2>
             </div>
-            <div className="relative max-w-4xl mx-auto timeline-line">
+            <div className="grid md:grid-cols-3 gap-x-8 gap-y-12 max-w-6xl mx-auto text-center md:text-left">
               {[
-                { title: 'REGISTRATIONS OPEN', description: 'Mark your calendars! The journey begins now. Form your teams and sign up.' },
-                { title: 'IDEATE REGISTRATIONS OPEN', description: 'The Ideathon stage is your chance to shine. Brainstorm ideas, form teams of 2-4 members, and submit your proposal through our platform. All the best!' },
-                { title: 'PROTOTYPE REGISTRATIONS OPEN', description: 'It’s time to bring your ideas to life. Develop a functional prototype and submit it for evaluation. This is where your technical skills will be put to the test.' },
-                { title: 'TECHNICAL PITCH', description: 'The pitch presentation is the final step. Present your work to our judges, covering the problem, solution, and business model. Make it count!' },
-                { title: 'GRAND FINALE', description: 'The moment of truth! The top teams will be announced, and prizes will be awarded. Celebrate your hard work and success with us.' },
+                { date: '05th FEBRUARY', description: 'Registration for DESIGNATHON 24 starts through Devfolio.' },
+                { date: '20th FEBRUARY', description: 'Registration for DESIGNATHON 24 comes to an end.' },
+                { date: '22nd FEBRUARY', description: 'Shortlisting based on submissions and previous designs.' },
+                { date: '24th FEBRUARY', description: 'Shortlisted Participants are informed via emails.' },
+                { date: '28th FEBRUARY', description: 'DESIGNATHON 24 begins at 08 PM in the evening.' },
+                { date: '29th FEBRUARY', description: 'Valedictory ceremony of DESIGNATHON 24.' },
               ].map((event, index) => (
-                <div key={index} className={`mb-8 flex justify-between items-center w-full ${index % 2 === 0 ? 'flex-row-reverse' : ''}`}>
-                   <div className="order-1 w-5/12"></div>
-                  <div className="z-20 flex items-center order-1 bg-pink-500 shadow-xl w-4 h-4 rounded-full"></div>
-                  <div className={`order-1 w-5/12 p-4 rounded-lg shadow-xl bg-gray-900 bg-opacity-50 box-glow ${index % 2 === 0 ? 'text-right' : 'text-left'}`}>
-                    <h3 className="font-bold text-lg mb-1">{event.title}</h3>
-                    <p className="text-sm text-gray-400">{event.description}</p>
-                  </div>
+                <div key={index}>
+                    <h3 className="font-bold text-2xl mb-2 text-pink-400">{event.date}</h3>
+                    <p className="text-gray-400">{event.description}</p>
                 </div>
               ))}
             </div>
-             <div className="text-center mt-12">
-                <button className="mt-8 px-8 py-3 bg-transparent border border-pink-500 text-pink-500 font-bold rounded-full hover:bg-pink-500 hover:text-white transition-transform duration-300 button-glow">
-                  CONTACT US
-                </button>
-              </div>
         </motion.section>
 
-        {/* Contact / Team */}
+        {/* Memories */}
         <motion.section 
-            className="py-20 text-center relative"
+            className="py-20 text-center"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.3 }}
             variants={sectionVariants}
         >
-            <motion.div
-              className="absolute -bottom-48 -right-48 w-96 h-96 bg-pink-500/10 rounded-full blur-3xl"
-              animate={{
-                x: [0, -20, 0, 20, 0],
-                y: [0, 15, -10, 15, 0],
-              }}
-              transition={{
-                duration: 28,
-                repeat: Infinity,
-                repeatType: 'reverse',
-                ease: 'easeInOut',
-                delay: 1,
-              }}
-            />
-            <motion.div
-          className="absolute -top-48 -left-48 w-96 h-96 bg-blue-300/10 rounded-full blur-3xl"
-          animate={{
-            x: [0, 20, 0, -20, 0],
-            y: [0, -10, 20, -10, 0],
-          }}
-          transition={{
-            duration: 28,
-            repeat: Infinity,
-            repeatType: 'reverse',
-            ease: 'easeInOut',
-            delay: 4,
-          }}
-        />
-            <div className="inline-block px-4 py-1.5 bg-pink-900/70 text-pink-300 rounded-full text-sm uppercase font-semibold tracking-wider mb-4">
-                Our Team
-            </div>
-            <h2 className="text-3xl md:text-4xl font-bold mb-12 heading-gradient">MEET THE EXPERTS</h2>
-            <div className="container mx-auto px-4 grid grid-cols-2 md:grid-cols-4 gap-8">
+            <h2 className="text-3xl md:text-4xl font-bold mb-12">
+                GLIMPSE INTO THE <span className="heading-gradient">MEMORIES</span> WE
+                <br />
+                 HAVE CREATED.
+            </h2>
+            <div className="container mx-auto px-4 grid grid-cols-2 md:grid-cols-4 gap-4">
               {[
-                { name: 'VIHAN PERERA', role: 'Lead Organizer', image: '/team-1.jpg' },
-                { name: 'KAVISHA THANUJAN', role: 'Co-Lead Organizer', image: '/team-2.jpg' },
-                { name: 'GIMHANI RANATHUNGA', role: 'Co-Lead Organizer', image: '/team-3.jpg' },
-                { name: 'PRASANNA KATHIRAMANATHAN', role: 'Co-Lead Organizer', image: '/team-4.jpg' },
-              ].map((member, index) => (
-                <div key={index} className="flex flex-col items-center">
-                  <div className="relative w-32 h-32 md:w-40 md:h-40 mb-4">
-                    <Image
-                      src={member.image}
-                      alt={member.name}
-                      layout="fill"
-                      objectFit="cover"
-                      className="rounded-lg border-2 border-pink-400"
-                    />
-                  </div>
-                  <h3 className="font-bold text-lg">{member.name}</h3>
-                  <p className="text-pink-400 text-sm">{member.role}</p>
-                  <div className="flex gap-4 mt-2">
-                    <FaLinkedin className="text-gray-400 hover:text-white" />
-                    <FaTwitter className="text-gray-400 hover:text-white" />
-                  </div>
+                'https://picsum.photos/seed/mem1/400/400',
+                'https://picsum.photos/seed/mem2/400/400',
+                'https://picsum.photos/seed/mem3/400/400',
+                'https://picsum.photos/seed/mem4/400/400',
+              ].map((src, index) => (
+                <div key={index} className="relative aspect-square">
+                  <Image
+                    src={src}
+                    alt={`Memory ${index + 1}`}
+                    layout="fill"
+                    objectFit="cover"
+                    className="rounded-lg"
+                    data-ai-hint="hackathon photos"
+                  />
                 </div>
               ))}
             </div>
+            <p className="mt-4 text-gray-500">The Previous Edition of DESIGNATHON by CODe</p>
         </motion.section>
 
-        {/* FAQ and Registration form */}
+
+        {/* FAQ */}
         <motion.section 
             id="register" 
-            className="py-20 container mx-auto px-4 max-w-6xl"
+            className="py-20 container mx-auto px-4"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.3 }}
             variants={sectionVariants}
         >
-            <div className="text-center mb-12">
-                 <div className="inline-block px-4 py-1.5 bg-pink-900/70 text-pink-300 rounded-full text-sm uppercase font-semibold tracking-wider mb-4">
-                    Get Started
+            <div className="grid md:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
+                <div>
+                     <Image
+                        src="https://picsum.photos/seed/faq-retro-computer/600/400"
+                        alt="Retro computer"
+                        width={600}
+                        height={400}
+                        className="rounded-lg"
+                        data-ai-hint="retro computer"
+                    />
                 </div>
-                <h2 className="text-3xl md:text-4xl font-bold heading-gradient">FREQUENTLY ASKED QUESTIONS</h2>
-            </div>
-            <div className="grid md:grid-cols-2 gap-x-12 gap-y-4">
-              {faqData.map((item, index) => (
-                <FAQItem key={index} item={item} index={index} />
-              ))}
+                <div>
+                    <h2 className="text-3xl md:text-4xl font-bold mb-8">
+                        <span className="heading-gradient">FREQUENTLY ASKED</span> QUESTIONS
+                    </h2>
+                    <div className="space-y-4">
+                      {faqData.map((item, index) => (
+                        <FAQItem key={index} item={item} index={index} />
+                      ))}
+                    </div>
+                </div>
             </div>
         </motion.section>
+
+        {/* Partners */}
+        <motion.section
+            className="py-20 text-center"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.3 }}
+            variants={sectionVariants}
+        >
+            <h2 className="text-3xl md:text-4xl font-bold mb-8">
+                <span className="heading-gradient">PARTNERING</span> WITH
+            </h2>
+            <div className="flex flex-wrap justify-center items-center gap-x-8 gap-y-4 max-w-4xl mx-auto">
+                {partners.map(partner => (
+                    <div key={partner} className="text-gray-400 text-2xl font-bold">{partner}</div>
+                ))}
+            </div>
+        </motion.section>
+
         
         <motion.footer 
             className="py-8 border-t border-gray-800"
@@ -484,15 +295,18 @@ export default function Home() {
             viewport={{ once: true, amount: 0.3 }}
             variants={sectionVariants}
         >
-              <div className="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-4">
-                <p className="text-sm text-gray-500">&copy; 2025 CodeSprint X. All Rights Reserved.</p>
+            <div className="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-4">
+                <div className='flex items-center gap-4'>
+                    <Image src="https://picsum.photos/seed/christ-logo/100/100" alt="Christ College Logo" width={50} height={50} data-ai-hint="college logo" />
+                    <p className="text-sm text-gray-500">CHRIST COLLEGE OF ENGINEERING</p>
+                </div>
+                <p className="text-sm text-gray-500 text-center">Copyright &copy; 2024 Community Of Developers (CODe). All Rights Reserved</p>
                 <div className="flex gap-6">
                   <FaFacebook className="text-xl text-gray-400 hover:text-white cursor-pointer" />
                   <FaTwitter className="text-xl text-gray-400 hover:text-white cursor-pointer" />
                   <FaInstagram className="text-xl text-gray-400 hover:text-white cursor-pointer" />
-                  <FaLinkedin className="text-xl text-gray-400 hover:text-white cursor-pointer" />
                 </div>
-              </div>
+            </div>
         </motion.footer>
 
       </main>
