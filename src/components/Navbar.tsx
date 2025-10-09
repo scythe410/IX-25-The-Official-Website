@@ -9,7 +9,7 @@ const Navbar = () => {
     <nav className="fixed top-4 left-1/2 -translate-x-1/2 z-50 w-[95%] max-w-5xl mx-auto">
       <div className="flex justify-between items-center py-2 px-6 bg-black/20 backdrop-blur-md border border-white/10 rounded-full shadow-lg">
         <Image 
-          src="https://picsum.photos/seed/logo/50/20" 
+          src="/../../public/images/logo.svg" 
           alt="Logo" 
           width={50} 
           height={20}

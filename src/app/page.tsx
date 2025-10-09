@@ -83,7 +83,7 @@ export default function Home() {
             </div>
             <div className="relative flex justify-center items-center h-96">
                 <Image
-                  src="https://picsum.photos/seed/designathon/600/400"
+                  src="/../../public/images/hero-img.webp"
                   alt="Designathon Illustration"
                   width={600}
                   height={400}
