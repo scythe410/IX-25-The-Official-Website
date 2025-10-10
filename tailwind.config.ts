@@ -10,8 +10,8 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        archivo: ['var(--font-archivo)', 'sans-serif'],
-        vt323: ['var(--font-vt323)', 'monospace'],
+        chakra: ['Chakra Petch', 'sans-serif'],
+        turret: ['Turret Road', 'monospace'],
       },
       colors: {
         background: 'hsl(var(--background))',

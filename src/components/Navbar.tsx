@@ -16,7 +16,7 @@ const Navbar = () => {
           data-ai-hint="logo"
         />
         <motion.button 
-          className="px-6 py-2 bg-[#95FF00] text-black font-bold rounded-full text-sm font-vt323 button-glow"
+          className="px-6 py-2 bg-[#95FF00] text-black font-bold rounded-full text-sm font-chakra button-glow"
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
         >
