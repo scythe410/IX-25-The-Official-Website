@@ -9,14 +9,14 @@ const Navbar = () => {
     <nav className="fixed top-4 left-1/2 -translate-x-1/2 z-50 w-[95%] max-w-5xl mx-auto">
       <div className="flex justify-between items-center py-2 px-6 bg-black/20 backdrop-blur-md border border-white/10 rounded-full shadow-lg">
         <Image 
-          src="/../../public/images/logo.svg" 
+          src="/images/logo.svg" 
           alt="Logo" 
           width={50} 
           height={20}
           data-ai-hint="logo"
         />
         <motion.button 
-          className="px-6 py-2 bg-[#95FF00] text-black font-bold rounded-full text-sm font-chakra button-glow"
+          className="px-6 py-2 bg-[#FF0879] text-white font-bold rounded-full text-sm font-chakra button-glow"
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
         >

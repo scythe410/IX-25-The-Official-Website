@@ -63,20 +63,20 @@ export default function Home() {
             <div className="text-center md:text-left">
                 <p className="text-xl md:text-2xl text-gray-300 font-chakra">28 & 29 FEB 2024</p>
                 <h1 className="text-8xl md:text-9xl font-bold my-2 -space-y-4 font-chakra">
-                    <span className="text-[#95FF00]">design</span>
+                    <span className="text-[#FF0879]">design</span>
                     <br />
                     <span>athon</span>
                 </h1>
                 <p className="text-2xl md:text-3xl font-bold text-gray-200 tracking-wider font-chakra">
-                    BIGGER<span className="text-purple-400">.</span> GRANDER<span className="text-purple-400">.</span> WILDER<span className="text-purple-400">.</span>
+                    BIGGER<span className="text-[#ACD5F8]">.</span> GRANDER<span className="text-[#ACD5F8]">.</span> WILDER<span className="text-[#ACD5F8]">.</span>
                 </p>
                 <div className="flex justify-center md:justify-start gap-12 mt-8">
                     <div>
-                        <p className="text-5xl font-bold text-[#95FF00] font-chakra">12</p>
+                        <p className="text-5xl font-bold text-[#FF0879] font-chakra">12</p>
                         <p className="text-gray-400 font-chakra">HOURS</p>
                     </div>
                     <div>
-                        <p className="text-5xl font-bold text-[#95FF00] font-chakra">20K</p>
+                        <p className="text-5xl font-bold text-[#FF0879] font-chakra">20K</p>
                         <p className="text-gray-400 font-chakra">PRIZEPOOL</p>
                     </div>
                 </div>
@@ -103,7 +103,7 @@ export default function Home() {
             viewport={{ once: true, amount: 0.3 }}
             variants={sectionVariants}
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 font-chakra">WHAT IS <span className="text-[#95FF00]">DESIGNATHON?</span></h2>
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 font-chakra">WHAT IS <span className="text-[#FF0879]">DESIGNATHON?</span></h2>
           <p className="text-lg text-gray-300 leading-relaxed">
             An in-person action packed design hackathon where students and aspiring designers are given a platform to experience real-life design problems and master the art of creating usable, viable, and empathetic design solutions while having a great deal of fun for 12 hours straight.
           </p>
@@ -150,10 +150,10 @@ export default function Home() {
                 </h1>
             </div>
             <div className="relative z-10">
-                <button className="px-8 py-3 bg-[#95FF00] text-black font-bold rounded-md hover:bg-lime-400 transition-colors duration-300 button-glow text-xl font-chakra">
+                <button className="px-8 py-3 bg-[#FF0879] text-white font-bold rounded-md hover:bg-pink-700 transition-colors duration-300 button-glow text-xl font-chakra">
                     REGISTER FOR FREE
                 </button>
-                <p className="mt-4 text-xl font-bold font-chakra">APPLICATIONS CLOSES ON <span className="text-purple-400">FEBRUARY 20TH</span></p>
+                <p className="mt-4 text-xl font-bold font-chakra">APPLICATIONS CLOSES ON <span className="text-[#ACD5F8]">FEBRUARY 20TH</span></p>
                 <button className="mt-2 px-6 py-2 border border-gray-600 text-gray-300 rounded-md text-sm font-semibold hover:bg-gray-800 transition-colors duration-300 font-chakra">
                     Apply with Devfolio
                 </button>
@@ -168,7 +168,7 @@ export default function Home() {
             viewport={{ once: true, amount: 0.3 }}
             variants={sectionVariants}
         >
-             <h2 className="text-3xl md:text-4xl font-bold mb-4 font-chakra">HACKATHON <span className="heading-gradient">VENUE</span></h2>
+             <h2 className="text-3xl md:text-4xl font-bold mb-4 font-chakra heading-gradient">HACKATHON VENUE</h2>
              <p className="text-xl text-gray-300 font-chakra">CHRIST COLLEGE OF ENGINEERING</p>
              <p className="text-gray-400 font-chakra">IRINJALAKUDA, THRISSUR, KERALA</p>
              <div className="mt-4 h-32 w-full bg-gray-900/50 max-w-4xl mx-auto rounded-lg border border-gray-700 flex items-center justify-center">
@@ -185,7 +185,7 @@ export default function Home() {
             variants={sectionVariants}
         >
             <div className="text-center mb-12">
-                <h2 className="text-3xl md:text-4xl font-bold font-chakra">HACKATHON <span className="heading-gradient">ROADMAP</span></h2>
+                <h2 className="text-3xl md:text-4xl font-bold font-chakra heading-gradient">HACKATHON ROADMAP</h2>
             </div>
             <div className="grid md:grid-cols-3 gap-x-8 gap-y-12 max-w-6xl mx-auto text-center md:text-left">
               {[
@@ -197,7 +197,7 @@ export default function Home() {
                 { date: '29th FEBRUARY', description: 'Valedictory ceremony of DESIGNATHON 24.' },
               ].map((event, index) => (
                 <div key={index}>
-                    <h3 className="font-bold text-2xl mb-2 text-purple-400 font-chakra">{event.date}</h3>
+                    <h3 className="font-bold text-2xl mb-2 text-[#ACD5F8] font-chakra">{event.date}</h3>
                     <p className="text-gray-400">{event.description}</p>
                 </div>
               ))}
@@ -212,8 +212,8 @@ export default function Home() {
             viewport={{ once: true, amount: 0.3 }}
             variants={sectionVariants}
         >
-            <h2 className="text-3xl md:text-4xl font-bold mb-12 font-chakra">
-                GLIMPSE INTO THE <span className="heading-gradient">MEMORIES</span> WE
+            <h2 className="text-3xl md:text-4xl font-bold mb-12 font-chakra heading-gradient">
+                GLIMPSE INTO THE MEMORIES WE
                 <br />
                  HAVE CREATED.
             </h2>
@@ -261,8 +261,8 @@ export default function Home() {
                     />
                 </div>
                 <div>
-                    <h2 className="text-3xl md:text-4xl font-bold mb-8 font-chakra">
-                        <span className="heading-gradient">FREQUENTLY ASKED</span> QUESTIONS
+                    <h2 className="text-3xl md:text-4xl font-bold mb-8 font-chakra heading-gradient">
+                        FREQUENTLY ASKED QUESTIONS
                     </h2>
                     <div className="space-y-4">
                       {faqData.map((item, index) => (
@@ -281,8 +281,8 @@ export default function Home() {
             viewport={{ once: true, amount: 0.3 }}
             variants={sectionVariants}
         >
-            <h2 className="text-3xl md:text-4xl font-bold mb-8 font-chakra">
-                <span className="heading-gradient">PARTNERING</span> WITH
+            <h2 className="text-3xl md:text-4xl font-bold mb-8 font-chakra heading-gradient">
+                PARTNERING WITH
             </h2>
             <div className="flex flex-wrap justify-center items-center gap-x-8 gap-y-4 max-w-4xl mx-auto">
                 {partners.map(partner => (

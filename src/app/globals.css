@@ -4,14 +4,14 @@
 
 @font-face {
   font-family: 'Chakra Petch';
-  src: url('/fonts/ChakraPetch-Bold.ttf') format('truetype');
+  src: url('/fonts/Cakra-Normal.otf') format('truetype');
   font-weight: 700;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Turret Road';
-  src: url('/fonts/TurretRoad-Regular.ttf') format('truetype');
+  src: url('/fonts/TurretRoad-Bold.ttf') format('truetype');
   font-weight: 400;
   font-style: normal;
 }
@@ -19,12 +19,12 @@
 
 .dot-grid-background {
   background-color: #000000;
-  background-image: radial-gradient(circle at 1px 1px, #95FF0033 1px, transparent 0);
+  background-image: radial-gradient(circle at 1px 1px, #FF087933 1px, transparent 0);
   background-size: 2rem 2rem;
 }
 
 html {
-  cursor: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0L18 12L13 14L0 0Z' fill='%23C774E7'/%3E%3Cpath d='M0 0L24 12L18 12L0 0Z' fill='%2395FF00'/%3E%3Cpath d='M13 14L18 12L24 12L13 14Z' fill='%2395FF00'/%3E%3Cpath d='M0 0L24 12L18 12L13 14L0 0Z' stroke='black' stroke-width='1.5' stroke-linejoin='round'/%3E%3C/svg%3E") 0 0, auto;
+  cursor: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0L18 12L13 14L0 0Z' fill='%23ACD5F8'/%3E%3Cpath d='M0 0L24 12L18 12L0 0Z' fill='%23FF0879'/%3E%3Cpath d='M13 14L18 12L24 12L13 14Z' fill='%23FF0879'/%3E%3Cpath d='M0 0L24 12L18 12L13 14L0 0Z' stroke='black' stroke-width='1.5' stroke-linejoin='round'/%3E%3C/svg%3E") 0 0, auto;
   scroll-behavior: smooth;
 }
 
@@ -35,15 +35,15 @@ body {
 
 /* Custom glow effects */
 .text-glow {
-  text-shadow: 0 0 8px rgba(149, 255, 0, 0.4), 0 0 20px rgba(149, 255, 0, 0.5);
+  text-shadow: 0 0 8px rgba(255, 8, 121, 0.4), 0 0 20px rgba(255, 8, 121, 0.5);
 }
 
 .box-glow {
-  box-shadow: 0 0 15px rgba(149, 255, 0, 0.4), 0 0 30px rgba(149, 255, 0, 0.3), inset 0 0 10px rgba(149, 255, 0, 0.2);
+  box-shadow: 0 0 15px rgba(255, 8, 121, 0.4), 0 0 30px rgba(255, 8, 121, 0.3), inset 0 0 10px rgba(255, 8, 121, 0.2);
 }
 
 .button-glow:hover {
-  box-shadow: 0 0 15px rgba(149, 255, 0, 0.6), 0 0 25px rgba(149, 255, 0, 0.4);
+  box-shadow: 0 0 15px rgba(255, 8, 121, 0.6), 0 0 25px rgba(255, 8, 121, 0.4);
 }
 
 @keyframes marquee {
@@ -56,5 +56,9 @@ body {
 }
 
 .heading-gradient {
-  color: #95FF00;
+  background: linear-gradient(90deg, #FF0879, #ACD5F8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
 }
