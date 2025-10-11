@@ -50,6 +50,15 @@ export default function Home() {
   
   const partners = ['Devfolio', 'polygon', 'replit', 'SOLANA', 'Filecoin'];
 
+  const roadmapEvents = [
+    { date: '05th FEBRUARY', description: 'Registration for DESIGNATHON 24 starts through Devfolio.' },
+    { date: '20th FEBRUARY', description: 'Registration for DESIGNATHON 24 comes to an end.' },
+    { date: '22nd FEBRUARY', description: 'Shortlisting based on submissions and previous designs.' },
+    { date: '24th FEBRUARY', description: 'Shortlisted Participants are informed via emails.' },
+    { date: '28th FEBRUARY', description: 'DESIGNATHON 24 begins at 08 PM in the evening.' },
+    { date: '29th FEBRUARY', description: 'Valedictory ceremony of DESIGNATHON 24.' },
+  ];
+
   return (
     <>
       {loading && <Preloader />}
@@ -60,7 +69,7 @@ export default function Home() {
         {/* Hero */}
         <section className="relative min-h-screen flex items-center justify-center py-20 px-8">
           <div className="container mx-auto grid md:grid-cols-2 gap-12 items-center">
-            <div className="text-center md:text-left">
+            <div className="text-left">
                 <p className="text-xl md:text-2xl text-gray-300 font-chakra">28 & 29 FEB 2024</p>
                 <h1 className="text-8xl md:text-9xl font-bold my-2 -space-y-4 font-chakra">
                     <span className="text-[#FF0879]">design</span>
@@ -70,7 +79,7 @@ export default function Home() {
                 <p className="text-2xl md:text-3xl font-bold text-gray-200 tracking-wider font-chakra">
                     BIGGER<span className="text-[#ACD5F8]">.</span> GRANDER<span className="text-[#ACD5F8]">.</span> WILDER<span className="text-[#ACD5F8]">.</span>
                 </p>
-                <div className="flex justify-center md:justify-start gap-12 mt-8">
+                <div className="flex justify-start gap-12 mt-8">
                     <div>
                         <p className="text-5xl font-bold text-[#FF0879] font-chakra">12</p>
                         <p className="text-gray-400 font-chakra">HOURS</p>
@@ -184,21 +193,23 @@ export default function Home() {
             viewport={{ once: true, amount: 0.3 }}
             variants={sectionVariants}
         >
-            <div className="text-center mb-12">
+            <div className="text-center mb-16">
                 <h2 className="text-3xl md:text-4xl font-bold font-chakra heading-gradient">HACKATHON ROADMAP</h2>
             </div>
-            <div className="grid md:grid-cols-3 gap-x-8 gap-y-12 max-w-6xl mx-auto text-center md:text-left">
-              {[
-                { date: '05th FEBRUARY', description: 'Registration for DESIGNATHON 24 starts through Devfolio.' },
-                { date: '20th FEBRUARY', description: 'Registration for DESIGNATHON 24 comes to an end.' },
-                { date: '22nd FEBRUARY', description: 'Shortlisting based on submissions and previous designs.' },
-                { date: '24th FEBRUARY', description: 'Shortlisted Participants are informed via emails.' },
-                { date: '28th FEBRUARY', description: 'DESIGNATHON 24 begins at 08 PM in the evening.' },
-                { date: '29th FEBRUARY', description: 'Valedictory ceremony of DESIGNATHON 24.' },
-              ].map((event, index) => (
-                <div key={index}>
-                    <h3 className="font-bold text-2xl mb-2 text-[#ACD5F8] font-chakra">{event.date}</h3>
-                    <p className="text-gray-400">{event.description}</p>
+            <div className="relative max-w-4xl mx-auto">
+              {/* Timeline line */}
+              <div className="absolute left-1/2 -translate-x-1/2 h-full w-0.5 bg-gray-700"></div>
+
+              {roadmapEvents.map((event, index) => (
+                <div key={index} className={`mb-12 flex items-center w-full ${index % 2 === 0 ? 'justify-start' : 'justify-end'}`}>
+                  <div className={`w-1/2 ${index % 2 === 0 ? 'pr-8' : 'pl-8'}`}>
+                    <div className={`p-6 rounded-lg shadow-lg bg-gray-900 box-glow ${index % 2 === 0 ? 'text-right' : 'text-left'}`}>
+                      <h3 className="font-bold text-2xl mb-2 text-[#ACD5F8] font-chakra">{event.date}</h3>
+                      <p className="text-gray-400">{event.description}</p>
+                    </div>
+                  </div>
+                  {/* Timeline dot */}
+                  <div className="absolute left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-[#FF0879] border-2 border-white"></div>
                 </div>
               ))}
             </div>
