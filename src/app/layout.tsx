@@ -5,6 +5,7 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import { Toaster } from '@/components/ui/toaster';
+import CustomCursor from '@/components/CustomCursor';
 
 export const metadata: Metadata = {
   title: 'iX — 25',
@@ -19,6 +20,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className="font-turret">
+        <CustomCursor />
         {children}
         <Toaster />
       </body>
