@@ -24,7 +24,7 @@
 }
 
 html {
-  cursor: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0L18 12L13 14L0 0Z' fill='%23ACD5F8'/%3E%3Cpath d='M0 0L24 12L18 12L0 0Z' fill='%23FF0879'/%3E%3Cpath d='M13 14L18 12L24 12L13 14Z' fill='%23FF0879'/%3E%3Cpath d='M0 0L24 12L18 12L13 14L0 0Z' stroke='black' stroke-width='1.5' stroke-linejoin='round'/%3E%3C/svg%3E") 0 0, auto;
+  cursor: url("data:image/svg+xml,%3Csvg width='28' height='28' viewBox='0 0 28 28' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cdefs%3E%3ClinearGradient id='grad1' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%23FFC0CB;stop-opacity:1' /%3E%3Cstop offset='100%25' style='stop-color:%23FF1493;stop-opacity:1' /%3E%3C/linearGradient%3E%3ClinearGradient id='grad2' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%23FFFFFF;stop-opacity:0.8' /%3E%3Cstop offset='100%25' style='stop-color:%23FF1493;stop-opacity:0.2' /%3E%3C/linearGradient%3E%3Cfilter id='glow' x='-50%25' y='-50%25' width='200%25' height='200%25'%3E%3CfeGaussianBlur stdDeviation='2' result='coloredBlur'/%3E%3CfeMerge%3E%3CfeMergeNode in='coloredBlur'/%3E%3CfeMergeNode in='SourceGraphic'/%3E%3C/feMerge%3E%3C/filter%3E%3C/defs%3E%3Cpath d='M4 4L24 14L16 16L4 4Z' fill='url(%23grad1)' stroke='%23FFFFFF' stroke-width='1.5' stroke-linejoin='round' filter='url(%23glow)'/%3E%3Cpath d='M4 4L24 14L16 16L4 4Z' fill='url(%23grad2)' stroke-opacity='0.5'/%3E%3C/svg%3E") 4 4, auto;
   scroll-behavior: smooth;
 }
 
@@ -70,15 +70,14 @@ body {
 .memories-carousel .swiper-slide {
   transition: transform 0.3s ease-out, filter 0.3s ease-out;
   filter: grayscale(100%);
-  transform: rotate(-5deg);
-}
-
-.memories-carousel:hover .swiper-wrapper {
-  animation-play-state: paused;
 }
 
 .memories-carousel .swiper-slide:hover {
   filter: grayscale(0%);
   transform: rotate(0deg) scale(1.1);
   z-index: 10;
+}
+
+.memories-carousel:hover .swiper-wrapper {
+  animation-play-state: paused;
 }
