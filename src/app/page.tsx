@@ -7,6 +7,7 @@ import Image from 'next/image';
 import Preloader from '@/components/Preloader';
 import Marquee from '@/components/Marquee';
 import Navbar from '@/components/Navbar';
+import MemoriesCarousel from '@/components/MemoriesCarousel';
 
 const FAQItem = ({ item, index }: { item: { question: string; answer: string }, index: number }) => {
     const [isOpen, setIsOpen] = useState(false);
@@ -223,7 +224,7 @@ export default function Home() {
 
         {/* Memories */}
         <motion.section 
-            className="py-20 text-center"
+            className="py-20 text-center overflow-hidden"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.3 }}
@@ -234,26 +235,8 @@ export default function Home() {
                 <br />
                  HAVE CREATED.
             </h2>
-            <div className="container mx-auto px-4 grid grid-cols-2 md:grid-cols-4 gap-4">
-              {[
-                'https://picsum.photos/seed/mem1/400/400',
-                'https://picsum.photos/seed/mem2/400/400',
-                'https://picsum.photos/seed/mem3/400/400',
-                'https://picsum.photos/seed/mem4/400/400',
-              ].map((src, index) => (
-                <div key={index} className="relative aspect-square">
-                  <Image
-                    src={src}
-                    alt={`Memory ${index + 1}`}
-                    fill
-                    style={{objectFit: 'cover'}}
-                    className="rounded-lg"
-                    data-ai-hint="hackathon photos"
-                  />
-                </div>
-              ))}
-            </div>
-            <p className="mt-4 text-gray-500 font-chakra">The Previous Edition of DESIGNATHON by CODe</p>
+            <MemoriesCarousel />
+            <p className="mt-8 text-gray-500 font-chakra">The Previous Edition of DESIGNATHON by CODe</p>
         </motion.section>
 
 
