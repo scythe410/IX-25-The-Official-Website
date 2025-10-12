@@ -66,14 +66,14 @@ export default function Home() {
       <Navbar />
       <main className="min-h-screen text-white dot-grid-background">
         
-        <div className="fixed top-0 left-0 w-full text-center z-0 pointer-events-none">
+        <div className="relative text-center z-0">
           <h1 className="text-[20vw] font-bold font-chakra text-white/5" style={{ transform: 'translateY(-50%)' }}>
               DESIGNATHON
           </h1>
         </div>
 
         {/* Hero */}
-        <section className="relative min-h-screen flex items-center justify-center py-20 px-8">
+        <section className="relative min-h-screen flex items-center justify-center py-20 px-8 -mt-[10vw]">
           <div className="container mx-auto grid md:grid-cols-2 gap-12 items-center">
             <div className="text-left">
                 <p className="text-xl md:text-2xl text-gray-300 font-chakra">28 & 29 FEB 2024</p>
@@ -208,8 +208,8 @@ export default function Home() {
 
               {roadmapEvents.map((event, index) => (
                 <div key={index} className={`mb-12 flex items-center w-full ${index % 2 === 0 ? 'justify-start' : 'justify-end'}`}>
-                  <div className={`w-1/2 ${index % 2 === 0 ? 'pr-8' : 'pl-8'}`}>
-                    <div className={`p-6 rounded-lg shadow-lg bg-gray-900 box-glow ${index % 2 === 0 ? 'text-right' : 'text-left'}`}>
+                  <div className={`w-1/2 ${index % 2 === 0 ? 'pr-8 text-right' : 'pl-8 text-left'}`}>
+                    <div className={`p-6 rounded-lg shadow-lg bg-gray-900 box-glow`}>
                       <h3 className="font-bold text-2xl mb-2 text-[#ACD5F8] font-chakra">{event.date}</h3>
                       <p className="text-gray-400">{event.description}</p>
                     </div>
@@ -261,7 +261,7 @@ export default function Home() {
         <motion.section 
             id="register" 
             className="py-20 container mx-auto px-4"
-            initial="hidden"
+            initial-hidden="true"
             whileInView="visible"
             viewport={{ once: true, amount: 0.3 }}
             variants={sectionVariants}
@@ -293,7 +293,7 @@ export default function Home() {
         {/* Partners */}
         <motion.section
             className="py-20 text-center"
-            initial="hidden"
+            initial-hidden="true"
             whileInView="visible"
             viewport={{ once: true, amount: 0.3 }}
             variants={sectionVariants}
@@ -311,7 +311,7 @@ export default function Home() {
         
         <motion.footer 
             className="py-8 border-t border-gray-800"
-            initial="hidden"
+            initial-hidden="true"
             whileInView="visible"
             viewport={{ once: true, amount: 0.3 }}
             variants={sectionVariants}
