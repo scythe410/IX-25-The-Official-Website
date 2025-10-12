@@ -73,7 +73,7 @@ export default function Home() {
         </div>
 
         {/* Hero */}
-        <section className="relative min-h-screen flex items-center justify-center py-20 px-8 -mt-[10vw]">
+        <section className="relative min-h-screen flex items-center justify-center py-20 px-8 -mt-[20vw]">
           <div className="container mx-auto grid md:grid-cols-2 gap-12 items-center">
             <div className="text-left">
                 <p className="text-xl md:text-2xl text-gray-300 font-chakra">28 & 29 FEB 2024</p>
