@@ -55,7 +55,7 @@ export default function Home() {
     { date: '20th FEBRUARY', description: 'Registration for DESIGNATHON 24 comes to an end.' },
     { date: '22nd FEBRUARY', description: 'Shortlisting based on submissions and previous designs.' },
     { date: '24th FEBRUARY', description: 'Shortlisted Participants are informed via emails.' },
-    { date: '28th FEBRUARY', description: 'DESIGNATHON 24 begins at 08 PM in the evening.' },
+    { date: '28th FEBRUARY', 'description': 'DESIGNATHON 24 begins at 08 PM in the evening.' },
     { date: '29th FEBRUARY', description: 'Valedictory ceremony of DESIGNATHON 24.' },
   ];
 
@@ -73,7 +73,7 @@ export default function Home() {
         </div>
 
         {/* Hero */}
-        <section className="relative min-h-screen flex items-center justify-center py-20 px-8 -mt-[20vw]">
+        <section className="relative min-h-screen flex items-center justify-center py-20 px-8 -mt-[25vw]">
           <div className="container mx-auto grid md:grid-cols-2 gap-12 items-center">
             <div className="text-left">
                 <p className="text-xl md:text-2xl text-gray-300 font-chakra">28 & 29 FEB 2024</p>
