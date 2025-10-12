@@ -66,6 +66,12 @@ export default function Home() {
       <Navbar />
       <main className="min-h-screen text-white dot-grid-background">
         
+        <div className="fixed top-0 left-0 w-full text-center z-0 pointer-events-none">
+          <h1 className="text-[20vw] font-bold font-chakra text-white/5" style={{ transform: 'translateY(-50%)' }}>
+              DESIGNATHON
+          </h1>
+        </div>
+
         {/* Hero */}
         <section className="relative min-h-screen flex items-center justify-center py-20 px-8">
           <div className="container mx-auto grid md:grid-cols-2 gap-12 items-center">
