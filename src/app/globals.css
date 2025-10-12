@@ -107,16 +107,16 @@ body {
 }
 
 .cursor-inner {
-  width: 10px;
-  height: 10px;
+  width: 8px;
+  height: 8px;
   background-color: #ff0077;
   border-radius: 50%;
   transition: transform 0.2s ease-in-out;
 }
 
 .cursor-outer {
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
   position: absolute;
   border: 2px solid #ff0077;
   border-radius: 50%;
