@@ -252,7 +252,7 @@ export default function Home() {
             <div className="grid md:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
                 <div>
                      <Image
-                        src="https://picsum.photos/seed/faq-retro-computer/600/400"
+                        src="https://picsum.photos/seed/faq-retro/600/400"
                         alt="Retro computer"
                         width={600}
                         height={400}
