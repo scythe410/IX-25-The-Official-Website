@@ -118,7 +118,7 @@ export default function Home() {
           </p>
         </motion.section>
 
-        <Marquee text="DESIGNATHON '24" />
+        <Marquee text="IX 25'" />
         
         {/* Prizes */}
         <motion.section

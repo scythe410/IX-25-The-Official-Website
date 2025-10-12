@@ -11,7 +11,7 @@ const Preloader = () => {
       className="fixed inset-0 z-[100] flex flex-col items-center justify-center bg-black dot-grid-background"
     >
       <div className="text-2xl font-bold tracking-widest text-glow font-anton mb-4">
-        CODESPRINT X
+        IX 25'
       </div>
       <div className="w-64 h-2 bg-gray-800 rounded-full overflow-hidden box-glow">
         <motion.div
