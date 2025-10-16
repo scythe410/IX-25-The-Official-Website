@@ -52,12 +52,16 @@ export default function Home() {
   const partners = ['Devfolio', 'polygon', 'replit', 'SOLANA', 'Filecoin'];
 
   const roadmapEvents = [
-    { date: '05th FEBRUARY', description: 'Registration for DESIGNATHON 24 starts through Devfolio.' },
-    { date: '20th FEBRUARY', description: 'Registration for DESIGNATHON 24 comes to an end.' },
-    { date: '22nd FEBRUARY', description: 'Shortlisting based on submissions and previous designs.' },
-    { date: '24th FEBRUARY', description: 'Shortlisted Participants are informed via emails.' },
-    { date: '28th FEBRUARY', 'description': 'DESIGNATHON 24 begins at 08 PM in the evening.' },
-    { date: '29th FEBRUARY', description: 'Valedictory ceremony of DESIGNATHON 24.' },
+    { date: '20th OCTOBER', description: 'Registrations Open' },
+    { date: '03rd NOVEMBER', description: 'Registrations Close' },
+    { date: '06th NOVEMBER', description: 'Introductory Session' },
+    { date: '08th NOVEMBER', description: 'Submissions Opening' },
+    { date: '09th NOVEMBER', description: 'Workshop 01' },
+    { date: '12th NOVEMBER', description: 'Workshop 02' },
+    { date: '15th NOVEMBER', description: 'Submissions Closing' },
+    { date: '20th NOVEMBER', description: 'Announcing Finalists' },
+    { date: '22nd NOVEMBER', description: 'Workshop 03' },
+    { date: '29th-30th NOVEMBER', description: 'Grand Finale' },
   ];
 
   return (
@@ -138,15 +142,15 @@ export default function Home() {
             <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
                 <div className="text-center">
                     <p className="text-gray-400 uppercase tracking-widest font-chakra">TITLE WINNER</p>
-                    <p className="text-5xl md:text-6xl font-bold heading-gradient font-chakra">10,000 INR</p>
+                    <p className="text-5xl md:text-6xl font-bold heading-gradient font-chakra">100,000 LKR</p>
                 </div>
                  <div className="text-center">
                     <p className="text-gray-400 uppercase tracking-widest font-chakra">FIRST RUNNERS UP</p>
-                    <p className="text-5xl md:text-6xl font-bold heading-gradient font-chakra">5,000 INR</p>
+                    <p className="text-5xl md:text-6xl font-bold heading-gradient font-chakra">60,000 LKR</p>
                 </div>
                  <div className="text-center">
                     <p className="text-gray-400 uppercase tracking-widest font-chakra">SECOND RUNNERS UP</p>
-                    <p className="text-5xl md:text-6xl font-bold heading-gradient font-chakra">3,000 INR</p>
+                    <p className="text-5xl md:text-6xl font-bold heading-gradient font-chakra">40,000 LKR</p>
                 </div>
             </div>
         </motion.section>
