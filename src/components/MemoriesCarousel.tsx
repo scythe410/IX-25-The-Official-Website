@@ -6,14 +6,14 @@ import { Autoplay } from 'swiper/modules';
 import Image from 'next/image';
 
 const images = [
-  'https://picsum.photos/seed/mem1/600/400',
-  'https://picsum.photos/seed/mem2/600/400',
-  'https://picsum.photos/seed/mem3/600/400',
-  'https://picsum.photos/seed/mem4/600/400',
-  'https://picsum.photos/seed/mem5/600/400',
-  'https://picsum.photos/seed/mem6/600/400',
-  'https://picsum.photos/seed/mem7/600/400',
-  'https://picsum.photos/seed/mem8/600/400',
+  '/images/c1.webp',
+  '/images/c2.webp',
+  '/images/c3.webp',
+  '/images/c4.webp',
+  '/images/c5.webp',
+  '/images/c6.webp',
+  '/images/c7.webp',
+  '/images/c8.webp',
 ];
 
 const MemoriesCarousel = () => {

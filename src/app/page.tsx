@@ -65,7 +65,7 @@ export default function Home() {
       {loading && <Preloader />}
       <div className="overflow-x-hidden font-turret">
       <Navbar />
-      <main className="min-h-screen text-white dot-grid-background">
+      <main className="min-h-screen text-white dot-grid-background pb-24">
         
         <div className="relative text-center z-0">
           <h1 className="text-[20vw] font-bold font-chakra text-white/5" style={{ transform: 'translateY(-50%)' }}>
@@ -236,7 +236,7 @@ export default function Home() {
                  HAVE CREATED.
             </h2>
             <MemoriesCarousel />
-            <p className="mt-8 text-gray-500 font-chakra">The Previous Edition of DESIGNATHON by CODe</p>
+            <p className="mt-8 text-gray-500 font-chakra">IX 24' Memories</p>
         </motion.section>
 
 
@@ -252,7 +252,7 @@ export default function Home() {
             <div className="grid md:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
                 <div>
                      <Image
-                        src="images/faq.svg"
+                        src="https://picsum.photos/seed/retro-computer/600/400"
                         alt="Retro computer"
                         width={600}
                         height={400}
