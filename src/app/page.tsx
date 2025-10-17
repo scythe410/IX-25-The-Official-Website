@@ -182,7 +182,7 @@ export default function Home() {
         
         {/* Venue */}
         <motion.section
-            className="py-20 text-center"
+            className="py-20 text-center relative"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.3 }}
@@ -191,13 +191,12 @@ export default function Home() {
              <h2 className="text-3xl md:text-4xl font-bold mb-4 font-chakra heading-gradient">HACKATHON VENUE</h2>
              <p className="text-xl text-gray-300 font-chakra">CHRIST COLLEGE OF ENGINEERING</p>
              <p className="text-gray-400 font-chakra">IRINJALAKUDA, THRISSUR, KERALA</p>
-             <div className="mt-4 max-w-4xl mx-auto">
+             <div className="mt-4 max-w-4xl mx-auto h-48 relative">
                 <Image
-                  src="/images/building overlay.png"
+                  src="https://picsum.photos/seed/building-illustration/1024/200"
                   alt="Christ College of Engineering"
-                  width={1024}
-                  height={200}
-                  className="rounded-lg object-cover w-full"
+                  layout="fill"
+                  className="rounded-lg object-cover w-full opacity-30"
                   data-ai-hint="building illustration"
                 />
              </div>
@@ -329,5 +328,3 @@ export default function Home() {
     </>
   );
 }
-
-    
