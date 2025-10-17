@@ -58,7 +58,7 @@ export default function Home() {
     { date: '08th NOVEMBER', description: 'Submissions Opening' },
     { date: '09th NOVEMBER', description: 'Workshop 01' },
     { date: '12th NOVEMBER', description: 'Workshop 02' },
-    { date: '15th NOVEMBER', description: 'Submissions Closing' },
+    { date: '15th AUGUST', description: 'Submissions Closing' },
     { date: '20th NOVEMBER', description: 'Announcing Finalists' },
     { date: '22nd NOVEMBER', description: 'Workshop 03' },
     { date: '29th-30th NOVEMBER', description: 'Grand Finale' },
@@ -191,8 +191,15 @@ export default function Home() {
              <h2 className="text-3xl md:text-4xl font-bold mb-4 font-chakra heading-gradient">HACKATHON VENUE</h2>
              <p className="text-xl text-gray-300 font-chakra">CHRIST COLLEGE OF ENGINEERING</p>
              <p className="text-gray-400 font-chakra">IRINJALAKUDA, THRISSUR, KERALA</p>
-             <div className="mt-4 h-32 w-full bg-gray-900/50 max-w-4xl mx-auto rounded-lg border border-gray-700 flex items-center justify-center">
-                <p className="text-gray-500">Building Illustration</p>
+             <div className="mt-4 max-w-4xl mx-auto">
+                <Image
+                  src="/images/building overlay.png"
+                  alt="Christ College of Engineering"
+                  width={1024}
+                  height={200}
+                  className="rounded-lg object-cover w-full"
+                  data-ai-hint="building illustration"
+                />
              </div>
         </motion.section>
 
