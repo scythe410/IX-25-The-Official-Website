@@ -52,16 +52,16 @@ export default function Home() {
   const partners = ['Devfolio', 'polygon', 'replit', 'SOLANA', 'Filecoin'];
 
   const roadmapEvents = [
-    { date: '20th OCTOBER', description: 'Registrations Open' },
-    { date: '03rd NOVEMBER', description: 'Registrations Close' },
-    { date: '06th NOVEMBER', description: 'Introductory Session' },
-    { date: '08th NOVEMBER', description: 'Submissions Opening' },
-    { date: '09th NOVEMBER', description: 'Workshop 01' },
-    { date: '12th NOVEMBER', description: 'Workshop 02' },
-    { date: '15th AUGUST', description: 'Submissions Closing' },
-    { date: '20th NOVEMBER', description: 'Announcing Finalists' },
-    { date: '22nd NOVEMBER', description: 'Workshop 03' },
-    { date: '29th-30th NOVEMBER', description: 'Grand Finale' },
+    { date: '23rd Oct', description: 'Registrations Open' },
+    { date: '07th Nov', description: 'Workshop 01' },
+    { date: '11th Nov', description: 'Registrations Closing' },
+    { date: '15th Nov', description: 'Introductory Session' },
+    { date: '16th Nov', description: 'Submissions Opening' },
+    { date: '19th Nov', description: 'Workshop 02' },
+    { date: '24th Nov', description: 'Submissions Closing' },
+    { date: '28th Nov', description: 'Choosing Finalists' },
+    { date: '29th Nov', description: 'Workshop 03' },
+    { date: '06-07th Dec', description: 'Grand Final' },
   ];
 
   return (
@@ -328,3 +328,5 @@ export default function Home() {
     </>
   );
 }
+
+    
