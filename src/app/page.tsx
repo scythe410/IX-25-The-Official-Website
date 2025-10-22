@@ -182,12 +182,12 @@ export default function Home() {
             variants={sectionVariants}
         >
              <h2 className="text-3xl md:text-4xl font-bold mb-4 font-chakra heading-gradient">HACKATHON VENUE</h2>
-             <p className="text-xl text-gray-300 font-chakra">CHRIST COLLEGE OF ENGINEERING</p>
-             <p className="text-gray-400 font-chakra">IRINJALAKUDA, THRISSUR, KERALA</p>
+             <p className="text-xl text-gray-300 font-chakra">Informatics Institute of Technology</p>
+             <p className="text-gray-400 font-chakra">GP Square, Colombo 04</p>
              <div className="mt-4 max-w-4xl mx-auto h-48 relative">
                 <Image
                   src="https://picsum.photos/seed/building-illustration/1024/200"
-                  alt="Christ College of Engineering"
+                  alt="Informatics Institute of Technology"
                   layout="fill"
                   className="rounded-lg object-cover w-full opacity-30"
                   data-ai-hint="building illustration"
