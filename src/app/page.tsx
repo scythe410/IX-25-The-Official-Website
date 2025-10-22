@@ -52,14 +52,14 @@ export default function Home() {
   const partners = ['Devfolio', 'polygon', 'replit', 'SOLANA', 'Filecoin'];
 
   const roadmapEvents = [
-    { date: '20th Oct', description: 'Registrations Open' },
-    { date: '03rd Nov', description: 'Registrations Closing' },
-    { date: '06th Nov', description: 'Introductory Session' },
-    { date: '08th Nov', description: 'Submissions Opening' },
-    { date: '09th Nov', description: 'Workshop 01' },
-    { date: '12th Nov', description: 'Workshop 02' },
-    { date: '20th Nov', description: 'Submissions Closing' },
-    { date: '22nd Nov', description: 'Announcing Finalists' },
+    { date: '15th Aug', description: 'Registrations Open' },
+    { date: '03rd Sep', description: 'Registrations close' },
+    { date: '06th Sep', description: 'Introductory session' },
+    { date: '08th Sep', description: 'Submissions Opening' },
+    { date: '09th Sep', description: 'workshop 01' },
+    { date: '12th Sep', description: 'workshop 02' },
+    { date: '20th Oct', description: 'Submissions Closing' },
+    { date: '22nd Oct', description: 'Announcing Finalists' },
     { date: '29th - 30th Nov', description: 'Grand Finale' },
   ];
 
@@ -145,11 +145,9 @@ export default function Home() {
                     PRIZE POOL
                 </h1>
             </div>
-            <div className="relative z-10 inline-block">
-                <div className="p-8 border border-gray-700 rounded-lg box-glow">
-                    <p className="text-gray-400 uppercase tracking-widest font-chakra">PRIZE POOL</p>
-                    <p className="text-7xl md:text-8xl font-bold heading-gradient font-chakra">200,000 LKR</p>
-                </div>
+            <div className="relative z-10">
+                <p className="text-gray-400 uppercase tracking-widest font-chakra">PRIZE POOL</p>
+                <p className="text-7xl md:text-8xl font-bold heading-gradient font-chakra">200,000 LKR</p>
             </div>
         </motion.section>
 
