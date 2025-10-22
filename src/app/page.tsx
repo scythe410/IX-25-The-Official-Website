@@ -134,15 +134,22 @@ export default function Home() {
         
         {/* Prizes */}
         <motion.section
-            className="py-20 container mx-auto px-4 text-center"
+            className="py-20 text-center relative"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.3 }}
             variants={sectionVariants}
         >
-            <div className="text-center">
-                <p className="text-gray-400 uppercase tracking-widest font-chakra">PRIZE POOL</p>
-                <p className="text-5xl md:text-6xl font-bold heading-gradient font-chakra">200,000 LKR</p>
+            <div className="absolute inset-x-0 top-1/2 -translate-y-1/2">
+                <h1 className="text-[15vw] font-bold text-gray-800/50 opacity-20 whitespace-nowrap font-chakra">
+                    PRIZE POOL
+                </h1>
+            </div>
+            <div className="relative z-10 inline-block">
+                <div className="p-8 border border-gray-700 rounded-lg box-glow">
+                    <p className="text-gray-400 uppercase tracking-widest font-chakra">PRIZE POOL</p>
+                    <p className="text-7xl md:text-8xl font-bold heading-gradient font-chakra">200,000 LKR</p>
+                </div>
             </div>
         </motion.section>
 
@@ -316,6 +323,8 @@ export default function Home() {
     </>
   );
 }
+
+    
 
     
 
