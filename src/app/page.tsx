@@ -83,7 +83,17 @@ export default function Home() {
         {/* Hero */}
         <section className="relative min-h-screen flex items-center justify-center py-20 px-8 -mt-[30vw]">
           <div className="container mx-auto grid md:grid-cols-5 gap-12 items-center">
-            <div className="md:col-span-3 md:col-start-3 text-left">
+            <div className="md:col-span-2 relative flex justify-center items-center h-96">
+                <Image
+                  src="/images/Designathon bg video 1.gif"
+                  alt="Designathon Illustration"
+                  width={600}
+                  height={400}
+                  className="rounded-lg object-contain"
+                  data-ai-hint="abstract illustration vaporwave"
+                />
+            </div>
+            <div className="md:col-span-3 text-left">
                 <p className="text-xl md:text-2xl text-gray-300 font-chakra">06 &amp; 07 DEC 2025</p>
                 <h1 className="text-8xl md:text-9xl font-bold my-2 -space-y-4 font-chakra">
                     <span className="text-[#FF0879]">design</span>
@@ -103,16 +113,6 @@ export default function Home() {
                         <p className="text-gray-400 font-chakra">PRIZEPOOL</p>
                     </div>
                 </div>
-            </div>
-            <div className="md:col-span-2 relative flex justify-center items-center h-96">
-                <Image
-                  src="/images/Designathon bg video 1.gif"
-                  alt="Designathon Illustration"
-                  width={600}
-                  height={400}
-                  className="rounded-lg object-contain"
-                  data-ai-hint="abstract illustration vaporwave"
-                />
             </div>
           </div>
         </section>
@@ -321,3 +321,5 @@ export default function Home() {
     </>
   );
 }
+
+    
