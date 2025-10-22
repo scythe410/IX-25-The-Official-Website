@@ -8,6 +8,7 @@ import Preloader from '@/components/Preloader';
 import Marquee from '@/components/Marquee';
 import Navbar from '@/components/Navbar';
 import MemoriesCarousel from '@/components/MemoriesCarousel';
+import ScrollTextReveal from '@/components/ScrollTextReveal';
 
 const FAQItem = ({ item, index }: { item: { question: string; answer: string }, index: number }) => {
     const [isOpen, setIsOpen] = useState(false);
@@ -62,6 +63,9 @@ export default function Home() {
     { date: '22nd Oct', description: 'Announcing Finalists' },
     { date: '29th - 30th Nov', description: 'Grand Finale' },
   ];
+
+  const aboutText = "IX is the first-ever virtual inter-university designathon organized in Sri Lanka. event where teams of students, professionals, and technology enthusiasts come together to solve real-world problems using innovative design solutions. With the success of IX in the past years, it has been recognized as one of the most prestigious design events in Sri Lanka. IX 24, the fourth edition of Sri Lanka’s pioneering inter-university designathon, spotlighted extended reality (XR), spatial UI, and AI-driven design. Over two phases, participants first presented innovative UI/UX concepts, with the top 10 teams advancing to a 24-hour designathon. The competition fostered creativity, collaboration, and future-focused problem-solving, empowering students to push design boundaries. The top three teams were celebrated for their ingenuity, practicality, and impactful solutions, solidifying IX 24 as a leading platform for visionary design in Sri Lanka.";
+
 
   return (
     <>
@@ -123,11 +127,7 @@ export default function Home() {
             variants={sectionVariants}
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-4 font-chakra">WHAT IS <span className="text-[#FF0879]">IX 25'?</span></h2>
-          <p className="text-lg text-gray-300 leading-relaxed">
-          IX is the first-ever virtual inter-university  designathon organized in Sri Lanka. event  where  teams  of  students,  professionals, and technology enthusiasts  come together to solve real-world problems  using innovative design solutions. With the  success of IX in the past years, it has been  recognized as one of the most prestigious  design events in Sri Lanka.
-          IX 24, the fourth edition of Sri Lanka’s pioneering inter-university designathon, spotlighted extended reality (XR), spatial UI, and AI-driven design. Over two phases, participants first presented innovative UI/UX concepts, with the top 10 teams advancing to a 24-hour designathon.
-          The competition fostered creativity, collaboration, and future-focused problem-solving, empowering students to push design boundaries. The top three teams were celebrated for their ingenuity, practicality, and impactful solutions, solidifying IX 24 as a leading platform for visionary design in Sri Lanka.
-          </p>
+          <ScrollTextReveal text={aboutText} />
         </motion.section>
 
         <Marquee text="IX 25'" />
@@ -321,9 +321,3 @@ export default function Home() {
     </>
   );
 }
-
-    
-
-    
-
-    
