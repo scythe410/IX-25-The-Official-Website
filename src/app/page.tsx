@@ -52,16 +52,15 @@ export default function Home() {
   const partners = ['Devfolio', 'polygon', 'replit', 'SOLANA', 'Filecoin'];
 
   const roadmapEvents = [
-    { date: '23rd Oct', description: 'Registrations Open' },
-    { date: '07th Nov', description: 'Workshop 01' },
-    { date: '11th Nov', description: 'Registrations Closing' },
-    { date: '15th Nov', description: 'Introductory Session' },
-    { date: '16th Nov', description: 'Submissions Opening' },
-    { date: '19th Nov', description: 'Workshop 02' },
-    { date: '24th Nov', description: 'Submissions Closing' },
-    { date: '28th Nov', description: 'Choosing Finalists' },
-    { date: '29th Nov', description: 'Workshop 03' },
-    { date: '06-07th Dec', description: 'Grand Final' },
+    { date: '20th Oct', description: 'Registrations Open' },
+    { date: '03rd Nov', description: 'Registrations Closing' },
+    { date: '06th Nov', description: 'Introductory Session' },
+    { date: '08th Nov', description: 'Submissions Opening' },
+    { date: '09th Nov', description: 'Workshop 01' },
+    { date: '12th Nov', description: 'Workshop 02' },
+    { date: '20th Nov', description: 'Submissions Closing' },
+    { date: '22nd Nov', description: 'Announcing Finalists' },
+    { date: '29th - 30th Nov', description: 'Grand Finale' },
   ];
 
   return (
@@ -81,7 +80,7 @@ export default function Home() {
         <section className="relative min-h-screen flex items-center justify-center py-20 px-8 -mt-[25vw]">
           <div className="container mx-auto grid md:grid-cols-2 gap-12 items-center">
             <div className="text-left">
-                <p className="text-xl md:text-2xl text-gray-300 font-chakra">28 & 29 FEB 2024</p>
+                <p className="text-xl md:text-2xl text-gray-300 font-chakra">06 & 07 DEC 2025</p>
                 <h1 className="text-8xl md:text-9xl font-bold my-2 -space-y-4 font-chakra">
                     <span className="text-[#FF0879]">design</span>
                     <br />
@@ -92,11 +91,11 @@ export default function Home() {
                 </p>
                 <div className="flex justify-start gap-12 mt-8">
                     <div>
-                        <p className="text-5xl font-bold text-[#FF0879] font-chakra">12</p>
+                        <p className="text-5xl font-bold text-[#FF0879] font-chakra">36</p>
                         <p className="text-gray-400 font-chakra">HOURS</p>
                     </div>
                     <div>
-                        <p className="text-5xl font-bold text-[#FF0879] font-chakra">20K</p>
+                        <p className="text-5xl font-bold text-[#FF0879] font-chakra">200K</p>
                         <p className="text-gray-400 font-chakra">PRIZEPOOL</p>
                     </div>
                 </div>
@@ -123,9 +122,11 @@ export default function Home() {
             viewport={{ once: true, amount: 0.3 }}
             variants={sectionVariants}
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 font-chakra">WHAT IS <span className="text-[#FF0879]">DESIGNATHON?</span></h2>
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 font-chakra">WHAT IS <span className="text-[#FF0879]">IX 25'?</span></h2>
           <p className="text-lg text-gray-300 leading-relaxed">
-            An in-person action packed design hackathon where students and aspiring designers are given a platform to experience real-life design problems and master the art of creating usable, viable, and empathetic design solutions while having a great deal of fun for 12 hours straight.
+          IX is the first-ever virtual inter-university  designathon organized in Sri Lanka. event  where  teams  of  students,  professionals, and technology enthusiasts  come together to solve real-world problems  using innovative design solutions. With the  success of IX in the past years, it has been  recognized as one of the most prestigious  design events in Sri Lanka.
+          IX 24, the fourth edition of Sri Lanka’s pioneering inter-university designathon, spotlighted extended reality (XR), spatial UI, and AI-driven design. Over two phases, participants first presented innovative UI/UX concepts, with the top 10 teams advancing to a 24-hour designathon.
+          The competition fostered creativity, collaboration, and future-focused problem-solving, empowering students to push design boundaries. The top three teams were celebrated for their ingenuity, practicality, and impactful solutions, solidifying IX 24 as a leading platform for visionary design in Sri Lanka.
           </p>
         </motion.section>
 
@@ -139,19 +140,9 @@ export default function Home() {
             viewport={{ once: true, amount: 0.3 }}
             variants={sectionVariants}
         >
-            <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-                <div className="text-center">
-                    <p className="text-gray-400 uppercase tracking-widest font-chakra">TITLE WINNER</p>
-                    <p className="text-5xl md:text-6xl font-bold heading-gradient font-chakra">100,000 LKR</p>
-                </div>
-                 <div className="text-center">
-                    <p className="text-gray-400 uppercase tracking-widest font-chakra">FIRST RUNNERS UP</p>
-                    <p className="text-5xl md:text-6xl font-bold heading-gradient font-chakra">60,000 LKR</p>
-                </div>
-                 <div className="text-center">
-                    <p className="text-gray-400 uppercase tracking-widest font-chakra">SECOND RUNNERS UP</p>
-                    <p className="text-5xl md:text-6xl font-bold heading-gradient font-chakra">40,000 LKR</p>
-                </div>
+            <div className="text-center">
+                <p className="text-gray-400 uppercase tracking-widest font-chakra">PRIZE POOL</p>
+                <p className="text-5xl md:text-6xl font-bold heading-gradient font-chakra">200,000 LKR</p>
             </div>
         </motion.section>
 
@@ -173,10 +164,7 @@ export default function Home() {
                 <button className="px-8 py-3 bg-[#FF0879] text-white font-bold rounded-md hover:bg-pink-700 transition-colors duration-300 button-glow text-xl font-chakra">
                     REGISTER FOR FREE
                 </button>
-                <p className="mt-4 text-xl font-bold font-chakra">APPLICATIONS CLOSES ON <span className="text-[#ACD5F8]">FEBRUARY 20TH</span></p>
-                <button className="mt-2 px-6 py-2 border border-gray-600 text-gray-300 rounded-md text-sm font-semibold hover:bg-gray-800 transition-colors duration-300 font-chakra">
-                    Apply with Devfolio
-                </button>
+                <p className="mt-4 text-xl font-bold font-chakra">APPLICATIONS CLOSES ON <span className="text-[#ACD5F8]">NOVEMBER 11TH</span></p>
             </div>
         </motion.section>
         
@@ -328,5 +316,7 @@ export default function Home() {
     </>
   );
 }
+
+    
 
     
