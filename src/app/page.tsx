@@ -50,7 +50,13 @@ export default function Home() {
     visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
   };
   
-  const partners = ['Devfolio', 'polygon', 'replit', 'SOLANA', 'Filecoin'];
+  const partners = [
+    { name: 'IFS', logo: '/images/ifs.png' },
+    { name: 'Polygon', logo: 'https://picsum.photos/seed/polygon/150/60' },
+    { name: 'Replit', logo: 'https://picsum.photos/seed/replit/150/60' },
+    { name: 'Solana', logo: 'https://picsum.photos/seed/solana/150/60' },
+    { name: 'Filecoin', logo: 'https://picsum.photos/seed/filecoin/150/60' },
+  ];
 
   const roadmapEvents = [
     { date: '15th Aug', description: 'Registrations Open' },
@@ -292,10 +298,10 @@ export default function Home() {
             </h2>
             <div className="flex flex-wrap justify-center items-center gap-x-12 gap-y-8 max-w-5xl mx-auto">
                 {partners.map((partner, index) => (
-                    <div key={partner}>
+                    <div key={partner.name}>
                         <Image
-                            src={`/images/ifs.png`}
-                            alt={`${partner} logo`}
+                            src={partner.logo}
+                            alt={`${partner.name} logo`}
                             width={150}
                             height={60}
                             className="object-contain filter grayscale hover:grayscale-0 transition-all duration-300"
