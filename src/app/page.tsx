@@ -81,10 +81,10 @@ export default function Home() {
         </div>
 
         {/* Hero */}
-        <section className="relative min-h-screen flex items-center justify-center py-20 px-8 -mt-[25vw]">
-          <div className="container mx-auto grid md:grid-cols-2 gap-12 items-center">
-            <div className="text-left">
-                <p className="text-xl md:text-2xl text-gray-300 font-chakra">06 & 07 DEC 2025</p>
+        <section className="relative min-h-screen flex items-center justify-center py-20 px-8 -mt-[30vw]">
+          <div className="container mx-auto grid md:grid-cols-5 gap-12 items-center">
+            <div className="md:col-span-3 text-left">
+                <p className="text-xl md:text-2xl text-gray-300 font-chakra">06 &amp; 07 DEC 2025</p>
                 <h1 className="text-8xl md:text-9xl font-bold my-2 -space-y-4 font-chakra">
                     <span className="text-[#FF0879]">design</span>
                     <br />
@@ -104,7 +104,7 @@ export default function Home() {
                     </div>
                 </div>
             </div>
-            <div className="relative flex justify-center items-center h-96">
+            <div className="md:col-span-2 relative flex justify-center items-center h-96">
                 <Image
                   src="/images/Designathon bg video 1.gif"
                   alt="Designathon Illustration"
@@ -307,7 +307,7 @@ export default function Home() {
                     <Image src="https://picsum.photos/seed/christ-logo/100/100" alt="Christ College Logo" width={50} height={50} data-ai-hint="college logo" />
                     <p className="text-sm text-gray-500 font-chakra">CHRIST COLLEGE OF ENGINEERING</p>
                 </div>
-                <p className="text-sm text-gray-500 text-center">Copyright &copy; 2024 Community Of Developers (CODe). All Rights Reserved</p>
+                <p className="text-sm text-gray-500 text-center">Copyright &amp;copy; 2024 Community Of Developers (CODe). All Rights Reserved</p>
                 <div className="flex gap-6">
                   <a href="#" aria-label="Facebook"><FaFacebook className="text-xl text-gray-400 hover:text-white cursor-pointer" /></a>
                   <a href="#" aria-label="Twitter"><FaTwitter className="text-xl text-gray-400 hover:text-white cursor-pointer" /></a>
@@ -321,5 +321,3 @@ export default function Home() {
     </>
   );
 }
-
-    
