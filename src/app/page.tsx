@@ -181,17 +181,20 @@ export default function Home() {
             viewport={{ once: true, amount: 0.3 }}
             variants={sectionVariants}
         >
-             <h2 className="text-3xl md:text-4xl font-bold mb-4 font-chakra heading-gradient">HACKATHON VENUE</h2>
-             <p className="text-xl text-gray-300 font-chakra">Informatics Institute of Technology</p>
-             <p className="text-gray-400 font-chakra">GP Square, Colombo 04</p>
-             <div className="mt-4 max-w-4xl mx-auto h-48 relative">
+            <div className="absolute inset-0">
                 <Image
-                  src="https://picsum.photos/seed/building-illustration/1024/200"
-                  alt="Informatics Institute of Technology"
-                  layout="fill"
-                  className="rounded-lg object-cover w-full opacity-30"
-                  data-ai-hint="building illustration"
+                    src="https://picsum.photos/seed/building-illustration/1280/400"
+                    alt="Informatics Institute of Technology Background"
+                    layout="fill"
+                    className="object-cover w-full opacity-20"
+                    data-ai-hint="building illustration"
                 />
+                <div className="absolute inset-0 bg-black/50"></div>
+            </div>
+             <div className="relative z-10">
+                 <h2 className="text-3xl md:text-4xl font-bold mb-4 font-chakra heading-gradient">HACKATHON VENUE</h2>
+                 <p className="text-xl text-gray-300 font-chakra">Informatics Institute of Technology</p>
+                 <p className="text-gray-400 font-chakra">GP Square, Colombo 04</p>
              </div>
         </motion.section>
 
