@@ -93,7 +93,7 @@ export default function Home() {
                   data-ai-hint="abstract illustration vaporwave"
                 />
             </div>
-            <div className="text-left md:pl-16">
+            <div className="text-left md:pl-32">
                 <p className="text-xl md:text-2xl text-gray-300 font-chakra">06 &amp; 07 DEC 2025</p>
                 <h1 className="text-8xl md:text-9xl font-bold my-2 -space-y-4 font-chakra">
                     <span className="text-[#FF0879]">design</span>
