@@ -183,7 +183,7 @@ export default function Home() {
         >
             <div className="absolute inset-0">
                 <Image
-                    src="https://picsum.photos/seed/building-illustration/1280/400"
+                    src="/images/venue.jpg"
                     alt="Informatics Institute of Technology Background"
                     layout="fill"
                     className="object-cover w-full opacity-20"
@@ -290,9 +290,18 @@ export default function Home() {
             <h2 className="text-3xl md:text-4xl font-bold mb-8 font-chakra heading-gradient">
                 PARTNERING WITH
             </h2>
-            <div className="flex flex-wrap justify-center items-center gap-x-8 gap-y-4 max-w-4xl mx-auto">
-                {partners.map(partner => (
-                    <div key={partner} className="text-gray-400 text-2xl font-bold font-chakra">{partner}</div>
+            <div className="flex flex-wrap justify-center items-center gap-x-12 gap-y-8 max-w-5xl mx-auto">
+                {partners.map((partner, index) => (
+                    <div key={partner}>
+                        <Image
+                            src={`https://picsum.photos/seed/logo${index}/150/60`}
+                            alt={`${partner} logo`}
+                            width={150}
+                            height={60}
+                            className="object-contain filter grayscale hover:grayscale-0 transition-all duration-300"
+                            data-ai-hint="company logo"
+                        />
+                    </div>
                 ))}
             </div>
         </motion.section>
@@ -308,9 +317,9 @@ export default function Home() {
             <div className="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-4">
                 <div className='flex items-center gap-4'>
                     <Image src="https://picsum.photos/seed/christ-logo/100/100" alt="Christ College Logo" width={50} height={50} data-ai-hint="college logo" />
-                    <p className="text-sm text-gray-500 font-chakra">CHRIST COLLEGE OF ENGINEERING</p>
+                    <p className="text-sm text-gray-500 font-chakra">IEEE Student Branch of IIT</p>
                 </div>
-                <p className="text-sm text-gray-500 text-center">Copyright &amp;copy; 2024 Community Of Developers (CODe). All Rights Reserved</p>
+                <p className="text-sm text-gray-500 text-center">Copyright 2025 IX 25'. All Rights Reserved</p>
                 <div className="flex gap-6">
                   <a href="#" aria-label="Facebook"><FaFacebook className="text-xl text-gray-400 hover:text-white cursor-pointer" /></a>
                   <a href="#" aria-label="Twitter"><FaTwitter className="text-xl text-gray-400 hover:text-white cursor-pointer" /></a>
