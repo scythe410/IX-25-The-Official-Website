@@ -294,7 +294,7 @@ export default function Home() {
                 {partners.map((partner, index) => (
                     <div key={partner}>
                         <Image
-                            src={`https://picsum.photos/seed/logo${index}/150/60`}
+                            src={`/images/ifs.png`}
                             alt={`${partner} logo`}
                             width={150}
                             height={60}
