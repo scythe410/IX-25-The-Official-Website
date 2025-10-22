@@ -120,7 +120,7 @@ export default function Home() {
         {/* About */}
         <motion.section 
             id="about" 
-            className="container mx-auto px-6 py-16 text-center max-w-4xl"
+            className="container mx-auto px-6 py-16 text-center max-w-5xl"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.3 }}
@@ -321,3 +321,5 @@ export default function Home() {
     </>
   );
 }
+
+    
