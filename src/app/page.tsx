@@ -10,6 +10,7 @@ import Navbar from '@/components/Navbar';
 import MemoriesCarousel from '@/components/MemoriesCarousel';
 import ScrollTextReveal from '@/components/ScrollTextReveal';
 import { Mail, Linkedin, Phone } from 'lucide-react';
+import IXLogo from '@/components/IXLogo';
 
 const FAQItem = ({ item, index }: { item: { question: string; answer: string }, index: number }) => {
     const [isOpen, setIsOpen] = useState(false);
@@ -161,20 +162,20 @@ export default function Home() {
             </div>
             <div className="relative z-10 flex flex-wrap justify-center items-center gap-x-12 md:gap-x-16 gap-y-8 container mx-auto">
                 <div className="text-center">
-                    <p className="text-5xl md:text-6xl font-bold heading-gradient font-chakra">200K+</p>
-                    <p className="text-gray-400 uppercase tracking-widest font-chakra mt-2">PRIZEPOOL</p>
+                    <p className="text-6xl md:text-7xl font-bold heading-gradient font-chakra">200K+</p>
+                    <p className="text-lg text-gray-400 uppercase tracking-widest font-chakra mt-2">PRIZEPOOL</p>
                 </div>
                 <div className="text-center">
-                    <p className="text-5xl md:text-6xl font-bold heading-gradient font-chakra">25+</p>
-                    <p className="text-gray-400 font-chakra mt-2">UNIVERSITIES</p>
+                    <p className="text-6xl md:text-7xl font-bold heading-gradient font-chakra">25+</p>
+                    <p className="text-lg text-gray-400 font-chakra mt-2">UNIVERSITIES</p>
                 </div>
                 <div className="text-center">
-                    <p className="text-5xl md:text-6xl font-bold heading-gradient font-chakra">260+</p>
-                    <p className="text-gray-400 font-chakra mt-2">TEAMS</p>
+                    <p className="text-6xl md:text-7xl font-bold heading-gradient font-chakra">260+</p>
+                    <p className="text-lg text-gray-400 font-chakra mt-2">TEAMS</p>
                 </div>
                 <div className="text-center">
-                    <p className="text-5xl md:text-6xl font-bold heading-gradient font-chakra">1100+</p>
-                    <p className="text-gray-400 font-chakra mt-2">PARTICIPANTS</p>
+                    <p className="text-6xl md:text-7xl font-bold heading-gradient font-chakra">1100+</p>
+                    <p className="text-lg text-gray-400 font-chakra mt-2">PARTICIPANTS</p>
                 </div>
             </div>
         </motion.section>
@@ -252,10 +253,10 @@ export default function Home() {
 
 
         {/* FAQ */}
-        <motion.section 
-            id="register" 
-            className="py-20 container mx-auto px-4"
-            initial-hidden="true"
+        <motion.section
+            id="faq"
+            className="container mx-auto px-6 py-16"
+            initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.3 }}
             variants={sectionVariants}
