@@ -190,13 +190,12 @@ export default function Home() {
           variants={sectionVariants}
         >
           <div className="container mx-auto grid md:grid-cols-2 gap-12 items-center">
-            <div className="relative flex justify-center items-center h-96">
+            <div className="relative h-[500px]">
               <Image
                 src="/images/registrations.png"
                 alt="Registrations Illustration"
-                width={500}
-                height={500}
-                className="rounded-lg object-contain"
+                layout="fill"
+                className="object-cover"
                 data-ai-hint="abstract illustration futuristic"
               />
             </div>
@@ -426,3 +425,6 @@ export default function Home() {
 
     
 
+
+
+    
