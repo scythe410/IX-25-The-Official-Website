@@ -206,14 +206,14 @@ export default function Home() {
                 </h1>
               </div>
               <div className="relative gradient-border-wrapper inline-block p-0.5 rounded-md mb-8">
-                 <button className="px-8 py-3 bg-black text-white font-bold rounded-md hover:bg-black/80 transition-colors duration-300 button-glow text-xl font-chakra">
+                 <button className="px-10 py-4 bg-black text-white font-bold rounded-md hover:bg-black/80 transition-colors duration-300 button-glow text-2xl font-chakra">
                    <span className="text-glow">REGISTER FOR FREE</span>
                  </button>
               </div>
-              <p className="text-xl font-bold font-chakra">
+              <p className="text-2xl font-bold font-chakra">
                 APPLICATIONS CLOSES ON
               </p>
-              <p className="text-5xl font-bold font-chakra text-[#ACD5F8]">
+              <p className="text-7xl font-bold font-chakra text-[#ACD5F8]">
                 NOVEMBER 11TH
               </p>
             </div>
@@ -426,5 +426,7 @@ export default function Home() {
     
 
 
+
+    
 
     
