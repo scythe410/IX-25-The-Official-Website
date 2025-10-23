@@ -74,10 +74,10 @@ export default function Home() {
   const aboutText = "IX is the first-ever virtual inter-university designathon organized in Sri Lanka. event where teams of students, professionals, and technology enthusiasts come together to solve real-world problems using innovative design solutions. With the success of IX in the past years, it has been recognized as one of the most prestigious design events in Sri Lanka. IX 24, the fourth edition of Sri Lanka’s pioneering inter-university designathon, spotlighted extended reality (XR), spatial UI, and AI-driven design. Over two phases, participants first presented innovative UI/UX concepts, with the top 10 teams advancing to a 24-hour designathon. The competition fostered creativity, collaboration, and future-focused problem-solving, empowering students to push design boundaries. The top three teams were celebrated for their ingenuity, practicality, and impactful solutions, solidifying IX 24 as a leading platform for visionary design in Sri Lanka.";
 
   const contacts = [
-    { name: 'VIHAN MENDIS', role: 'Project Chairperson', image: 'https://picsum.photos/seed/vihan/400/500' },
-    { name: 'MAYURAN THANUSHAN', role: 'Program Vice-Chair', image: 'https://picsum.photos/seed/mayuran/400/500' },
-    { name: 'GIHANSA SARATHCHANDRA', role: 'Industry Outreach Vice-Chair', image: 'https://picsum.photos/seed/gihansa/400/500' },
-    { name: 'HARIRAAM KETHISVARASUTHAN', role: 'Logistics Vice-Chair', image: 'https://picsum.photos/seed/hariraam/400/500' },
+    { name: 'Ramiru De Silva', role: "Project Co-Chairperson – IX'25", image: 'https://picsum.photos/seed/ramiru/400/500', email: 'nissanka.20240835@iit.ac.lk', phone: '+94701258369' },
+    { name: 'Daniru Senaratne', role: "Project Co-Chairperson – IX 25", image: 'https://picsum.photos/seed/daniru/400/500', email: 'daniru.20232126@iit.ac.lk', phone: '+94774965624' },
+    { name: 'Pavithma Fernando', role: "Program Vice Chair – IX'25", image: 'https://picsum.photos/seed/pavithma/400/500', email: 'pavithma.20240349@iit.ac.lk', phone: '+94742912929' },
+    { name: 'Damithu Fonseka', role: "Program Vice Chair – IX'25", image: 'https://picsum.photos/seed/damithu/400/500', email: 'damithu.20240185@iit.ac.lk', phone: '+94701117578' },
   ];
 
 
@@ -204,10 +204,10 @@ export default function Home() {
 
               {roadmapEvents.map((event, index) => (
                 <div key={index} className={`mb-12 flex items-center w-full ${index % 2 === 0 ? 'justify-start' : 'justify-end'}`}>
-                  <div className={`w-1/2 ${index % 2 === 0 ? 'pr-8' : 'pl-8'}`}>
+                  <div className={`w-1/2 ${index % 2 === 0 ? 'pr-8 text-right' : 'pl-8'}`}>
                     <div className="bg-gray-900/50 backdrop-blur-sm p-6 rounded-2xl border border-gray-800 box-glow">
                       <h3 className="font-bold text-xl mb-3 text-white tracking-widest font-chakra">{event.title}</h3>
-                      <div className="h-1 w-12 bg-gradient-to-r from-[#FF0879] to-[#ACD5F8] mb-4"></div>
+                      <div className={`h-1 w-12 bg-gradient-to-r from-[#FF0879] to-[#ACD5F8] mb-4 ${index % 2 === 0 ? 'ml-auto' : ''}`}></div>
                       <p className="text-sm text-gray-400 font-bold font-chakra mb-2">{event.date}</p>
                       <p className="text-gray-400 text-sm leading-relaxed">{event.description}</p>
                     </div>
@@ -312,13 +312,13 @@ export default function Home() {
                 <h3 className="text-xl font-bold font-turret tracking-wider">{contact.name}</h3>
                 <p className="text-gray-400 font-chakra mb-4">{contact.role}</p>
                 <div className="flex justify-center gap-4">
-                  <a href="#" aria-label="Email" className="p-2 bg-gray-800 rounded-full hover:bg-[#FF0879] transition-colors">
+                  <a href={`mailto:${contact.email}`} aria-label="Email" className="p-2 bg-gray-800 rounded-full hover:bg-[#FF0879] transition-colors">
                     <Mail className="w-5 h-5" />
                   </a>
                   <a href="#" aria-label="LinkedIn" className="p-2 bg-gray-800 rounded-full hover:bg-[#FF0879] transition-colors">
                     <Linkedin className="w-5 h-5" />
                   </a>
-                  <a href="#" aria-label="Phone" className="p-2 bg-gray-800 rounded-full hover:bg-[#FF0879] transition-colors">
+                  <a href={`tel:${contact.phone}`} aria-label="Phone" className="p-2 bg-gray-800 rounded-full hover:bg-[#FF0879] transition-colors">
                     <Phone className="w-5 h-5" />
                   </a>
                 </div>
