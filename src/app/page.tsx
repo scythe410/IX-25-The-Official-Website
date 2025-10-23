@@ -159,24 +159,22 @@ export default function Home() {
                     PRIZE POOL
                 </h1>
             </div>
-            <div className="relative z-10 flex flex-wrap justify-center items-center gap-x-12 md:gap-x-24 gap-y-8">
-                <div>
-                    <p className="text-gray-400 uppercase tracking-widest font-chakra">PRIZE POOL</p>
-                    <p className="text-7xl md:text-8xl font-bold heading-gradient font-chakra">200,000 LKR</p>
+            <div className="relative z-10 flex flex-wrap justify-center items-center gap-x-12 md:gap-x-16 gap-y-8 container mx-auto">
+                <div className="text-center">
+                    <p className="text-5xl md:text-6xl font-bold heading-gradient font-chakra">200,000 LKR</p>
+                    <p className="text-gray-400 uppercase tracking-widest font-chakra mt-2">PRIZE POOL</p>
                 </div>
-                <div className="flex gap-8 md:gap-12">
-                    <div>
-                        <p className="text-5xl font-bold text-white font-chakra">25+</p>
-                        <p className="text-gray-400 font-chakra">UNIVERSITIES</p>
-                    </div>
-                    <div>
-                        <p className="text-5xl font-bold text-white font-chakra">260+</p>
-                        <p className="text-gray-400 font-chakra">TEAMS</p>
-                    </div>
-                    <div>
-                        <p className="text-5xl font-bold text-white font-chakra">1100+</p>
-                        <p className="text-gray-400 font-chakra">PARTICIPANTS</p>
-                    </div>
+                <div className="text-center">
+                    <p className="text-5xl md:text-6xl font-bold text-white font-chakra">25+</p>
+                    <p className="text-gray-400 font-chakra mt-2">UNIVERSITIES</p>
+                </div>
+                <div className="text-center">
+                    <p className="text-5xl md:text-6xl font-bold text-white font-chakra">260+</p>
+                    <p className="text-gray-400 font-chakra mt-2">TEAMS</p>
+                </div>
+                <div className="text-center">
+                    <p className="text-5xl md:text-6xl font-bold text-white font-chakra">1100+</p>
+                    <p className="text-gray-400 font-chakra mt-2">PARTICIPANTS</p>
                 </div>
             </div>
         </motion.section>
