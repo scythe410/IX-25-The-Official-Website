@@ -127,7 +127,6 @@ body {
   position: relative;
   padding: 1px;
   background: linear-gradient(90deg, #FF0879, #ACD5F8);
-  border-radius: 1rem; /* same as inner */
 }
 
 .gradient-border-corner {
