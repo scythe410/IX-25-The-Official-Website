@@ -60,15 +60,15 @@ export default function Home() {
   ];
 
   const roadmapEvents = [
-    { date: '15th Aug', description: 'Registrations Open' },
-    { date: '03rd Sep', description: 'Registrations close' },
-    { date: '06th Sep', description: 'Introductory session' },
-    { date: '08th Sep', description: 'Submissions Opening' },
-    { date: '09th Sep', description: 'workshop 01' },
-    { date: '12th Sep', description: 'workshop 02' },
-    { date: '20th Oct', description: 'Submissions Closing' },
-    { date: '22nd Oct', description: 'Announcing Finalists' },
-    { date: '29th - 30th Nov', description: 'Grand Finale' },
+    { date: '15th Aug', title: 'REGISTRATIONS OPEN', description: 'Registrations Open' },
+    { date: '03rd Sep', title: 'IDEATE REGISTRATIONS OPEN', description: 'Registrations close' },
+    { date: '06th Sep', title: 'GRAND FINALE', description: 'Introductory session' },
+    { date: '08th Sep', title: 'SUBMISSIONS OPEN', description: 'Submissions Opening' },
+    { date: '09th Sep', title: 'WORKSHOP 01', description: 'workshop 01' },
+    { date: '12th Sep', title: 'WORKSHOP 02', description: 'workshop 02' },
+    { date: '20th Oct', title: 'SUBMISSIONS CLOSING', description: 'Submissions Closing' },
+    { date: '22nd Oct', title: 'ANNOUNCING FINALISTS', description: 'Announcing Finalists' },
+    { date: '29th - 30th Nov', title: 'GRAND FINALE', description: 'Grand Finale' },
   ];
 
   const aboutText = "IX is the first-ever virtual inter-university designathon organized in Sri Lanka. event where teams of students, professionals, and technology enthusiasts come together to solve real-world problems using innovative design solutions. With the success of IX in the past years, it has been recognized as one of the most prestigious design events in Sri Lanka. IX 24, the fourth edition of Sri Lanka’s pioneering inter-university designathon, spotlighted extended reality (XR), spatial UI, and AI-driven design. Over two phases, participants first presented innovative UI/UX concepts, with the top 10 teams advancing to a 24-hour designathon. The competition fostered creativity, collaboration, and future-focused problem-solving, empowering students to push design boundaries. The top three teams were celebrated for their ingenuity, practicality, and impactful solutions, solidifying IX 24 as a leading platform for visionary design in Sri Lanka.";
@@ -198,20 +198,22 @@ export default function Home() {
             <div className="text-center mb-16">
                 <h2 className="text-3xl md:text-4xl font-bold font-chakra heading-gradient">HACKATHON ROADMAP</h2>
             </div>
-            <div className="relative max-w-4xl mx-auto">
+            <div className="relative max-w-5xl mx-auto">
               {/* Timeline line */}
-              <div className="absolute left-1/2 -translate-x-1/2 h-full w-0.5 bg-gray-700"></div>
+              <div className="absolute left-1/2 -translate-x-1/2 h-full w-0.5 bg-gray-700/50"></div>
 
               {roadmapEvents.map((event, index) => (
                 <div key={index} className={`mb-12 flex items-center w-full ${index % 2 === 0 ? 'justify-start' : 'justify-end'}`}>
-                  <div className={`w-1/2 ${index % 2 === 0 ? 'pr-8 text-right' : 'pl-8 text-left'}`}>
-                    <div className={`p-6 rounded-lg shadow-lg bg-gray-900 box-glow`}>
-                      <h3 className="font-bold text-2xl mb-2 text-[#ACD5F8] font-chakra">{event.date}</h3>
-                      <p className="text-gray-400">{event.description}</p>
+                  <div className={`w-1/2 ${index % 2 === 0 ? 'pr-8' : 'pl-8'}`}>
+                    <div className="bg-gray-900/50 backdrop-blur-sm p-6 rounded-2xl border border-gray-800 box-glow">
+                      <h3 className="font-bold text-xl mb-3 text-white tracking-widest font-chakra">{event.title}</h3>
+                      <div className="h-1 w-12 bg-gradient-to-r from-[#FF0879] to-[#ACD5F8] mb-4"></div>
+                      <p className="text-sm text-gray-400 font-bold font-chakra mb-2">{event.date}</p>
+                      <p className="text-gray-400 text-sm leading-relaxed">{event.description}</p>
                     </div>
                   </div>
                   {/* Timeline dot */}
-                  <div className="absolute left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-[#FF0879] border-2 border-white"></div>
+                  <div className="absolute left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-gray-900 border-2 border-white box-glow"></div>
                 </div>
               ))}
             </div>
