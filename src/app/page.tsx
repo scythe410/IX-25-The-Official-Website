@@ -290,9 +290,7 @@ export default function Home() {
             variants={sectionVariants}
         >
           <div className="text-center mb-16">
-            <button className="px-8 py-3 bg-gray-900 text-white font-bold rounded-full transition-colors duration-300 button-glow text-xl font-chakra box-glow">
-              CONTACT US
-            </button>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 font-chakra heading-gradient">CONTACT US</h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
             {contacts.map((contact, index) => (
