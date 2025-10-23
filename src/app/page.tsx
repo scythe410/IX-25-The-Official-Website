@@ -75,10 +75,10 @@ export default function Home() {
   const aboutText = "IX is the first-ever virtual inter-university designathon organized in Sri Lanka. event where teams of students, professionals, and technology enthusiasts come together to solve real-world problems using innovative design solutions. With the success of IX in the past years, it has been recognized as one of the most prestigious design events in Sri Lanka. IX 24, the fourth edition of Sri Lanka’s pioneering inter-university designathon, spotlighted extended reality (XR), spatial UI, and AI-driven design. Over two phases, participants first presented innovative UI/UX concepts, with the top 10 teams advancing to a 24-hour designathon. The competition fostered creativity, collaboration, and future-focused problem-solving, empowering students to push design boundaries. The top three teams were celebrated for their ingenuity, practicality, and impactful solutions, solidifying IX 24 as a leading platform for visionary design in Sri Lanka.";
 
   const contacts = [
-    { name: 'Ramiru De Silva', role: "Project Co-Chairperson – IX'25", image: 'https://picsum.photos/seed/ramiru/400/500', email: 'nissanka.20240835@iit.ac.lk', phone: '+94701258369' },
-    { name: 'Daniru Senaratne', role: "Project Co-Chairperson – IX 25", image: 'https://picsum.photos/seed/daniru/400/500', email: 'daniru.20232126@iit.ac.lk', phone: '+94774965624' },
-    { name: 'Pavithma Fernando', role: "Program Vice Chair – IX'25", image: 'https://picsum.photos/seed/pavithma/400/500', email: 'pavithma.20240349@iit.ac.lk', phone: '+94742912929' },
-    { name: 'Damithu Fonseka', role: "Program Vice Chair – IX'25", image: 'https://picsum.photos/seed/damithu/400/500', email: 'damithu.20240185@iit.ac.lk', phone: '+94701117578' },
+    { name: 'Ramiru De Silva', role: "Project Co-Chairperson – IX'25", image: '/images/ramiru.png', email: 'nissanka.20240835@iit.ac.lk', phone: '+94701258369' },
+    { name: 'Daniru Senaratne', role: "Project Co-Chairperson – IX 25", image: '/images/daniru.png', email: 'daniru.20232126@iit.ac.lk', phone: '+94774965624' },
+    { name: 'Pavithma Fernando', role: "Program Vice Chair – IX'25", image: '/images/pavithma.png', email: 'pavithma.20240349@iit.ac.lk', phone: '+94742912929' },
+    { name: 'Damithu Fonseka', role: "Program Vice Chair – IX'25", image: '/images/damithu.png', email: 'damithu.20240185@iit.ac.lk', phone: '+94701117578' },
   ];
 
 
