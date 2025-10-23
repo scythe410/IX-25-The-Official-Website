@@ -311,31 +311,40 @@ export default function Home() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
             {contacts.map((contact, index) => (
-              <div key={index} className="text-center">
-                <div className="relative inline-block mb-4">
-                  <div className="p-1 rounded-2xl box-glow bg-gray-900">
-                    <Image
-                      src={contact.image}
-                      alt={`Portrait of ${contact.name}`}
-                      width={400}
-                      height={500}
-                      className="rounded-xl object-cover w-full h-auto"
-                      data-ai-hint="person portrait"
-                    />
+              <div key={index} className="gradient-border-wrapper">
+                <div className="gradient-border-corner -top-1 -left-1"></div>
+                <div className="gradient-border-corner -top-1 -right-1"></div>
+                <div className="gradient-border-corner -bottom-1 -left-1"></div>
+                <div className="gradient-border-corner -bottom-1 -right-1"></div>
+
+                <div className="bg-black/80 backdrop-blur-sm rounded-xl p-6 text-center h-full flex flex-col">
+                  <div className="relative inline-block mb-4 self-center">
+                    <div className="p-1 rounded-2xl box-glow bg-gray-900">
+                      <Image
+                        src={contact.image}
+                        alt={`Portrait of ${contact.name}`}
+                        width={400}
+                        height={500}
+                        className="rounded-xl object-cover w-full h-auto"
+                        data-ai-hint="person portrait"
+                      />
+                    </div>
                   </div>
-                </div>
-                <h3 className="text-xl font-bold font-turret tracking-wider">{contact.name}</h3>
-                <p className="text-gray-400 font-chakra mb-4">{contact.role}</p>
-                <div className="flex justify-center gap-4">
-                  <a href={`mailto:${contact.email}`} aria-label="Email" className="p-2 bg-gray-800 rounded-full hover:bg-[#FF0879] transition-colors">
-                    <Mail className="w-5 h-5" />
-                  </a>
-                  <a href="#" aria-label="LinkedIn" className="p-2 bg-gray-800 rounded-full hover:bg-[#FF0879] transition-colors">
-                    <Linkedin className="w-5 h-5" />
-                  </a>
-                  <a href={`tel:${contact.phone}`} aria-label="Phone" className="p-2 bg-gray-800 rounded-full hover:bg-[#FF0879] transition-colors">
-                    <Phone className="w-5 h-5" />
-                  </a>
+                  <div className="flex-grow">
+                    <h3 className="text-xl font-bold font-turret tracking-wider">{contact.name}</h3>
+                    <p className="text-gray-400 font-chakra mb-4">{contact.role}</p>
+                  </div>
+                  <div className="flex justify-center gap-4 mt-auto">
+                    <a href={`mailto:${contact.email}`} aria-label="Email" className="p-2 bg-gray-800 rounded-full hover:bg-[#FF0879] transition-colors">
+                      <Mail className="w-5 h-5" />
+                    </a>
+                    <a href="#" aria-label="LinkedIn" className="p-2 bg-gray-800 rounded-full hover:bg-[#FF0879] transition-colors">
+                      <Linkedin className="w-5 h-5" />
+                    </a>
+                    <a href={`tel:${contact.phone}`} aria-label="Phone" className="p-2 bg-gray-800 rounded-full hover:bg-[#FF0879] transition-colors">
+                      <Phone className="w-5 h-5" />
+                    </a>
+                  </div>
                 </div>
               </div>
             ))}

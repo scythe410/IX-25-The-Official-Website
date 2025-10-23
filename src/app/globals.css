@@ -122,3 +122,18 @@ body {
   border-radius: 50%;
   transition: transform 0.1s ease-out;
 }
+
+.gradient-border-wrapper {
+  position: relative;
+  padding: 1px;
+  background: linear-gradient(90deg, #FF0879, #ACD5F8);
+  border-radius: 1rem; /* same as inner */
+}
+
+.gradient-border-corner {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background-color: white;
+  box-shadow: 0 0 8px white;
+}
