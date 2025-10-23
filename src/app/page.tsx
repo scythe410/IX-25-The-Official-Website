@@ -317,15 +317,14 @@ export default function Home() {
                 <div className="gradient-border-corner -bottom-1 -left-1"></div>
                 <div className="gradient-border-corner -bottom-1 -right-1"></div>
 
-                <div className="bg-black/80 backdrop-blur-sm rounded-xl p-6 text-center h-full flex flex-col">
-                  <div className="relative inline-block mb-4 self-center">
-                    <div className="p-1 rounded-2xl box-glow bg-gray-900">
+                <div className="bg-black/80 backdrop-blur-sm p-6 text-center h-full flex flex-col">
+                  <div className="relative inline-block mb-4 self-center w-full aspect-[4/5]">
+                    <div className="p-1 rounded-2xl box-glow bg-gray-900 h-full">
                       <Image
                         src={contact.image}
                         alt={`Portrait of ${contact.name}`}
-                        width={400}
-                        height={500}
-                        className="rounded-xl object-cover w-full h-auto"
+                        fill
+                        className="rounded-xl object-cover"
                         data-ai-hint="person portrait"
                       />
                     </div>
@@ -405,3 +404,5 @@ export default function Home() {
     </>
   );
 }
+
+    
