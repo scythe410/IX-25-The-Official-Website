@@ -183,18 +183,13 @@ export default function Home() {
 
         {/* Registration */}
         <motion.section
-          className="py-20 text-center relative"
+          className="py-20 relative"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.3 }}
           variants={sectionVariants}
         >
-          <div className="absolute inset-x-0 top-1/2 -translate-y-1/2">
-            <h1 className="text-[20vw] font-bold text-gray-800/50 opacity-50 whitespace-nowrap font-chakra">
-              BIGGER. GRANDER. WILDER.
-            </h1>
-          </div>
-          <div className="relative z-10 container mx-auto grid md:grid-cols-2 gap-12 items-center">
+          <div className="container mx-auto grid md:grid-cols-2 gap-12 items-center">
             <div className="relative flex justify-center items-center h-96">
               <Image
                 src="/images/registrations.png"
@@ -205,13 +200,22 @@ export default function Home() {
                 data-ai-hint="abstract illustration futuristic"
               />
             </div>
-            <div className="text-center md:text-left">
-              <button className="px-8 py-3 bg-[#FF0879] text-white font-bold rounded-md hover:bg-pink-700 transition-colors duration-300 button-glow text-xl font-chakra">
-                REGISTER FOR FREE
-              </button>
-              <p className="mt-4 text-xl font-bold font-chakra">
-                APPLICATIONS CLOSES ON{" "}
-                <span className="text-[#ACD5F8]">NOVEMBER 11TH</span>
+            <div className="relative text-center md:text-left">
+              <div className="absolute inset-0 flex items-center justify-center -z-10">
+                <h1 className="text-[10vw] lg:text-[8vw] font-bold text-gray-800/50 opacity-50 whitespace-nowrap font-chakra leading-none">
+                  BIGGER. GRANDER. WILDER.
+                </h1>
+              </div>
+              <div className="relative gradient-border-wrapper inline-block p-0.5 rounded-md mb-8">
+                 <button className="px-8 py-3 bg-black text-white font-bold rounded-md hover:bg-black/80 transition-colors duration-300 button-glow text-xl font-chakra">
+                   <span className="text-glow">REGISTER FOR FREE</span>
+                 </button>
+              </div>
+              <p className="text-xl font-bold font-chakra">
+                APPLICATIONS CLOSES ON
+              </p>
+              <p className="text-5xl font-bold font-chakra text-[#ACD5F8]">
+                NOVEMBER 11TH
               </p>
             </div>
           </div>
@@ -421,3 +425,4 @@ export default function Home() {
 }
 
     
+
