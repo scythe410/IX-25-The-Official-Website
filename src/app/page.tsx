@@ -161,8 +161,8 @@ export default function Home() {
             </div>
             <div className="relative z-10 flex flex-wrap justify-center items-center gap-x-12 md:gap-x-16 gap-y-8 container mx-auto">
                 <div className="text-center">
-                    <p className="text-5xl md:text-6xl font-bold heading-gradient font-chakra">200,000 LKR</p>
-                    <p className="text-gray-400 uppercase tracking-widest font-chakra mt-2">PRIZE POOL</p>
+                    <p className="text-5xl md:text-6xl font-bold heading-gradient font-chakra">200K+</p>
+                    <p className="text-gray-400 uppercase tracking-widest font-chakra mt-2">PRIZEPOOL</p>
                 </div>
                 <div className="text-center">
                     <p className="text-5xl md:text-6xl font-bold heading-gradient font-chakra">25+</p>
