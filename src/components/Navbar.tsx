@@ -7,7 +7,7 @@ import { motion } from 'framer-motion';
 const Navbar = () => {
   return (
     <nav className="fixed bottom-4 left-1/2 -translate-x-1/2 z-50 w-[95%] max-w-5xl mx-auto">
-      <div className="flex justify-between items-center py-2 px-6 bg-black/30 backdrop-blur-lg border border-white/10 rounded-full shadow-[0_0_2px_#ffffff40_inset,0_0_2px_#ffffff40]">
+      <div className="flex justify-between items-center py-2 px-6 bg-black/20 backdrop-blur-md rounded-full shadow-[0_0_2px_#ffffff40_inset,0_0_2px_#ffffff40]">
         <Image 
           src="/images/logo.svg" 
           alt="Logo" 

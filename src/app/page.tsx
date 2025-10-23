@@ -236,26 +236,14 @@ export default function Home() {
             viewport={{ once: true, amount: 0.3 }}
             variants={sectionVariants}
         >
-            <div className="grid md:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
-                <div>
-                     <Image
-                        src="https://picsum.photos/seed/retro-computer/600/400"
-                        alt="Retro computer"
-                        width={600}
-                        height={400}
-                        className="rounded-lg"
-                        data-ai-hint="retro computer"
-                    />
-                </div>
-                <div>
-                    <h2 className="text-3xl md:text-4xl font-bold mb-8 font-chakra heading-gradient">
-                        FREQUENTLY ASKED QUESTIONS
-                    </h2>
-                    <div className="space-y-4">
-                      {faqData.map((item, index) => (
-                        <FAQItem key={index} item={item} index={index} />
-                      ))}
-                    </div>
+            <div className="max-w-4xl mx-auto">
+                <h2 className="text-3xl md:text-4xl font-bold mb-8 font-chakra heading-gradient text-center">
+                    FREQUENTLY ASKED QUESTIONS
+                </h2>
+                <div className="space-y-4">
+                  {faqData.map((item, index) => (
+                    <FAQItem key={index} item={item} index={index} />
+                  ))}
                 </div>
             </div>
         </motion.section>
