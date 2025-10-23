@@ -9,6 +9,7 @@ import Marquee from '@/components/Marquee';
 import Navbar from '@/components/Navbar';
 import MemoriesCarousel from '@/components/MemoriesCarousel';
 import ScrollTextReveal from '@/components/ScrollTextReveal';
+import { Mail, Linkedin, Phone } from 'lucide-react';
 
 const FAQItem = ({ item, index }: { item: { question: string; answer: string }, index: number }) => {
     const [isOpen, setIsOpen] = useState(false);
@@ -71,6 +72,13 @@ export default function Home() {
   ];
 
   const aboutText = "IX is the first-ever virtual inter-university designathon organized in Sri Lanka. event where teams of students, professionals, and technology enthusiasts come together to solve real-world problems using innovative design solutions. With the success of IX in the past years, it has been recognized as one of the most prestigious design events in Sri Lanka. IX 24, the fourth edition of Sri Lanka’s pioneering inter-university designathon, spotlighted extended reality (XR), spatial UI, and AI-driven design. Over two phases, participants first presented innovative UI/UX concepts, with the top 10 teams advancing to a 24-hour designathon. The competition fostered creativity, collaboration, and future-focused problem-solving, empowering students to push design boundaries. The top three teams were celebrated for their ingenuity, practicality, and impactful solutions, solidifying IX 24 as a leading platform for visionary design in Sri Lanka.";
+
+  const contacts = [
+    { name: 'VIHAN MENDIS', role: 'Project Chairperson', image: 'https://picsum.photos/seed/vihan/400/500' },
+    { name: 'MAYURAN THANUSHAN', role: 'Program Vice-Chair', image: 'https://picsum.photos/seed/mayuran/400/500' },
+    { name: 'GIHANSA SARATHCHANDRA', role: 'Industry Outreach Vice-Chair', image: 'https://picsum.photos/seed/gihansa/400/500' },
+    { name: 'HARIRAAM KETHISVARASUTHAN', role: 'Logistics Vice-Chair', image: 'https://picsum.photos/seed/hariraam/400/500' },
+  ];
 
 
   return (
@@ -271,6 +279,52 @@ export default function Home() {
                  <p className="text-xl text-gray-300 font-chakra">Informatics Institute of Technology</p>
                  <p className="text-gray-400 font-chakra">GP Square, Colombo 04</p>
              </div>
+        </motion.section>
+
+        {/* Contact Us */}
+        <motion.section
+            className="py-20 container mx-auto px-4"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.3 }}
+            variants={sectionVariants}
+        >
+          <div className="text-center mb-16">
+            <button className="px-8 py-3 bg-gray-900 text-white font-bold rounded-full transition-colors duration-300 button-glow text-xl font-chakra box-glow">
+              CONTACT US
+            </button>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
+            {contacts.map((contact, index) => (
+              <div key={index} className="text-center">
+                <div className="relative inline-block mb-4">
+                  <div className="p-1 rounded-2xl box-glow bg-gray-900">
+                    <Image
+                      src={contact.image}
+                      alt={`Portrait of ${contact.name}`}
+                      width={400}
+                      height={500}
+                      className="rounded-xl object-cover w-full h-auto"
+                      data-ai-hint="person portrait"
+                    />
+                  </div>
+                </div>
+                <h3 className="text-xl font-bold font-turret tracking-wider">{contact.name}</h3>
+                <p className="text-gray-400 font-chakra mb-4">{contact.role}</p>
+                <div className="flex justify-center gap-4">
+                  <a href="#" aria-label="Email" className="p-2 bg-gray-800 rounded-full hover:bg-[#FF0879] transition-colors">
+                    <Mail className="w-5 h-5" />
+                  </a>
+                  <a href="#" aria-label="LinkedIn" className="p-2 bg-gray-800 rounded-full hover:bg-[#FF0879] transition-colors">
+                    <Linkedin className="w-5 h-5" />
+                  </a>
+                  <a href="#" aria-label="Phone" className="p-2 bg-gray-800 rounded-full hover:bg-[#FF0879] transition-colors">
+                    <Phone className="w-5 h-5" />
+                  </a>
+                </div>
+              </div>
+            ))}
+          </div>
         </motion.section>
 
         {/* Partners */}
