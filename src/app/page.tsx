@@ -94,15 +94,15 @@ export default function Home() {
       <main className="min-h-screen text-white dot-grid-background pb-24">
         
         <div className="relative text-center z-0">
-          <h1 className="text-[20vw] font-bold font-chakra text-white/5" style={{ transform: 'translateY(-50%)' }}>
+          <h1 className="text-[25vw] md:text-[20vw] font-bold font-chakra text-white/5" style={{ transform: 'translateY(-50%)' }}>
               DESIGNATHON
           </h1>
         </div>
 
         {/* Hero */}
-        <section className="relative min-h-screen flex items-center justify-center py-20 px-8 -mt-[30vw]">
+        <section className="relative min-h-screen flex items-center justify-center py-20 px-4 sm:px-8 -mt-[40vw] md:-mt-[30vw]">
           <div className="container mx-auto grid md:grid-cols-2 gap-12 items-center">
-            <div className="relative flex justify-center items-center h-96">
+            <div className="relative flex justify-center items-center h-64 md:h-96">
                 <Image
                   src="/images/Designathon bg video 1.gif"
                   alt="Designathon Illustration"
@@ -112,24 +112,24 @@ export default function Home() {
                   data-ai-hint="abstract illustration vaporwave"
                 />
             </div>
-            <div className="text-left md:pl-32">
-                <p className="text-xl md:text-2xl text-gray-300 font-chakra">06 &amp; 07 DEC 2025</p>
-                <h1 className="text-8xl md:text-9xl font-bold my-2 -space-y-4 font-chakra">
+            <div className="text-center md:text-left md:pl-16">
+                <p className="text-lg md:text-2xl text-gray-300 font-chakra">06 &amp; 07 DEC 2025</p>
+                <h1 className="text-7xl md:text-9xl font-bold my-2 -space-y-2 md:-space-y-4 font-chakra">
                     <span className="text-[#FF0879]">design</span>
                     <br />
                     <span>athon</span>
                 </h1>
-                <p className="text-2xl md:text-3xl font-bold text-gray-200 tracking-wider font-chakra">
+                <p className="text-xl md:text-3xl font-bold text-gray-200 tracking-wider font-chakra">
                     BIGGER<span className="text-[#ACD5F8]">.</span> GRANDER<span className="text-[#ACD5F8]">.</span> WILDER<span className="text-[#ACD5F8]">.</span>
                 </p>
-                <div className="flex justify-start gap-12 mt-8">
+                <div className="flex justify-center md:justify-start gap-8 md:gap-12 mt-8">
                     <div>
-                        <p className="text-5xl font-bold text-[#FF0879] font-chakra">36</p>
-                        <p className="text-gray-400 font-chakra">HOURS</p>
+                        <p className="text-4xl md:text-5xl font-bold text-[#FF0879] font-chakra">36</p>
+                        <p className="text-sm md:text-base text-gray-400 font-chakra">HOURS</p>
                     </div>
                     <div>
-                        <p className="text-5xl font-bold text-[#FF0879] font-chakra">200K</p>
-                        <p className="text-gray-400 font-chakra">PRIZEPOOL</p>
+                        <p className="text-4xl md:text-5xl font-bold text-[#FF0879] font-chakra">200K</p>
+                        <p className="text-sm md:text-base text-gray-400 font-chakra">PRIZEPOOL</p>
                     </div>
                 </div>
             </div>
@@ -145,7 +145,7 @@ export default function Home() {
             viewport={{ amount: 0.3 }}
             variants={sectionVariants}
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 font-chakra">WHAT IS <span className="text-[#FF0879]">IX 25'?</span></h2>
+          <h2 className="text-3xl md:text-5xl font-bold mb-4 font-chakra">WHAT IS <span className="text-[#FF0879]">IX 25'?</span></h2>
           <ScrollTextReveal text={aboutText} />
         </motion.section>
 
@@ -153,33 +153,33 @@ export default function Home() {
         
         {/* Prizes */}
         <motion.section
-            className="py-20 text-center relative"
+            className="py-20 text-center relative px-4"
             initial="hidden"
             whileInView="visible"
             viewport={{ amount: 0.3 }}
             variants={sectionVariants}
         >
             <div className="absolute inset-x-0 top-1/2 -translate-y-1/2">
-                <h1 className="text-[15vw] font-bold text-gray-800/50 opacity-20 whitespace-nowrap font-chakra">
+                <h1 className="text-[20vw] md:text-[15vw] font-bold text-gray-800/50 opacity-20 whitespace-nowrap font-chakra">
                     PRIZE POOL
                 </h1>
             </div>
-            <div className="relative z-10 flex flex-wrap justify-center items-center gap-x-12 md:gap-x-16 gap-y-8 container mx-auto">
+            <div className="relative z-10 flex flex-wrap justify-center items-center gap-x-8 md:gap-x-16 gap-y-8 container mx-auto">
                 <div className="text-center">
-                    <p className="text-6xl md:text-7xl font-bold heading-gradient font-chakra">200K+</p>
-                    <p className="text-lg text-gray-400 uppercase tracking-widest font-chakra mt-2">PRIZEPOOL</p>
+                    <p className="text-5xl md:text-7xl font-bold heading-gradient font-chakra">200K+</p>
+                    <p className="text-base md:text-lg text-gray-400 uppercase tracking-widest font-chakra mt-2">PRIZEPOOL</p>
                 </div>
                 <div className="text-center">
-                    <p className="text-6xl md:text-7xl font-bold heading-gradient font-chakra">25+</p>
-                    <p className="text-lg text-gray-400 font-chakra mt-2">UNIVERSITIES</p>
+                    <p className="text-5xl md:text-7xl font-bold heading-gradient font-chakra">25+</p>
+                    <p className="text-base md:text-lg text-gray-400 font-chakra mt-2">UNIVERSITIES</p>
                 </div>
                 <div className="text-center">
-                    <p className="text-6xl md:text-7xl font-bold heading-gradient font-chakra">260+</p>
-                    <p className="text-lg text-gray-400 font-chakra mt-2">TEAMS</p>
+                    <p className="text-5xl md:text-7xl font-bold heading-gradient font-chakra">260+</p>
+                    <p className="text-base md:text-lg text-gray-400 font-chakra mt-2">TEAMS</p>
                 </div>
                 <div className="text-center">
-                    <p className="text-6xl md:text-7xl font-bold heading-gradient font-chakra">1100+</p>
-                    <p className="text-lg text-gray-400 font-chakra mt-2">PARTICIPANTS</p>
+                    <p className="text-5xl md:text-7xl font-bold heading-gradient font-chakra">1100+</p>
+                    <p className="text-base md:text-lg text-gray-400 font-chakra mt-2">PARTICIPANTS</p>
                 </div>
             </div>
         </motion.section>
@@ -193,8 +193,8 @@ export default function Home() {
           viewport={{ amount: 0.3 }}
           variants={sectionVariants}
         >
-          <div className="container mx-auto grid md:grid-cols-2 gap-12 items-center">
-            <div className="relative h-[500px]">
+          <div className="container mx-auto grid md:grid-cols-2 gap-12 items-center px-4">
+            <div className="relative h-[400px] md:h-[500px]">
               <Image
                 src="/images/registrations.png"
                 alt="Registrations Illustration"
@@ -205,19 +205,19 @@ export default function Home() {
             </div>
             <div className="relative text-center md:text-left">
               <div className="absolute inset-0 flex items-center justify-center -z-10">
-                <h1 className="text-[10vw] lg:text-[8vw] font-bold text-gray-800/50 opacity-50 whitespace-nowrap font-chakra leading-none">
+                <h1 className="text-[12vw] lg:text-[8vw] font-bold text-gray-800/50 opacity-50 whitespace-nowrap font-chakra leading-none">
                   BIGGER. GRANDER. WILDER.
                 </h1>
               </div>
               <div className="relative gradient-border-wrapper inline-block p-0.5 rounded-md mb-8">
-                 <button className="px-10 py-4 bg-black text-white font-bold rounded-md hover:bg-black/80 transition-colors duration-300 button-glow text-2xl font-chakra">
+                 <button className="px-8 py-3 md:px-10 md:py-4 bg-black text-white font-bold rounded-md hover:bg-black/80 transition-colors duration-300 button-glow text-xl md:text-2xl font-chakra">
                    <span className="text-glow">REGISTER FOR FREE</span>
                  </button>
               </div>
-              <p className="text-2xl font-bold font-chakra">
+              <p className="text-xl md:text-2xl font-bold font-chakra">
                 APPLICATIONS CLOSES ON
               </p>
-              <p className="text-7xl font-bold font-chakra text-[#ACD5F8]">
+              <p className="text-5xl md:text-7xl font-bold font-chakra text-[#ACD5F8]">
                 NOVEMBER 11TH
               </p>
             </div>
@@ -242,10 +242,10 @@ export default function Home() {
                 />
                 <div className="absolute inset-0 bg-black/50"></div>
             </div>
-             <div className="relative z-10">
+             <div className="relative z-10 px-4">
                  <h2 className="text-3xl md:text-4xl font-bold mb-4 font-chakra heading-gradient">DESIGNATHON VENUE</h2>
-                 <p className="text-xl text-gray-300 font-chakra">Informatics Institute of Technology</p>
-                 <p className="text-gray-400 font-chakra">GP Square, Colombo 04</p>
+                 <p className="text-lg md:text-xl text-gray-300 font-chakra">Informatics Institute of Technology</p>
+                 <p className="text-sm md:text-base text-gray-400 font-chakra">GP Square, Colombo 04</p>
              </div>
         </motion.section>
         
@@ -262,20 +262,19 @@ export default function Home() {
             </div>
             <div className="relative max-w-5xl mx-auto">
               {/* Timeline line */}
-              <div className="absolute left-1/2 -translate-x-1/2 h-full w-0.5 bg-gray-700/50"></div>
+              <div className="absolute left-6 md:left-1/2 -translate-x-1/2 h-full w-0.5 bg-gray-700/50"></div>
 
               {roadmapEvents.map((event, index) => (
-                <div key={index} className={`mb-12 flex items-center w-full ${index % 2 === 0 ? 'justify-start' : 'justify-end'}`}>
-                  <div className={`w-1/2 ${index % 2 === 0 ? 'pr-8 text-right' : 'pl-8'}`}>
+                <div key={index} className="mb-12 flex items-center w-full">
+                  <div className={`w-full md:w-1/2 ${index % 2 === 0 ? 'md:pr-8 md:text-right' : 'md:pl-8'} pl-12`}>
                     <div className="bg-gray-900/50 backdrop-blur-sm p-6 rounded-2xl border border-gray-800 box-glow">
-                      <h3 className="font-bold text-xl mb-3 text-white tracking-widest font-chakra">{event.title}</h3>
-                      <div className={`h-1 w-12 bg-gradient-to-r from-[#FF0879] to-[#ACD5F8] mb-4 ${index % 2 === 0 ? 'ml-auto' : ''}`}></div>
+                      <h3 className="font-bold text-lg md:text-xl mb-3 text-white tracking-widest font-chakra">{event.title}</h3>
+                      <div className={`h-1 w-12 bg-gradient-to-r from-[#FF0879] to-[#ACD5F8] mb-4 ${index % 2 === 0 ? 'md:ml-auto' : ''}`}></div>
                       <p className="text-sm text-gray-400 font-bold font-chakra mb-2">{event.date}</p>
                       <p className="text-gray-400 text-sm leading-relaxed">{event.description}</p>
                     </div>
                   </div>
-                  {/* Timeline dot */}
-                  <div className="absolute left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-gray-900 border-2 border-white box-glow"></div>
+                   <div className="absolute left-6 md:left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-gray-900 border-2 border-white box-glow"></div>
                 </div>
               ))}
             </div>
@@ -289,7 +288,7 @@ export default function Home() {
             viewport={{ amount: 0.3 }}
             variants={sectionVariants}
         >
-            <h2 className="text-3xl md:text-4xl font-bold mb-12 font-chakra heading-gradient">
+            <h2 className="text-3xl md:text-4xl font-bold mb-12 font-chakra heading-gradient px-4">
                 GLIMPSE INTO THE MEMORIES WE
                 <br />
                  HAVE CREATED.
@@ -333,7 +332,7 @@ export default function Home() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
             {contacts.map((contact, index) => (
-              <div key={index} className="gradient-border-wrapper">
+              <div key={index} className="gradient-border-wrapper p-px">
                 <div className="gradient-border-corner -top-1 -left-1"></div>
                 <div className="gradient-border-corner -top-1 -right-1"></div>
                 <div className="gradient-border-corner -bottom-1 -left-1"></div>
@@ -341,7 +340,7 @@ export default function Home() {
 
                 <div className="bg-black/80 backdrop-blur-sm p-6 text-center h-full flex flex-col">
                 <div className="relative w-full h-64 mb-4 self-center">
-                    <div className="p-1 rounded-2xl h-full">
+                    <div className="p-1 h-full">
                       <Image
                         src={contact.image}
                         alt={`Portrait of ${contact.name}`}
@@ -353,7 +352,7 @@ export default function Home() {
                   </div>
                   <div className="flex-grow">
                     <h3 className="text-xl font-bold font-turret tracking-wider">{contact.name}</h3>
-                    <p className="text-gray-400 font-chakra mb-4">{contact.role}</p>
+                    <p className="text-sm text-gray-400 font-chakra mb-4">{contact.role}</p>
                   </div>
                   <div className="flex justify-center gap-4 mt-auto">
                     <a href={`mailto:${contact.email}`} aria-label="Email" className="p-2 bg-gray-800 rounded-full hover:bg-[#FF0879] transition-colors">
@@ -383,14 +382,14 @@ export default function Home() {
             <h2 className="text-3xl md:text-4xl font-bold mb-8 font-chakra heading-gradient">
                 PARTNERING WITH
             </h2>
-            <div className="flex flex-wrap justify-center items-center gap-x-12 gap-y-8 max-w-5xl mx-auto">
+            <div className="flex flex-wrap justify-center items-center gap-x-12 gap-y-8 max-w-5xl mx-auto px-4">
                 {partners.map((partner, index) => (
                     <div key={partner.name}>
                         <Image
                             src={partner.logo}
                             alt={`${partner.name} logo`}
-                            width={150}
-                            height={60}
+                            width={120}
+                            height={50}
                             className="object-contain filter grayscale hover:grayscale-0 transition-all duration-300"
                             data-ai-hint="company logo"
                         />
@@ -409,14 +408,14 @@ export default function Home() {
         >
             <div className="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-4">
                 <div className='flex items-center gap-4'>
-                    <Image src="https://picsum.photos/seed/christ-logo/100/100" alt="Christ College Logo" width={50} height={50} data-ai-hint="college logo" />
-                    <p className="text-sm text-gray-500 font-chakra">IEEE Student Branch of IIT</p>
+                    <Image src="https://picsum.photos/seed/christ-logo/100/100" alt="Christ College Logo" width={40} height={40} data-ai-hint="college logo" />
+                    <p className="text-xs md:text-sm text-gray-500 font-chakra">IEEE Student Branch of IIT</p>
                 </div>
-                <p className="text-sm text-gray-500 text-center">Copyright 2025 IX 25'. All Rights Reserved</p>
+                <p className="text-xs md:text-sm text-gray-500 text-center">Copyright 2025 IX 25'. All Rights Reserved</p>
                 <div className="flex gap-6">
-                  <a href="#" aria-label="Facebook"><FaFacebook className="text-xl text-gray-400 hover:text-white cursor-pointer" /></a>
-                  <a href="#" aria-label="Twitter"><FaTwitter className="text-xl text-gray-400 hover:text-white cursor-pointer" /></a>
-                  <a href="#" aria-label="Instagram"><FaInstagram className="text-xl text-gray-400 hover:text-white cursor-pointer" /></a>
+                  <a href="#" aria-label="Facebook"><FaFacebook className="text-lg md:text-xl text-gray-400 hover:text-white cursor-pointer" /></a>
+                  <a href="#" aria-label="Twitter"><FaTwitter className="text-lg md:text-xl text-gray-400 hover:text-white cursor-pointer" /></a>
+                  <a href="#" aria-label="Instagram"><FaInstagram className="text-lg md:text-xl text-gray-400 hover:text-white cursor-pointer" /></a>
                 </div>
             </div>
         </motion.footer>
@@ -426,11 +425,3 @@ export default function Home() {
     </>
   );
 }
-
-    
-
-
-
-    
-
-    
