@@ -138,10 +138,13 @@ body {
 
 .dotted-border-wrapper {
   position: relative;
+  padding: 8px;
 }
 
 .dotted-border-wrapper::before,
-.dotted-border-wrapper::after {
+.dotted-border-wrapper::after,
+.dotted-border-wrapper > .dotted-border-inner::before,
+.dotted-border-wrapper > .dotted-border-inner::after {
   content: '';
   position: absolute;
   background-color: transparent;
@@ -149,72 +152,42 @@ body {
 
 /* Horizontal dotted lines */
 .dotted-border-wrapper::before {
+  top: 0;
   left: 10px;
   right: 10px;
   height: 2px;
   background-image: linear-gradient(to right, #FF0879 50%, transparent 50%);
   background-size: 8px 2px;
-  top: 0;
-  animation: border-top 1s linear forwards;
 }
 
 .dotted-border-wrapper::after {
+  bottom: 0;
   left: 10px;
   right: 10px;
   height: 2px;
   background-image: linear-gradient(to right, #FF0879 50%, transparent 50%);
   background-size: 8px 2px;
-  bottom: 0;
-  animation: border-bottom 1s linear forwards;
-}
-
-@keyframes border-top {
-  from { top: 100%; }
-  to { top: 0; }
-}
-
-@keyframes border-bottom {
-  from { bottom: 100%; }
-  to { bottom: 0; }
 }
 
 /* Vertical dotted lines */
-.dotted-border-wrapper > div::before,
-.dotted-border-wrapper > div::after {
-  content: '';
-  position: absolute;
-  background-color: transparent;
-}
-
-.dotted-border-wrapper > div::before {
+.dotted-border-wrapper > .dotted-border-inner::before {
   top: 10px;
   bottom: 10px;
-  width: 2px;
-  background-image: linear-gradient(to bottom, #FF0879 50%, transparent 50%);
-  background-size: 2px 8px;
   left: 0;
-  animation: border-left 1s linear forwards;
-}
-
-.dotted-border-wrapper > div::after {
-  top: 10px;
-  bottom: 10px;
   width: 2px;
   background-image: linear-gradient(to bottom, #FF0879 50%, transparent 50%);
   background-size: 2px 8px;
+}
+
+.dotted-border-wrapper > .dotted-border-inner::after {
+  top: 10px;
+  bottom: 10px;
   right: 0;
-  animation: border-right 1s linear forwards;
+  width: 2px;
+  background-image: linear-gradient(to bottom, #FF0879 50%, transparent 50%);
+  background-size: 2px 8px;
 }
 
-@keyframes border-left {
-  from { left: 100%; }
-  to { left: 0; }
-}
-
-@keyframes border-right {
-  from { right: 100%; }
-  to { right: 0; }
-}
 
 /* Corners */
 .dotted-border-wrapper > .corner {
@@ -243,6 +216,7 @@ body {
 
 .dotted-border-wrapper > .bottom-right { bottom: -2px; right: -2px; }
 .dotted-border-wrapper > .bottom-right::before { bottom: 2px; right: 2px; }
+
 
 .gradient-border-wrapper {
   background: linear-gradient(90deg, #FF0879, #ACD5F8);
