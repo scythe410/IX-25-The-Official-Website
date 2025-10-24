@@ -333,12 +333,12 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
             {contacts.map((contact, index) => (
               <div key={index} className="dotted-border-wrapper p-4">
-                <div className="dotted-border-inner">
-                  <div className="corner top-left"></div>
-                  <div className="corner top-right"></div>
-                  <div className="corner bottom-left"></div>
-                  <div className="corner bottom-right"></div>
-                  <div className="bg-black/80 backdrop-blur-sm text-center h-full flex flex-col p-6">
+                <div className="dotted-border-inner"></div>
+                <div className="corner top-left"></div>
+                <div className="corner top-right"></div>
+                <div className="corner bottom-left"></div>
+                <div className="corner bottom-right"></div>
+                <div className="bg-black/80 backdrop-blur-sm text-center h-full flex flex-col p-6">
                     <div className="relative w-full h-64 mb-4 self-center">
                       <Image
                         src={contact.image}
@@ -364,7 +364,6 @@ export default function Home() {
                       </a>
                     </div>
                   </div>
-                </div>
               </div>
             ))}
           </div>
