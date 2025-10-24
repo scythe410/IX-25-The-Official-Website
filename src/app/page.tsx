@@ -332,23 +332,16 @@ export default function Home() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
             {contacts.map((contact, index) => (
-              <div key={index} className="gradient-border-wrapper p-px">
-                <div className="gradient-border-corner -top-1 -left-1"></div>
-                <div className="gradient-border-corner -top-1 -right-1"></div>
-                <div className="gradient-border-corner -bottom-1 -left-1"></div>
-                <div className="gradient-border-corner -bottom-1 -right-1"></div>
-
-                <div className="bg-black/80 backdrop-blur-sm p-6 text-center h-full flex flex-col">
-                <div className="relative w-full h-64 mb-4 self-center">
-                    <div className="p-1 h-full">
-                      <Image
-                        src={contact.image}
-                        alt={`Portrait of ${contact.name}`}
-                        fill
-                        className="rounded-xl object-cover"
-                        data-ai-hint="person portrait"
-                      />
-                    </div>
+              <div key={index} className="dotted-border-wrapper p-8">
+                <div className="bg-black/80 backdrop-blur-sm text-center h-full flex flex-col p-6">
+                  <div className="relative w-full h-64 mb-4 self-center">
+                    <Image
+                      src={contact.image}
+                      alt={`Portrait of ${contact.name}`}
+                      fill
+                      className="rounded-xl object-cover"
+                      data-ai-hint="person portrait"
+                    />
                   </div>
                   <div className="flex-grow">
                     <h3 className="text-xl font-bold font-turret tracking-wider">{contact.name}</h3>
