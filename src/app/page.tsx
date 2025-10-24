@@ -76,7 +76,7 @@ export default function Home() {
 
   const contacts = [
     { name: 'Ramiru De Silva', role: "Project Co-Chairperson – IX'25", image: '/images/ramiru.png', email: 'nissanka.20240835@iit.ac.lk', phone: '+94701258369' },
-    { name: 'Daniru Senaratne', role: "Project Co-Chairperson – IX 25", image: '/images/daniru.png', email: 'daniru.20232126@iit.ac.lk', phone: '+94774965624' },
+    { name: 'Daniru Senaratne', role: "Project Co-Chairperson – IX 25", image: '/images/daniru 2.png', email: 'daniru.20232126@iit.ac.lk', phone: '+94774965624' },
     { name: 'Pavithma Fernando', role: "Program Vice Chair – IX'25", image: '/images/pavithma.png', email: 'pavithma.20240349@iit.ac.lk', phone: '+94742912929' },
     { name: 'Damithu Fonseka', role: "Program Vice Chair – IX'25", image: '/images/damithu.png', email: 'damithu.20240185@iit.ac.lk', phone: '+94701117578' },
   ];
@@ -336,8 +336,8 @@ export default function Home() {
                 <div className="gradient-border-corner -bottom-1 -right-1"></div>
 
                 <div className="bg-black/80 backdrop-blur-sm p-6 text-center h-full flex flex-col">
-                <div className="relative w-full h-96 mb-4 self-center">
-                    <div className="p-1 rounded-2xl box-glow bg-gray-900 h-full">
+                <div className="relative w-full h-64 mb-4 self-center">
+                    <div className="p-1 rounded-2xl h-full">
                       <Image
                         src={contact.image}
                         alt={`Portrait of ${contact.name}`}
