@@ -34,6 +34,10 @@ export default function Home() {
   const [loading, setLoading] = useState(true);
   
   useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+  useEffect(() => {
     const timer = setTimeout(() => {
       setLoading(false);
     }, 3000);
@@ -138,7 +142,7 @@ export default function Home() {
             className="container mx-auto px-6 py-16 text-center max-w-5xl"
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, amount: 0.3 }}
+            viewport={{ amount: 0.3 }}
             variants={sectionVariants}
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-4 font-chakra">WHAT IS <span className="text-[#FF0879]">IX 25'?</span></h2>
@@ -152,7 +156,7 @@ export default function Home() {
             className="py-20 text-center relative"
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, amount: 0.3 }}
+            viewport={{ amount: 0.3 }}
             variants={sectionVariants}
         >
             <div className="absolute inset-x-0 top-1/2 -translate-y-1/2">
@@ -186,7 +190,7 @@ export default function Home() {
           className="py-20 relative"
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, amount: 0.3 }}
+          viewport={{ amount: 0.3 }}
           variants={sectionVariants}
         >
           <div className="container mx-auto grid md:grid-cols-2 gap-12 items-center">
@@ -194,7 +198,7 @@ export default function Home() {
               <Image
                 src="/images/registrations.png"
                 alt="Registrations Illustration"
-                layout="fill"
+                fill
                 className="object-cover"
                 data-ai-hint="abstract illustration futuristic"
               />
@@ -225,14 +229,14 @@ export default function Home() {
             className="py-20 text-center relative"
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, amount: 0.3 }}
+            viewport={{ amount: 0.3 }}
             variants={sectionVariants}
         >
             <div className="absolute inset-0">
                 <Image
                     src="/images/venue.jpg"
                     alt="Informatics Institute of Technology Background"
-                    layout="fill"
+                    fill
                     className="object-cover w-full opacity-20"
                     data-ai-hint="building illustration"
                 />
@@ -250,7 +254,7 @@ export default function Home() {
             className="py-20 container mx-auto px-4"
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, amount: 0.3 }}
+            viewport={{ amount: 0.3 }}
             variants={sectionVariants}
         >
             <div className="text-center mb-16">
@@ -282,7 +286,7 @@ export default function Home() {
             className="py-20 text-center overflow-hidden"
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, amount: 0.3 }}
+            viewport={{ amount: 0.3 }}
             variants={sectionVariants}
         >
             <h2 className="text-3xl md:text-4xl font-bold mb-12 font-chakra heading-gradient">
@@ -301,7 +305,7 @@ export default function Home() {
             className="container mx-auto px-6 py-16"
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, amount: 0.3 }}
+            viewport={{ amount: 0.3 }}
             variants={sectionVariants}
         >
             <div className="max-w-4xl mx-auto">
@@ -321,7 +325,7 @@ export default function Home() {
             className="py-20 container mx-auto px-4"
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, amount: 0.3 }}
+            viewport={{ amount: 0.3 }}
             variants={sectionVariants}
         >
           <div className="text-center mb-16">
@@ -371,9 +375,9 @@ export default function Home() {
         {/* Partners */}
         <motion.section
             className="py-20 text-center"
-            initial-hidden="true"
+            initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, amount: 0.3 }}
+            viewport={{ amount: 0.3 }}
             variants={sectionVariants}
         >
             <h2 className="text-3xl md:text-4xl font-bold mb-8 font-chakra heading-gradient">
@@ -398,9 +402,9 @@ export default function Home() {
         
         <motion.footer 
             className="py-8 border-t border-gray-800"
-            initial-hidden="true"
+            initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, amount: 0.3 }}
+            viewport={{ amount: 0.3 }}
             variants={sectionVariants}
         >
             <div className="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-4">
