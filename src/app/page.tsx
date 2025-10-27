@@ -12,13 +12,12 @@ import ScrollTextReveal from '@/components/ScrollTextReveal';
 import { Mail, Linkedin, Phone } from 'lucide-react';
 import IXLogo from '@/components/IXLogo';
 
-const FAQItem = ({ item, index }: { item: { question: string; answer: string }, index: number }) => {
-    const [isOpen, setIsOpen] = useState(false);
+const FAQItem = ({ item, isOpen, onToggle }: { item: { question: string; answer: string }, isOpen: boolean, onToggle: () => void }) => {
     return (
         <div className="border-b border-gray-800 py-4">
             <button
                 className="w-full flex justify-between items-center text-left"
-                onClick={() => setIsOpen(!isOpen)}
+                onClick={onToggle}
             >
                 <h3 className="font-semibold text-lg flex items-center gap-4 font-chakra">
                     {item.question}
@@ -32,6 +31,8 @@ const FAQItem = ({ item, index }: { item: { question: string; answer: string }, 
 
 export default function Home() {
   const [loading, setLoading] = useState(true);
+  const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(null);
+
   
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -268,7 +269,7 @@ export default function Home() {
             {roadmapEvents.map((event, index) => (
               <div key={index} className="relative flex md:justify-between items-start w-full mb-12">
                 {/* Desktop: Alternating content */}
-                <div className={`hidden md:flex w-1/2 ${index % 2 === 0 ? 'pr-8 justify-end' : 'order-2 pl-8 justify-start'}`}>
+                <div className={`hidden md:flex w-1/2 ${index % 2 === 0 ? 'pr-8 justify-end text-right' : 'order-2 pl-8 justify-start'}`}>
                   <div className="w-full max-w-sm">
                     <div className="electric-border-wrapper p-0.5">
                       <div className="bg-gray-900/80 backdrop-blur-sm p-6 rounded-2xl">
@@ -335,7 +336,12 @@ export default function Home() {
                 </h2>
                 <div className="space-y-4">
                   {faqData.map((item, index) => (
-                    <FAQItem key={index} item={item} index={index} />
+                    <FAQItem 
+                      key={index} 
+                      item={item} 
+                      isOpen={openFaqIndex === index}
+                      onToggle={() => setOpenFaqIndex(openFaqIndex === index ? null : index)} 
+                    />
                   ))}
                 </div>
             </div>
@@ -445,7 +451,3 @@ export default function Home() {
     </>
   );
 }
-
-    
-
-    
