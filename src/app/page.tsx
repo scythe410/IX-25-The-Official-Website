@@ -64,24 +64,24 @@ export default function Home() {
   ];
 
   const roadmapEvents = [
-    { date: '23rd Oct', title: 'REGISTRATIONS OPEN', description: 'Registrations Open' },
-    { date: '07th Nov', title: 'WORKSHOP 01', description: 'Workshop 01' },
-    { date: '11th Nov', title: 'REGISTRATIONS CLOSING', description: 'Registrations Closing' },
-    { date: '15th Nov', title: 'INTRODUCTORY SESSION', description: 'Introductory Session' },
-    { date: '16th Nov', title: 'SUBMISSIONS OPENING', description: 'Submissions Opening' },
-    { date: '19th Nov', title: 'WORKSHOP 02', description: 'Workshop 02' },
-    { date: '24th Nov', title: 'SUBMISSIONS CLOSING', description: 'Submissions Closing' },
-    { date: '28th Nov', title: 'CHOOSING FINALISTS', description: 'Choosing Finalists' },
-    { date: '29th Nov', title: 'WORKSHOP 03', description: 'Workshop 03' },
-    { date: '06-07th Dec', title: 'GRAND FINALE', description: 'Grand Finale' },
+    { date: '23rd Oct', title: 'REGISTRATIONS OPEN', description: 'Kickstart your iX journey! Sign up and join the innovation challenge.' },
+    { date: '07th Nov', title: 'WORKSHOP 01', description: 'Gain insights and skills to shape your innovative ideas.' },
+    { date: '11th Nov', title: 'REGISTRATIONS CLOSING', description: 'Last call to register and be part of the competition.' },
+    { date: '15th Nov', title: 'INTRODUCTORY SESSION', description: 'Get to know the competition, teams, and what lies ahead.' },
+    { date: '16th Nov', title: 'SUBMISSIONS OPENING', description: 'Begin submitting your creative and technical solutions.' },
+    { date: '19th Nov', title: 'WORKSHOP 02', description: 'Level up your project with expert guidance and feedback.' },
+    { date: '24th Nov', title: 'SUBMISSIONS CLOSING', description: 'Deadline to showcase your innovation—make it count!' },
+    { date: '28th Nov', title: 'CHOOSING FINALISTS', description: 'Top teams are selected to move on to the grand stage.' },
+    { date: '29th Nov', title: 'WORKSHOP 03', description: 'Final preparation and mentoring before the finale.' },
+    { date: '06-07th Dec', title: 'GRAND FINALE', description: 'The ultimate showdown—present, pitch, and conquer!' },
   ];
 
   const aboutText = "IX is the first-ever virtual inter-university designathon organized in Sri Lanka. event where teams of students, professionals, and technology enthusiasts come together to solve real-world problems using innovative design solutions. With the success of IX in the past years, it has been recognized as one of the most prestigious design events in Sri Lanka. IX 24, the fourth edition of Sri Lanka’s pioneering inter-university designathon, spotlighted extended reality (XR), spatial UI, and AI-driven design. Over two phases, participants first presented innovative UI/UX concepts, with the top 10 teams advancing to a 24-hour designathon. The competition fostered creativity, collaboration, and future-focused problem-solving, empowering students to push design boundaries. The top three teams were celebrated for their ingenuity, practicality, and impactful solutions, solidifying IX 24 as a leading platform for visionary design in Sri Lanka.";
 
   const contacts = [
     { name: 'Ramiru De Silva', role: "Project Co-Chairperson – IX'25", image: '/images/ramiru.png', email: 'nissanka.20240835@iit.ac.lk', phone: '+94701258369', linkedin: 'https://www.linkedin.com/in/ramirudesilva/' },
-    { name: 'Daniru Senaratne', role: "Project Co-Chairperson – IX 25", image: '/images/daniru 2.png', email: 'daniru.20232126@iit.ac.lk', phone: '+94774965624', linkedin: 'https://www.linkedin.com/in/daniru-senarathne/' },
-    { name: 'Pavithma Fernando', role: "Program Vice Chair – IX'25", image: '/images/pavithma.png', email: 'pavithma.20240349@iit.ac.lk', phone: '+94742912929', linkedin: 'https://www.linkedin.com/in/pavithma-fernando-1a8468324/' },
+    { name: 'Daniru Senaratne', role: "Project Co-Chairperson – IX 25", image: '/images/daniru.jpg', email: 'daniru.20232126@iit.ac.lk', phone: '+94774965624', linkedin: 'https://www.linkedin.com/in/daniru-senarathne/' },
+    { name: 'Pavithma Fernando', role: "Program Vice Chair – IX'25", image: '/images/pavithma.jpg', email: 'pavithma.20240349@iit.ac.lk', phone: '+94742912929', linkedin: 'https://www.linkedin.com/in/pavithma-fernando-1a8468324/' },
     { name: 'Damithu Fonseka', role: "Program Vice Chair – IX'25", image: '/images/damithu.png', email: 'damithu.20240185@iit.ac.lk', phone: '+94701117578', linkedin: 'https://www.linkedin.com/in/damithufonseka/' },
   ];
 
@@ -445,9 +445,9 @@ export default function Home() {
                 </div>
                 <p className="text-xs md:text-sm text-gray-500 text-center">Copyright 2025 IX 25'. All Rights Reserved</p>
                 <div className="flex gap-6">
-                  <a href="#" aria-label="Facebook"><FaFacebook className="text-lg md:text-xl text-gray-400 hover:text-white cursor-pointer" /></a>
-                  <a href="#" aria-label="Linkedin"><FaLinkedin className="text-lg md:text-xl text-gray-400 hover:text-white cursor-pointer" /></a>
-                  <a href="#" aria-label="Instagram"><FaInstagram className="text-lg md:text-xl text-gray-400 hover:text-white cursor-pointer" /></a>
+                  <a href="https://www.facebook.com/ieeeinformatics" aria-label="Facebook"><FaFacebook className="text-lg md:text-xl text-gray-400 hover:text-white cursor-pointer" /></a>
+                  <a href="https://www.linkedin.com/company/ieeesbiit/" aria-label="Linkedin"><FaLinkedin className="text-lg md:text-xl text-gray-400 hover:text-white cursor-pointer" /></a>
+                  <a href="https://www.instagram.com/ieeeiit/#" aria-label="Instagram"><FaInstagram className="text-lg md:text-xl text-gray-400 hover:text-white cursor-pointer" /></a>
                 </div>
             </div>
         </motion.footer>
