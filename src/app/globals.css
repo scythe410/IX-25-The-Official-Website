@@ -222,3 +222,46 @@ body {
   background: linear-gradient(90deg, #FF0879, #ACD5F8);
   padding: 1px;
 }
+
+/* Electric Border Effect */
+@property --angle {
+  syntax: '<angle>';
+  initial-value: 0deg;
+  inherits: false;
+}
+
+@keyframes electric-rotation {
+  0% { --angle: 0deg; }
+  100% { --angle: 360deg; }
+}
+
+.electric-border-wrapper {
+  position: relative;
+  border-radius: 1.25rem; /* slightly larger than inner card */
+  overflow: hidden;
+  z-index: 1;
+}
+
+.electric-border-wrapper::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 200%;
+  height: 200%;
+  background: conic-gradient(
+    from var(--angle),
+    transparent 20%,
+    #ACD5F8,
+    #FF0879,
+    transparent 80%
+  );
+  animation: electric-rotation 6s linear infinite;
+}
+
+.electric-border-wrapper > * {
+  position: relative;
+  z-index: 2;
+  border-radius: 1rem;
+}

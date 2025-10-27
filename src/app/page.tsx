@@ -267,11 +267,13 @@ export default function Home() {
               {roadmapEvents.map((event, index) => (
                 <div key={index} className="mb-12 flex items-center w-full">
                   <div className={`w-full md:w-1/2 ${index % 2 === 0 ? 'md:pr-8 md:text-right' : 'md:pl-8'} pl-12`}>
-                    <div className="bg-gray-900/50 backdrop-blur-sm p-6 rounded-2xl border border-gray-800 box-glow">
-                      <h3 className="font-bold text-lg md:text-xl mb-3 text-white tracking-widest font-chakra">{event.title}</h3>
-                      <div className={`h-1 w-12 bg-gradient-to-r from-[#FF0879] to-[#ACD5F8] mb-4 ${index % 2 === 0 ? 'md:ml-auto' : ''}`}></div>
-                      <p className="text-sm text-gray-400 font-bold font-chakra mb-2">{event.date}</p>
-                      <p className="text-gray-400 text-sm leading-relaxed">{event.description}</p>
+                    <div className="electric-border-wrapper p-0.5">
+                      <div className="bg-gray-900/80 backdrop-blur-sm p-6 rounded-2xl">
+                        <h3 className="font-bold text-lg md:text-xl mb-3 text-white tracking-widest font-chakra">{event.title}</h3>
+                        <div className={`h-1 w-12 bg-gradient-to-r from-[#FF0879] to-[#ACD5F8] mb-4 ${index % 2 === 0 ? 'md:ml-auto' : ''}`}></div>
+                        <p className="text-sm text-gray-400 font-bold font-chakra mb-2">{event.date}</p>
+                        <p className="text-gray-400 text-sm leading-relaxed">{event.description}</p>
+                      </div>
                     </div>
                   </div>
                    <div className="absolute left-6 md:left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-gray-900 border-2 border-white box-glow"></div>
