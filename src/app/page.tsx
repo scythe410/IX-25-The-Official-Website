@@ -267,53 +267,45 @@ export default function Home() {
             <div className="absolute left-4 md:left-1/2 -translate-x-1/2 h-full w-0.5 bg-gray-700/50"></div>
 
             {roadmapEvents.map((event, index) => (
-              <div key={index} className="relative flex items-start mb-12">
-                {/* Mobile view: single column */}
-                <div className="md:hidden w-full pl-10">
-                   <div className="electric-border-wrapper p-0.5">
-                       <div className="bg-gray-900/80 backdrop-blur-sm p-6 rounded-2xl">
-                           <p className="text-2xl font-bold font-chakra text-[#FF0879] mb-3">{event.date}</p>
-                           <h3 className="font-bold text-xl mb-3 text-white tracking-widest font-chakra">{event.title}</h3>
-                           <div className="h-1 w-12 bg-gradient-to-r from-[#FF0879] to-[#ACD5F8] mb-4"></div>
-                           <p className="text-gray-400 text-sm leading-relaxed">{event.description}</p>
+              <div key={index} className="relative flex justify-between items-center w-full mb-8">
+                {/* Desktop: Alternating layout */}
+                {index % 2 === 0 ? (
+                  <>
+                    <div className="hidden md:block w-5/12"></div>
+                    <div className="hidden md:block w-1/12">
+                      <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-4 h-4 rounded-full bg-gray-900 border-2 border-white box-glow"></div>
+                    </div>
+                    <div className="w-full md:w-5/12">
+                       <div className="electric-border-wrapper p-0.5 ml-8 md:ml-0">
+                           <div className="bg-gray-900/80 backdrop-blur-sm p-6 rounded-2xl">
+                               <p className="text-2xl font-bold font-chakra text-[#FF0879] mb-3">{event.date}</p>
+                               <h3 className="font-bold text-xl mb-3 text-white tracking-widest font-chakra">{event.title}</h3>
+                               <div className="h-1 w-12 bg-gradient-to-r from-[#FF0879] to-[#ACD5F8] mb-4"></div>
+                               <p className="text-gray-400 text-sm leading-relaxed">{event.description}</p>
+                           </div>
                        </div>
-                   </div>
-                </div>
-
-                {/* Desktop view: alternating columns */}
-                <div className="hidden md:flex w-full items-center">
-                    {index % 2 === 0 ? (
-                        <>
-                            <div className="w-1/2"></div>
-                            <div className="w-1/2 pl-8">
-                                <div className="electric-border-wrapper p-0.5">
-                                    <div className="bg-gray-900/80 backdrop-blur-sm p-6 rounded-2xl">
-                                        <p className="text-2xl font-bold font-chakra text-[#FF0879] mb-3">{event.date}</p>
-                                        <h3 className="font-bold text-xl mb-3 text-white tracking-widest font-chakra">{event.title}</h3>
-                                        <div className="h-1 w-12 bg-gradient-to-r from-[#FF0879] to-[#ACD5F8] mb-4"></div>
-                                        <p className="text-gray-400 text-sm leading-relaxed">{event.description}</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </>
-                    ) : (
-                        <>
-                             <div className="w-1/2 pr-8 text-right">
-                                <div className="electric-border-wrapper p-0.5">
-                                    <div className="bg-gray-900/80 backdrop-blur-sm p-6 rounded-2xl">
-                                        <p className="text-2xl font-bold font-chakra text-[#FF0879] mb-3">{event.date}</p>
-                                        <h3 className="font-bold text-xl mb-3 text-white tracking-widest font-chakra">{event.title}</h3>
-                                        <div className="h-1 w-12 bg-gradient-to-r from-[#FF0879] to-[#ACD5F8] mb-4 ml-auto"></div>
-                                        <p className="text-gray-400 text-sm leading-relaxed">{event.description}</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="w-1/2"></div>
-                        </>
-                    )}
-                </div>
-                
-                <div className="absolute left-4 top-1/2 md:left-1/2 -translate-x-1/2 -translate-y-1/2 w-4 h-4 rounded-full bg-gray-900 border-2 border-white box-glow"></div>
+                    </div>
+                  </>
+                ) : (
+                  <>
+                    <div className="w-full md:w-5/12">
+                       <div className="electric-border-wrapper p-0.5 ml-8 md:ml-0">
+                           <div className="bg-gray-900/80 backdrop-blur-sm p-6 rounded-2xl md:text-right">
+                               <p className="text-2xl font-bold font-chakra text-[#FF0879] mb-3">{event.date}</p>
+                               <h3 className="font-bold text-xl mb-3 text-white tracking-widest font-chakra">{event.title}</h3>
+                               <div className="h-1 w-12 bg-gradient-to-r from-[#FF0879] to-[#ACD5F8] mb-4 md:ml-auto"></div>
+                               <p className="text-gray-400 text-sm leading-relaxed">{event.description}</p>
+                           </div>
+                       </div>
+                    </div>
+                     <div className="hidden md:block w-1/12">
+                       <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-4 h-4 rounded-full bg-gray-900 border-2 border-white box-glow"></div>
+                     </div>
+                    <div className="hidden md:block w-5/12"></div>
+                  </>
+                )}
+                 {/* Mobile: Central dot */}
+                <div className="md:hidden absolute left-4 top-1/2 -translate-x-1/2 -translate-y-1/2 w-4 h-4 rounded-full bg-gray-900 border-2 border-white box-glow"></div>
               </div>
             ))}
           </div>
