@@ -2,7 +2,7 @@
 'use client';
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { FaPlus, FaMinus } from 'react-icons/fa';
+import { FaPlus, FaMinus, FaLinkedinIn, FaLinkedin } from 'react-icons/fa';
 import { FaFacebook, FaInstagram, FaTwitter } from 'react-icons/fa';
 import Image from 'next/image';
 import Preloader from '@/components/Preloader';
@@ -80,9 +80,9 @@ export default function Home() {
 
   const contacts = [
     { name: 'Ramiru De Silva', role: "Project Co-Chairperson – IX'25", image: '/images/ramiru.png', email: 'nissanka.20240835@iit.ac.lk', phone: '+94701258369', linkedin: 'https://www.linkedin.com/in/ramirudesilva/' },
-    { name: 'Daniru Senaratne', role: "Project Co-Chairperson – IX 25", image: '/images/daniru 2.png', email: 'daniru.20232126@iit.ac.lk', phone: '+94774965624', linkedin: 'https://www.linkedin.com/in/daniru-senaratne-a55534288/' },
-    { name: 'Pavithma Fernando', role: "Program Vice Chair – IX'25", image: '/images/pavithma.png', email: 'pavithma.20240349@iit.ac.lk', phone: '+94742912929', linkedin: 'https://www.linkedin.com/in/pavithma-fernando-1a1b3b1b2/' },
-    { name: 'Damithu Fonseka', role: "Program Vice Chair – IX'25", image: '/images/damithu.png', email: 'damithu.20240185@iit.ac.lk', phone: '+94701117578', linkedin: 'https://www.linkedin.com/in/damithu-fonseka-1b1b3b1b2/' },
+    { name: 'Daniru Senaratne', role: "Project Co-Chairperson – IX 25", image: '/images/daniru 2.png', email: 'daniru.20232126@iit.ac.lk', phone: '+94774965624', linkedin: 'https://www.linkedin.com/in/daniru-senarathne/' },
+    { name: 'Pavithma Fernando', role: "Program Vice Chair – IX'25", image: '/images/pavithma.png', email: 'pavithma.20240349@iit.ac.lk', phone: '+94742912929', linkedin: 'https://www.linkedin.com/in/pavithma-fernando-1a8468324/' },
+    { name: 'Damithu Fonseka', role: "Program Vice Chair – IX'25", image: '/images/damithu.png', email: 'damithu.20240185@iit.ac.lk', phone: '+94701117578', linkedin: 'https://www.linkedin.com/in/damithufonseka/' },
   ];
 
 
@@ -446,7 +446,7 @@ export default function Home() {
                 <p className="text-xs md:text-sm text-gray-500 text-center">Copyright 2025 IX 25'. All Rights Reserved</p>
                 <div className="flex gap-6">
                   <a href="#" aria-label="Facebook"><FaFacebook className="text-lg md:text-xl text-gray-400 hover:text-white cursor-pointer" /></a>
-                  <a href="#" aria-label="Twitter"><FaTwitter className="text-lg md:text-xl text-gray-400 hover:text-white cursor-pointer" /></a>
+                  <a href="#" aria-label="Linkedin"><FaLinkedin className="text-lg md:text-xl text-gray-400 hover:text-white cursor-pointer" /></a>
                   <a href="#" aria-label="Instagram"><FaInstagram className="text-lg md:text-xl text-gray-400 hover:text-white cursor-pointer" /></a>
                 </div>
             </div>
@@ -457,5 +457,7 @@ export default function Home() {
     </>
   );
 }
+
+    
 
     
