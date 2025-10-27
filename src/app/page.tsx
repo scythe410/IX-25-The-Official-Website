@@ -33,10 +33,14 @@ export default function Home() {
   const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(null);
 
   const faqData = [
-    { question: 'WHAT IS THE TEAM SIZE?', answer: 'Teams can consist of 2 to 4 members.' },
-    { question: 'WHAT IS EXPECTED TO BE BUILD?', answer: 'You are expected to design a solution for a given problem within 12 hours. No coding is involved.' },
-    { question: 'HOW CAN I GET SHORTLISTED?', answer: 'Shortlisting is based on submissions and previous designs.' },
-    { question: 'IS THERE A REGISTRATION FEE?', answer: 'No, participation is completely free of charge.' },
+    { question: 'HOW MANY MEMBERS PER TEAM?', answer: 'Teams can consist of 2 to 4 members.' },
+    { question: 'WHO CAN JOIN IX?', answer: 'The competition is open to all university undergraduates across the country.' },
+    { question: 'WHAT CAN PARTICIPANTS BUILD?', answer: 'You are expected to design a solution for a given problem. This is a designathon, so the focus is on UI/UX, not coding.' },
+    { question: 'IS CODING REQUIRED BEFOREHAND?', answer: 'No coding experience is required. This is a design-focused competition.' },
+    { question: 'TEAM FROM DIFFERENT UNIVERSITIES?', answer: 'Yes, members of a team can be from different universities.' },
+    { question: 'IS PHYSICAL ATTENDANCE REQUIRED?', answer: 'Yes, the grand finale is a physical event that requires attendance.' },
+    { question: 'WILL I GET A CERTIFICATE?', answer: 'Yes, all participants who successfully complete the designathon will receive a certificate.' },
+    { question: 'HOW TO REGISTER FOR IX?', answer: 'You can register for free by clicking the "Register" button on our website.' },
   ];
 
   const sectionVariants = {
@@ -326,7 +330,7 @@ export default function Home() {
                 <h2 className="text-3xl md:text-4xl font-bold mb-8 font-chakra heading-gradient text-center">
                     FREQUENTLY ASKED QUESTIONS
                 </h2>
-                <div className="space-y-4">
+                <div className="grid md:grid-cols-2 gap-x-8">
                   {faqData.map((item, index) => (
                     <FAQItem 
                       key={index} 
