@@ -5,7 +5,6 @@ import { motion } from 'framer-motion';
 import { FaPlus, FaMinus, FaLinkedin } from 'react-icons/fa';
 import { FaFacebook, FaInstagram } from 'react-icons/fa';
 import Image from 'next/image';
-import Preloader from '@/components/Preloader';
 import Marquee from '@/components/Marquee';
 import Navbar from '@/components/Navbar';
 import MemoriesCarousel from '@/components/MemoriesCarousel';
@@ -130,7 +129,7 @@ export default function Home() {
             className="container mx-auto px-6 py-16 text-center max-w-5xl"
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: false }}
+            viewport={{ once: true }}
             variants={sectionVariants}
         >
           <h2 className="text-3xl md:text-5xl font-bold mb-4 font-chakra">WHAT IS <span className="text-[#FF0879]">IX 25'?</span></h2>
@@ -144,7 +143,7 @@ export default function Home() {
             className="py-20 text-center relative px-4"
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: false }}
+            viewport={{ once: true }}
             variants={sectionVariants}
         >
             <div className="absolute inset-x-0 top-1/2 -translate-y-1/2">
@@ -178,7 +177,7 @@ export default function Home() {
           className="py-20 relative"
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: false }}
+          viewport={{ once: true }}
           variants={sectionVariants}
         >
           <div className="container mx-auto grid md:grid-cols-2 gap-12 items-center px-4">
@@ -217,7 +216,7 @@ export default function Home() {
             className="py-20 text-center relative"
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: false }}
+            viewport={{ once: true }}
             variants={sectionVariants}
         >
             <div className="absolute inset-0">
@@ -242,7 +241,7 @@ export default function Home() {
           className="py-20 container mx-auto px-4"
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: false }}
+          viewport={{ once: true }}
           variants={sectionVariants}
         >
           <div className="text-center mb-16">
@@ -302,7 +301,7 @@ export default function Home() {
             className="py-20 text-center overflow-hidden"
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: false }}
+            viewport={{ once: true }}
             variants={sectionVariants}
         >
             <h2 className="text-3xl md:text-4xl font-bold mb-12 font-chakra heading-gradient px-4">
@@ -321,7 +320,7 @@ export default function Home() {
             className="container mx-auto px-6 py-16"
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: false }}
+            viewport={{ once: true }}
             variants={sectionVariants}
         >
             <div className="max-w-4xl mx-auto">
@@ -346,7 +345,7 @@ export default function Home() {
             className="py-20 container mx-auto px-4"
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: false }}
+            viewport={{ once: true }}
             variants={sectionVariants}
         >
           <div className="text-center mb-16">
@@ -396,7 +395,7 @@ export default function Home() {
             className="py-20 text-center"
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: false }}
+            viewport={{ once: true }}
             variants={sectionVariants}
         >
             <h2 className="text-3xl md:text-4xl font-bold mb-8 font-chakra heading-gradient">
@@ -423,7 +422,7 @@ export default function Home() {
             className="py-8 border-t border-gray-800"
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: false }}
+            viewport={{ once: true }}
             variants={sectionVariants}
         >
             <div className="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-4">
@@ -445,5 +444,3 @@ export default function Home() {
     </>
   );
 }
-
-    
