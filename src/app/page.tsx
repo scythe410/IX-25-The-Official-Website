@@ -65,15 +65,16 @@ export default function Home() {
   ];
 
   const roadmapEvents = [
-    { date: '15th Aug', title: 'REGISTRATIONS OPEN', description: 'Registrations Open' },
-    { date: '03rd Sep', title: 'IDEATE REGISTRATIONS OPEN', description: 'Registrations close' },
-    { date: '06th Sep', title: 'GRAND FINALE', description: 'Introductory session' },
-    { date: '08th Sep', title: 'SUBMISSIONS OPEN', description: 'Submissions Opening' },
-    { date: '09th Sep', title: 'WORKSHOP 01', description: 'workshop 01' },
-    { date: '12th Sep', title: 'WORKSHOP 02', description: 'workshop 02' },
-    { date: '20th Oct', title: 'SUBMISSIONS CLOSING', description: 'Submissions Closing' },
-    { date: '22nd Oct', title: 'ANNOUNCING FINALISTS', description: 'Announcing Finalists' },
-    { date: '29th - 30th Nov', title: 'GRAND FINALE', description: 'Grand Finale' },
+    { date: '23rd Oct', title: 'REGISTRATIONS OPEN', description: 'Registrations Open' },
+    { date: '07th Nov', title: 'WORKSHOP 01', description: 'Workshop 01' },
+    { date: '11th Nov', title: 'REGISTRATIONS CLOSING', description: 'Registrations Closing' },
+    { date: '15th Nov', title: 'INTRODUCTORY SESSION', description: 'Introductory Session' },
+    { date: '16th Nov', title: 'SUBMISSIONS OPENING', description: 'Submissions Opening' },
+    { date: '19th Nov', title: 'WORKSHOP 02', description: 'Workshop 02' },
+    { date: '24th Nov', title: 'SUBMISSIONS CLOSING', description: 'Submissions Closing' },
+    { date: '28th Nov', title: 'CHOOSING FINALISTS', description: 'Choosing Finalists' },
+    { date: '29th Nov', title: 'WORKSHOP 03', description: 'Workshop 03' },
+    { date: '06-07th Dec', title: 'GRAND FINALE', description: 'Grand Finale' },
   ];
 
   const aboutText = "IX is the first-ever virtual inter-university designathon organized in Sri Lanka. event where teams of students, professionals, and technology enthusiasts come together to solve real-world problems using innovative design solutions. With the success of IX in the past years, it has been recognized as one of the most prestigious design events in Sri Lanka. IX 24, the fourth edition of Sri Lanka’s pioneering inter-university designathon, spotlighted extended reality (XR), spatial UI, and AI-driven design. Over two phases, participants first presented innovative UI/UX concepts, with the top 10 teams advancing to a 24-hour designathon. The competition fostered creativity, collaboration, and future-focused problem-solving, empowering students to push design boundaries. The top three teams were celebrated for their ingenuity, practicality, and impactful solutions, solidifying IX 24 as a leading platform for visionary design in Sri Lanka.";
@@ -426,3 +427,5 @@ export default function Home() {
     </>
   );
 }
+
+    
