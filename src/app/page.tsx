@@ -267,37 +267,53 @@ export default function Home() {
             <div className="absolute left-4 md:left-1/2 -translate-x-1/2 h-full w-0.5 bg-gray-700/50"></div>
 
             {roadmapEvents.map((event, index) => (
-              <div key={index} className="relative flex md:justify-between items-start w-full mb-12">
-                {/* Desktop: Alternating content */}
-                <div className={`hidden md:flex w-1/2 ${index % 2 === 0 ? 'pr-8 justify-end text-right' : 'order-2 pl-8 justify-start'}`}>
-                  <div className="w-full max-w-sm">
-                    <div className="electric-border-wrapper p-0.5">
-                      <div className="bg-gray-900/80 backdrop-blur-sm p-6 rounded-2xl">
-                        <p className="text-2xl font-bold font-chakra text-[#FF0879] mb-3">{event.date}</p>
-                        <h3 className="font-bold text-xl md:text-2xl mb-3 text-white tracking-widest font-chakra">{event.title}</h3>
-                        <div className={`h-1 w-12 bg-gradient-to-r from-[#FF0879] to-[#ACD5F8] mb-4 ${index % 2 === 0 ? 'ml-auto' : ''}`}></div>
-                        <p className="text-gray-400 text-sm leading-relaxed">{event.description}</p>
-                      </div>
-                    </div>
-                  </div>
+              <div key={index} className="relative flex items-start mb-12">
+                {/* Mobile view: single column */}
+                <div className="md:hidden w-full pl-10">
+                   <div className="electric-border-wrapper p-0.5">
+                       <div className="bg-gray-900/80 backdrop-blur-sm p-6 rounded-2xl">
+                           <p className="text-2xl font-bold font-chakra text-[#FF0879] mb-3">{event.date}</p>
+                           <h3 className="font-bold text-xl mb-3 text-white tracking-widest font-chakra">{event.title}</h3>
+                           <div className="h-1 w-12 bg-gradient-to-r from-[#FF0879] to-[#ACD5F8] mb-4"></div>
+                           <p className="text-gray-400 text-sm leading-relaxed">{event.description}</p>
+                       </div>
+                   </div>
                 </div>
 
-                {/* Mobile: Single column */}
-                 <div className="flex md:hidden w-full pl-10">
-                   <div className="w-full">
-                     <div className="electric-border-wrapper p-0.5">
-                       <div className="bg-gray-900/80 backdrop-blur-sm p-6 rounded-2xl">
-                         <p className="text-2xl font-bold font-chakra text-[#FF0879] mb-3">{event.date}</p>
-                         <h3 className="font-bold text-xl md:text-2xl mb-3 text-white tracking-widest font-chakra">{event.title}</h3>
-                         <div className="h-1 w-12 bg-gradient-to-r from-[#FF0879] to-[#ACD5F8] mb-4"></div>
-                         <p className="text-gray-400 text-sm leading-relaxed">{event.description}</p>
-                       </div>
-                     </div>
-                   </div>
-                 </div>
+                {/* Desktop view: alternating columns */}
+                <div className="hidden md:flex w-full items-center">
+                    {index % 2 === 0 ? (
+                        <>
+                            <div className="w-1/2"></div>
+                            <div className="w-1/2 pl-8">
+                                <div className="electric-border-wrapper p-0.5">
+                                    <div className="bg-gray-900/80 backdrop-blur-sm p-6 rounded-2xl">
+                                        <p className="text-2xl font-bold font-chakra text-[#FF0879] mb-3">{event.date}</p>
+                                        <h3 className="font-bold text-xl mb-3 text-white tracking-widest font-chakra">{event.title}</h3>
+                                        <div className="h-1 w-12 bg-gradient-to-r from-[#FF0879] to-[#ACD5F8] mb-4"></div>
+                                        <p className="text-gray-400 text-sm leading-relaxed">{event.description}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </>
+                    ) : (
+                        <>
+                             <div className="w-1/2 pr-8 text-right">
+                                <div className="electric-border-wrapper p-0.5">
+                                    <div className="bg-gray-900/80 backdrop-blur-sm p-6 rounded-2xl">
+                                        <p className="text-2xl font-bold font-chakra text-[#FF0879] mb-3">{event.date}</p>
+                                        <h3 className="font-bold text-xl mb-3 text-white tracking-widest font-chakra">{event.title}</h3>
+                                        <div className="h-1 w-12 bg-gradient-to-r from-[#FF0879] to-[#ACD5F8] mb-4 ml-auto"></div>
+                                        <p className="text-gray-400 text-sm leading-relaxed">{event.description}</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="w-1/2"></div>
+                        </>
+                    )}
+                </div>
                 
                 <div className="absolute left-4 top-1/2 md:left-1/2 -translate-x-1/2 -translate-y-1/2 w-4 h-4 rounded-full bg-gray-900 border-2 border-white box-glow"></div>
-                <div className={`hidden md:block w-1/2 ${index % 2 === 0 ? 'order-2' : ''}`}></div>
               </div>
             ))}
           </div>
