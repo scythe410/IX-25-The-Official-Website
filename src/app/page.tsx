@@ -262,11 +262,11 @@ export default function Home() {
             </div>
             <div className="relative max-w-5xl mx-auto">
               {/* Timeline line */}
-              <div className="absolute left-6 md:left-1/2 -translate-x-1/2 h-full w-0.5 bg-gray-700/50"></div>
+              <div className="absolute left-0 md:left-1/2 -translate-x-1/2 h-full w-0.5 bg-gray-700/50"></div>
 
               {roadmapEvents.map((event, index) => (
-                <div key={index} className="mb-12 flex items-center w-full">
-                  <div className={`w-full md:w-1/2 ${index % 2 === 0 ? 'md:pr-8 md:text-right' : 'md:pl-8'} pl-12`}>
+                <div key={index} className="relative flex justify-between items-center w-full mb-12">
+                  <div className={`w-full md:w-1/2 ${index % 2 === 0 ? 'md:pr-8 md:text-right' : 'md:pl-8 md:text-left'} md:order-1`}>
                     <div className="electric-border-wrapper p-0.5">
                       <div className="bg-gray-900/80 backdrop-blur-sm p-6 rounded-2xl">
                         <h3 className="font-bold text-lg md:text-xl mb-3 text-white tracking-widest font-chakra">{event.title}</h3>
@@ -276,7 +276,8 @@ export default function Home() {
                       </div>
                     </div>
                   </div>
-                   <div className="absolute left-6 md:left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-gray-900 border-2 border-white box-glow"></div>
+                  <div className="absolute left-0 top-1/2 md:left-1/2 -translate-x-1/2 -translate-y-1/2 w-4 h-4 rounded-full bg-gray-900 border-2 border-white box-glow"></div>
+                  <div className={`w-full md:w-1/2 ${index % 2 === 0 ? 'md:order-2' : 'md:order-0'}`}></div>
                 </div>
               ))}
             </div>
