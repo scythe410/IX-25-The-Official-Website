@@ -60,10 +60,7 @@ export default function Home() {
   
   const partners = [
     { name: 'IFS', logo: '/images/ifs.png' },
-    { name: 'Polygon', logo: 'https://picsum.photos/seed/polygon/150/60' },
-    { name: 'Replit', logo: 'https://picsum.photos/seed/replit/150/60' },
-    { name: 'Solana', logo: 'https://picsum.photos/seed/solana/150/60' },
-    { name: 'Filecoin', logo: 'https://picsum.photos/seed/filecoin/150/60' },
+    
   ];
 
   const roadmapEvents = [
@@ -82,10 +79,10 @@ export default function Home() {
   const aboutText = "IX is the first-ever virtual inter-university designathon organized in Sri Lanka. event where teams of students, professionals, and technology enthusiasts come together to solve real-world problems using innovative design solutions. With the success of IX in the past years, it has been recognized as one of the most prestigious design events in Sri Lanka. IX 24, the fourth edition of Sri Lanka’s pioneering inter-university designathon, spotlighted extended reality (XR), spatial UI, and AI-driven design. Over two phases, participants first presented innovative UI/UX concepts, with the top 10 teams advancing to a 24-hour designathon. The competition fostered creativity, collaboration, and future-focused problem-solving, empowering students to push design boundaries. The top three teams were celebrated for their ingenuity, practicality, and impactful solutions, solidifying IX 24 as a leading platform for visionary design in Sri Lanka.";
 
   const contacts = [
-    { name: 'Ramiru De Silva', role: "Project Co-Chairperson – IX'25", image: '/images/ramiru.png', email: 'nissanka.20240835@iit.ac.lk', phone: '+94701258369' },
-    { name: 'Daniru Senaratne', role: "Project Co-Chairperson – IX 25", image: '/images/daniru 2.png', email: 'daniru.20232126@iit.ac.lk', phone: '+94774965624' },
-    { name: 'Pavithma Fernando', role: "Program Vice Chair – IX'25", image: '/images/pavithma.png', email: 'pavithma.20240349@iit.ac.lk', phone: '+94742912929' },
-    { name: 'Damithu Fonseka', role: "Program Vice Chair – IX'25", image: '/images/damithu.png', email: 'damithu.20240185@iit.ac.lk', phone: '+94701117578' },
+    { name: 'Ramiru De Silva', role: "Project Co-Chairperson – IX'25", image: '/images/ramiru.png', email: 'nissanka.20240835@iit.ac.lk', phone: '+94701258369', linkedin: 'https://www.linkedin.com/in/ramirudesilva/' },
+    { name: 'Daniru Senaratne', role: "Project Co-Chairperson – IX 25", image: '/images/daniru 2.png', email: 'daniru.20232126@iit.ac.lk', phone: '+94774965624', linkedin: 'https://www.linkedin.com/in/daniru-senaratne-a55534288/' },
+    { name: 'Pavithma Fernando', role: "Program Vice Chair – IX'25", image: '/images/pavithma.png', email: 'pavithma.20240349@iit.ac.lk', phone: '+94742912929', linkedin: 'https://www.linkedin.com/in/pavithma-fernando-1a1b3b1b2/' },
+    { name: 'Damithu Fonseka', role: "Program Vice Chair – IX'25", image: '/images/damithu.png', email: 'damithu.20240185@iit.ac.lk', phone: '+94701117578', linkedin: 'https://www.linkedin.com/in/damithu-fonseka-1b1b3b1b2/' },
   ];
 
 
@@ -393,7 +390,7 @@ export default function Home() {
                       <a href={`mailto:${contact.email}`} aria-label="Email" className="p-2 bg-gray-800 rounded-full hover:bg-[#FF0879] transition-colors">
                         <Mail className="w-5 h-5" />
                       </a>
-                      <a href="#" aria-label="LinkedIn" className="p-2 bg-gray-800 rounded-full hover:bg-[#FF0879] transition-colors">
+                      <a href={contact.linkedin} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="p-2 bg-gray-800 rounded-full hover:bg-[#FF0879] transition-colors">
                         <Linkedin className="w-5 h-5" />
                       </a>
                       <a href={`tel:${contact.phone}`} aria-label="Phone" className="p-2 bg-gray-800 rounded-full hover:bg-[#FF0879] transition-colors">
@@ -443,7 +440,7 @@ export default function Home() {
         >
             <div className="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-4">
                 <div className='flex items-center gap-4'>
-                    <Image src="https://picsum.photos/seed/christ-logo/100/100" alt="Christ College Logo" width={40} height={40} data-ai-hint="college logo" />
+                    <Image src="/images/SB logo.png" alt="Christ College Logo" width={40} height={40} data-ai-hint="college logo" />
                     <p className="text-xs md:text-sm text-gray-500 font-chakra">IEEE Student Branch of IIT</p>
                 </div>
                 <p className="text-xs md:text-sm text-gray-500 text-center">Copyright 2025 IX 25'. All Rights Reserved</p>
@@ -460,3 +457,5 @@ export default function Home() {
     </>
   );
 }
+
+    
