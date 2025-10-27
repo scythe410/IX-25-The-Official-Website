@@ -10,7 +10,6 @@ import Navbar from '@/components/Navbar';
 import MemoriesCarousel from '@/components/MemoriesCarousel';
 import ScrollTextReveal from '@/components/ScrollTextReveal';
 import { Mail, Linkedin, Phone } from 'lucide-react';
-import IXLogo from '@/components/IXLogo';
 import PageClientEffects from '@/components/PageClientEffects';
 
 const FAQItem = ({ item, isOpen, onToggle }: { item: { question: string; answer: string }, isOpen: boolean, onToggle: () => void }) => {

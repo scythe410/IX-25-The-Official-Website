@@ -18,8 +18,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <body className="font-turret">
+    <html lang="en">
+      <body className="font-turret" suppressHydrationWarning>
         <CustomCursor />
         {children}
         <Toaster />
