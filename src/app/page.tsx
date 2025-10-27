@@ -160,15 +160,15 @@ export default function Home() {
                     <p className="text-base md:text-lg text-gray-400 uppercase tracking-widest font-chakra mt-2">PRIZEPOOL</p>
                 </div>
                 <div className="text-center">
-                    <p className="text-5xl md:text-7xl font-bold heading-gradient font-chakra">25+</p>
+                    <p className="text-5xl md:text-7xl font-bold heading-gradient font-chakra">21+</p>
                     <p className="text-base md:text-lg text-gray-400 font-chakra mt-2">UNIVERSITIES</p>
                 </div>
                 <div className="text-center">
-                    <p className="text-5xl md:text-7xl font-bold heading-gradient font-chakra">260+</p>
+                    <p className="text-5xl md:text-7xl font-bold heading-gradient font-chakra">160+</p>
                     <p className="text-base md:text-lg text-gray-400 font-chakra mt-2">TEAMS</p>
                 </div>
                 <div className="text-center">
-                    <p className="text-5xl md:text-7xl font-bold heading-gradient font-chakra">1100+</p>
+                    <p className="text-5xl md:text-7xl font-bold heading-gradient font-chakra">1500+</p>
                     <p className="text-base md:text-lg text-gray-400 font-chakra mt-2">PARTICIPANTS</p>
                 </div>
             </div>
