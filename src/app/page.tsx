@@ -11,6 +11,7 @@ import MemoriesCarousel from '@/components/MemoriesCarousel';
 import ScrollTextReveal from '@/components/ScrollTextReveal';
 import { Mail, Linkedin, Phone } from 'lucide-react';
 import PageClientEffects from '@/components/PageClientEffects';
+import Counter from '@/components/Counter';
 
 const FAQItem = ({ item, isOpen, onToggle }: { item: { question: string; answer: string }, isOpen: boolean, onToggle: () => void }) => {
     return (
@@ -32,7 +33,7 @@ const FAQItem = ({ item, isOpen, onToggle }: { item: { question: string; answer:
 export default function Home() {
   const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(null);
 
-  const faqData = [
+    const faqData = [
     { question: 'HOW MANY MEMBERS PER TEAM?', answer: 'Teams can consist of 2 to 4 members.' },
     { question: 'WHO CAN JOIN IX?', answer: 'The competition is open to all university undergraduates across the country.' },
     { question: 'WHAT CAN PARTICIPANTS BUILD?', answer: 'You are expected to design a solution for a given problem. This is a designathon, so the focus is on UI/UX, not coding.' },
@@ -42,6 +43,7 @@ export default function Home() {
     { question: 'WILL I GET A CERTIFICATE?', answer: 'Yes, all participants who successfully complete the designathon will receive a certificate.' },
     { question: 'HOW TO REGISTER FOR IX?', answer: 'You can register for free by clicking the "Register" button on our website.' },
   ];
+
 
   const sectionVariants = {
     hidden: { opacity: 0, y: 50 },
@@ -75,6 +77,12 @@ export default function Home() {
     { name: 'Damithu Fonseka', role: "Program Vice Chair – IX'25", image: '/images/damithu.jpg', email: 'damithu.20240185@iit.ac.lk', phone: '+94701117578', linkedin: 'https://www.linkedin.com/in/damithufonseka/' },
   ];
 
+  const stats = [
+    { value: 200, suffix: 'K+', label: 'PRIZEPOOL' },
+    { value: 21, suffix: '+', label: 'UNIVERSITIES' },
+    { value: 160, suffix: '+', label: 'TEAMS' },
+    { value: 1500, suffix: '+', label: 'PARTICIPANTS' },
+  ];
 
   return (
     <>
@@ -155,22 +163,14 @@ export default function Home() {
                 </h1>
             </div>
             <div className="relative z-10 flex flex-wrap justify-center items-center gap-x-8 md:gap-x-16 gap-y-8 container mx-auto">
-                <div className="text-center">
-                    <p className="text-5xl md:text-7xl font-bold heading-gradient font-chakra">200K+</p>
-                    <p className="text-base md:text-lg text-gray-400 uppercase tracking-widest font-chakra mt-2">PRIZEPOOL</p>
-                </div>
-                <div className="text-center">
-                    <p className="text-5xl md:text-7xl font-bold heading-gradient font-chakra">21+</p>
-                    <p className="text-base md:text-lg text-gray-400 font-chakra mt-2">UNIVERSITIES</p>
-                </div>
-                <div className="text-center">
-                    <p className="text-5xl md:text-7xl font-bold heading-gradient font-chakra">160+</p>
-                    <p className="text-base md:text-lg text-gray-400 font-chakra mt-2">TEAMS</p>
-                </div>
-                <div className="text-center">
-                    <p className="text-5xl md:text-7xl font-bold heading-gradient font-chakra">1500+</p>
-                    <p className="text-base md:text-lg text-gray-400 font-chakra mt-2">PARTICIPANTS</p>
-                </div>
+                {stats.map((stat, index) => (
+                    <div key={index} className="text-center">
+                        <div className="text-5xl md:text-7xl font-bold heading-gradient font-chakra">
+                            <Counter to={stat.value} suffix={stat.suffix} />
+                        </div>
+                        <p className="text-base md:text-lg text-gray-400 uppercase tracking-widest font-chakra mt-2">{stat.label}</p>
+                    </div>
+                ))}
             </div>
         </motion.section>
 
@@ -363,7 +363,7 @@ export default function Home() {
                 <div className="corner bottom-left"></div>
                 <div className="corner bottom-right"></div>
                 <div className="bg-black/80 backdrop-blur-sm text-center h-full flex flex-col p-6">
-                    <div className="relative w-full h-56 mb-4 self-center">
+                    <div className="relative w-full h-32 mb-4 self-center">
                       <Image
                         src={contact.image}
                         alt={`Portrait of ${contact.name}`}
