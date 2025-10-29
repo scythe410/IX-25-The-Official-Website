@@ -1,3 +1,4 @@
+
 'use client';
 
 import { useEffect, useRef } from 'react';
@@ -34,3 +35,5 @@ const Counter = ({ from = 0, to, prefix = '', suffix = '', className }: CounterP
 };
 
 export default Counter;
+
+    
