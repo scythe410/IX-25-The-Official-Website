@@ -14,7 +14,7 @@ type CounterProps = {
 
 const Counter = ({ from = 0, to, prefix = '', suffix = '', className }: CounterProps) => {
   const nodeRef = useRef<HTMLSpanElement>(null);
-  const isInView = useInView(nodeRef, { once: true });
+  const isInView = useInView(nodeRef, { once: false });
 
   useEffect(() => {
     const node = nodeRef.current;
