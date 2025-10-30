@@ -55,6 +55,16 @@ body {
   animation: marquee 40s linear infinite;
 }
 
+@keyframes preloader-marquee-vertical {
+  from { transform: translateY(0); }
+  to { transform: translateY(-50%); }
+}
+
+.animate-preloader-marquee-vertical {
+  animation: preloader-marquee-vertical 20s linear infinite;
+}
+
+
 .heading-gradient {
   background: linear-gradient(90deg, #FF0879, #ACD5F8);
   -webkit-background-clip: text;
