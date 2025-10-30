@@ -8,7 +8,7 @@ const Preloader = () => {
       initial={{ opacity: 1 }}
       animate={{ opacity: 0, transitionEnd: { display: 'none' } }}
       transition={{ delay: 3.5, duration: 0.5 }}
-      className="fixed inset-0 z-[100] flex items-center justify-center bg-black overflow-hidden"
+      className="fixed inset-0 z-[100] flex items-center justify-center bg-black"
     >
       <motion.div
         initial={{ scale: 1.5, opacity: 1 }}
