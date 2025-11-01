@@ -1,124 +1,113 @@
 'use client';
 
-import { motion } from 'framer-motion';
+import { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 
-const containerVariants = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.05,
-      delayChildren: 0.2,
-    },
-  },
+const ScrambledText = ({ text }: { text: string }) => {
+  const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
+  const [displayText, setDisplayText] = useState('');
+
+  useEffect(() => {
+    let interval: NodeJS.Timeout;
+    let counter = 0;
+
+    interval = setInterval(() => {
+      let newText = '';
+      for (let i = 0; i < text.length; i++) {
+        const isResolved = i < counter;
+        if (isResolved) {
+          newText += text[i];
+        } else {
+          newText += chars[Math.floor(Math.random() * chars.length)];
+        }
+      }
+      setDisplayText(newText);
+      
+      if(counter > text.length) {
+        clearInterval(interval)
+        setDisplayText(text);
+      }
+      counter++;
+
+    }, 100);
+
+    return () => clearInterval(interval);
+  }, [text]);
+
+  return <>{displayText}</>;
 };
 
-const letterVariants = (fromLeft: boolean) => ({
-  hidden: { x: fromLeft ? '-100%' : '100%', opacity: 0 },
-  visible: {
-    x: 0,
-    opacity: 1,
-    transition: {
-      duration: 0.8,
-      ease: [0.6, 0.01, 0.05, 0.95],
-    },
-  },
-});
-
-const finalTitleVariants = {
-  hidden: { opacity: 0, scale: 0.8 },
-  visible: {
-    opacity: 1,
-    scale: 1,
-    transition: {
-      duration: 0.5,
-      ease: 'easeOut',
-      delay: 1.8,
-    },
-  },
-};
-
-const subtitleVariants = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: {
-      duration: 0.5,
-      delay: 2.3,
-    },
-  },
-};
 
 const Preloader = () => {
-  const topRow = "DESIGN";
-  const bottomRow = "ATHON";
+    const [stage, setStage] = useState(0);
+
+    useEffect(() => {
+        const sequence = [
+            setTimeout(() => setStage(1), 200), // Initial render
+            setTimeout(() => setStage(2), 2000), // Show IX-25
+            setTimeout(() => setStage(3), 3000), // Show subtitle
+            setTimeout(() => setStage(4), 4500) // Start fade out
+        ];
+        return () => sequence.forEach(clearTimeout);
+    }, []);
+
 
   return (
-    <motion.div
-      initial={{ opacity: 1 }}
-      animate={{ opacity: 0, transitionEnd: { display: 'none' } }}
-      transition={{ delay: 3.0, duration: 0.5 }}
-      className="fixed inset-0 z-[100] flex items-center justify-center bg-black"
-    >
-      {/* Stage 1: Kinetic text animation */}
-      <motion.div
-        initial={{ opacity: 1, scale: 1 }}
-        animate={{ opacity: 0, scale: 0.5, transitionEnd: { display: 'none' } }}
-        transition={{ duration: 0.8, ease: 'easeIn', delay: 1.5 }}
-        className="absolute inset-0 flex flex-col items-center justify-center font-chakra font-bold text-white uppercase"
-      >
-        <motion.div
-          variants={containerVariants}
-          initial="hidden"
-          animate="visible"
-          className="flex overflow-hidden text-[20vw] md:text-[15vw] leading-none"
-        >
-          {topRow.split('').map((char, i) => (
-            <motion.span
-              key={i}
-              variants={letterVariants(true)}
-              className={char === 'G' ? 'text-[#FF0879]' : ''}
+    <AnimatePresence>
+        {stage < 4 && (
+            <motion.div
+              initial={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              className="fixed inset-0 z-[100] flex flex-col items-center justify-center bg-black font-chakra"
             >
-              {char}
-            </motion.span>
-          ))}
-        </motion.div>
-        <motion.div
-          variants={containerVariants}
-          initial="hidden"
-          animate="visible"
-          className="flex overflow-hidden text-[20vw] md:text-[15vw] leading-none"
-        >
-          {bottomRow.split('').map((char, i) => (
-            <motion.span
-              key={i}
-              variants={letterVariants(false)}
-               className={char === 'N' ? 'text-[#FF0879]' : ''}
-            >
-              {char}
-            </motion.span>
-          ))}
-        </motion.div>
-      </motion.div>
+                {/* Stage 1: DESIGNATHON zooms out */}
+                <AnimatePresence>
+                {stage === 1 && (
+                    <motion.div
+                        key="designathon"
+                        initial={{ opacity: 0, scale: 3 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        exit={{ opacity: 0, scale: 0.5, transition:{ duration: 0.8, ease: 'easeIn'} }}
+                        className="absolute text-center"
+                    >
+                        <h1 className="text-6xl md:text-9xl font-bold text-white/80 tracking-widest animate-scrolling-text">
+                            DESIGNATHON
+                        </h1>
+                    </motion.div>
+                )}
+                </AnimatePresence>
 
-      {/* Stage 2: Final title and subtitle reveal */}
-      <motion.div
-        variants={finalTitleVariants}
-        initial="hidden"
-        animate="visible"
-        className="relative text-center"
-      >
-        <div className="text-5xl md:text-7xl font-bold tracking-widest text-glow font-chakra mb-2">
-          IX 25'
-        </div>
-        <motion.div
-          variants={subtitleVariants}
-          className="text-center text-sm md:text-base text-gray-400 font-chakra"
-        >
-          Magic Happening...
-        </motion.div>
-      </motion.div>
-    </motion.div>
+
+                {/* Stage 2 & 3: IX-25 and Subtitle */}
+                <AnimatePresence>
+                {stage >= 2 && (
+                     <motion.div
+                        key="ix-25"
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        transition={{ duration: 0.5, ease: 'easeOut' }}
+                        className="text-center"
+                    >
+                        <div className="text-7xl md:text-9xl font-bold tracking-widest text-glow heading-gradient mb-2">
+                           <ScrambledText text="IX-25" />
+                        </div>
+
+                        {stage === 3 && (
+                            <motion.div
+                                initial={{ opacity: 0 }}
+                                animate={{ opacity: 1, transition: { delay: 0.2 } }}
+                                className="text-center text-sm md:text-base text-gray-400 font-chakra"
+                            >
+                                Magic Happening...
+                            </motion.div>
+                        )}
+                    </motion.div>
+                )}
+                </AnimatePresence>
+            </motion.div>
+        )}
+    </AnimatePresence>
   );
 };
 

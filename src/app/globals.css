@@ -275,3 +275,43 @@ body {
   z-index: 2;
   border-radius: 1rem;
 }
+
+@keyframes scrolling-text {
+    0% {
+        transform: translateY(0.1em);
+    }
+    10% {
+        transform: translateY(-0.1em);
+    }
+    20% {
+        transform: translateY(0.2em);
+    }
+    30% {
+        transform: translateY(-0.15em);
+    }
+    40% {
+        transform: translateY(0.1em);
+    }
+    50% {
+        transform: translateY(-0.2em);
+    }
+    60% {
+        transform: translateY(0.05em);
+    }
+    70% {
+        transform: translateY(-0.1em);
+    }
+    80% {
+        transform: translateY(0.15em);
+    }
+    90% {
+        transform: translateY(-0.05em);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+.animate-scrolling-text {
+    animation: scrolling-text 0.8s forwards;
+    will-change: transform;
+}
