@@ -3,27 +3,27 @@
 import { motion } from 'framer-motion';
 
 const containerVariants = {
-  hidden: { opacity: 1 },
+  hidden: { opacity: 0 },
   visible: {
     opacity: 1,
     transition: {
-      staggerChildren: 0.1,
-      delayChildren: 0.3,
+      staggerChildren: 0.05,
+      delayChildren: 0.2,
     },
   },
 };
 
-const letterVariants = {
-  hidden: { y: '100%', opacity: 0 },
+const letterVariants = (fromLeft: boolean) => ({
+  hidden: { x: fromLeft ? '-100%' : '100%', opacity: 0 },
   visible: {
-    y: 0,
+    x: 0,
     opacity: 1,
     transition: {
       duration: 0.8,
       ease: [0.6, 0.01, 0.05, 0.95],
     },
   },
-};
+});
 
 const finalTitleVariants = {
   hidden: { opacity: 0, scale: 0.8 },
@@ -33,7 +33,7 @@ const finalTitleVariants = {
     transition: {
       duration: 0.5,
       ease: 'easeOut',
-      delay: 2.3,
+      delay: 1.8,
     },
   },
 };
@@ -44,40 +44,56 @@ const subtitleVariants = {
     opacity: 1,
     transition: {
       duration: 0.5,
-      delay: 2.8,
+      delay: 2.3,
     },
   },
 };
 
-
 const Preloader = () => {
-  const title = "IX-25";
+  const topRow = "DESIGN";
+  const bottomRow = "ATHON";
 
   return (
     <motion.div
       initial={{ opacity: 1 }}
       animate={{ opacity: 0, transitionEnd: { display: 'none' } }}
-      transition={{ delay: 3.5, duration: 0.5 }}
+      transition={{ delay: 3.0, duration: 0.5 }}
       className="fixed inset-0 z-[100] flex items-center justify-center bg-black"
     >
       {/* Stage 1: Kinetic text animation */}
       <motion.div
-        initial={{ opacity: 1 }}
-        animate={{ opacity: 0, transitionEnd: { display: 'none' } }}
-        transition={{ duration: 0.5, ease: 'easeIn', delay: 2.0 }}
-        className="absolute inset-0 flex items-center justify-center"
+        initial={{ opacity: 1, scale: 1 }}
+        animate={{ opacity: 0, scale: 0.5, transitionEnd: { display: 'none' } }}
+        transition={{ duration: 0.8, ease: 'easeIn', delay: 1.5 }}
+        className="absolute inset-0 flex flex-col items-center justify-center font-chakra font-bold text-white uppercase"
       >
         <motion.div
           variants={containerVariants}
           initial="hidden"
           animate="visible"
-          className="font-chakra font-bold text-7xl md:text-9xl tracking-tighter flex overflow-hidden"
+          className="flex overflow-hidden text-[20vw] md:text-[15vw] leading-none"
         >
-          {title.split('').map((char, i) => (
+          {topRow.split('').map((char, i) => (
             <motion.span
               key={i}
-              variants={letterVariants}
-              className={char === 'X' || char === '2' ? 'text-[#FF0879]' : 'text-white'}
+              variants={letterVariants(true)}
+              className={char === 'G' ? 'text-[#FF0879]' : ''}
+            >
+              {char}
+            </motion.span>
+          ))}
+        </motion.div>
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          animate="visible"
+          className="flex overflow-hidden text-[20vw] md:text-[15vw] leading-none"
+        >
+          {bottomRow.split('').map((char, i) => (
+            <motion.span
+              key={i}
+              variants={letterVariants(false)}
+               className={char === 'N' ? 'text-[#FF0879]' : ''}
             >
               {char}
             </motion.span>
