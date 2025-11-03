@@ -63,9 +63,10 @@ const Preloader = () => {
     },
     exit: {
       opacity: 0,
-      scale: 0.5,
+      y: 50,
       transition: {
         duration: 0.5,
+        ease: 'easeOut'
       }
     }
   };
@@ -86,7 +87,7 @@ const Preloader = () => {
       initial={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 0.5, delay: 0.5 }}
-      className="fixed inset-0 z-[100] flex flex-col items-center justify-center bg-black font-chakra"
+      className="fixed inset-0 z-[100] flex flex-col items-center justify-center bg-black font-chakra dot-grid-background"
     >
       <AnimatePresence>
         {showWords && (
