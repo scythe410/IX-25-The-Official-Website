@@ -8,6 +8,7 @@ const words = ['BIGGER.', 'GRANDER.', 'WILDER.'];
 
 const Preloader = () => {
   const [showFinal, setShowFinal] = useState(false);
+  const [showGlitch, setShowGlitch] = useState(false);
   const [currentWords, setCurrentWords] = useState<string[]>([]);
   const [wordIndex, setWordIndex] = useState(0);
 
@@ -18,7 +19,11 @@ const Preloader = () => {
         setWordIndex(wordIndex + 1);
       } else {
          setTimeout(() => {
-            setShowFinal(true);
+            setShowGlitch(true);
+            setTimeout(() => {
+              setShowGlitch(false);
+              setShowFinal(true);
+            }, 500); // Glitch duration
          }, 500);
       }
     }, 700);
@@ -61,7 +66,7 @@ const Preloader = () => {
       className="fixed inset-0 z-[100] flex flex-col items-center justify-center bg-black font-chakra"
     >
       <AnimatePresence>
-        {!showFinal ? (
+        {!showGlitch && !showFinal ? (
           <motion.div
             key="words"
             variants={wordContainerVariants}
@@ -74,6 +79,24 @@ const Preloader = () => {
                 <motion.span key={i} variants={wordVariants}>{word}</motion.span>
             ))}
           </motion.div>
+        ) : showGlitch ? (
+            <motion.div
+                key="glitch-stage"
+                variants={finalVariants}
+                initial="hidden"
+                animate="visible"
+                exit="exit"
+                className="text-center"
+            >
+                <div className="glitch-image relative w-48 h-48 md:w-64 md:h-64">
+                    <Image
+                        src="/images/logo.svg"
+                        alt="IX 25 Logo Glitch"
+                        fill
+                        className="object-contain"
+                    />
+                </div>
+            </motion.div>
         ) : (
           <motion.div
             key="final-stage"
@@ -82,7 +105,7 @@ const Preloader = () => {
             animate="visible"
             className="text-center"
           >
-            <div className="glitch-image relative w-48 h-48 md:w-64 md:h-64">
+            <div className="relative w-48 h-48 md:w-64 md:h-64">
                 <Image
                     src="/images/logo.svg"
                     alt="IX 25 Logo"
@@ -98,5 +121,3 @@ const Preloader = () => {
 };
 
 export default Preloader;
-
-    
