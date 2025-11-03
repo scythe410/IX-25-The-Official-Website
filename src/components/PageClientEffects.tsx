@@ -14,7 +14,7 @@ export default function PageClientEffects() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setLoading(false);
-    }, 5000); // Increased to match new preloader animation duration
+    }, 4500); 
     return () => clearTimeout(timer);
   }, []);
 
