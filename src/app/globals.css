@@ -1,3 +1,4 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -315,3 +316,59 @@ body {
     animation: scrolling-text 0.8s forwards;
     will-change: transform;
 }
+
+
+/* GLITCH EFFECT */
+.glitch {
+  position: relative;
+  animation: glitch-skew 1s infinite linear alternate-reverse;
+}
+.glitch::before,
+.glitch::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+  overflow: hidden;
+}
+.glitch::before {
+  left: 2px;
+  text-shadow: -2px 0 #FF0879;
+  animation: glitch-anim-1 2s infinite linear alternate-reverse;
+}
+.glitch::after {
+  left: -2px;
+  text-shadow: -2px 0 #00E5E5, 2px 2px #FF0879;
+  animation: glitch-anim-2 3s infinite linear alternate-reverse;
+}
+
+@keyframes glitch-anim-1 {
+  0% { clip-path: inset(15% 0 86% 0); }
+  20% { clip-path: inset(51% 0 29% 0); }
+  40% { clip-path: inset(26% 0 64% 0); }
+  60% { clip-path: inset(74% 0 8% 0); }
+  80% { clip-path: inset(53% 0 15% 0); }
+  100% { clip-path: inset(36% 0 54% 0); }
+}
+
+@keyframes glitch-anim-2 {
+  0% { clip-path: inset(86% 0 4% 0); }
+  20% { clip-path: inset(8% 0 69% 0); }
+  40% { clip-path: inset(83% 0 13% 0); }
+  60% { clip-path: inset(21% 0 57% 0); }
+  80% { clip-path: inset(20% 0 35% 0); }
+  100% { clip-path: inset(84% 0 1% 0); }
+}
+
+@keyframes glitch-skew {
+  0% { transform: skew(0); }
+  5% { transform: skew(1deg); }
+  10% { transform: skew(0.5deg); }
+  15% { transform: skew(-0.2deg); }
+  20% { transform: skew(0); }
+  100% { transform: skew(0); }
+}
+

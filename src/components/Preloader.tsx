@@ -90,7 +90,10 @@ const Preloader = () => {
                         transition={{ duration: 0.5, ease: 'easeOut' }}
                         className="text-center"
                     >
-                        <div className="text-7xl md:text-9xl font-bold tracking-widest text-glow heading-gradient mb-2">
+                        <div 
+                          className="glitch text-7xl md:text-9xl font-bold tracking-widest heading-gradient mb-2"
+                          data-text="IX-25"
+                        >
                            <ScrambledText text="IX-25" />
                         </div>
 
