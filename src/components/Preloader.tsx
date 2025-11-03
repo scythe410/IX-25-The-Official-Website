@@ -6,7 +6,7 @@ import Image from 'next/image';
 import { useGlitch } from 'react-powerglitch';
 
 const Preloader = () => {
-  const [showWords, setShowWords] = useState(true);
+  const [showText, setShowText] = useState(true);
   const [showLogo, setShowLogo] = useState(false);
   const glitch = useGlitch({
     playMode: 'manual',
@@ -26,8 +26,8 @@ const Preloader = () => {
   });
 
   useEffect(() => {
-    const wordsTimer = setTimeout(() => {
-      setShowWords(false);
+    const textTimer = setTimeout(() => {
+      setShowText(false);
     }, 2500);
 
     const logoTimer = setTimeout(() => {
@@ -35,7 +35,7 @@ const Preloader = () => {
     }, 3000);
 
     return () => {
-      clearTimeout(wordsTimer);
+      clearTimeout(textTimer);
       clearTimeout(logoTimer);
     };
   }, []);
@@ -43,36 +43,13 @@ const Preloader = () => {
   useEffect(() => {
     if (showLogo) {
       glitch.startGlitch();
-      const timer = setTimeout(() => {
-        glitch.stopGlitch();
-      }, 500);
-      return () => clearTimeout(timer);
     }
   }, [showLogo, glitch]);
 
-  const wordContainerVariants = {
+  const textVariants = {
     hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.4,
-        delayChildren: 0.2,
-      },
-    },
-    exit: {
-      opacity: 0,
-      filter: 'blur(8px)',
-      scale: 0.95,
-      transition: {
-        duration: 0.4,
-        ease: 'easeOut',
-      },
-    },
-  };
-
-  const wordVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: 'easeOut' } },
+    visible: { opacity: 1, transition: { duration: 0.5 } },
+    exit: { opacity: 0, transition: { duration: 0.5 } },
   };
 
   const logoVariants = {
@@ -85,28 +62,35 @@ const Preloader = () => {
     exit: { opacity: 0 },
   };
 
+  const marqueeText = 'BIGGER. GRANDER. WILDER. '.repeat(4);
+
   return (
     <motion.div
       initial={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 0.5, delay: 0.5 }}
-      className="fixed inset-0 z-[100] flex flex-col items-center justify-center bg-black font-chakra dot-grid-background"
+      className="fixed inset-0 z-[100] flex flex-col items-center justify-center bg-black font-chakra dot-grid-background overflow-hidden"
     >
       <AnimatePresence>
-        {showWords && (
+        {showText && (
           <motion.div
-            key="words"
-            variants={wordContainerVariants}
+            key="marquee"
+            variants={textVariants}
             initial="hidden"
             animate="visible"
             exit="exit"
-            className="flex flex-col md:flex-row items-center justify-center text-5xl md:text-7xl font-bold tracking-widest text-white space-y-4 md:space-y-0 md:space-x-8"
+            className="absolute w-full flex"
           >
-            <motion.span variants={wordVariants}>BIGGER.</motion.span>
-            <motion.span variants={wordVariants} style={{ color: '#FF0879' }}>
-              GRANDER.
-            </motion.span>
-            <motion.span variants={wordVariants}>WILDER.</motion.span>
+            <div className="animate-preloader-marquee whitespace-nowrap">
+              <span className="text-[20vw] font-bold mx-4 text-white">
+                {marqueeText}
+              </span>
+            </div>
+            <div className="animate-preloader-marquee whitespace-nowrap">
+              <span className="text-[20vw] font-bold mx-4 text-white">
+                {marqueeText}
+              </span>
+            </div>
           </motion.div>
         )}
       </AnimatePresence>

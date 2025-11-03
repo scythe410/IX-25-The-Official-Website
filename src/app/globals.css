@@ -56,6 +56,15 @@ body {
   animation: marquee 40s linear infinite;
 }
 
+@keyframes preloader-marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-100%); }
+}
+
+.animate-preloader-marquee {
+  animation: preloader-marquee 20s linear infinite;
+}
+
 @keyframes preloader-marquee-vertical {
   from { transform: translateY(0); }
   to { transform: translateY(-50%); }
@@ -90,7 +99,7 @@ body {
 .memories-carousel .swiper-slide:nth-child(3n+2) {
   transform: rotate(-3deg) translateY(-5px);
 }
-.memories-carousel .swiper-slide:nth-child(3n+3) {
+.memoriescarousel .swiper-slide:nth-child(3n+3) {
   transform: rotate(1deg) translateY(5px);
 }
 
