@@ -371,12 +371,10 @@ body {
 .glitch-image::before {
   left: 2px;
   animation: glitch-anim-1 2s infinite linear alternate-reverse;
-  filter: hue-rotate(180deg);
 }
 .glitch-image::after {
   left: -2px;
   animation: glitch-anim-2 3s infinite linear alternate-reverse;
-  filter: hue-rotate(90deg);
 }
 
 
