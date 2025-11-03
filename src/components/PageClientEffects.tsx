@@ -14,7 +14,7 @@ export default function PageClientEffects() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setLoading(false);
-    }, 4500); 
+    }, 4000); 
     return () => clearTimeout(timer);
   }, []);
 
