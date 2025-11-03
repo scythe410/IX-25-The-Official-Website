@@ -13,10 +13,7 @@ const Preloader = () => {
   const [showLogo, setShowLogo] = useState(false);
   const glitch = useGlitch({
     playMode: 'manual',
-    glitchTimeSpan: {
-      start: 0,
-      end: 0.5,
-    },
+    glitchTimeSpan: false,
     shake: {
       velocity: 15,
       amplitudeX: 0.1,
@@ -41,14 +38,20 @@ const Preloader = () => {
       const timer = setTimeout(() => {
         setShowWords(false);
         setShowLogo(true);
-        glitch.startGlitch();
-        setTimeout(() => {
-          glitch.stopGlitch();
-        }, 500); // Glitch duration
       }, 700);
       return () => clearTimeout(timer);
     }
-  }, [wordIndex, glitch]);
+  }, [wordIndex]);
+
+  useEffect(() => {
+    if (showLogo) {
+      glitch.startGlitch();
+      const timer = setTimeout(() => {
+        glitch.stopGlitch();
+      }, 500); // Glitch duration
+      return () => clearTimeout(timer);
+    }
+  }, [showLogo, glitch]);
   
   const wordContainerVariants = {
     hidden: { opacity: 0 },
@@ -60,6 +63,7 @@ const Preloader = () => {
     },
     exit: {
       opacity: 0,
+      scale: 0.5,
       transition: {
         duration: 0.5,
       }
@@ -94,7 +98,7 @@ const Preloader = () => {
             exit="exit"
             className="flex flex-col md:flex-row items-center justify-center text-5xl md:text-7xl font-bold tracking-widest text-white space-y-4 md:space-y-0 md:space-x-8"
           >
-            {words.slice(0, wordIndex + 1).map((word, i) => (
+            {words.slice(0, wordIndex).map((word, i) => (
                 <motion.span key={i} variants={wordVariants} initial="hidden" animate="visible">{words[i]}</motion.span>
             ))}
           </motion.div>
