@@ -4,18 +4,36 @@ import React, { useState, useEffect } from 'react';
 
 const CustomCursor = () => {
   const [position, setPosition] = useState({ x: 0, y: 0 });
+  const [isVisible, setIsVisible] = useState(true);
 
   useEffect(() => {
     const onMouseMove = (e: MouseEvent) => {
       setPosition({ x: e.clientX, y: e.clientY });
     };
 
+    const onMouseEnter = () => {
+      setIsVisible(true);
+    };
+
+    const onMouseLeave = () => {
+      setIsVisible(false);
+    };
+
     document.addEventListener('mousemove', onMouseMove);
+    document.body.addEventListener('mouseenter', onMouseEnter);
+    document.body.addEventListener('mouseleave', onMouseLeave);
+
 
     return () => {
       document.removeEventListener('mousemove', onMouseMove);
+      document.body.removeEventListener('mouseenter', onMouseEnter);
+      document.body.removeEventListener('mouseleave', onMouseLeave);
     };
   }, []);
+
+  if (!isVisible) {
+    return null;
+  }
 
   return (
     <div
