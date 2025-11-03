@@ -45,7 +45,7 @@ const Preloader = () => {
     useEffect(() => {
         const sequence = [
             setTimeout(() => setStage(1), 200), // Initial render
-            setTimeout(() => setStage(2), 2000), // Show IX-25
+            setTimeout(() => setStage(2), 2000), // Show IX-25 with glitch
             setTimeout(() => setStage(3), 3000), // Show subtitle
             setTimeout(() => setStage(4), 4500) // Start fade out
         ];
