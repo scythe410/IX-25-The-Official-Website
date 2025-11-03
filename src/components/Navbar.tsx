@@ -1,3 +1,4 @@
+
 'use client';
 
 import React from 'react';
@@ -16,13 +17,15 @@ const Navbar = () => {
             height={20}
             data-ai-hint="logo"
           />
-          <motion.button 
-            className="px-6 py-2 bg-[#FF0879] text-white font-bold rounded-full text-sm font-chakra button-glow"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            REGISTER
-          </motion.button>
+          <a href="https://forms.gle/eTSignSuyngmLmSN9" target="_blank" rel="noopener noreferrer">
+            <motion.button 
+              className="px-6 py-2 bg-[#FF0879] text-white font-bold rounded-full text-sm font-chakra button-glow"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              REGISTER
+            </motion.button>
+          </a>
         </div>
       </div>
     </nav>
@@ -30,3 +33,5 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
+    

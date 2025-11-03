@@ -200,9 +200,11 @@ export default function Home() {
                 </h1>
               </div>
               <div className="relative gradient-border-wrapper inline-block p-0.5 rounded-md mb-8">
-                 <button className="px-8 py-3 md:px-10 md:py-4 bg-black text-white font-bold rounded-md hover:bg-black/80 transition-colors duration-300 button-glow text-xl md:text-2xl font-chakra">
-                   <span className="text-glow">REGISTER FOR FREE</span>
-                 </button>
+                 <a href="https://forms.gle/eTSignSuyngmLmSN9" target="_blank" rel="noopener noreferrer">
+                   <button className="px-8 py-3 md:px-10 md:py-4 bg-black text-white font-bold rounded-md hover:bg-black/80 transition-colors duration-300 button-glow text-xl md:text-2xl font-chakra">
+                     <span className="text-glow">REGISTER FOR FREE</span>
+                   </button>
+                 </a>
               </div>
               <p className="text-xl md:text-2xl font-bold font-chakra">
                 APPLICATIONS CLOSES ON
@@ -447,5 +449,7 @@ export default function Home() {
     </>
   );
 }
+
+    
 
     
