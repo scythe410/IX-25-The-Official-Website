@@ -51,8 +51,8 @@ export default function Home() {
   };
   
   const partners = [
-    { name: 'IFS', logo: '/images/ifs.png' },
-    
+    { name: 'IFS', logo: '/images/ifsab.png' },
+    { name: 'Westfield Campus', logo: '/images/Westfield Campus.png' },
   ];
 
   const roadmapEvents = [
