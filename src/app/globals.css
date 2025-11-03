@@ -345,6 +345,41 @@ body {
   animation: glitch-anim-2 3s infinite linear alternate-reverse;
 }
 
+/* IMAGE GLITCH */
+.glitch-image {
+  position: relative;
+  animation: glitch-skew 1s infinite linear alternate-reverse;
+}
+.glitch-image > img {
+  opacity: 0;
+}
+.glitch-image::before,
+.glitch-image::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+  overflow: hidden;
+  background-image: url('/images/logo.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+.glitch-image::before {
+  left: 2px;
+  animation: glitch-anim-1 2s infinite linear alternate-reverse;
+  filter: hue-rotate(180deg);
+}
+.glitch-image::after {
+  left: -2px;
+  animation: glitch-anim-2 3s infinite linear alternate-reverse;
+  filter: hue-rotate(90deg);
+}
+
+
 @keyframes glitch-anim-1 {
   0% { clip-path: inset(15% 0 86% 0); }
   20% { clip-path: inset(51% 0 29% 0); }
@@ -372,3 +407,4 @@ body {
   100% { transform: skew(0); }
 }
 
+    

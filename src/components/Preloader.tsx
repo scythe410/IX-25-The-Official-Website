@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import Image from 'next/image';
 
 const words = ['BIGGER.', 'GRANDER.', 'WILDER.'];
 
@@ -35,6 +36,7 @@ const Preloader = () => {
     },
     exit: {
       opacity: 0,
+      y: -20,
       transition: {
         duration: 0.5,
       }
@@ -80,19 +82,14 @@ const Preloader = () => {
             animate="visible"
             className="text-center"
           >
-            <div 
-              className="glitch text-7xl md:text-9xl font-bold tracking-widest heading-gradient mb-2"
-              data-text="IX-25"
-            >
-               IX-25
+            <div className="glitch-image relative w-48 h-48 md:w-64 md:h-64">
+                <Image
+                    src="/images/logo.svg"
+                    alt="IX 25 Logo"
+                    fill
+                    className="object-contain"
+                />
             </div>
-            <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1, transition: { delay: 0.5 } }}
-                className="text-center text-sm md:text-base text-gray-400 font-chakra"
-            >
-                Magic Happening...
-            </motion.div>
           </motion.div>
         )}
       </AnimatePresence>
@@ -101,3 +98,5 @@ const Preloader = () => {
 };
 
 export default Preloader;
+
+    
