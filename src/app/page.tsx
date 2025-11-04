@@ -365,7 +365,7 @@ export default function Home() {
                 <div className="corner bottom-left"></div>
                 <div className="corner bottom-right"></div>
                 <div className="bg-black/80 backdrop-blur-sm text-center h-full flex flex-col p-6">
-                    <div className="relative w-full h-32 mb-4 self-center">
+                    <div className="relative w-full h-48 mb-4 self-center">
                       <Image
                         src={contact.image}
                         alt={`Portrait of ${contact.name}`}
@@ -449,6 +449,8 @@ export default function Home() {
     </>
   );
 }
+
+    
 
     
 
