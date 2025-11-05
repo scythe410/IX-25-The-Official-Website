@@ -14,7 +14,7 @@ const ScrollTextReveal = ({ text, className }: ScrollTextRevealProps) => {
 
   const { scrollYProgress } = useScroll({
     target: containerRef,
-    offset: ['start 0.9', 'end 0.25'],
+    offset: ['start 0.8', 'end 0.5'],
   });
 
   return (
