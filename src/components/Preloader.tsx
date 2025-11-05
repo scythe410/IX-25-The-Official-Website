@@ -62,7 +62,16 @@ const Preloader = () => {
     exit: { opacity: 0 },
   };
 
-  const marqueeText = 'BIGGER. GRANDER. WILDER. '.repeat(4);
+  const MarqueeText = () => (
+    <>
+      {'BIGGER. '}
+      <span style={{ color: '#FF0879' }}>GRANDER.</span>
+      {' WILDER. '}
+    </>
+  );
+
+  const marqueeTextContent = Array(4).fill(0).map((_, i) => <MarqueeText key={i} />);
+
 
   return (
     <motion.div
@@ -83,12 +92,12 @@ const Preloader = () => {
           >
             <div className="animate-preloader-marquee whitespace-nowrap">
               <span className="text-[20vw] font-bold mx-4 text-white">
-                {marqueeText}
+                {marqueeTextContent}
               </span>
             </div>
             <div className="animate-preloader-marquee whitespace-nowrap">
               <span className="text-[20vw] font-bold mx-4 text-white">
-                {marqueeText}
+                {marqueeTextContent}
               </span>
             </div>
           </motion.div>
