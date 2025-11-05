@@ -64,9 +64,9 @@ const Preloader = () => {
 
   const MarqueeText = () => (
     <>
-      {'BIGGER. '}
-      <span style={{ color: '#FF0879' }}>GRANDER.</span>
-      {' WILDER. '}
+      {'BIGGER. GRANDER. '}
+      <span style={{ color: '#FF0879' }}>WILDER.</span>
+      {' '}
     </>
   );
 
