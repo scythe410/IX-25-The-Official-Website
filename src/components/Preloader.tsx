@@ -64,7 +64,8 @@ const Preloader = () => {
 
   const MarqueeText = () => (
     <>
-      {'BIGGER. GRANDER. '}
+      {'BIGGER. '}
+      {'GRANDER. '}
       <span style={{ color: '#FF0879' }}>WILDER.</span>
       {' '}
     </>
@@ -78,7 +79,7 @@ const Preloader = () => {
       initial={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 0.5, delay: 0.5 }}
-      className="fixed inset-0 z-[100] flex flex-col items-center justify-center bg-black font-chakra dot-grid-background overflow-hidden"
+      className="fixed inset-0 z-[100] flex flex-col items-center justify-center bg-black font-tommy dot-grid-background overflow-hidden"
     >
       <AnimatePresence>
         {showText && (

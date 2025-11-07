@@ -19,7 +19,7 @@ const Navbar = () => {
           />
           <a href="https://forms.gle/eTSignSuyngmLmSN9" target="_blank" rel="noopener noreferrer">
             <motion.button 
-              className="px-6 py-2 bg-[#FF0879] text-white font-bold rounded-full text-sm font-chakra button-glow"
+              className="px-6 py-2 bg-[#FF0879] text-white font-bold rounded-full text-sm button-glow"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
