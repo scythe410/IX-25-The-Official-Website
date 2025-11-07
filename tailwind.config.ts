@@ -10,8 +10,9 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        chakra: ['Chakra Petch', 'sans-serif'],
-        turret: ['Turret Road', 'monospace'],
+        chakra: ['ChakraPetch', 'sans-serif'],
+        turret: ['TurretRoad', 'monospace'],
+        tommy: ['MADETOMMY', 'sans-serif'],
       },
       colors: {
         background: 'hsl(var(--background))',

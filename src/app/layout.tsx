@@ -19,7 +19,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="font-turret" suppressHydrationWarning>
+      <body className="font-tommy" suppressHydrationWarning>
         <CustomCursor />
         {children}
         <Toaster />

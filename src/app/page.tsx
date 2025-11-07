@@ -61,7 +61,7 @@ export default function Home() {
     { date: '11th Nov', title: 'REGISTRATIONS CLOSING', description: 'Last call to register and be part of the competition.' },
     { date: '15th Nov', title: 'INTRODUCTORY SESSION', description: 'Get to know the competition, teams, and what lies ahead.' },
     { date: '16th Nov', title: 'SUBMISSIONS OPENING', description: 'Begin submitting your creative and technical solutions.' },
-    { date: '19th Nov', title: 'WORKSHOP 02', description: 'Level up your project with expert guidance and feedback.' },
+    { date: '22nd Nov', title: 'WORKSHOP 02', description: 'Level up your project with expert guidance and feedback.' },
     { date: '24th Nov', title: 'SUBMISSIONS CLOSING', description: 'Deadline to showcase your innovation—make it count!' },
     { date: '28th Nov', title: 'CHOOSING FINALISTS', description: 'Top teams are selected to move on to the grand stage.' },
     { date: '29th Nov', title: 'WORKSHOP 03', description: 'Final preparation and mentoring before the finale.' },
@@ -87,7 +87,7 @@ export default function Home() {
   return (
     <>
       <PageClientEffects />
-      <div className="overflow-x-hidden font-turret">
+      <div className="overflow-x-hidden font-tommy">
       <Navbar />
       <main className="min-h-screen text-white dot-grid-background pb-24">
         
@@ -375,7 +375,7 @@ export default function Home() {
                       />
                     </div>
                     <div className="flex-grow">
-                      <h3 className="text-xl font-bold font-turret tracking-wider">{contact.name}</h3>
+                      <h3 className="text-xl font-bold font-tommy tracking-wider">{contact.name}</h3>
                       <p className="text-sm text-gray-400 font-chakra mb-4">{contact.role}</p>
                     </div>
                     <div className="flex justify-center gap-4 mt-auto">

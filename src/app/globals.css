@@ -4,16 +4,23 @@
 @tailwind utilities;
 
 @font-face {
-  font-family: 'Chakra Petch';
+  font-family: 'ChakraPetch';
   src: url('/fonts/Cakra-Normal.otf') format('truetype');
   font-weight: 700;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Turret Road';
+  font-family: 'TurretRoad';
   src: url('/fonts/TurretRoad-Bold.ttf') format('truetype');
   font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'MADETOMMY';
+  src: url('/fonts/MADE TOMMY.otf') format('opentype');
+  font-weight: normal;
   font-style: normal;
 }
 
