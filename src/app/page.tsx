@@ -177,7 +177,7 @@ export default function Home() {
 
         {/* Registration */}
         <motion.section
-          className="py-10 relative"
+          className="py-0 relative"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: false }}
