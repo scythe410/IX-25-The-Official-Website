@@ -177,7 +177,7 @@ export default function Home() {
 
         {/* Registration */}
         <motion.section
-          className="py-0 relative"
+          className="py-10 relative"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: false }}
@@ -358,7 +358,7 @@ export default function Home() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
             {contacts.map((contact, index) => (
-              <div key={index} className="dotted-border-wrapper p-4">
+              <div key={index} className="dotted-border-wrapper p-4 group">
                 <div className="dotted-border-inner"></div>
                 <div className="corner top-left"></div>
                 <div className="corner top-right"></div>
@@ -370,7 +370,7 @@ export default function Home() {
                         src={contact.image}
                         alt={`Portrait of ${contact.name}`}
                         fill
-                        className="rounded-xl object-cover"
+                        className="rounded-xl object-cover grayscale group-hover:grayscale-0 transition-all duration-300"
                         data-ai-hint="person portrait"
                       />
                     </div>
@@ -455,3 +455,4 @@ export default function Home() {
     
 
     
+
