@@ -113,9 +113,9 @@ export default function Home() {
             <div className="text-center md:text-left md:pl-16">
                 <p className="text-lg md:text-2xl text-gray-300">06 &amp; 07 DEC 2025</p>
                 <h1 className="text-7xl md:text-9xl font-bold my-2 -space-y-2 md:-space-y-4">
-                    <span className="text-[#FF0879]">design</span>
+                    <span className="text-[#FF0879]">DESIGN</span>
                     <br />
-                    <span>athon</span>
+                    <span>ATHON</span>
                 </h1>
                 <p className="text-xl md:text-3xl font-bold text-gray-200 tracking-wider">
                     BIGGER<span className="text-[#ACD5F8]">.</span> GRANDER<span className="text-[#ACD5F8]">.</span> WILDER<span className="text-[#ACD5F8]">.</span>
