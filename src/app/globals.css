@@ -333,11 +333,14 @@ body {
 }
 
 .marquee-container::before {
-  top: 0;
+  top: -8px;
 }
 
 .marquee-container::after {
-  bottom: 0;
+  bottom: -8px;
 }
     
 
+
+
+    
