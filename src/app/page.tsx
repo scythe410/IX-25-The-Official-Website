@@ -92,7 +92,7 @@ export default function Home() {
       <main className="min-h-screen text-white dot-grid-background pb-24">
         
         <div className="relative text-center z-0">
-          <h1 className="text-[25vw] md:text-[20vw] font-bold text-white/5" style={{ transform: 'translateY(0%)' }}>
+          <h1 className="text-[25vw] md:text-[20vw] font-bold text-white/5" style={{ transform: 'translateY(-50%)' }}>
               DESIGNATHON
           </h1>
         </div>
