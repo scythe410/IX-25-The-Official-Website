@@ -92,7 +92,7 @@ export default function Home() {
       <main className="min-h-screen text-white dot-grid-background pb-24">
         
         <div className="relative text-center z-0">
-          <h1 className="text-[25vw] md:text-[20vw] font-bold text-white/5 font-tommy-outline" style={{ transform: 'translateY(-50%)' }}>
+          <h1 className="text-[25vw] md:text-[20vw] font-bold text-white/5" style={{ transform: 'translateY(0%)' }}>
               DESIGNATHON
           </h1>
         </div>
@@ -115,7 +115,7 @@ export default function Home() {
                 <h1 className="text-7xl md:text-9xl font-bold my-2 -space-y-2 md:-space-y-4">
                     <span className="text-[#FF0879]">DESIGN</span>
                     <br />
-                    <span>ATHON</span>
+                    <span className="font-tommy-outline">ATHON</span>
                 </h1>
                 <p className="text-xl md:text-3xl font-bold text-gray-200 tracking-wider">
                     BIGGER<span className="text-[#ACD5F8]">.</span> GRANDER<span className="text-[#ACD5F8]">.</span> WILDER<span className="text-[#ACD5F8]">.</span>
