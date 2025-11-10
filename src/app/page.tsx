@@ -34,13 +34,13 @@ export default function Home() {
   const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(null);
 
     const faqData = [
-    { question: 'HOW MANY MEMBERS PER TEAM?', answer: 'Teams can consist of 2 to 4 members.' },
+    { question: 'HOW MANY MEMBERS PER TEAM?', answer: '3-6 members' },
     { question: 'WHO CAN JOIN IX?', answer: 'The competition is open to all university undergraduates across the country.' },
     { question: 'WHAT CAN PARTICIPANTS BUILD?', answer: 'You are expected to design a solution for a given problem. This is a designathon, so the focus is on UI/UX, not coding.' },
     { question: 'IS CODING REQUIRED BEFOREHAND?', answer: 'No coding experience is required. This is a design-focused competition.' },
     { question: 'TEAM FROM DIFFERENT UNIVERSITIES?', answer: 'Yes, members of a team can be from different universities.' },
-    { question: 'IS PHYSICAL ATTENDANCE REQUIRED?', answer: 'Yes, the grand finale is a physical event that requires attendance.' },
-    { question: 'WILL I GET A CERTIFICATE?', answer: 'Yes, all participants who successfully complete the designathon will receive a certificate.' },
+    { question: 'IS PHYSICAL ATTENDANCE REQUIRED?', answer: 'Phase one is not physical, while phase two requires physical attendance.' },
+    { question: 'WILL I GET A CERTIFICATE?', answer: 'When you participate in phase one, you will get the participant certificate.' },
     { question: 'HOW TO REGISTER FOR IX?', answer: 'You can register for free by clicking the "Register" button on our website.' },
   ];
 
