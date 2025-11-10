@@ -118,7 +118,7 @@ export default function Home() {
                     <span className="font-tommy-outline">ATHON</span>
                 </h1>
                 <p className="text-xl md:text-3xl font-bold text-gray-200 tracking-wider">
-                    BIGGER<span className="text-[#ACD5F8]">.</span> GRANDER<span className="text-[#ACD5F8]">.</span> WILDER<span className="text-[#ACD5F8]">.</span>
+                    BIGGER<span className="text-[#ACD5F8]">.</span> GRANDER<span className="text-[#ACD5F8]">.</span> <span className="font-tommy-outline">WILDER.</span>
                 </p>
                 <div className="flex justify-center md:justify-start gap-8 md:gap-12 mt-8">
                     <div>
@@ -147,7 +147,7 @@ export default function Home() {
           <ScrollTextReveal text={aboutText} />
         </motion.section>
 
-        <Marquee text="IX 25'" />
+        <Marquee text="IX 25" />
         
         {/* Prizes */}
         <motion.section
@@ -202,7 +202,7 @@ export default function Home() {
               <div className="relative gradient-border-wrapper inline-block p-0.5 rounded-md mb-8">
                  <a href="https://forms.gle/eTSignSuyngmLmSN9" target="_blank" rel="noopener noreferrer">
                    <button className="px-8 py-3 md:px-10 md:py-4 bg-black text-white font-bold rounded-md hover:bg-black/80 transition-colors duration-300 button-glow text-xl md:text-2xl">
-                     <span className="text-glow">REGISTER FOR FREE</span>
+                     <span className="text-glow">REGISTER NOW</span>
                    </button>
                  </a>
               </div>
@@ -336,7 +336,7 @@ export default function Home() {
               <div key={index} className="group">
                 <div className="gradient-border-wrapper">
                     <div className="bg-black/80 backdrop-blur-sm text-center h-full flex flex-col p-6">
-                        <div className="relative w-full h-64 mb-4 self-center">
+                        <div className="relative w-full h-56 mb-4 self-center">
                           <Image
                             src={contact.image}
                             alt={`Portrait of ${contact.name}`}
