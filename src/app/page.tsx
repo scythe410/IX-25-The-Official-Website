@@ -331,12 +331,12 @@ export default function Home() {
             <div className="absolute inset-0">
                 <Image
                     src="/images/building_overlay_bg.png"
-                    alt="Informatics Institute of Technology Background"
+                    alt="Dot-grid building overlay"
                     fill
                     className="object-cover w-full opacity-20"
-                    data-ai-hint="building illustration"
+                    data-ai-hint="cityscape illustration"
                 />
-                <div className="absolute inset-0 bg-black/50"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent"></div>
             </div>
              <div className="relative z-10 px-4">
                  <h2 className="text-3xl md:text-4xl font-bold mb-4 heading-gradient">DESIGNATHON VENUE</h2>
@@ -457,5 +457,7 @@ export default function Home() {
     
 
 
+
+    
 
     
