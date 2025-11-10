@@ -333,38 +333,39 @@ export default function Home() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
             {contacts.map((contact, index) => (
-              <div key={index} className="dotted-border-wrapper p-4 group">
-                <div className="dotted-border-inner"></div>
-                <div className="corner top-left"></div>
-                <div className="corner top-right"></div>
-                <div className="corner bottom-left"></div>
-                <div className="corner bottom-right"></div>
-                <div className="bg-black/80 backdrop-blur-sm text-center h-full flex flex-col p-6">
-                    <div className="relative w-full h-64 mb-4 self-center">
-                      <Image
-                        src={contact.image}
-                        alt={`Portrait of ${contact.name}`}
-                        fill
-                        className="rounded-xl object-cover grayscale group-hover:grayscale-0 transition-all duration-300"
-                        data-ai-hint="person portrait"
-                      />
-                    </div>
-                    <div className="flex-grow">
-                      <h3 className="text-xl font-bold tracking-wider">{contact.name}</h3>
-                      <p className="text-sm text-gray-400 mb-4">{contact.role}</p>
-                    </div>
-                    <div className="flex justify-center gap-4 mt-auto">
-                      <a href={`mailto:${contact.email}`} aria-label="Email" className="p-2 bg-gray-800 rounded-full hover:bg-[#FF0879] transition-colors">
-                        <Mail className="w-5 h-5" />
-                      </a>
-                      <a href={contact.linkedin} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="p-2 bg-gray-800 rounded-full hover:bg-[#FF0879] transition-colors">
-                        <Linkedin className="w-5 h-5" />
-                      </a>
-                      <a href={`tel:${contact.phone}`} aria-label="Phone" className="p-2 bg-gray-800 rounded-full hover:bg-[#FF0879] transition-colors">
-                        <Phone className="w-5 h-5" />
-                      </a>
-                    </div>
-                  </div>
+              <div key={index} className="group">
+                <div className="gradient-border-wrapper">
+                    <div className="bg-black/80 backdrop-blur-sm text-center h-full flex flex-col p-6">
+                        <div className="relative w-full h-64 mb-4 self-center">
+                          <Image
+                            src={contact.image}
+                            alt={`Portrait of ${contact.name}`}
+                            fill
+                            className="rounded-xl object-cover grayscale group-hover:grayscale-0 transition-all duration-300"
+                            data-ai-hint="person portrait"
+                          />
+                        </div>
+                        <div className="flex-grow">
+                          <h3 className="text-xl font-bold tracking-wider">{contact.name}</h3>
+                          <p className="text-sm text-gray-400 mb-4">{contact.role}</p>
+                        </div>
+                        <div className="flex justify-center gap-4 mt-auto">
+                          <a href={`mailto:${contact.email}`} aria-label="Email" className="p-2 bg-gray-800 rounded-full hover:bg-[#FF0879] transition-colors">
+                            <Mail className="w-5 h-5" />
+                          </a>
+                          <a href={contact.linkedin} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="p-2 bg-gray-800 rounded-full hover:bg-[#FF0879] transition-colors">
+                            <Linkedin className="w-5 h-5" />
+                          </a>
+                          <a href={`tel:${contact.phone}`} aria-label="Phone" className="p-2 bg-gray-800 rounded-full hover:bg-[#FF0879] transition-colors">
+                            <Phone className="w-5 h-5" />
+                          </a>
+                        </div>
+                      </div>
+                      <div className="gradient-border-corner absolute -top-px -left-px"></div>
+                      <div className="gradient-border-corner absolute -top-px -right-px"></div>
+                      <div className="gradient-border-corner absolute -bottom-px -left-px"></div>
+                      <div className="gradient-border-corner absolute -bottom-px -right-px"></div>
+                </div>
               </div>
             ))}
           </div>
