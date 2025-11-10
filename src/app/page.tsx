@@ -432,7 +432,7 @@ export default function Home() {
         >
             <div className="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-4">
                 <div className='flex items-center gap-4'>
-                    <Image src="/images/BlueSBLogo 1.png" alt="IEEE Student Branch of IIT Logo" width={120} height={40} data-ai-hint="college logo" />
+                    <Image src="/images/BlueSBLogo 1.png" alt="IEEE Student Branch of IIT Logo" width={150} height={50} data-ai-hint="college logo" />
                 </div>
                 <p className="text-xs md:text-sm text-gray-500 text-center">Copyright 2025 IX 25'. All Rights Reserved</p>
                 <div className="flex gap-6">
