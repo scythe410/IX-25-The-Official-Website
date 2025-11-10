@@ -336,12 +336,12 @@ export default function Home() {
               <div key={index} className="group">
                 <div className="gradient-border-wrapper">
                     <div className="bg-black/80 backdrop-blur-sm text-center h-full flex flex-col p-6">
-                        <div className="relative w-full h-56 mb-4 self-center">
+                        <div className="relative w-full h-48 mb-4 self-center">
                           <Image
                             src={contact.image}
                             alt={`Portrait of ${contact.name}`}
                             fill
-                            className="rounded-xl object-cover grayscale group-hover:grayscale-0 transition-all duration-300"
+                            className="rounded-xl object-contain grayscale group-hover:grayscale-0 transition-all duration-300"
                             data-ai-hint="person portrait"
                           />
                         </div>
@@ -449,4 +449,5 @@ export default function Home() {
   );
 }
 
+    
     
