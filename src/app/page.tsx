@@ -118,7 +118,7 @@ export default function Home() {
                     <span className="font-tommy-outline">ATHON</span>
                 </h1>
                 <p className="text-xl md:text-3xl font-bold text-gray-200 tracking-wider">
-                    BIGGER<span className="text-[#ACD5F8]">.</span> GRANDER<span className="text-[#ACD5F8]">.</span> <span className="font-tommy-outline">WILDER.</span>
+                    BIGGER<span className="text-[#ACD5F8]">.</span> GRANDER<span className="text-[#ACD5F8]">.</span> WILDER<span className="text-[#ACD5F8]">.</span>
                 </p>
                 <div className="flex justify-center md:justify-start gap-8 md:gap-12 mt-8">
                     <div>
@@ -432,7 +432,7 @@ export default function Home() {
         >
             <div className="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-4">
                 <div className='flex items-center gap-4'>
-                    <Image src="/images/BlueSBLogo 1.svg" alt="IEEE Student Branch of IIT Logo" width={240} height={80} data-ai-hint="college logo" />
+                    <Image src="/images/BlueSBLogo 1.svg" alt="IEEE Student Branch of IIT Logo" width={150} height={50} data-ai-hint="college logo" />
                 </div>
                 <p className="text-xs md:text-sm text-gray-500 text-center">Copyright 2025 IX 25'. All Rights Reserved</p>
                 <div className="flex gap-6">
@@ -448,3 +448,5 @@ export default function Home() {
     </>
   );
 }
+
+    
