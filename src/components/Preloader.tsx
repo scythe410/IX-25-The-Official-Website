@@ -66,7 +66,7 @@ const Preloader = () => {
     <>
       {'BIGGER. '}
       {'GRANDER. '}
-      <span style={{ color: '#FF0879' }}>WILDER.</span>
+      <span className="font-tommy-outline text-[#FF0879]">WILDER.</span>
       {' '}
     </>
   );
