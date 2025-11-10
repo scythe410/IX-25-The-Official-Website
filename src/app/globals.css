@@ -10,6 +10,13 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'MADETOMMYOUTLINE';
+  src: url('/fonts/MADE TOMMY OUTLINE.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 
 .dot-grid-background {
   background-color: #000000;
@@ -344,3 +351,4 @@ body {
 
 
     
+

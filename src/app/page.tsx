@@ -92,7 +92,7 @@ export default function Home() {
       <main className="min-h-screen text-white dot-grid-background pb-24">
         
         <div className="relative text-center z-0">
-          <h1 className="text-[25vw] md:text-[20vw] font-bold text-white/5" style={{ transform: 'translateY(-50%)' }}>
+          <h1 className="text-[25vw] md:text-[20vw] font-bold text-white/5 font-tommy-outline" style={{ transform: 'translateY(-50%)' }}>
               DESIGNATHON
           </h1>
         </div>
@@ -143,7 +143,7 @@ export default function Home() {
             viewport={{ once: false }}
             variants={sectionVariants}
         >
-          <h2 className="text-3xl md:text-5xl font-bold mb-4">WHAT IS <span className="text-[#FF0879]">IX 25'?</span></h2>
+          <h2 className="text-3xl md:text-5xl font-bold mb-4">WHAT IS <span className="font-tommy-outline text-[#FF0879]">IX 25'?</span></h2>
           <ScrollTextReveal text={aboutText} />
         </motion.section>
 
@@ -225,7 +225,7 @@ export default function Home() {
           variants={sectionVariants}
         >
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold heading-gradient">HACKATHON ROADMAP</h2>
+            <h2 className="text-3xl md:text-4xl font-bold heading-gradient">HACKATHON <span className="font-tommy-outline">ROADMAP</span></h2>
           </div>
           <div className="relative max-w-5xl mx-auto">
             {/* Timeline line */}
@@ -287,7 +287,7 @@ export default function Home() {
             <h2 className="text-3xl md:text-4xl font-bold mb-12 heading-gradient px-4">
                 GLIMPSE INTO THE MEMORIES WE
                 <br />
-                 HAVE CREATED.
+                 <span className="font-tommy-outline">HAVE CREATED.</span>
             </h2>
             <MemoriesCarousel />
             <p className="mt-8 text-gray-500">IX 24' Memories</p>
@@ -305,7 +305,7 @@ export default function Home() {
         >
             <div className="max-w-4xl mx-auto">
                 <h2 className="text-3xl md:text-4xl font-bold mb-8 heading-gradient text-center">
-                    FREQUENTLY ASKED QUESTIONS
+                    FREQUENTLY ASKED <span className="font-tommy-outline">QUESTIONS</span>
                 </h2>
                 <div className="grid md:grid-cols-2 gap-x-8">
                   {faqData.map((item, index) => (
@@ -329,7 +329,7 @@ export default function Home() {
             variants={sectionVariants}
         >
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 heading-gradient">CONTACT US</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 heading-gradient">CONTACT <span className="font-tommy-outline">US</span></h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
             {contacts.map((contact, index) => (
@@ -380,7 +380,7 @@ export default function Home() {
             variants={sectionVariants}
         >
             <h2 className="text-3xl md:text-4xl font-bold mb-8 heading-gradient">
-                PARTNERING WITH
+                PARTNERING <span className="font-tommy-outline">WITH</span>
             </h2>
             <div className="flex flex-wrap justify-center items-center gap-x-12 gap-y-8 max-w-5xl mx-auto px-4">
                 {partners.map((partner, index) => (
@@ -417,7 +417,7 @@ export default function Home() {
                 <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent"></div>
             </div>
              <div className="relative z-10 px-4">
-                 <h2 className="text-3xl md:text-4xl font-bold mb-4 heading-gradient">DESIGNATHON VENUE</h2>
+                 <h2 className="text-3xl md:text-4xl font-bold mb-4 heading-gradient">DESIGNATHON <span className="font-tommy-outline">VENUE</span></h2>
                  <p className="text-lg md:text-xl text-gray-300">Informatics Institute of Technology</p>
                  <p className="text-sm md:text-base text-gray-400">GP Square, Colombo 04</p>
              </div>
@@ -432,7 +432,7 @@ export default function Home() {
         >
             <div className="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-4">
                 <div className='flex items-center gap-4'>
-                    <Image src="/images/BlueSBLogo 1.svg" alt="IEEE Student Branch of IIT Logo" width={240} height={80} data-ai-hint="college logo" />
+                    <Image src="/images/BlueSBLogo 1.png" alt="IEEE Student Branch of IIT Logo" width={150} height={50} data-ai-hint="college logo" />
                 </div>
                 <p className="text-xs md:text-sm text-gray-500 text-center">Copyright 2025 IX 25'. All Rights Reserved</p>
                 <div className="flex gap-6">

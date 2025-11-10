@@ -11,6 +11,7 @@ export default {
     extend: {
       fontFamily: {
         tommy: ['MADETOMMY', 'sans-serif'],
+        'tommy-outline': ['MADETOMMYOUTLINE', 'sans-serif'],
       },
       colors: {
         background: 'hsl(var(--background))',
