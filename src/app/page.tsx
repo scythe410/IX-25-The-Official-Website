@@ -319,31 +319,6 @@ export default function Home() {
                 </div>
             </div>
         </motion.section>
-        
-        {/* Venue */}
-        <motion.section
-            className="py-10 text-center relative min-h-[60vh] flex items-center justify-center"
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: false }}
-            variants={sectionVariants}
-        >
-            <div className="absolute inset-0">
-                <Image
-                    src="/images/building_overlay_bg.png"
-                    alt="Dot-grid building overlay"
-                    fill
-                    className="object-cover w-full opacity-20"
-                    data-ai-hint="cityscape illustration"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent"></div>
-            </div>
-             <div className="relative z-10 px-4">
-                 <h2 className="text-3xl md:text-4xl font-bold mb-4 heading-gradient">DESIGNATHON VENUE</h2>
-                 <p className="text-lg md:text-xl text-gray-300">Informatics Institute of Technology</p>
-                 <p className="text-sm md:text-base text-gray-400">GP Square, Colombo 04</p>
-             </div>
-        </motion.section>
 
         {/* Contact Us */}
         <motion.section
@@ -421,7 +396,31 @@ export default function Home() {
                 ))}
             </div>
         </motion.section>
-
+        
+        {/* Venue */}
+        <motion.section
+            className="py-10 text-center relative min-h-[60vh] flex items-center justify-center"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: false }}
+            variants={sectionVariants}
+        >
+            <div className="absolute inset-0">
+                <Image
+                    src="/images/building_overlay_bg.png"
+                    alt="Dot-grid building overlay"
+                    fill
+                    className="object-cover w-full opacity-20"
+                    data-ai-hint="cityscape illustration"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent"></div>
+            </div>
+             <div className="relative z-10 px-4">
+                 <h2 className="text-3xl md:text-4xl font-bold mb-4 heading-gradient">DESIGNATHON VENUE</h2>
+                 <p className="text-lg md:text-xl text-gray-300">Informatics Institute of Technology</p>
+                 <p className="text-sm md:text-base text-gray-400">GP Square, Colombo 04</p>
+             </div>
+        </motion.section>
         
         <motion.footer 
             className="py-8 border-t border-gray-800"
