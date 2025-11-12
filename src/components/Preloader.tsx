@@ -65,9 +65,8 @@ const Preloader = () => {
   const MarqueeText = () => (
     <>
       {'BIGGER. '}
-      {'GRANDER. '}
-      <span className="font-tommy-outline text-[#FF0879]">WILDER.</span>
-      {' '}
+      <span className="font-tommy-outline text-[#FF0879]">GRANDER.</span>
+      {' WILDER. '}
     </>
   );
 
