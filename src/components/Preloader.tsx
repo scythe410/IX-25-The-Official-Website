@@ -70,9 +70,6 @@ const Preloader = () => {
     </>
   );
 
-  const marqueeTextContent = Array(4).fill(0).map((_, i) => <MarqueeText key={i} />);
-
-
   return (
     <motion.div
       initial={{ opacity: 1 }}
@@ -90,14 +87,12 @@ const Preloader = () => {
             exit="exit"
             className="absolute w-full flex"
           >
-            <div className="animate-preloader-marquee whitespace-nowrap">
+            <div className="animate-preloader-marquee whitespace-nowrap flex">
               <span className="text-[20vw] font-bold mx-4 text-white">
-                {marqueeTextContent}
+                <MarqueeText />
               </span>
-            </div>
-            <div className="animate-preloader-marquee whitespace-nowrap">
               <span className="text-[20vw] font-bold mx-4 text-white">
-                {marqueeTextContent}
+                <MarqueeText />
               </span>
             </div>
           </motion.div>
