@@ -225,7 +225,7 @@ export default function Home() {
           variants={sectionVariants}
         >
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold heading-gradient">HACKATHON <span className="font-tommy-outline">ROADMAP</span></h2>
+            <h2 className="text-3xl md:text-4xl font-bold heading-gradient">DESIGNATHON <span className="font-tommy-outline">ROADMAP</span></h2>
           </div>
           <div className="relative max-w-5xl mx-auto">
             {/* Timeline line */}
