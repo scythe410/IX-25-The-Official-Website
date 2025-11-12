@@ -58,7 +58,7 @@ export default function Home() {
   const roadmapEvents = [
     { date: '23rd Oct', title: 'REGISTRATIONS OPEN', description: 'Kickstart your iX journey! Sign up and join the innovation challenge.' },
     { date: '10th Nov', title: 'WORKSHOP 01', description: 'Gain insights and skills to shape your innovative ideas.' },
-    { date: '11th Nov', title: 'REGISTRATIONS CLOSING', description: 'Last call to register and be part of the competition.' },
+    { date: '14th Nov', title: 'REGISTRATIONS CLOSING', description: 'Last call to register and be part of the competition.' },
     { date: '15th Nov', title: 'INTRODUCTORY SESSION', description: 'Get to know the competition, teams, and what lies ahead.' },
     { date: '16th Nov', title: 'SUBMISSIONS OPENING', description: 'Begin submitting your creative and technical solutions.' },
     { date: '22nd Nov', title: 'WORKSHOP 02', description: 'Level up your project with expert guidance and feedback.' },
@@ -210,7 +210,7 @@ export default function Home() {
                 APPLICATIONS CLOSES ON
               </p>
               <p className="text-5xl md:text-7xl font-bold text-[#ACD5F8]">
-                NOVEMBER 11TH
+                NOVEMBER 14TH
               </p>
             </div>
           </div>
