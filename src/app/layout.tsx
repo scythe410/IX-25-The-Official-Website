@@ -8,7 +8,7 @@ import { Toaster } from '@/components/ui/toaster';
 import CustomCursor from '@/components/CustomCursor';
 
 export const metadata: Metadata = {
-  title: 'iX — 25',
+  title: 'IX25 - The Official Site',
   description: 'Defying the final line — a battle for startup brilliance, prototypes and the future of ideas.',
 };
 
