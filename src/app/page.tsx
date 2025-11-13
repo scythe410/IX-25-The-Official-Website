@@ -390,7 +390,7 @@ export default function Home() {
                             alt={`${partner.name} logo`}
                             width={120}
                             height={50}
-                            className="object-contain filter grayscale-[80%] hover:grayscale-0 transition-all duration-300"
+                            className="object-contain transition-all duration-300"
                             data-ai-hint="company logo"
                         />
                     </div>
