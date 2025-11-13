@@ -436,7 +436,7 @@ export default function Home() {
                         <Image src="/images/BlueSBLogo 1.svg" alt="IEEE Student Branch of IIT Logo" fill style={{objectFit: 'contain'}} data-ai-hint="college logo" />
                     </div>
                 </div>
-                <p className="text-xs md:text-sm text-gray-500 text-center">Copyright 2025 IX 25'. All Rights Reserved</p>
+                <p className="text-xs md:text-sm text-gray-500 text-center">Copyright 2025 IEEE Student Branch of IIT. All Rights Reserved</p>
                 <div className="flex gap-6">
                   <a href="https://www.facebook.com/ieeeinformatics" aria-label="Facebook"><FaFacebook className="text-lg md:text-xl text-gray-400 hover:text-white cursor-pointer" /></a>
                   <a href="https://www.linkedin.com/company/ieeesbiit/" aria-label="Linkedin"><FaLinkedin className="text-lg md:text-xl text-gray-400 hover:text-white cursor-pointer" /></a>
