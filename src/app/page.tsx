@@ -92,7 +92,7 @@ export default function Home() {
       <main className="min-h-screen text-white dot-grid-background pb-24">
         
         <div className="relative text-center z-0">
-          <h1 className="text-[25vw] md:text-[20vw] font-bold text-white/5" style={{ transform: 'translateY(-50%)' }}>
+          <h1 className="text-[25vw] md:text-[20vw] font-bold text-white/10" style={{ transform: 'translateY(-50%)' }}>
               DESIGNATHON
           </h1>
         </div>
@@ -390,7 +390,7 @@ export default function Home() {
                             alt={`${partner.name} logo`}
                             width={120}
                             height={50}
-                            className="object-contain filter grayscale hover:grayscale-0 transition-all duration-300"
+                            className="object-contain filter grayscale-[80%] hover:grayscale-0 transition-all duration-300"
                             data-ai-hint="company logo"
                         />
                     </div>
@@ -450,4 +450,6 @@ export default function Home() {
 }
 
     
+    
+
     
