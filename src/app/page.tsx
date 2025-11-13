@@ -56,7 +56,7 @@ export default function Home() {
   ];
 
   const roadmapEvents = [
-    { date: '23rd Oct', title: 'REGISTRATIONS OPEN', description: 'Kickstart your iX journey! Sign up and join the innovation challenge.' },
+    { date: '23rd Oct', title: 'REGISTRATIONS OPEN', description: 'Kickstart your IX journey! Sign up and join the innovation challenge.' },
     { date: '10th Nov', title: 'WORKSHOP 01', description: 'Gain insights and skills to shape your innovative ideas.' },
     { date: '14th Nov', title: 'REGISTRATIONS CLOSING', description: 'Last call to register and be part of the competition.' },
     { date: '15th Nov', title: 'INTRODUCTORY SESSION', description: 'Get to know the competition, teams, and what lies ahead.' },
@@ -68,8 +68,7 @@ export default function Home() {
     { date: '06-07th Dec', title: 'GRAND FINALE', description: 'The ultimate showdown—present, pitch, and conquer!' },
   ];
 
-  const aboutTextP1 = "IX 25, organized by the IEEE Student Branch of IIT, marks the fifth wave of Sri Lanka’s pioneering AI and XR Designathon. This edition explores gesture-based spatial interfaces, wearable technology, self-generative UIs, and 3D interactivity. Conducted in two phases, participants first present creative UI/UX concepts, with the top teams advancing to a 36-hour designathon to bring their ideas to life.";
-  const aboutTextP2 = "Evolving beyond a competition, IX has become a platform that nurtures innovation, creativity, and design excellence empowering the next generation to shape the future of digital experiences in Sri Lanka.";
+  const aboutText = "IX is Sri Lanka’s first-ever inter-university designathon an event where undergraduates tackle real-world problems through innovative design solutions. Over the years, it has grown into one of the country’s most prestigious UI/UX events. IX 25, organized by the IEEE Student Branch of IIT, marks the fifth wave of Sri Lanka’s pioneering AI and XR Designathon. This edition explores gesture-based spatial interfaces, wearable technology, self-generative UIs, and 3D interactivity. Conducted in two phases, participants first present creative UI/UX concepts, with the top teams advancing to a 36-hour designathon to bring their ideas to life. Evolving beyond a competition, IX has become a platform that nurtures innovation, creativity, and design excellence empowering the next generation to shape the future of digital experiences in Sri Lanka.";
 
 
   const contacts = [
@@ -145,10 +144,9 @@ export default function Home() {
             viewport={{ once: false }}
             variants={sectionVariants}
         >
-          <h2 className="text-3xl md:text-5xl font-bold mb-4">WHAT IS <span className="font-tommy-outline text-[#FF0879]">IX 25'?</span></h2>
+          <h2 className="text-3xl md:text-5xl font-bold mb-4">WHAT IS <span className="font-tommy-outline text-[#FF0879]">IX 25?</span></h2>
           <div className="space-y-6">
-            <ScrollTextReveal text={aboutTextP1} />
-            <ScrollTextReveal text={aboutTextP2} />
+            <ScrollTextReveal text={aboutText} />
           </div>
         </motion.section>
 
@@ -295,7 +293,7 @@ export default function Home() {
                  <span className="font-tommy-outline">HAVE CREATED.</span>
             </h2>
             <MemoriesCarousel />
-            <p className="mt-8 text-gray-500">IX 24' Memories</p>
+            <p className="mt-8 text-gray-500">IX 24 Memories</p>
         </motion.section>
 
 
@@ -460,3 +458,4 @@ export default function Home() {
     
 
     
+
