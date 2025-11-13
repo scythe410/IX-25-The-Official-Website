@@ -68,7 +68,7 @@ export default function Home() {
     { date: '06-07th Dec', title: 'GRAND FINALE', description: 'The ultimate showdown—present, pitch, and conquer!' },
   ];
 
-  const aboutText = "IX is the first-ever virtual inter-university designathon organized in Sri Lanka. event where teams of students, professionals, and technology enthusiasts come together to solve real-world problems using innovative design solutions. With the success of IX in the past years, it has been recognized as one of the most prestigious design events in Sri Lanka. IX 24, the fourth edition of Sri Lanka’s pioneering inter-university designathon, spotlighted extended reality (XR), spatial UI, and AI-driven design. Over two phases, participants first presented innovative UI/UX concepts, with the top 10 teams advancing to a 24-hour designathon. The competition fostered creativity, collaboration, and future-focused problem-solving, empowering students to push design boundaries. The top three teams were celebrated for their ingenuity, practicality, and impactful solutions, solidifying IX 24 as a leading platform for visionary design in Sri Lanka.";
+  const aboutText = "IX 25, organized by the IEEE Student Branch of IIT, marks the fifth wave of Sri Lanka’s pioneering AI and XR Designathon. This edition explores gesture-based spatial interfaces, wearable technology, self-generative UIs, and 3D interactivity. Conducted in two phases, participants first present creative UI/UX concepts, with the top teams advancing to a 36-hour designathon to bring their ideas to life. Evolving beyond a competition, IX has become a platform that nurtures innovation, creativity, and design excellence empowering the next generation to shape the future of digital experiences in Sri Lanka.";
 
   const contacts = [
     { name: 'Ramiru De Silva', role: "Project Co-Chairperson – IX'25", image: '/images/ramiru_new.png', email: 'nissanka.20240835@iit.ac.lk', phone: '+94701258369', linkedin: 'https://www.linkedin.com/in/ramirudesilva/' },
@@ -452,6 +452,8 @@ export default function Home() {
 }
 
     
+    
+
     
 
     
