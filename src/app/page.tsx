@@ -432,7 +432,9 @@ export default function Home() {
         >
             <div className="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-4">
                 <div className='flex items-center gap-4'>
-                    <Image src="/images/BlueSBLogo 1.svg" alt="IEEE Student Branch of IIT Logo" width={150} height={50} data-ai-hint="college logo" />
+                    <div className="relative w-32 md:w-40 h-auto">
+                        <Image src="/images/BlueSBLogo 1.svg" alt="IEEE Student Branch of IIT Logo" width={150} height={50} className="w-full h-auto" data-ai-hint="college logo" />
+                    </div>
                 </div>
                 <p className="text-xs md:text-sm text-gray-500 text-center">Copyright 2025 IX 25'. All Rights Reserved</p>
                 <div className="flex gap-6">
