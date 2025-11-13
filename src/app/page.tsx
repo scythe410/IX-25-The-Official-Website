@@ -62,13 +62,15 @@ export default function Home() {
     { date: '15th Nov', title: 'INTRODUCTORY SESSION', description: 'Get to know the competition, teams, and what lies ahead.' },
     { date: '16th Nov', title: 'SUBMISSIONS OPENING', description: 'Begin submitting your creative and technical solutions.' },
     { date: '22nd Nov', title: 'WORKSHOP 02', description: 'Level up your project with expert guidance and feedback.' },
-    { date: '24th Nov', title: 'SUBMISSIONS CLOSING', description: 'Deadline to showcase your innovation—make it count!' },
-    { date: '28th Nov', title: 'CHOOSING FINALISTS', description: 'Top teams are selected to move on to the grand stage.' },
+    { date: '24th Nov', 'title': 'SUBMISSIONS CLOSING', description: 'Deadline to showcase your innovation—make it count!' },
+    { date: '28th Nov', 'title': 'CHOOSING FINALISTS', description: 'Top teams are selected to move on to the grand stage.' },
     { date: '29th Nov', title: 'WORKSHOP 03', description: 'Final preparation and mentoring before the finale.' },
     { date: '06-07th Dec', title: 'GRAND FINALE', description: 'The ultimate showdown—present, pitch, and conquer!' },
   ];
 
-  const aboutText = "IX 25, organized by the IEEE Student Branch of IIT, marks the fifth wave of Sri Lanka’s pioneering AI and XR Designathon. This edition explores gesture-based spatial interfaces, wearable technology, self-generative UIs, and 3D interactivity. Conducted in two phases, participants first present creative UI/UX concepts, with the top teams advancing to a 36-hour designathon to bring their ideas to life.\n\nEvolving beyond a competition, IX has become a platform that nurtures innovation, creativity, and design excellence empowering the next generation to shape the future of digital experiences in Sri Lanka.";
+  const aboutTextP1 = "IX 25, organized by the IEEE Student Branch of IIT, marks the fifth wave of Sri Lanka’s pioneering AI and XR Designathon. This edition explores gesture-based spatial interfaces, wearable technology, self-generative UIs, and 3D interactivity. Conducted in two phases, participants first present creative UI/UX concepts, with the top teams advancing to a 36-hour designathon to bring their ideas to life.";
+  const aboutTextP2 = "Evolving beyond a competition, IX has become a platform that nurtures innovation, creativity, and design excellence empowering the next generation to shape the future of digital experiences in Sri Lanka.";
+
 
   const contacts = [
     { name: 'Ramiru De Silva', role: "Project Co-Chairperson – IX'25", image: '/images/ramiru_new.png', email: 'nissanka.20240835@iit.ac.lk', phone: '+94701258369', linkedin: 'https://www.linkedin.com/in/ramirudesilva/' },
@@ -144,7 +146,10 @@ export default function Home() {
             variants={sectionVariants}
         >
           <h2 className="text-3xl md:text-5xl font-bold mb-4">WHAT IS <span className="font-tommy-outline text-[#FF0879]">IX 25'?</span></h2>
-          <ScrollTextReveal text={aboutText} />
+          <div className="space-y-6">
+            <ScrollTextReveal text={aboutTextP1} />
+            <ScrollTextReveal text={aboutTextP2} />
+          </div>
         </motion.section>
 
         <Marquee text="IX 25" />
@@ -431,10 +436,8 @@ export default function Home() {
             variants={sectionVariants}
         >
             <div className="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-4">
-                <div className='flex items-center gap-4'>
-                    <div className="relative w-32 md:w-40 h-12">
-                        <Image src="/images/BlueSBLogo 1.svg" alt="IEEE Student Branch of IIT Logo" fill style={{objectFit: 'contain'}} data-ai-hint="college logo" />
-                    </div>
+                <div className='relative w-32 md:w-40 h-12'>
+                    <Image src="/images/BlueSBLogo 1.svg" alt="IEEE Student Branch of IIT Logo" fill style={{objectFit: 'contain'}} data-ai-hint="college logo" />
                 </div>
                 <p className="text-xs md:text-sm text-gray-500 text-center">Copyright 2025 IEEE Student Branch of IIT. All Rights Reserved</p>
                 <div className="flex gap-6">
