@@ -38,7 +38,7 @@ export default function Home() {
     { question: 'WHO CAN JOIN IX?', answer: 'The competition is open to all university undergraduates across the country.' },
     { question: 'WHAT CAN PARTICIPANTS BUILD?', answer: 'You are expected to design a solution for a given problem. This is a designathon, so the focus is on UI/UX, not coding.' },
     { question: 'IS CODING REQUIRED BEFOREHAND?', answer: 'No coding experience is required. This is a design-focused competition.' },
-    { question: 'TEAM FROM DIFFERENT UNIVERSITIES?', answer: 'Yes, members of a team should be from the same university.' },
+    { question: 'TEAM FROM DIFFERENT UNIVERSITIES?', answer: 'No, members of a team should be from the same university.' },
     { question: 'IS PHYSICAL ATTENDANCE REQUIRED?', answer: 'Phase one is not physical, while phase two requires physical attendance.' },
     { question: 'WILL I GET A CERTIFICATE?', answer: 'When you participate in phase one, you will get the participant certificate.' },
     { question: 'HOW TO REGISTER FOR IX?', answer: 'You can register for free by clicking the "Register" button on our website.' },
@@ -68,7 +68,7 @@ export default function Home() {
     { date: '06-07th Dec', title: 'GRAND FINALE', description: 'The ultimate showdown—present, pitch, and conquer!' },
   ];
 
-  const aboutText = "IX 25, organized by the IEEE Student Branch of IIT, marks the fifth wave of Sri Lanka’s pioneering AI and XR Designathon. This edition explores gesture-based spatial interfaces, wearable technology, self-generative UIs, and 3D interactivity. Conducted in two phases, participants first present creative UI/UX concepts, with the top teams advancing to a 36-hour designathon to bring their ideas to life. Evolving beyond a competition, IX has become a platform that nurtures innovation, creativity, and design excellence empowering the next generation to shape the future of digital experiences in Sri Lanka.";
+  const aboutText = "IX 25, organized by the IEEE Student Branch of IIT, marks the fifth wave of Sri Lanka’s pioneering AI and XR Designathon. This edition explores gesture-based spatial interfaces, wearable technology, self-generative UIs, and 3D interactivity. Conducted in two phases, participants first present creative UI/UX concepts, with the top teams advancing to a 36-hour designathon to bring their ideas to life.\n\nEvolving beyond a competition, IX has become a platform that nurtures innovation, creativity, and design excellence empowering the next generation to shape the future of digital experiences in Sri Lanka.";
 
   const contacts = [
     { name: 'Ramiru De Silva', role: "Project Co-Chairperson – IX'25", image: '/images/ramiru_new.png', email: 'nissanka.20240835@iit.ac.lk', phone: '+94701258369', linkedin: 'https://www.linkedin.com/in/ramirudesilva/' },
