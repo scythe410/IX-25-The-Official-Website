@@ -240,8 +240,8 @@ export default function Home() {
                     disabled={registrationsClosed}
                     className="px-8 py-3 md:px-10 md:py-4 bg-black text-white font-bold rounded-md hover:bg-black/80 transition-colors duration-300 button-glow text-xl md:text-2xl disabled:cursor-not-allowed"
                   >
-                    <span className={`text-glow relative ${registrationsClosed ? 'text-cutoff' : ''}`}>
-                      {registrationsClosed ? 'REGISTRATIONS CLOSED' : 'REGISTER NOW'}
+                    <span className={`text-glow relative ${registrationsClosed ? 'line-through' : ''}`}>
+                      REGISTER NOW
                     </span>
                   </button>
               </div>
@@ -505,5 +505,7 @@ export default function Home() {
     </>
   );
 }
+
+    
 
     
