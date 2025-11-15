@@ -253,22 +253,6 @@ export default function Home() {
                 NOVEMBER 14TH
               </p>
               
-              <div className="mt-8 group">
-                <a 
-                  href="/Phase_01_Booklet_IX_25.pdf"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-block dotted-border-wrapper text-lg font-bold"
-                >
-                  <span className="dotted-border-inner px-8 py-3 block">
-                    View Phase 01 Booklet
-                  </span>
-                  <span className="corner top-left"></span>
-                  <span className="corner top-right"></span>
-                  <span className="corner bottom-left"></span>
-                  <span className="corner bottom-right"></span>
-                </a>
-              </div>
             </div>
           </div>
         </motion.section>
