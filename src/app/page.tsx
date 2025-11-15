@@ -12,6 +12,7 @@ import ScrollTextReveal from '@/components/ScrollTextReveal';
 import { Mail, Linkedin, Phone } from 'lucide-react';
 import PageClientEffects from '@/components/PageClientEffects';
 import Counter from '@/components/Counter';
+import { useGlitch } from 'react-powerglitch';
 
 const FAQItem = ({ item, isOpen, onToggle }: { item: { question: string; answer: string }, isOpen: boolean, onToggle: () => void }) => {
     return (
@@ -32,6 +33,19 @@ const FAQItem = ({ item, isOpen, onToggle }: { item: { question: string; answer:
 
 export default function Home() {
   const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(null);
+  const [buttonText, setButtonText] = useState('REGISTER NOW');
+  const [registrationsClosed, setRegistrationsClosed] = useState(false);
+  const glitch = useGlitch();
+
+  const handleRegisterClick = () => {
+    glitch.startGlitch();
+    setTimeout(() => {
+      setButtonText('REGISTRATIONS CLOSED');
+      setRegistrationsClosed(true);
+      glitch.stopGlitch();
+    }, 500);
+  };
+
 
     const faqData = [
     { question: 'HOW MANY MEMBERS PER TEAM?', answer: '3-6 members' },
@@ -203,18 +217,30 @@ export default function Home() {
                 </h1>
               </div>
               <div className="relative gradient-border-wrapper inline-block p-0.5 rounded-md mb-8">
-                 <a href="https://forms.gle/eTSignSuyngmLmSN9" target="_blank" rel="noopener noreferrer">
-                   <button className="px-8 py-3 md:px-10 md:py-4 bg-black text-white font-bold rounded-md hover:bg-black/80 transition-colors duration-300 button-glow text-xl md:text-2xl">
-                     <span className="text-glow">REGISTER NOW</span>
-                   </button>
-                 </a>
+                <button
+                  ref={glitch.ref}
+                  onClick={handleRegisterClick}
+                  disabled={registrationsClosed}
+                  className="px-8 py-3 md:px-10 md:py-4 bg-black text-white font-bold rounded-md hover:bg-black/80 transition-colors duration-300 button-glow text-xl md:text-2xl disabled:cursor-not-allowed"
+                >
+                  <span className="text-glow">{buttonText}</span>
+                </button>
               </div>
-              <p className="text-xl md:text-2xl font-bold">
-                APPLICATIONS CLOSES ON
-              </p>
-              <p className="text-5xl md:text-7xl font-bold text-[#ACD5F8]">
-                NOVEMBER 14TH
-              </p>
+              
+              {registrationsClosed ? (
+                <p className="text-xl md:text-2xl font-bold">
+                  APPLICATIONS ARE NOW CLOSED
+                </p>
+              ) : (
+                <>
+                  <p className="text-xl md:text-2xl font-bold">
+                    APPLICATIONS CLOSES ON
+                  </p>
+                  <p className="text-5xl md:text-7xl font-bold text-[#ACD5F8]">
+                    NOVEMBER 14TH
+                  </p>
+                </>
+              )}
             </div>
           </div>
         </motion.section>
@@ -458,4 +484,3 @@ export default function Home() {
     
 
     
-
