@@ -87,10 +87,10 @@ export default function Home() {
   ];
 
   const roadmapEvents = [
-    { date: '23rd Oct', title: 'REGISTRATIONS OPEN', description: 'Kickstart your IX journey! Sign up and join the innovation challenge.' },
-    { date: '10th Nov', title: 'WORKSHOP 01', description: 'Gain insights and skills to shape your innovative ideas.' },
-    { date: '14th Nov', title: 'REGISTRATIONS CLOSING', description: 'Last call to register and be part of the competition.' },
-    { date: '15th Nov', title: 'INTRODUCTORY SESSION', description: 'Get to know the competition, teams, and what lies ahead.' },
+    { date: '23rd Oct', title: 'REGISTRATIONS OPEN', description: 'Kickstart your IX journey! Sign up and join the innovation challenge.', completed: true },
+    { date: '10th Nov', title: 'WORKSHOP 01', description: 'Gain insights and skills to shape your innovative ideas.', completed: true },
+    { date: '14th Nov', title: 'REGISTRATIONS CLOSING', description: 'Last call to register and be part of the competition.', completed: true },
+    { date: '15th Nov', title: 'INTRODUCTORY SESSION', description: 'Get to know the competition, teams, and what lies ahead.', completed: true },
     { date: '16th Nov', title: 'SUBMISSIONS OPENING', description: 'Begin submitting your creative and technical solutions.' },
     { date: '22nd Nov', title: 'WORKSHOP 02', description: 'Level up your project with expert guidance and feedback.' },
     { date: '24th Nov', 'title': 'SUBMISSIONS CLOSING', description: 'Deadline to showcase your innovation—make it count!' },
@@ -301,7 +301,7 @@ export default function Home() {
                        <div className="electric-border-wrapper p-0.5">
                            <div className="bg-gray-900/80 backdrop-blur-sm p-6 rounded-2xl">
                                <p className="text-2xl font-bold text-[#FF0879] mb-3">{event.date}</p>
-                               <h3 className="font-bold text-xl mb-3 text-white tracking-widest">{event.title}</h3>
+                               <h3 className={`font-bold text-xl mb-3 text-white tracking-widest ${event.completed ? 'line-through' : ''}`}>{event.title}</h3>
                                <div className="h-1 w-12 bg-gradient-to-r from-[#FF0879] to-[#ACD5F8] mb-4"></div>
                                <p className="text-gray-400 text-sm leading-relaxed">{event.description}</p>
                            </div>
@@ -314,7 +314,7 @@ export default function Home() {
                        <div className="electric-border-wrapper p-0.5">
                            <div className="bg-gray-900/80 backdrop-blur-sm p-6 rounded-2xl">
                                <p className="text-2xl font-bold text-[#FF0879] mb-3">{event.date}</p>
-                               <h3 className="font-bold text-xl mb-3 text-white tracking-widest">{event.title}</h3>
+                               <h3 className={`font-bold text-xl mb-3 text-white tracking-widest ${event.completed ? 'line-through' : ''}`}>{event.title}</h3>
                                <div className="h-1 w-12 bg-gradient-to-r from-[#FF0879] to-[#ACD5F8] mb-4 md:ml-auto"></div>
                                <p className="text-gray-400 text-sm leading-relaxed">{event.description}</p>
                            </div>
@@ -474,7 +474,7 @@ export default function Home() {
                 <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent"></div>
             </div>
              <div className="relative z-10 px-4">
-                 <h2 className="text-3xl md:text-4xl font-bold mb-4 heading-gradient">DESIGNATHON <span className="font-tommy-outline">VENUE</span></h2>
+                 <h2 className="text-3xl md-text-4xl font-bold mb-4 heading-gradient">DESIGNATHON <span className="font-tommy-outline">VENUE</span></h2>
                  <p className="text-lg md:text-xl text-gray-300">Informatics Institute of Technology</p>
                  <p className="text-sm md:text-base text-gray-400">GP Square, Colombo 04</p>
              </div>
