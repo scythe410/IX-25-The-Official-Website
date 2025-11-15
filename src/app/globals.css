@@ -40,7 +40,7 @@ body {
 }
 
 .box-glow {
-  box-shadow: 0 0 15px rgba(255, 8, 121, 0.4), 0 0 30px rgba(255, 8, 121, 0.3), inset 0 0 10px rgba(255, 8, 121, 0.2);
+  box-shadow: 0 0 15px rgba(25_5, 8, 121, 0.4), 0 0 30px rgba(255, 8, 121, 0.3), inset 0 0 10px rgba(255, 8, 121, 0.2);
 }
 
 .button-glow:hover {
@@ -346,6 +346,23 @@ body {
 .marquee-container::after {
   bottom: -8px;
 }
+
+.text-cutoff {
+  position: relative;
+  text-shadow: 2px 2px 1px rgba(0,0,0,0.5);
+}
+
+.text-cutoff::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  height: 2px;
+  background-color: white;
+  box-shadow: 0 0 2px white;
+  transform: translateY(-50%);
+}
     
 
 
@@ -354,5 +371,7 @@ body {
 
 
 
+
+    
 
     

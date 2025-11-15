@@ -33,14 +33,31 @@ const FAQItem = ({ item, isOpen, onToggle }: { item: { question: string; answer:
 
 export default function Home() {
   const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(null);
-  const [buttonText, setButtonText] = useState('REGISTER NOW');
   const [registrationsClosed, setRegistrationsClosed] = useState(false);
-  const glitch = useGlitch();
+  const glitch = useGlitch({
+    playMode: 'manual',
+    glitchTimeSpan: {
+      start: 0,
+      end: 0.5,
+    },
+    shake: {
+      velocity: 15,
+      amplitudeX: 0.1,
+      amplitudeY: 0.1,
+    },
+    slice: {
+      count: 8,
+      velocity: 15,
+      minHeight: 0.02,
+      maxHeight: 0.2,
+      hueRotate: false,
+    },
+  });
 
   const handleRegisterClick = () => {
+    if (registrationsClosed) return;
     glitch.startGlitch();
     setTimeout(() => {
-      setButtonText('REGISTRATIONS CLOSED');
       setRegistrationsClosed(true);
       glitch.stopGlitch();
     }, 500);
@@ -82,7 +99,7 @@ export default function Home() {
     { date: '06-07th Dec', title: 'GRAND FINALE', description: 'The ultimate showdown—present, pitch, and conquer!' },
   ];
 
-  const aboutText = "IX is Sri Lanka’s first-ever inter-university designathon an event where undergraduates tackle real-world problems through innovative design solutions. Over the years, it has grown into one of the country’s most prestigious UI/UX events. IX 25, organized by the IEEE Student Branch of IIT, marks the fifth wave of Sri Lanka’s pioneering AI and XR Designathon. This edition explores gesture-based spatial interfaces, wearable technology, self-generative UIs, and 3D interactivity. Conducted in two phases, participants first present creative UI/UX concepts, with the top teams advancing to a 36-hour designathon to bring their ideas to life. Evolving beyond a competition, IX has become a platform that nurtures innovation, creativity, and design excellence empowering the next generation to shape the future of digital experiences in Sri Lanka.";
+  const aboutText = "IX is Sri Lanka’s first-ever inter-university designathon an event where undergraduates tackle real-world problems through innovative design solutions. Over the years, it has grown into one of the country’s most prestigious UI/UX events. IX 25, organized by the IEEE Student Branch of IIT, marks the fifth wave of Sri Lanka’s pioneering AI and XR Designathon. This edition explores gesture-based spatial interfaces, wearable technology, self-generative UIs, and 3D interactivity. Conducted in two phases, participants first present creative UI/UX concepts, with the top teams advancing to a 36-hour designathon to bring their ideas to life. Evolving beyond a competition, IX has become a platform that nurtures innovation, creativity, and design excellence empowering the next generation to shape the future of digital experiences in Sri Lanka.";
 
 
   const contacts = [
@@ -217,30 +234,41 @@ export default function Home() {
                 </h1>
               </div>
               <div className="relative gradient-border-wrapper inline-block p-0.5 rounded-md mb-8">
-                <button
-                  ref={glitch.ref}
-                  onClick={handleRegisterClick}
-                  disabled={registrationsClosed}
-                  className="px-8 py-3 md:px-10 md:py-4 bg-black text-white font-bold rounded-md hover:bg-black/80 transition-colors duration-300 button-glow text-xl md:text-2xl disabled:cursor-not-allowed"
-                >
-                  <span className="text-glow">{buttonText}</span>
-                </button>
+                 <button
+                    ref={glitch.ref}
+                    onClick={handleRegisterClick}
+                    disabled={registrationsClosed}
+                    className="px-8 py-3 md:px-10 md:py-4 bg-black text-white font-bold rounded-md hover:bg-black/80 transition-colors duration-300 button-glow text-xl md:text-2xl disabled:cursor-not-allowed"
+                  >
+                    <span className={`text-glow relative ${registrationsClosed ? 'text-cutoff' : ''}`}>
+                      {registrationsClosed ? 'REGISTRATIONS CLOSED' : 'REGISTER NOW'}
+                    </span>
+                  </button>
               </div>
               
-              {registrationsClosed ? (
-                <p className="text-xl md:text-2xl font-bold">
-                  APPLICATIONS ARE NOW CLOSED
-                </p>
-              ) : (
-                <>
-                  <p className="text-xl md:text-2xl font-bold">
-                    APPLICATIONS CLOSES ON
-                  </p>
-                  <p className="text-5xl md:text-7xl font-bold text-[#ACD5F8]">
-                    NOVEMBER 14TH
-                  </p>
-                </>
-              )}
+              <p className="text-xl md:text-2xl font-bold">
+                APPLICATIONS CLOSES ON
+              </p>
+              <p className="text-5xl md:text-7xl font-bold text-[#ACD5F8]">
+                NOVEMBER 14TH
+              </p>
+              
+              <div className="mt-8 group">
+                <a 
+                  href="/Phase_01_Booklet_IX_25.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block dotted-border-wrapper text-lg font-bold"
+                >
+                  <span className="dotted-border-inner px-8 py-3 block">
+                    View Phase 01 Booklet
+                  </span>
+                  <span className="corner top-left"></span>
+                  <span className="corner top-right"></span>
+                  <span className="corner bottom-left"></span>
+                  <span className="corner bottom-right"></span>
+                </a>
+              </div>
             </div>
           </div>
         </motion.section>
@@ -477,10 +505,5 @@ export default function Home() {
     </>
   );
 }
-
-    
-    
-
-    
 
     
