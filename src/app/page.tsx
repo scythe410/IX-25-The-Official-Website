@@ -13,6 +13,7 @@ import { Mail, Linkedin, Phone } from 'lucide-react';
 import PageClientEffects from '@/components/PageClientEffects';
 import Counter from '@/components/Counter';
 import { useGlitch } from 'react-powerglitch';
+import RoundsCarousel from '@/components/RoundsCarousel';
 
 const FAQItem = ({ item, isOpen, onToggle }: { item: { question: string; answer: string }, isOpen: boolean, onToggle: () => void }) => {
     return (
@@ -257,6 +258,19 @@ export default function Home() {
           </div>
         </motion.section>
 
+        {/* Rounds Section */}
+        <motion.section
+          className="py-20"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: false }}
+          variants={sectionVariants}
+        >
+          <div className="container mx-auto px-4">
+            <RoundsCarousel />
+          </div>
+        </motion.section>
+
         {/* Roadmap */}
         <motion.section
           className="py-20 container mx-auto px-4"
@@ -489,6 +503,8 @@ export default function Home() {
     </>
   );
 }
+
+    
 
     
 

@@ -280,6 +280,22 @@ body {
   box-shadow: 0 0 2px white;
   transform: translateY(-50%);
 }
+
+.swiper-pagination-custom {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+.swiper-pagination-custom .swiper-pagination-bullet {
+  width: 8px;
+  height: 8px;
+  background-color: #6b7280;
+  opacity: 1;
+  transition: background-color 0.3s;
+}
+.swiper-pagination-custom .swiper-pagination-bullet-active {
+  background-color: #ff0879;
+}
     
 
 
@@ -292,5 +308,8 @@ body {
     
 
     
+
+    
+
 
     
