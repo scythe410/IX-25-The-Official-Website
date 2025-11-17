@@ -26,14 +26,14 @@ const RoundsCarousel = () => {
         className="relative"
       >
         <SwiperSlide>
-          <div className="bg-[#FF0879]/10 backdrop-blur-md p-8 rounded-2xl min-h-[550px] flex flex-col border border-white/10">
+          <div className="bg-black/20 backdrop-blur-md p-8 rounded-2xl min-h-[550px] flex flex-col border border-white/10">
               <h3 className="text-3xl md:text-4xl font-bold text-center mb-8 heading-gradient">
                 CONCEPT <span className="font-tommy-outline">ROUND</span>
               </h3>
               <div className="grid md:grid-cols-2 gap-8 items-center flex-grow">
                 <div className="text-center md:text-left">
-                  <p className="text-gray-300 mb-8">
-                    This is where it all begins. The Concept Round is your chance to showcase your innovative ideas and design-thinking skills. Form your teams, brainstorm groundbreaking solutions, and submit a comprehensive proposal that outlines your vision. Focus on user experience, problem-solving, and feasibility. We're looking for creativity that pushes boundaries.
+                  <p className="text-gray-300 mb-8 text-justify">
+                    This is where it all begins. The Concept Round is your chance to showcase your innovative ideas and design-thinking skills. Form your teams, brainstorm groundbreaking solutions, and submit a comprehensive proposal that outlines your vision. Focus on user experience, problem-solving, and feasibility. We're looking for creativity that pushes boundaries. This initial phase is critical for setting a strong foundation for your project. Your submission will be judged on its originality, potential impact, and clarity of presentation. Make sure your documentation is thorough and your concept is well-defined to stand out from the competition.
                   </p>
                   <a href="https://drive.google.com/file/d/1wNEAlvo49KgHf4OMRQgwb4H7KML-RK96/view?usp=drive_link" target="_blank" rel="noopener noreferrer">
                     <motion.button 
@@ -61,14 +61,14 @@ const RoundsCarousel = () => {
         </SwiperSlide>
         
         <SwiperSlide>
-          <div className="bg-[#FF0879]/10 backdrop-blur-md p-8 rounded-2xl min-h-[550px] flex flex-col border border-white/10">
+          <div className="bg-black/20 backdrop-blur-md p-8 rounded-2xl min-h-[550px] flex flex-col border border-white/10">
                 <h3 className="text-3xl md:text-4xl font-bold text-center mb-8 heading-gradient">
                     FINAL <span className="font-tommy-outline">ROUND</span>
                 </h3>
                 <div className="grid md:grid-cols-2 gap-8 items-center flex-grow">
                     <div className="text-center md:text-left">
-                        <p className="text-gray-300 mb-8">
-                            The grand stage awaits. The Final Round is a 36-hour intensive designathon where the top teams will bring their concepts to life. Build, iterate, and perfect your prototypes with mentorship from industry experts before presenting to our panel of judges.
+                        <p className="text-gray-300 mb-8 text-justify">
+                            The grand stage awaits. The Final Round is a 36-hour intensive designathon where the top teams will bring their concepts to life. Build, iterate, and perfect your prototypes with mentorship from industry experts before presenting to our panel of judges. This is where your execution skills will be tested under pressure. You will have access to resources, workshops, and one-on-one sessions with mentors to help you refine your solution. Time management, teamwork, and the ability to adapt to feedback are crucial for success in this high-stakes final phase of the competition.
                         </p>
                         <Countdown />
                     </div>
