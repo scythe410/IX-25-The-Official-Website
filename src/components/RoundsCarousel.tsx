@@ -26,7 +26,7 @@ const RoundsCarousel = () => {
         className="relative"
       >
         <SwiperSlide>
-          <div className="bg-black/20 backdrop-blur-md p-8 rounded-2xl min-h-[550px] flex flex-col border border-white/10">
+          <div className="bg-[#FF0879]/10 backdrop-blur-md p-8 md:p-12 rounded-2xl min-h-[550px] flex flex-col border border-white/10">
               <h3 className="text-3xl md:text-4xl font-bold text-center mb-8 heading-gradient">
                 CONCEPT <span className="font-tommy-outline">ROUND</span>
               </h3>
@@ -61,7 +61,7 @@ const RoundsCarousel = () => {
         </SwiperSlide>
         
         <SwiperSlide>
-          <div className="bg-black/20 backdrop-blur-md p-8 rounded-2xl min-h-[550px] flex flex-col border border-white/10">
+          <div className="bg-[#FF0879]/10 backdrop-blur-md p-8 md:p-12 rounded-2xl min-h-[550px] flex flex-col border border-white/10">
                 <h3 className="text-3xl md:text-4xl font-bold text-center mb-8 heading-gradient">
                     FINAL <span className="font-tommy-outline">ROUND</span>
                 </h3>
