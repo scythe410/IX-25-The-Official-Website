@@ -45,25 +45,25 @@
     {
       "id": "participant5",
       "description": "Portrait of Chris Lee",
-      "imageUrl": "https://images.unsplash.com/photo-1535643302794-19c3804b874b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxwZXJzb24lMjBwb3J0cmFpdHxlbnwwfHx8fDE3NTk2MjQ1ODZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1535643302794-19c3804b874b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxwZXJzb24lMjBwb3J0cmFpdHxlbnwwfHx8fDE3NTk2MjQ1ODZ8MA&ixlib,rb-4.1.0&q=80&w=1080",
       "imageHint": "person portrait"
     },
     {
       "id": "participant6",
       "description": "Portrait of Maria Garcia",
-      "imageUrl": "https://images.unsplash.com/photo-1521119989659-a83eee488004?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8cGVyc29uJTIwcG9ydHJhaXR8ZW58MHx8fHwxNzU5NjI0NTg2fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1521119989659-a83eee488004?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8cGVyc29uJTIwcG9ydHJhaXR8ZW58MHx8fHwxNzU5NjI0NTg2fDA&ixlib,rb-4.1.0&q=80&w=1080",
       "imageHint": "person portrait"
     },
     {
       "id": "concept-round",
       "description": "Abstract image for concept round",
-      "imageUrl": "https://images.unsplash.com/photo-1632829401795-2745c905ac77?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxhYnN0cmFjdCUyMGlkZWF8ZW58MHx8fHwxNzYzMjUyNjczfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/images/rounds pic.png",
       "imageHint": "abstract idea"
     },
     {
       "id": "final-round",
       "description": "Abstract image for final round",
-      "imageUrl": "https://images.unsplash.com/photo-1641545423876-3d7dc842132c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxhYnN0cmFjdCUyMG1hdHJpeHxlbnwwfHx8fDE3NjMzMjMzODF8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/images/rounds pic.png",
       "imageHint": "abstract matrix"
     }
   ]
