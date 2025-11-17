@@ -260,7 +260,7 @@ export default function Home() {
 
         {/* Rounds Section */}
         <motion.section
-          className="py-20 px-4"
+          className="py-20 px-4 md:px-16"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: false }}
