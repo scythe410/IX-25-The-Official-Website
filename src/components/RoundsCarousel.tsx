@@ -21,7 +21,7 @@ const RoundsCarousel = () => {
         loop={true}
         autoplay={{
           delay: 5000,
-          disableOnInteraction: false,
+          disableOnInteraction: true,
         }}
         className="relative"
       >
