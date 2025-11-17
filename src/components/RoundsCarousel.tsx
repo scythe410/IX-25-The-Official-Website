@@ -27,8 +27,7 @@ const RoundsCarousel = () => {
         className="relative"
       >
         <SwiperSlide>
-          <div className="electric-border-wrapper p-0.5">
-            <div className="bg-gray-900/80 backdrop-blur-sm p-8 rounded-2xl min-h-[500px] flex flex-col">
+          <div className="bg-[#FF0879]/10 backdrop-blur-sm p-8 rounded-2xl min-h-[500px] flex flex-col border border-white/10">
               <h3 className="text-3xl md:text-4xl font-bold text-center mb-8 heading-gradient">
                 CONCEPT <span className="font-tommy-outline">ROUND</span>
               </h3>
@@ -60,12 +59,10 @@ const RoundsCarousel = () => {
                 </div>
               </div>
             </div>
-          </div>
         </SwiperSlide>
         
         <SwiperSlide>
-          <div className="electric-border-wrapper p-0.5">
-            <div className="bg-gray-900/80 backdrop-blur-sm p-8 rounded-2xl min-h-[500px] flex flex-col">
+          <div className="bg-[#FF0879]/10 backdrop-blur-sm p-8 rounded-2xl min-h-[500px] flex flex-col border border-white/10">
                 <h3 className="text-3xl md:text-4xl font-bold text-center mb-8 heading-gradient">
                     FINAL <span className="font-tommy-outline">ROUND</span>
                 </h3>
@@ -89,7 +86,6 @@ const RoundsCarousel = () => {
                     </div>
                 </div>
             </div>
-          </div>
         </SwiperSlide>
         
         <div className="swiper-pagination-custom !bottom-0 !relative mt-8"></div>
