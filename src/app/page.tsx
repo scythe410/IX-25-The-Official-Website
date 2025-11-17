@@ -260,15 +260,13 @@ export default function Home() {
 
         {/* Rounds Section */}
         <motion.section
-          className="py-20"
+          className="py-20 px-4"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: false }}
           variants={sectionVariants}
         >
-          <div className="container mx-auto px-4">
-            <RoundsCarousel />
-          </div>
+          <RoundsCarousel />
         </motion.section>
 
         {/* Roadmap */}
@@ -503,9 +501,3 @@ export default function Home() {
     </>
   );
 }
-
-    
-
-    
-
-    
