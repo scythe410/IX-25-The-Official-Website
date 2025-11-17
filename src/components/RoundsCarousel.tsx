@@ -27,7 +27,7 @@ const RoundsCarousel = () => {
         className="relative"
       >
         <SwiperSlide>
-          <div className="backdrop-blur-md p-8 rounded-2xl min-h-[550px] flex flex-col border border-white/10">
+          <div className="bg-black/20 backdrop-blur-md p-8 rounded-2xl min-h-[550px] flex flex-col border border-white/10">
               <h3 className="text-3xl md:text-4xl font-bold text-center mb-8 heading-gradient">
                 CONCEPT <span className="font-tommy-outline">ROUND</span>
               </h3>
@@ -36,7 +36,7 @@ const RoundsCarousel = () => {
                   <p className="text-gray-300 mb-8">
                     This is where it all begins. The Concept Round is your chance to showcase your innovative ideas and design-thinking skills. Form your teams, brainstorm groundbreaking solutions, and submit a comprehensive proposal that outlines your vision. Focus on user experience, problem-solving, and feasibility. We're looking for creativity that pushes boundaries.
                   </p>
-                  <a href="#" target="_blank" rel="noopener noreferrer">
+                  <a href="https://drive.google.com/file/d/1wNEAlvo49KgHf4OMRQgwb4H7KML-RK96/view?usp=drive_link" target="_blank" rel="noopener noreferrer">
                     <motion.button 
                       className="px-6 py-2 bg-[#FF0879] text-white font-bold rounded-full text-sm button-glow"
                       whileHover={{ scale: 1.05 }}
@@ -62,7 +62,7 @@ const RoundsCarousel = () => {
         </SwiperSlide>
         
         <SwiperSlide>
-          <div className="backdrop-blur-md p-8 rounded-2xl min-h-[550px] flex flex-col border border-white/10">
+          <div className="bg-black/20 backdrop-blur-md p-8 rounded-2xl min-h-[550px] flex flex-col border border-white/10">
                 <h3 className="text-3xl md:text-4xl font-bold text-center mb-8 heading-gradient">
                     FINAL <span className="font-tommy-outline">ROUND</span>
                 </h3>

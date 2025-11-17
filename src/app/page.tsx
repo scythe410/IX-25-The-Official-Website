@@ -266,7 +266,9 @@ export default function Home() {
           viewport={{ once: false }}
           variants={sectionVariants}
         >
-          <RoundsCarousel />
+          <div className="bg-transparent">
+            <RoundsCarousel />
+          </div>
         </motion.section>
 
         {/* Roadmap */}
