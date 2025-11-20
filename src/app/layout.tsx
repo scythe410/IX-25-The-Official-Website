@@ -6,6 +6,7 @@ import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import { Toaster } from '@/components/ui/toaster';
 import CustomCursor from '@/components/CustomCursor';
+import {Analytics} from "@vercel/analytics/next"
 
 export const metadata: Metadata = {
   title: 'IX25 - The Official Site',
@@ -23,6 +24,7 @@ export default function RootLayout({
         <CustomCursor />
         {children}
         <Toaster />
+        <Analytics />
       </body>
     </html>
   );
