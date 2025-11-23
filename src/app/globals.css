@@ -47,6 +47,20 @@ body {
   box-shadow: 0 0 15px rgba(255, 8, 121, 0.6), 0 0 25px rgba(255, 8, 121, 0.4);
 }
 
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(255, 8, 121, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(255, 8, 121, 0.8);
+  }
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 2s infinite ease-in-out;
+}
+
+
 @keyframes marquee {
   from { transform: translateX(0); }
   to { transform: translateX(-50%); }

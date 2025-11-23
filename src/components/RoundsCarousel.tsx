@@ -35,15 +35,27 @@ const RoundsCarousel = () => {
                   <p className="text-gray-300 mb-8 text-justify">
                     This is where it all begins. The Concept Round is your chance to showcase your innovative ideas and design-thinking skills. Form your teams, brainstorm groundbreaking solutions, and submit a comprehensive proposal that outlines your vision. Focus on user experience, problem-solving, and feasibility. We're looking for creativity that pushes boundaries. This initial phase is critical for setting a strong foundation for your project. Your submission will be judged on its originality, potential impact, and clarity of presentation. Make sure your documentation is thorough and your concept is well-defined to stand out from the competition.
                   </p>
-                  <a href="https://drive.google.com/file/d/1wNEAlvo49KgHf4OMRQgwb4H7KML-RK96/view?usp=drive_link" target="_blank" rel="noopener noreferrer">
-                    <motion.button 
-                      className="px-6 py-2 bg-[#FF0879] text-white font-bold rounded-full text-sm button-glow"
-                      whileHover={{ scale: 1.05 }}
-                      whileTap={{ scale: 0.95 }}
-                    >
-                      VIEW GUIDELINE BOOKLET
-                    </motion.button>
-                  </a>
+                  <div className="flex flex-col sm:flex-row gap-4 items-center">
+                    <a href="https://drive.google.com/file/d/1wNEAlvo49KgHf4OMRQgwb4H7KML-RK96/view?usp=drive_link" target="_blank" rel="noopener noreferrer">
+                      <motion.button 
+                        className="px-6 py-2 bg-transparent border border-white/50 text-white font-bold rounded-full text-sm button-glow"
+                        whileHover={{ scale: 1.05, backgroundColor: '#FF0879', borderColor: '#FF0879' }}
+                        whileTap={{ scale: 0.95 }}
+                      >
+                        VIEW GUIDELINE BOOKLET
+                      </motion.button>
+                    </a>
+                     <a href="https://forms.gle/whaw8c6n8EmUeP3M6" target="_blank" rel="noopener noreferrer">
+                      <motion.button
+                        className="px-8 py-3 bg-[#FF0879] text-white font-bold rounded-full button-glow animate-pulse-glow"
+                        whileHover={{ scale: 1.1 }}
+                        whileTap={{ scale: 0.9 }}
+                        transition={{ type: 'spring', stiffness: 300 }}
+                      >
+                        SUBMIT NOW
+                      </motion.button>
+                    </a>
+                  </div>
                 </div>
                 <div className="relative h-64 md:h-full w-full">
                   {conceptImage && (
