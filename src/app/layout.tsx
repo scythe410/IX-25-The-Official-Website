@@ -8,7 +8,7 @@ import CustomCursor from '@/components/CustomCursor';
 import {Analytics} from "@vercel/analytics/next"
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://ix25.vercel.app'), // Replace with your actual domain
+  metadataBase: new URL('https://ix25.cloud'), // Replace with your actual domain
   title: 'IX 25 - The Official Site | Inter-University Designathon',
   description: 'IX 25 is Sri Lanka\'s pioneering AI and XR Designathon. A battle for startup brilliance, prototypes, and the future of ideas, organized by the IEEE Student Branch of IIT.',
   keywords: ['IX 25', 'Designathon', 'UI/UX', 'Hackathon', 'Sri Lanka', 'IEEE', 'IIT', 'Innovation', 'AI', 'XR', 'Wearable Technology'],
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'IX 25 - The Official Site | Inter-University Designathon',
     description: 'Defying the final line — a battle for startup brilliance, prototypes and the future of ideas.',
-    url: 'https://ix25.vercel.app', // Replace with your actual domain
+    url: 'https://ix25.cloud', // Replace with your actual domain
     siteName: 'IX 25',
     images: [
       {

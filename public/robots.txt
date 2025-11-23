@@ -10,4 +10,4 @@
 
 User-agent: *
 Allow: /
-Sitemap: https://ix25.vercel.app/sitemap.xml
+Sitemap: https://ix25.cloud/sitemap.xml
