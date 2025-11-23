@@ -26,11 +26,11 @@ const RoundsCarousel = () => {
         className="relative"
       >
         <SwiperSlide>
-          <div className="bg-[#FF0879]/10 backdrop-blur-md p-8 md:p-12 rounded-2xl h-[700px] md:h-[550px] flex flex-col border border-white/10">
+          <div className="bg-[#FF0879]/10 backdrop-blur-md p-8 md:p-12 rounded-2xl min-h-[550px] flex flex-col border border-white/10">
               <h3 className="text-3xl md:text-4xl font-bold text-center mb-8 heading-gradient">
                 CONCEPT <span className="font-tommy-outline">ROUND</span>
               </h3>
-              <div className="grid md:grid-cols-2 gap-8 items-center flex-grow">
+              <div className="grid md:grid-cols-2 gap-8 items-center">
                 <div className="text-center md:text-left">
                   <p className="text-gray-300 mb-8 text-justify">
                     This is where it all begins. The Concept Round is your chance to showcase your innovative ideas and design-thinking skills. Form your teams, brainstorm groundbreaking solutions, and submit a comprehensive proposal that outlines your vision. We're looking for creativity that pushes boundaries. This initial phase is critical for setting a strong foundation. Your submission will be judged on originality, impact, and clarity. Make sure your documentation is thorough and your concept is well-defined to stand out. Don't miss this opportunity to lay the groundwork for a winning project. Join us and turn your vision into a reality that could redefine the future.
@@ -57,7 +57,7 @@ const RoundsCarousel = () => {
                     </a>
                   </div>
                 </div>
-                <div className="relative h-full w-full">
+                <div className="relative h-64 md:h-96 w-full">
                   {conceptImage && (
                     <Image
                       src={conceptImage.imageUrl}
@@ -73,18 +73,18 @@ const RoundsCarousel = () => {
         </SwiperSlide>
         
         <SwiperSlide>
-          <div className="bg-[#FF0879]/10 backdrop-blur-md p-8 md:p-12 rounded-2xl h-[700px] md:h-[550px] flex flex-col border border-white/10">
+          <div className="bg-[#FF0879]/10 backdrop-blur-md p-8 md:p-12 rounded-2xl min-h-[550px] flex flex-col border border-white/10">
                 <h3 className="text-3xl md:text-4xl font-bold text-center mb-8 heading-gradient">
                     FINAL <span className="font-tommy-outline">ROUND</span>
                 </h3>
-                <div className="grid md:grid-cols-2 gap-8 items-center flex-grow">
+                <div className="grid md:grid-cols-2 gap-8 items-center">
                     <div className="text-center md:text-left">
                         <p className="text-gray-300 mb-8 text-justify">
                            The grand stage awaits. The Final Round is a 36-hour intensive designathon where the top teams will bring their concepts to life. Build, iterate, and perfect your prototypes with mentorship from industry experts before presenting to our panel of judges. This is where your execution skills will be tested under pressure. You will have access to resources, workshops, and one-on-one sessions with mentors to help you refine your solution. Time management, teamwork, and the ability to adapt to feedback are crucial for success in this high-stakes final phase. Prepare to push your limits and deliver a polished, functional prototype that stands out.
                         </p>
                         <Countdown />
                     </div>
-                     <div className="relative h-full w-full">
+                     <div className="relative h-64 md:h-96 w-full">
                         {finalImage && (
                             <Image
                                 src={finalImage.imageUrl}
