@@ -1,0 +1,13 @@
+# See https://www.robotstxt.org/robotstxt.html for documentation on how to use the robots.txt file
+#
+# To allow all robots to crawl your site, use:
+# User-agent: *
+# Allow: /
+#
+# To disallow all robots from crawling your site, use:
+# User-agent: *
+# Disallow: /
+
+User-agent: *
+Allow: /
+Sitemap: https://ix25.vercel.app/sitemap.xml

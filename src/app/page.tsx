@@ -124,7 +124,7 @@ export default function Home() {
       <Navbar />
       <main className="min-h-screen text-white dot-grid-background pb-24">
         
-        <div className="relative text-center z-0">
+        <div className="relative text-center z-0" aria-hidden="true">
           <h1 className="text-[25vw] md:text-[20vw] font-bold text-white/10" style={{ transform: 'translateY(-50%)' }}>
               DESIGNATHON
           </h1>
@@ -136,11 +136,12 @@ export default function Home() {
             <div className="relative flex justify-center items-center h-64 md:h-96">
                 <Image
                   src="/images/Designathon bg video 1.gif"
-                  alt="Designathon Illustration"
+                  alt="Abstract animation for IX 25 Designathon"
                   width={600}
                   height={400}
                   className="rounded-lg object-contain"
                   data-ai-hint="abstract illustration vaporwave"
+                  priority
                 />
             </div>
             <div className="text-center md:text-left md:pl-16">
@@ -192,10 +193,10 @@ export default function Home() {
             viewport={{ once: false }}
             variants={sectionVariants}
         >
-            <div className="absolute inset-x-0 top-1/2 -translate-y-1/2">
-                <h1 className="text-[20vw] md:text-[15vw] font-bold text-gray-800/50 opacity-20 whitespace-nowrap">
+            <div className="absolute inset-x-0 top-1/2 -translate-y-1/2" aria-hidden="true">
+                <h2 className="text-[20vw] md:text-[15vw] font-bold text-gray-800/50 opacity-20 whitespace-nowrap">
                     PRIZE POOL
-                </h1>
+                </h2>
             </div>
             <div className="relative z-10 flex flex-wrap justify-center items-center gap-x-8 md:gap-x-16 gap-y-8 container mx-auto">
                 {stats.map((stat, index) => (
@@ -222,17 +223,17 @@ export default function Home() {
             <div className="relative h-[400px] md:h-[500px]">
               <Image
                 src="/images/registrations.png"
-                alt="Registrations Illustration"
+                alt="Futuristic illustration for IX 25 registrations"
                 fill
                 className="object-cover"
                 data-ai-hint="abstract illustration futuristic"
               />
             </div>
             <div className="relative text-center md:text-left">
-              <div className="absolute inset-0 flex items-center justify-center -z-10">
-                <h1 className="text-[12vw] lg:text-[8vw] font-bold text-gray-800/50 opacity-50 whitespace-nowrap leading-none">
+              <div className="absolute inset-0 flex items-center justify-center -z-10" aria-hidden="true">
+                <h2 className="text-[12vw] lg:text-[8vw] font-bold text-gray-800/50 opacity-50 whitespace-nowrap leading-none">
                   BIGGER. GRANDER. WILDER.
-                </h1>
+                </h2>
               </div>
               <div className="relative gradient-border-wrapper inline-block p-0.5 rounded-md mb-8">
                  <button
@@ -284,7 +285,7 @@ export default function Home() {
           </div>
           <div className="relative max-w-5xl mx-auto">
             {/* Timeline line */}
-            <div className="absolute left-4 md:left-1/2 -translate-x-1/2 h-full w-0.5 bg-gray-700/50"></div>
+            <div className="absolute left-4 md:left-1/2 -translate-x-1/2 h-full w-0.5 bg-gray-700/50" aria-hidden="true"></div>
 
             {roadmapEvents.map((event, index) => (
               <div key={index} className="relative flex items-center mb-8 md:justify-between w-full">
@@ -292,7 +293,7 @@ export default function Home() {
                 {index % 2 === 0 ? (
                   <>
                     <div className="hidden md:flex w-5/12"></div>
-                    <div className="hidden md:flex w-1/12 justify-center">
+                    <div className="hidden md:flex w-1/12 justify-center" aria-hidden="true">
                       <div className="w-4 h-4 rounded-full bg-gray-900 border-2 border-white box-glow"></div>
                     </div>
                     <div className="w-full md:w-5/12 ml-8 md:ml-0">
@@ -318,14 +319,14 @@ export default function Home() {
                            </div>
                        </div>
                     </div>
-                    <div className="hidden md:flex w-1/12 justify-center">
+                    <div className="hidden md:flex w-1/12 justify-center" aria-hidden="true">
                        <div className="w-4 h-4 rounded-full bg-gray-900 border-2 border-white box-glow"></div>
                     </div>
                     <div className="hidden md:flex w-5/12"></div>
                   </>
                 )}
                  {/* Mobile: Central dot */}
-                <div className="md:hidden absolute left-4 top-1/2 -translate-x-1/2 -translate-y-1/2 w-4 h-4 rounded-full bg-gray-900 border-2 border-white box-glow"></div>
+                <div className="md:hidden absolute left-4 top-1/2 -translate-x-1/2 -translate-y-1/2 w-4 h-4 rounded-full bg-gray-900 border-2 border-white box-glow" aria-hidden="true"></div>
               </div>
             ))}
           </div>
@@ -405,13 +406,13 @@ export default function Home() {
                           <p className="text-sm text-gray-400 mb-4">{contact.role}</p>
                         </div>
                         <div className="flex justify-center gap-4 mt-auto">
-                          <a href={`mailto:${contact.email}`} aria-label="Email" className="p-2 bg-gray-800 rounded-full hover:bg-[#FF0879] transition-colors">
+                          <a href={`mailto:${contact.email}`} aria-label={`Email ${contact.name}`} className="p-2 bg-gray-800 rounded-full hover:bg-[#FF0879] transition-colors">
                             <Mail className="w-5 h-5" />
                           </a>
-                          <a href={contact.linkedin} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="p-2 bg-gray-800 rounded-full hover:bg-[#FF0879] transition-colors">
+                          <a href={contact.linkedin} target="_blank" rel="noopener noreferrer" aria-label={`LinkedIn profile of ${contact.name}`} className="p-2 bg-gray-800 rounded-full hover:bg-[#FF0879] transition-colors">
                             <Linkedin className="w-5 h-5" />
                           </a>
-                          <a href={`tel:${contact.phone}`} aria-label="Phone" className="p-2 bg-gray-800 rounded-full hover:bg-[#FF0879] transition-colors">
+                          <a href={`tel:${contact.phone}`} aria-label={`Call ${contact.name}`} className="p-2 bg-gray-800 rounded-full hover:bg-[#FF0879] transition-colors">
                             <Phone className="w-5 h-5" />
                           </a>
                         </div>
@@ -464,7 +465,7 @@ export default function Home() {
             <div className="absolute inset-0">
                 <Image
                     src="/images/building_overlay_bg.png"
-                    alt="Dot-grid building overlay"
+                    alt="Stylized overlay of the Informatics Institute of Technology building"
                     fill
                     className="object-cover w-full opacity-20"
                     data-ai-hint="cityscape illustration"
@@ -491,9 +492,9 @@ export default function Home() {
                 </div>
                 <p className="text-xs md:text-sm text-gray-500 text-center">Copyright 2025 IEEE Student Branch of IIT. All Rights Reserved</p>
                 <div className="flex gap-6">
-                  <a href="https://www.facebook.com/ieeeinformatics" aria-label="Facebook"><FaFacebook className="text-lg md:text-xl text-gray-400 hover:text-white cursor-pointer" /></a>
-                  <a href="https://www.linkedin.com/company/ieeesbiit/" aria-label="Linkedin"><FaLinkedin className="text-lg md:text-xl text-gray-400 hover:text-white cursor-pointer" /></a>
-                  <a href="https://www.instagram.com/ieeeiit/#" aria-label="Instagram"><FaInstagram className="text-lg md:text-xl text-gray-400 hover:text-white cursor-pointer" /></a>
+                  <a href="https://www.facebook.com/ieeeinformatics" aria-label="Facebook page for IEEE Student Branch of IIT"><FaFacebook className="text-lg md:text-xl text-gray-400 hover:text-white cursor-pointer" /></a>
+                  <a href="https://www.linkedin.com/company/ieeesbiit/" aria-label="LinkedIn page for IEEE Student Branch of IIT"><FaLinkedin className="text-lg md:text-xl text-gray-400 hover:text-white cursor-pointer" /></a>
+                  <a href="https://www.instagram.com/ieeeiit/#" aria-label="Instagram page for IEEE Student Branch of IIT"><FaInstagram className="text-lg md:text-xl text-gray-400 hover:text-white cursor-pointer" /></a>
                 </div>
             </div>
         </motion.footer>
