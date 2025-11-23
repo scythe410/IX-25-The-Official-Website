@@ -57,7 +57,7 @@ const RoundsCarousel = () => {
                     </a>
                   </div>
                 </div>
-                <div className="relative h-64 md:h-full w-full">
+                <div className="relative h-full w-full">
                   {conceptImage && (
                     <Image
                       src={conceptImage.imageUrl}
@@ -84,7 +84,7 @@ const RoundsCarousel = () => {
                         </p>
                         <Countdown />
                     </div>
-                     <div className="relative h-64 md:h-full w-full">
+                     <div className="relative h-full w-full">
                         {finalImage && (
                             <Image
                                 src={finalImage.imageUrl}
