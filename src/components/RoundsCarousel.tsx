@@ -26,16 +26,16 @@ const RoundsCarousel = () => {
         className="relative"
       >
         <SwiperSlide>
-          <div className="bg-[#FF0879]/10 backdrop-blur-md p-8 md:p-12 rounded-2xl min-h-[550px] flex flex-col border border-white/10">
+          <div className="bg-[#FF0879]/10 backdrop-blur-md p-8 md:p-12 rounded-2xl h-[700px] md:h-[550px] flex flex-col border border-white/10">
               <h3 className="text-3xl md:text-4xl font-bold text-center mb-8 heading-gradient">
                 CONCEPT <span className="font-tommy-outline">ROUND</span>
               </h3>
               <div className="grid md:grid-cols-2 gap-8 items-center flex-grow">
                 <div className="text-center md:text-left">
                   <p className="text-gray-300 mb-8 text-justify">
-                    This is where it all begins. The Concept Round is your chance to showcase your innovative ideas and design-thinking skills. Form your teams, brainstorm groundbreaking solutions, and submit a comprehensive proposal that outlines your vision. Focus on user experience, problem-solving, and feasibility. We're looking for creativity that pushes boundaries. This initial phase is critical for setting a strong foundation for your project. Your submission will be judged on its originality, potential impact, and clarity of presentation. Make sure your documentation is thorough and your concept is well-defined to stand out from the competition. Don't miss this opportunity to lay the groundwork for a winning project. Join us and turn your vision into a reality that could redefine the future.
+                    This is where it all begins. The Concept Round is your chance to showcase your innovative ideas and design-thinking skills. Form your teams, brainstorm groundbreaking solutions, and submit a comprehensive proposal that outlines your vision. We're looking for creativity that pushes boundaries. This initial phase is critical for setting a strong foundation. Your submission will be judged on originality, impact, and clarity. Make sure your documentation is thorough and your concept is well-defined to stand out. Don't miss this opportunity to lay the groundwork for a winning project. Join us and turn your vision into a reality that could redefine the future.
                   </p>
-                  <div className="flex flex-col sm:flex-row gap-4 items-center">
+                  <div className="flex flex-col sm:flex-row gap-4 items-center justify-center md:justify-start">
                     <a href="https://drive.google.com/file/d/1wNEAlvo49KgHf4OMRQgwb4H7KML-RK96/view?usp=drive_link" target="_blank" rel="noopener noreferrer">
                       <motion.button 
                         className="px-8 py-3 bg-transparent border border-white/50 text-white font-bold rounded-full button-glow"
@@ -73,7 +73,7 @@ const RoundsCarousel = () => {
         </SwiperSlide>
         
         <SwiperSlide>
-          <div className="bg-[#FF0879]/10 backdrop-blur-md p-8 md:p-12 rounded-2xl min-h-[550px] flex flex-col border border-white/10">
+          <div className="bg-[#FF0879]/10 backdrop-blur-md p-8 md:p-12 rounded-2xl h-[700px] md:h-[550px] flex flex-col border border-white/10">
                 <h3 className="text-3xl md:text-4xl font-bold text-center mb-8 heading-gradient">
                     FINAL <span className="font-tommy-outline">ROUND</span>
                 </h3>
