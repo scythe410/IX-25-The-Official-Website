@@ -54,8 +54,27 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "IX 25",
+    "url": "https://ix25.cloud",
+    "logo": "https://ix25.cloud/images/logo.svg",
+    "sameAs": [
+      "https://www.facebook.com/ieeeinformatics",
+      "https://www.linkedin.com/company/ieeesbiit/",
+      "https://www.instagram.com/ieeeiit/#"
+    ]
+  };
+
   return (
     <html lang="en">
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+        />
+      </head>
       <body className="font-tommy" suppressHydrationWarning>
         <CustomCursor />
         {children}
