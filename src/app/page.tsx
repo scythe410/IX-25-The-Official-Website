@@ -94,7 +94,7 @@ export default function Home() {
     { date: '15th Nov', title: 'INTRODUCTORY SESSION', description: 'Get to know the competition, teams, and what lies ahead.', completed: true },
     { date: '16th Nov', title: 'SUBMISSIONS OPENING', description: 'Begin submitting your creative and technical solutions.' , completed: true },
     { date: '22nd Nov', title: 'WORKSHOP 02', description: 'Level up your project with expert guidance and feedback.' , completed: true },
-    { date: '26th Nov', 'title': 'SUBMISSIONS CLOSING', description: 'Deadline to showcase your innovation—make it count!' },
+    { date: '26th Nov', 'title': 'SUBMISSIONS CLOSING', description: 'Deadline to showcase your innovation—make it count!', completed: true },
     { date: '28th Nov', 'title': 'CHOOSING FINALISTS', description: 'Top teams are selected to move on to the grand stage.' },
     { date: '29th Nov', title: 'WORKSHOP 03', description: 'Final preparation and mentoring before the finale.' },
     { date: '06-07th Dec', title: 'GRAND FINALE', description: 'The ultimate showdown—present, pitch, and conquer!' },
