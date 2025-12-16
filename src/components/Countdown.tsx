@@ -14,7 +14,7 @@ const Countdown = () => {
 
   useEffect(() => {
     setIsClient(true);
-    const targetDate = new Date('2025-12-06T00:00:00').getTime();
+    const targetDate = new Date('2024-12-20T08:00:00').getTime();
 
     const interval = setInterval(() => {
       const now = new Date().getTime();
