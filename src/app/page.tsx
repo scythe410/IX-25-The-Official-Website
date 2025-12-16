@@ -95,9 +95,9 @@ export default function Home() {
     { date: '16th Nov', title: 'SUBMISSIONS OPENING', description: 'Begin submitting your creative and technical solutions.' , completed: true },
     { date: '22nd Nov', title: 'WORKSHOP 02', description: 'Level up your project with expert guidance and feedback.' , completed: true },
     { date: '26th Nov', 'title': 'SUBMISSIONS CLOSING', description: 'Deadline to showcase your innovation—make it count!', completed: true },
-    { date: '28th Nov', 'title': 'CHOOSING FINALISTS', description: 'Top teams are selected to move on to the grand stage.' },
-    { date: '29th Nov', title: 'WORKSHOP 03', description: 'Final preparation and mentoring before the finale.' },
-    { date: '06-07th Dec', title: 'GRAND FINALE', description: 'The ultimate showdown—present, pitch, and conquer!' },
+    { date: '28th Nov', 'title': 'CHOOSING FINALISTS', description: 'Top teams are selected to move on to the grand stage.' , completed: true},
+    { date: '18th Dec', title: 'WORKSHOP 03', description: 'Final preparation and mentoring before the finale.' , completed: true},
+    { date: '20-21st Dec', title: 'GRAND FINALE', description: 'The ultimate showdown—present, pitch, and conquer!' },
   ];
 
   const aboutText = "IX is Sri Lanka’s first-ever inter-university designathon an event where undergraduates tackle real-world problems through innovative design solutions. Over the years, it has grown into one of the country’s most prestigious UI/UX events. IX 25, organized by the IEEE Student Branch of IIT, marks the fifth wave of Sri Lanka’s pioneering AI and XR Designathon. This edition explores gesture-based spatial interfaces, wearable technology, self-generative UIs, and 3D interactivity. Conducted in two phases, participants first present creative UI/UX concepts, with the top teams advancing to a 36-hour designathon to bring their ideas to life. Evolving beyond a competition, IX has become a platform that nurtures innovation, creativity, and design excellence empowering the next generation to shape the future of digital experiences in Sri Lanka.";
