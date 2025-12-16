@@ -1,4 +1,3 @@
-
 'use client';
 
 import { useState, useEffect } from 'react';
@@ -25,9 +24,12 @@ const Countdown = () => {
   const [isClient, setIsClient] = useState(false);
 
   useEffect(() => {
-    // This effect runs only on the client, after the initial render
     setIsClient(true);
-    // Set the initial time left
+  }, []);
+  
+  useEffect(() => {
+    if (!isClient) return;
+
     setTimeLeft(calculateTimeLeft());
 
     const interval = setInterval(() => {
@@ -35,7 +37,7 @@ const Countdown = () => {
     }, 1000);
 
     return () => clearInterval(interval);
-  }, []);
+  }, [isClient]);
 
   const formatTime = (time: number) => time.toString().padStart(2, '0');
 
