@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 
 const Countdown = () => {
   const calculateTimeLeft = () => {
-    const targetDate = new Date('2024-12-20T08:00:00').getTime();
+    const targetDate = new Date('2025-12-21T08:00:00').getTime();
     const now = new Date().getTime();
     const distance = targetDate - now;
 
