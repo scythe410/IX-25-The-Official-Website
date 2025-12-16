@@ -45,16 +45,15 @@ const RoundsCarousel = () => {
                         VIEW GUIDELINE BOOKLET
                       </motion.button>
                     </a>
-                     <a href="https://forms.gle/whaw8c6n8EmUeP3M6" target="_blank" rel="noopener noreferrer">
+                     <div className="cursor-not-allowed">
                       <motion.button
-                        className="px-8 py-3 bg-[#FF0879] text-white font-bold rounded-full button-glow animate-pulse-glow"
-                        whileHover={{ scale: 1.1 }}
-                        whileTap={{ scale: 0.9 }}
+                        disabled
+                        className="px-8 py-3 bg-[#FF0879] text-white font-bold rounded-full filter blur-sm opacity-50 cursor-not-allowed"
                         transition={{ type: 'spring', stiffness: 300 }}
                       >
                         SUBMIT NOW
                       </motion.button>
-                    </a>
+                    </div>
                   </div>
                 </div>
                 <div className="relative h-64 md:h-96 w-full">
