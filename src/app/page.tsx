@@ -86,6 +86,7 @@ export default function Home() {
     { name: 'IFS', logo: '/images/ifsab.png' },
     { name: 'Westfield Campus', logo: '/images/Westfield Campus.png' },
     { name: 'Infomark', logo: '/images/Infomark Logo.png' },
+    { name: 'Outerspace Digital', logo: '/images/OuterspaceLogo.png' },
   ];
 
   const roadmapEvents = [
